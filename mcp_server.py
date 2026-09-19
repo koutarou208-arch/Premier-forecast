@@ -138,8 +138,8 @@ def _get_embedder():
     if _EMBEDDER_ERROR is not None and mode != "on":
         return None
     try:
-        from sentence_transformers import SentenceTransformer
-        _EMBEDDER = SentenceTransformer(EMBEDDING_MODEL)
+        from fastembed import TextEmbedding
+        _EMBEDDER = TextEmbedding(model_name=EMBEDDING_MODEL)
         _EMBEDDER_ERROR = None
         return _EMBEDDER
     except Exception as e:
@@ -224,20 +224,18 @@ def _semantic_scores(query: str, candidates: list[dict[str, Any]]) -> list[float
     texts = [_semantic_text(x) for x in candidates]
     signature = hashlib.sha256("\n\x1e\n".join(texts).encode("utf-8")).hexdigest()
     if _EMBED_CACHE["signature"] != signature or _EMBED_CACHE["vectors"] is None:
-        _EMBED_CACHE["vectors"] = model.encode(
-            texts,
-            normalize_embeddings=True,
-            convert_to_numpy=True,
-            show_progress_bar=False,
-        )
+        import numpy as np
+        vectors = np.asarray(list(model.embed(texts)), dtype=np.float32)
+        norms = np.linalg.norm(vectors, axis=1, keepdims=True)
+        norms[norms == 0] = 1.0
+        _EMBED_CACHE["vectors"] = vectors / norms
         _EMBED_CACHE["signature"] = signature
 
-    q = model.encode(
-        [query],
-        normalize_embeddings=True,
-        convert_to_numpy=True,
-        show_progress_bar=False,
-    )[0]
+    import numpy as np
+    q = np.asarray(list(model.embed([query]))[0], dtype=np.float32)
+    q_norm = float(np.linalg.norm(q))
+    if q_norm > 0:
+        q = q / q_norm
     sims = _EMBED_CACHE["vectors"] @ q
     return [float(x) for x in sims]
 
@@ -294,7 +292,7 @@ def get_search_capabilities(probe_embeddings: bool = False) -> dict[str, Any]:
 
     Set probe_embeddings=true to actually load the embedding model.
     """
-    installed = importlib.util.find_spec("sentence_transformers") is not None
+    installed = importlib.util.find_spec("fastembed") is not None
     loaded = _EMBEDDER is not None
     if probe_embeddings and _embedding_mode() not in {"0", "false", "off", "disabled", "none"}:
         try:
