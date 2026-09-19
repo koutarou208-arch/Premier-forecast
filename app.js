@@ -184,7 +184,7 @@
     const audit = bt.alert_audit || {};
     const outside = audit.outside_labeled_windows_rate_pct || {};
 
-    currentEl.textContent = cur.market_score == null ? "—" : Number(cur.market_score).toFixed(1);
+    const comparable = cur.historical_comparable_score != null ? cur.historical_comparable_score : cur.market_score;\n    currentEl.textContent = comparable == null ? "—" : Number(comparable).toFixed(1);
     document.getElementById("btPercentile").textContent = cur.percentile_outside_labeled_windows == null ? "—" : Number(cur.percentile_outside_labeled_windows).toFixed(1)+"%";
     document.getElementById("btOutsideRate").textContent = outside["45"] == null ? "—" : Number(outside["45"]).toFixed(1)+"%";
     document.getElementById("btP95").textContent = dist.outside_windows_p95 == null ? "—" : Number(dist.outside_windows_p95).toFixed(1);
