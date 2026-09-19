@@ -10,7 +10,7 @@ v5の最大の変更は、**未来データを参照しない walk-forward backt
 - ラベル済みストレス窓とreference date前120日は日次サンプリングを追加し、短期Funding shockを捕捉
 - 過去検証は長期公開proxyで作る Historical-comparable score を使用し、現在だけ存在するAIイベント手動点は混ぜない
 - FREDのICE BofA OAS系列は2026年4月以降3年ローリングに制限されたため、歴史検証では IG=BAA10Y、Credit=NFCICREDIT、Leveraged=NFCIRISK を使用
-- SOFR-IORBが存在しない過去期間だけTED spreadを歴史検証専用のFunding proxyとして使用
+- Fundingの歴史検証は SOFR-IORB → SOFR-IOER → TED spread の順で制度時点に合わせて切り替え
 - 欠損系列は安全=0点にせず、その時点の分母から除外
 - ラベル外期間の警報率も計測
 - 現在のHistorical-comparable scoreが歴史分布の何percentileか表示
@@ -95,7 +95,7 @@ FRED上のICE BofA系列は2026年4月から直近3年に制限されている�
 ## Scripts
 
 - `scripts/update_data.py` — 現在値更新
-- `scripts/backtest.py` — walk-forward historical validation
+- `scripts/backtest.py` — walk-forward historical validation（SOFR-IORB / SOFR-IOER / TED の時代別Funding proxyを使用）
 
 ## GitHub Actions
 
