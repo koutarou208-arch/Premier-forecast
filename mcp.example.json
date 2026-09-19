@@ -8,7 +8,8 @@
       "env": {
         "MCP_TRANSPORT": "stdio",
         "MCP_EMBEDDINGS": "on",
-        "MCP_EMBEDDING_MODEL": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+        "MCP_EMBEDDING_MODEL": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "FASTEMBED_CACHE_PATH": "~/.cache/fastembed"
       }
     }
   }
