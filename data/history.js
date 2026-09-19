@@ -1,23 +1,27 @@
 window.__RISK_HISTORY__ = [
   {
     "date": "2026-09-19",
-    "score": 24.6,
-    "raw_score": 24.6,
+    "score": 23.9,
+    "raw_score": 23.9,
     "level": "NORMAL",
     "stage": 1,
     "coverage_pct": 100.0,
-    "breadth": 16.7,
+    "breadth": 22.2,
     "synchronization_bonus": 0.0,
     "pillars": {
-      "Broad Credit": 0.0,
-      "Funding / Liquidity": 0.0,
+      "Broad Credit": 15.4,
+      "Funding / Liquidity": 3.4,
+      "Banking": 43.2,
       "AI / Private Credit": 63.4,
       "Europe / Energy": 26.7
     },
     "hy_oas": 2.7,
     "ig_oas": 0.78,
+    "ccc_oas": 10.76,
     "stlfsi": -0.8477,
     "rates_vol": 66.65204225559872,
+    "sofr_iorb_bps": -4.999999999999982,
+    "cpff": 0.27,
     "italy_bund_bps": 80.59799999999998,
     "wti": 107.02
   }
