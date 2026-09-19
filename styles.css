@@ -50,3 +50,23 @@ a{color:inherit}.shell{max-width:1200px;margin:0 auto;padding:40px 20px 72px}.he
 .event-table td strong{display:block;color:var(--text);font-size:11px;margin-bottom:3px}
 .event-table td small{display:block;color:#64758d;font-size:9px;margin-top:3px}
 @media(max-width:760px){.validation-metrics{grid-template-columns:repeat(2,1fr)}.backtest-panel{padding:16px}}
+
+.nn-panel{border:1px solid var(--line);background:linear-gradient(145deg,rgba(18,26,45,.97),rgba(8,14,24,.99));border-radius:20px;padding:22px;margin-top:14px}
+.neural-badge{color:#b99cff;border-color:#53407b;background:#171126}
+.nn-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:10px}
+.nn-metrics article{border:1px solid var(--line);border-radius:11px;padding:11px;background:#09101a}
+.nn-metrics span{display:block;color:#71839c;font:800 8px/1.2 ui-monospace,monospace;letter-spacing:.05em}
+.nn-metrics strong{display:block;font:900 18px/1 ui-monospace,monospace;margin-top:7px}
+.nn-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.driver-list,.nn-event-list{display:grid;gap:7px}
+.driver-row{display:grid;grid-template-columns:140px 1fr 46px;gap:8px;align-items:center}
+.driver-row span{font:750 9px/1.2 ui-monospace,monospace;color:#8da0ba}
+.driver-row b{font:850 10px/1 ui-monospace,monospace;text-align:right}
+.driver-track{height:6px;border-radius:99px;background:#202b3e;overflow:hidden}
+.driver-track i{display:block;height:100%;border-radius:99px;background:#9b7bff}
+.nn-event{display:grid;grid-template-columns:1fr 48px 90px;gap:8px;align-items:center;border-bottom:1px solid #1b2738;padding:8px 0}
+.nn-event:last-child{border-bottom:0}
+.nn-event span{font-size:10px;color:#bcc7d7}
+.nn-event b{font:850 11px/1 ui-monospace,monospace;text-align:right}
+.nn-event small{font:700 8px/1.2 ui-monospace,monospace;color:#71839c;text-align:right}
+@media(max-width:760px){.nn-metrics{grid-template-columns:repeat(2,1fr)}.nn-grid{grid-template-columns:1fr}.driver-row{grid-template-columns:105px 1fr 42px}}
