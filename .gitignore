@@ -1,0 +1,7 @@
+# Generated local intelligence databases; portable corpus/snapshots are committed instead.
+data/news.db
+data/news.db-*
+data/knowledge_graph/
+.cache/
+__pycache__/
+*.pyc
