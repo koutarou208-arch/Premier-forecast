@@ -1,0 +1,43 @@
+name: Test MCP embeddings
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "mcp_server.py"
+      - "requirements-embeddings.txt"
+      - "scripts/test_mcp_embeddings.py"
+      - ".github/workflows/test-mcp-embeddings.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mcp-embedding-test
+  cancel-in-progress: true
+
+jobs:
+  semantic-search:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache Hugging Face model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-multilingual-minilm-${{ runner.os }}-v1
+
+      - name: Install MCP and embedding dependencies
+        run: |
+          python3 -m pip install --disable-pip-version-check --quiet -r requirements-mcp.txt
+          python3 -m pip install --disable-pip-version-check --quiet -r requirements-embeddings.txt
+
+      - name: Validate embedding search
+        env:
+          MCP_EMBEDDINGS: "on"
+          MCP_EMBEDDING_MODEL: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          TOKENIZERS_PARALLELISM: "false"
+        run: python3 scripts/test_mcp_embeddings.py
