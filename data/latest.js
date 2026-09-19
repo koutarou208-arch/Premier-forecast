@@ -1,6 +1,6 @@
 window.__RISK_DATA__ = {
   "version": 3,
-  "updated_at": "2026-09-19T14:33:17.361313Z",
+  "updated_at": "2026-09-19T14:43:07.662837Z",
   "score": 24.6,
   "raw_score": 24.6,
   "synchronization_bonus": 0.0,
@@ -289,7 +289,7 @@ window.__RISK_DATA__ = {
       "as_of": "2026-09-18",
       "weight": 8,
       "source_url": "https://www.reuters.com/business/finance/oracles-18-billion-data-center-debt-under-pressure-ft-reports-2026-09-18/",
-      "note": "Banks reportedly retained more Oracle-linked project debt than planned after distribution weakened. This overlaps with the data-center event, so v2 caps its portfolio weight.",
+      "note": "Banks reportedly retained more Oracle-linked project debt than planned after distribution weakened. This overlaps with the data-center event; v3 limits double counting through explicit channel weights and requires broad-market transmission for higher stages.",
       "components": {
         "level": 56.7,
         "deviation": null,
