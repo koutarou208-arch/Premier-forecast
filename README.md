@@ -319,6 +319,8 @@ sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
 
 It maps Japanese and English sentences into the same dense vector space, so semantically equivalent wording can match even when the literal keywords differ.
 
+The model runs locally through **FastEmbed / ONNX**, so semantic search does not require an embedding API key.
+
 Install the optional semantic-search dependency:
 
 ```bash
@@ -336,13 +338,14 @@ Environment variables:
 - `MCP_EMBEDDINGS=on` — require semantic embedding search; startup/search fails if the model cannot load
 - `MCP_EMBEDDINGS=auto` — default; use embeddings when installed, otherwise fall back to lexical/alias search
 - `MCP_EMBEDDINGS=off` — disable embedding search
-- `MCP_EMBEDDING_MODEL` — override the sentence-transformer model
+- `MCP_EMBEDDING_MODEL` — override the FastEmbed-supported model
+- `FASTEMBED_CACHE_PATH` — persistent model-cache directory; default is `~/.cache/fastembed`
 
 `search_crisis_data()` uses a default 45% lexical / 55% semantic hybrid score.
 
 `semantic_search_crisis_data()` is embedding-first: 15% lexical / 85% semantic.
 
-The candidate corpus includes current indicators, pillars, historical backtest episodes, neural diagnostics, self-improvement-agent state and the latest 90 saved history rows. Candidate embeddings are cached in memory and rebuilt only when the underlying corpus changes.
+The candidate corpus includes current indicators, pillars, historical backtest episodes, neural diagnostics, self-improvement-agent state and the latest 90 saved history rows. Candidate embeddings are cached in memory and rebuilt only when the underlying corpus changes. Model artifacts are cached separately by FastEmbed.
 
 If the optional embedding package is unavailable, the normal MCP server remains usable and automatically falls back to the existing deterministic lexical search.
 
