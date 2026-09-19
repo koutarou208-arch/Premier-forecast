@@ -30,14 +30,18 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install neural-network dependency
-        run: python3 -m pip install --disable-pip-version-check --quiet numpy
+      - name: Install runtime dependencies
+        run: |
+          python3 -m pip install --disable-pip-version-check --quiet numpy
+          python3 -m pip install --disable-pip-version-check --quiet -r requirements-mcp.txt
 
       - name: Validate Python syntax
         run: |
           python3 -m py_compile scripts/update_data.py
           python3 -m py_compile scripts/backtest.py
           python3 -m py_compile scripts/train_nn.py
+          python3 -m py_compile mcp_server.py
+          python3 -m py_compile scripts/test_mcp_data.py
 
       - name: Refresh v6 market data
         run: python3 scripts/update_data.py
@@ -47,6 +51,9 @@ jobs:
 
       - name: Train v6 neural early-warning ensemble
         run: python3 scripts/train_nn.py
+
+      - name: Smoke-test MCP search server
+        run: python3 scripts/test_mcp_data.py
 
       - name: Validate v6 payloads
         run: |
