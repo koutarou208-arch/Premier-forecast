@@ -93,11 +93,11 @@ def read_latest():
 def main():
     cfg = json.loads(CONFIG.read_text(encoding="utf-8"))
     failures = []
-    series = core.fetch_all_series(failures)
+    series = core.fetch_all_series(failures, start_date="1990-01-01")
 
     # Historical-only funding proxy for periods before SOFR/IORB history.
     try:
-        ted = core.fetch_series("TEDRATE")
+        ted = core.fetch_series("TEDRATE", start_date="1990-01-01")
     except Exception as e:
         ted = []
         failures.append(f"TEDRATE: {e}")
