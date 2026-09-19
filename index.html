@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#070b12">
-  <title>Global Financial Crisis Watch v2</title>
+  <title>Global Financial Crisis Watch v3</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,10 +13,10 @@
       <div>
         <div class="titleline">
           <p class="eyebrow">GLOBAL FINANCIAL CRISIS WATCH</p>
-          <span class="vtag">v2</span>
+          <span class="vtag">v3</span>
         </div>
         <h1>信用収縮 早期警戒システム</h1>
-        <p class="sub">AI・Private Credit の局所ストレスが、社債・国債・銀行・欧州・エネルギーへ伝播しているかを監視。</p>
+        <p class="sub">現在水準・過去平均との差・悪化速度・複数市場の同時悪化を統合し、信用収縮の伝播を監視。</p>
       </div>
       <div class="hero-actions">
         <div class="updated" id="updated">更新時刻 —</div>
@@ -83,7 +83,7 @@
         <p class="eyebrow">9 RISK CHANNELS</p>
         <h2>詳細モニター</h2>
       </div>
-      <p>各指標を0〜3で判定し、重要度で加重。AI関連の同一案件が複数カードに現れても総合点を過大評価しにくい設計です。</p>
+      <p>自動指標は Level 45% + Deviation 30% + Velocity 25% で0〜100点化。イベント指標は信頼度と経過日数で減衰します。</p>
     </section>
 
     <section class="grid" id="grid"></section>
@@ -111,7 +111,7 @@
 
     <footer>
       <p>Monitoring tool only — 予測・売買推奨ではありません。</p>
-      <p>MOVE未入力時は米10年金利の20日実現ボラを代替指標として使用。Italy–Bundは自動取得時は月次です。</p>
+      <p>v3は欠損を安全扱いせず分母から除外。イベントスコアは信頼度・鮮度で減衰します。</p>
     </footer>
   </main>
 
