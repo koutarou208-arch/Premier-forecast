@@ -41,7 +41,7 @@ mcp = MCPServer(
         "Use get_current_state for the latest system condition, search_crisis_data "
         "for cross-dataset search, get_indicator for one channel, search_history "
         "for historical snapshots, get_backtest_event for historical validation, "
-        "and get_neural_state for v6 neural early-warning diagnostics. Hybrid search uses multilingual embeddings when installed. "
+        "and get_neural_state for v6 neural early-warning diagnostics. Use search_news_intelligence for BM25+vector news search, search_all_intelligence for cross-domain retrieval, get_news_timeseries for event history, and search_event_graph/get_event_neighborhood for graph retrieval. Hybrid search uses multilingual embeddings when installed. "
         "Do not interpret neural scores as calibrated crisis probabilities."
     ),
 )
@@ -101,6 +101,15 @@ def load_neural() -> dict[str, Any]:
 
 def load_agent() -> dict[str, Any]:
     return _read_json(DATA / "agent_state.json", {})
+
+def load_news_status() -> dict[str, Any]:
+    return _read_json(DATA / "news_intelligence_status.json", {})
+
+def load_news_timeseries() -> list[dict[str, Any]]:
+    return _read_json(DATA / "news_timeseries.json", [])
+
+def load_graph_snapshot() -> dict[str, Any]:
+    return _read_json(DATA / "graph_snapshot.json", {"nodes": [], "edges": [], "stats": {}})
 
 def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", str(text or "").strip().lower())
@@ -313,6 +322,13 @@ def get_search_capabilities(probe_embeddings: bool = False) -> dict[str, Any]:
         "embedding_error": _EMBEDDER_ERROR,
         "hybrid_default_weights": {"lexical": 0.45, "semantic": 0.55},
         "semantic_first_weights": {"lexical": 0.15, "semantic": 0.85},
+        "news_corpus_present": (DATA / "news_corpus.jsonl").exists(),
+        "news_vector_dependencies_installed": (
+            importlib.util.find_spec("sqlite_vec") is not None
+            and importlib.util.find_spec("fastembed") is not None
+        ),
+        "graph_snapshot_present": (DATA / "graph_snapshot.json").exists(),
+        "ladybug_installed": importlib.util.find_spec("ladybug") is not None,
     }
 
 @mcp.tool()
@@ -459,6 +475,165 @@ def semantic_search_crisis_data(query: str, limit: int = 10) -> dict[str, Any]:
     )
 
 @mcp.tool()
+def search_news_intelligence(query: str, limit: int = 10) -> dict[str, Any]:
+    """Hybrid BM25 + vector + recency/trust search over collected news intelligence."""
+    try:
+        from intelligence_store import search_news
+        return search_news(query, limit=limit)
+    except Exception as e:
+        return {
+            "available": False,
+            "error": f"{type(e).__name__}: {e}",
+            "setup": "Install requirements-intelligence.txt to enable persistent news vector search.",
+        }
+
+@mcp.tool()
+def search_all_intelligence(query: str, limit: int = 10) -> dict[str, Any]:
+    """Search structured crisis state and the persistent news vector store together."""
+    limit = max(1, min(int(limit), 30))
+    structured = search_crisis_data(query=query, limit=limit)
+    news = search_news_intelligence(query=query, limit=limit)
+
+    merged = []
+    for rank, item in enumerate(structured.get("results", []), start=1):
+        merged.append({
+            "domain": "structured",
+            "rrf_score": round(1.0 / (60 + rank), 8),
+            "rank": rank,
+            "item": item,
+        })
+    if news.get("available", True):
+        for rank, item in enumerate(news.get("results", []), start=1):
+            merged.append({
+                "domain": "news",
+                "rrf_score": round(1.0 / (60 + rank), 8),
+                "rank": rank,
+                "item": item,
+            })
+    merged.sort(key=lambda x: x["rrf_score"], reverse=True)
+    return {
+        "query": query,
+        "mode": "cross-domain RRF(structured hybrid search + news BM25/vector hybrid search)",
+        "structured": structured,
+        "news": news,
+        "merged": merged[:limit],
+    }
+
+@mcp.tool()
+def get_news_timeseries(
+    key: str | None = None,
+    kind: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    days: int = 90,
+) -> dict[str, Any]:
+    """Return internally stored news/event time-series by topic or indicator."""
+    rows = load_news_timeseries()
+    end = date.fromisoformat(end_date) if end_date else date.today()
+    start = date.fromisoformat(start_date) if start_date else end - __import__("datetime").timedelta(days=max(1, int(days)))
+    out = []
+    for row in rows:
+        try:
+            d = date.fromisoformat(row.get("day", ""))
+        except Exception:
+            continue
+        if d < start or d > end:
+            continue
+        if key is not None and _normalize(row.get("key")) != _normalize(key):
+            continue
+        if kind is not None and _normalize(row.get("kind")) != _normalize(kind):
+            continue
+        out.append(row)
+    return {
+        "filters": {"key": key, "kind": kind, "start_date": start.isoformat(), "end_date": end.isoformat()},
+        "count": len(out),
+        "results": out,
+    }
+
+@mcp.tool()
+def search_event_graph(query: str, limit: int = 10) -> dict[str, Any]:
+    """Hybrid lexical/embedding search over knowledge-graph nodes."""
+    graph = load_graph_snapshot()
+    candidates = [
+        {
+            "type": "graph_node",
+            "key": n.get("id"),
+            "title": n.get("label"),
+            "data": n,
+        }
+        for n in graph.get("nodes", [])
+    ]
+    ranked, mode = _hybrid_rank(query, candidates, semantic=True, lexical_weight=0.35, semantic_weight=0.65)
+    return {
+        "query": query,
+        "search_mode": mode,
+        "graph_stats": graph.get("stats", {}),
+        "count": min(len(ranked), max(1, min(int(limit), 50))),
+        "results": [
+            {
+                **item,
+                "match_score": round(score * 100.0, 2),
+                "lexical_score": round(lexical, 2),
+                "semantic_similarity": None if semantic is None else round(semantic, 4),
+            }
+            for score, lexical, semantic, item in ranked[:max(1, min(int(limit), 50))]
+        ],
+    }
+
+@mcp.tool()
+def get_event_neighborhood(event_id: str, hops: int = 1, limit: int = 100) -> dict[str, Any]:
+    """Traverse the persisted knowledge-graph snapshot around an event/node id."""
+    graph = load_graph_snapshot()
+    nodes = {n.get("id"): n for n in graph.get("nodes", [])}
+    target = event_id
+    if target not in nodes:
+        for prefix in ("event:", "historical:", "article:", "topic:", "indicator:", "entity:"):
+            if prefix + event_id in nodes:
+                target = prefix + event_id
+                break
+    if target not in nodes:
+        return {"found": False, "event_id": event_id}
+
+    max_hops = max(1, min(int(hops), 3))
+    max_items = max(1, min(int(limit), 500))
+    frontier = {target}
+    visited = {target}
+    selected_edges = []
+    for _ in range(max_hops):
+        nxt = set()
+        for e in graph.get("edges", []):
+            if e.get("src") in frontier or e.get("dst") in frontier:
+                selected_edges.append(e)
+                other = e.get("dst") if e.get("src") in frontier else e.get("src")
+                if other and other not in visited:
+                    nxt.add(other)
+        visited.update(nxt)
+        frontier = nxt
+        if not frontier or len(visited) >= max_items:
+            break
+    selected_nodes = [nodes[n] for n in list(visited)[:max_items] if n in nodes]
+    allowed = {n["id"] for n in selected_nodes}
+    selected_edges = [e for e in selected_edges if e.get("src") in allowed and e.get("dst") in allowed][:max_items]
+    return {
+        "found": True,
+        "root": nodes[target],
+        "hops": max_hops,
+        "nodes": selected_nodes,
+        "edges": selected_edges,
+    }
+
+@mcp.tool()
+def get_news_intelligence_status() -> dict[str, Any]:
+    """Return news collection, vector DB, time-series, and graph build status."""
+    status = load_news_status()
+    return {
+        "available": bool(status),
+        "status": status,
+        "graph_stats": load_graph_snapshot().get("stats", {}),
+        "timeseries_rows": len(load_news_timeseries()),
+    }
+
+@mcp.tool()
 def search_history(
     start_date: str | None = None,
     end_date: str | None = None,
@@ -594,6 +769,21 @@ def agent_resource() -> str:
 def neural_resource() -> str:
     """v6 neural early-warning payload."""
     return json.dumps(load_neural(), ensure_ascii=False, indent=2)
+
+@mcp.resource("crisis://news/status", mime_type="application/json")
+def news_status_resource() -> str:
+    """News/vector/time-series/graph intelligence build status."""
+    return json.dumps(load_news_status(), ensure_ascii=False, indent=2)
+
+@mcp.resource("crisis://news/timeseries", mime_type="application/json")
+def news_timeseries_resource() -> str:
+    """News-derived topic and indicator time-series."""
+    return json.dumps(load_news_timeseries(), ensure_ascii=False, indent=2)
+
+@mcp.resource("crisis://graph", mime_type="application/json")
+def graph_resource() -> str:
+    """Portable knowledge-graph snapshot."""
+    return json.dumps(load_graph_snapshot(), ensure_ascii=False, indent=2)
 
 @mcp.resource("crisis://history", mime_type="application/json")
 def history_resource() -> str:
