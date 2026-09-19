@@ -1,4 +1,4 @@
-name: Update crisis dashboard v4
+name: Update crisis dashboard v5
 
 on:
   workflow_dispatch:
@@ -9,7 +9,9 @@ on:
       - main
     paths:
       - "scripts/update_data.py"
+      - "scripts/backtest.py"
       - "data/manual.json"
+      - "data/backtest_config.json"
       - ".github/workflows/update-dashboard.yml"
 
 permissions:
@@ -24,33 +26,48 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Validate Python syntax
-        run: python3 -m py_compile scripts/update_data.py
+        run: |
+          python3 -m py_compile scripts/update_data.py
+          python3 -m py_compile scripts/backtest.py
 
-      - name: Refresh v4 market data and history
+      - name: Refresh v5 market data
         run: python3 scripts/update_data.py
 
-      - name: Validate v4 payload
+      - name: Run walk-forward backtest
+        run: python3 scripts/backtest.py
+
+      - name: Validate v5 payloads
         run: |
           python3 - <<'PY'
           import json, pathlib, re
-          h = json.loads(pathlib.Path("data/history.json").read_text())
-          assert isinstance(h, list) and h
+
           latest = pathlib.Path("data/latest.js").read_text()
           m = re.search(r"window.__RISK_DATA__\s*=\s*(\{.*\});\s*$", latest, re.S)
           assert m, "latest.js payload missing"
           payload = json.loads(m.group(1))
-          assert payload["version"] == 4
+          assert payload["version"] == 5
           assert 0 <= payload["coverage_pct"] <= 100
+          assert 0 <= payload["market_coverage_pct"] <= 100
           assert payload["score"] is None or 0 <= payload["score"] <= 100
-          assert "breadth" in payload and "methodology" in payload
+          assert payload["market_score"] is None or 0 <= payload["market_score"] <= 100
           ids = {x["id"] for x in payload["indicators"]}
           assert {"funding_market","banking_stress","leveraged_credit"}.issubset(ids)
-          print("v4 payload validation OK")
+
+          bt = json.loads(pathlib.Path("data/backtest.json").read_text())
+          assert bt["version"] == 5
+          assert bt["method"]["lookahead"] is False
+          assert bt["method"]["market_only"] is True
+          assert len(bt["events"]) >= 4
+          assert bt["range"]["observations"] > 100
+          assert pathlib.Path("data/backtest.js").exists()
+          print("v5 payload + backtest validation OK")
           PY
 
-      - name: Commit refreshed snapshot
+      - name: Commit refreshed snapshot and backtest
         run: |
           if git diff --quiet; then
             echo "No changes"
@@ -58,7 +75,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/latest.js data/history.js data/history.json
-          git commit -m "Update crisis watch v4 snapshot"
+          git add data/latest.js data/history.js data/history.json data/backtest.js data/backtest.json
+          git commit -m "Update crisis watch v5 snapshot and backtest"
           git pull --rebase origin main
           git push
