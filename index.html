@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d16">
+  <title>Global Financial Crisis Watch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">GLOBAL FINANCIAL CRISIS WATCH</p>
+        <h1>信用収縮 早期警戒ダッシュボード</h1>
+        <p class="sub">AI信用・Private Credit・HY・国債市場・欧州ソブリン・エネルギーを横断監視</p>
+      </div>
+      <div class="updated" id="updated">更新時刻 —</div>
+    </header>
+
+    <section class="overview">
+      <div class="score-panel">
+        <div class="score-ring" id="scoreRing">
+          <div><strong id="score">--</strong><span>/100</span></div>
+        </div>
+        <div class="score-copy">
+          <span class="level" id="level">LOADING</span>
+          <h2>Systemic Stress Score</h2>
+          <p id="summary">データを読み込んでいます。</p>
+        </div>
+      </div>
+
+      <div class="legend">
+        <div><i class="dot s0"></i><span>NORMAL</span><b>0–24</b></div>
+        <div><i class="dot s1"></i><span>WATCH</span><b>25–44</b></div>
+        <div><i class="dot s2"></i><span>ELEVATED</span><b>45–64</b></div>
+        <div><i class="dot s3"></i><span>HIGH / CRITICAL</span><b>65–100</b></div>
+      </div>
+    </section>
+
+    <section class="section-head">
+      <div>
+        <p class="eyebrow">8 RISK CHANNELS</p>
+        <h2>警戒指標</h2>
+      </div>
+      <p>各指標 0〜3。総合スコアは8指標の等ウェイト平均を0〜100へ変換。</p>
+    </section>
+
+    <section class="grid" id="grid"></section>
+
+    <section class="method">
+      <div>
+        <p class="eyebrow">INTERPRETATION</p>
+        <h2>見るべきは「同時悪化」</h2>
+      </div>
+      <div class="method-grid">
+        <article>
+          <b>1</b>
+          <h3>株安だけでは危機ではない</h3>
+          <p>HY、銀行在庫、Private Credit、国債市場まで悪化するかを確認。</p>
+        </article>
+        <article>
+          <b>2</b>
+          <h3>信用市場への波及を優先</h3>
+          <p>スプレッド拡大、融資の売れ残り、償還制限が重なるほど警戒度を上げる。</p>
+        </article>
+        <article>
+          <b>3</b>
+          <h3>エネルギーとの複合ショック</h3>
+          <p>信用収縮と原油・ガス高が同時進行すると政策対応の自由度が低下。</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>Monitoring tool only — forecast / investment recommendation ではありません。</p>
+      <p>一部指標はProxyまたは手動入力。カードの MODE と注記を確認してください。</p>
+    </footer>
+  </main>
+
+  <script src="data/latest.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
