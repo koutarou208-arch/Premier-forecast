@@ -60,12 +60,12 @@ ABS_THRESHOLDS = {
     "energy_gas": (5.0, 8.0, 12.0),
 }
 
-FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}&cosd=1990-01-01"
+FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}&cosd={start_date}"
 LOOKBACK = 1260
 
-def fetch_series(series_id):
+def fetch_series(series_id, start_date="2018-01-01"):
     req = urllib.request.Request(
-        FRED_URL.format(series_id=series_id),
+        FRED_URL.format(series_id=series_id, start_date=start_date),
         headers={"User-Agent": "global-financial-crisis-watch-v5/5.0"},
     )
     with urllib.request.urlopen(req, timeout=30) as r:
@@ -82,17 +82,17 @@ def fetch_series(series_id):
         raise RuntimeError(f"No observations for {series_id}")
     return result
 
-def safe_series(name, failures):
+def safe_series(name, failures, start_date="2018-01-01"):
     try:
-        return fetch_series(SERIES[name])
+        return fetch_series(SERIES[name], start_date=start_date)
     except Exception as e:
         failures.append(f"{name}: {e}")
         return []
 
-def fetch_all_series(failures, max_workers=6):
+def fetch_all_series(failures, max_workers=6, start_date="2018-01-01"):
     out = {k: [] for k in SERIES}
     with ThreadPoolExecutor(max_workers=max_workers) as ex:
-        futures = {ex.submit(fetch_series, sid): name for name, sid in SERIES.items()}
+        futures = {ex.submit(fetch_series, sid, start_date): name for name, sid in SERIES.items()}
         for fut in as_completed(futures):
             name = futures[fut]
             try:
