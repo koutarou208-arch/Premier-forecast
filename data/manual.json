@@ -1,18 +1,34 @@
 {
   "data_center_financing": {
-    "score": 1,
-    "note": "Watch: financing markets are active, but repricing/warehouse risk should be monitored. Update from current deal evidence."
+    "score": 2,
+    "as_of": "2026-09-18",
+    "confidence": "high",
+    "note": "Material repricing: $18bn of Project Jupiter loans were quoted around 89-91 cents and broader syndication reportedly stalled. Treat as sector stress, not yet a system-wide freeze.",
+    "source_url": "https://www.reuters.com/business/finance/oracles-18-billion-data-center-debt-under-pressure-ft-reports-2026-09-18/"
   },
   "private_credit": {
-    "score": 1,
-    "note": "Watch: monitor redemption requests, gates, NAV marks and lender concentration."
+    "score": 2,
+    "as_of": "2026-09-18",
+    "confidence": "high",
+    "note": "Morgan Stanley North Haven PIF saw 11.4% redemption requests versus a 5% repurchase limit. Elevated liquidity pressure, though the backlog may be stabilizing.",
+    "source_url": "https://www.reuters.com/markets/wealth/morgan-stanley-private-credit-fund-redemptions-remain-elevated-third-quarter-2026-09-18/"
   },
   "bank_ai_inventory": {
-    "score": 1,
-    "note": "Watch: monitor underwritten-but-unsold AI/data-center loans and syndication discounts."
+    "score": 2,
+    "as_of": "2026-09-18",
+    "confidence": "medium",
+    "note": "Banks reportedly retained more Oracle-linked project debt than planned after distribution weakened. This overlaps with the data-center event, so v2 caps its portfolio weight.",
+    "source_url": "https://www.reuters.com/business/finance/oracles-18-billion-data-center-debt-under-pressure-ft-reports-2026-09-18/"
   },
-  "europe_sovereign_spread_bps": {
-    "value": 140,
-    "note": "Manual placeholder. Replace with a current Italy 10Y minus Germany 10Y spread or another chosen euro-area sovereign stress benchmark."
+  "move_index": {
+    "value": null,
+    "as_of": null,
+    "note": "Optional manual MOVE index override. Leave null to use the automatic 20-day realized Treasury-yield volatility proxy.",
+    "source_url": "https://finance.yahoo.com/quote/%5EMOVE/"
+  },
+  "europe_daily_spread_bps": {
+    "value": null,
+    "as_of": null,
+    "note": "Optional current Italy-Bund 10Y spread override. Leave null to use the automatic monthly OECD/FRED Italy minus Germany 10Y spread."
   }
 }
