@@ -1,6 +1,6 @@
 window.__RISK_DATA__ = {
   "version": 6,
-  "updated_at": "2026-09-19T15:54:38.589273Z",
+  "updated_at": "2026-09-19T16:01:40.517175Z",
   "score": 23.9,
   "raw_score": 23.9,
   "market_score": 14.5,
@@ -62,6 +62,36 @@ window.__RISK_DATA__ = {
     "data_center": 6,
     "private_credit": 8,
     "bank_ai": 5
+  },
+  "active_model_config": {
+    "version": 1,
+    "market_weights": {
+      "ig_credit": 10,
+      "hy_credit": 14,
+      "leveraged_credit": 10,
+      "financial_stress": 8,
+      "rates_liquidity": 8,
+      "funding_market": 10,
+      "banking_stress": 8,
+      "europe": 6,
+      "energy": 7
+    },
+    "structural_weights": {
+      "data_center": 6,
+      "private_credit": 8,
+      "bank_ai": 5
+    },
+    "hybrid": {
+      "rule_weight": 0.6,
+      "nn_weight": 0.4
+    },
+    "source": "self_improvement_agent",
+    "last_agent_change": {
+      "at": "2026-09-19T16:00:57.446038Z",
+      "description": "NN weight 0.35 -> 0.40",
+      "baseline_objective": 0.857334,
+      "candidate_objective": 0.870146
+    }
   },
   "methodology": {
     "auto_components": {

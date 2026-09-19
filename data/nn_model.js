@@ -9,6 +9,40 @@ window.__NN_DATA__ = {
   ],
   "activation": "tanh/tanh/sigmoid",
   "ensemble_size": 5,
+  "active_model_config": {
+    "version": 1,
+    "market_weights": {
+      "ig_credit": 10,
+      "hy_credit": 14,
+      "leveraged_credit": 10,
+      "financial_stress": 8,
+      "rates_liquidity": 8,
+      "funding_market": 10,
+      "banking_stress": 8,
+      "europe": 6,
+      "energy": 7
+    },
+    "structural_weights": {
+      "data_center": 6,
+      "private_credit": 8,
+      "bank_ai": 5
+    },
+    "hybrid": {
+      "rule_weight": 0.6,
+      "nn_weight": 0.4
+    },
+    "source": "self_improvement_agent",
+    "last_agent_change": {
+      "at": "2026-09-19T16:00:57.446038Z",
+      "description": "NN weight 0.35 -> 0.40",
+      "baseline_objective": 0.857334,
+      "candidate_objective": 0.870146
+    }
+  },
+  "hybrid_mix": {
+    "rule_weight": 0.6,
+    "nn_weight": 0.4
+  },
   "target": "inside labeled stress window or within 60 calendar days before its start",
   "temporal_split": {
     "train": "<= 2019-12-31",
@@ -144,7 +178,7 @@ window.__NN_DATA__ = {
     "historical_comparable_nn_score": 13.7,
     "historical_comparable_uncertainty_std": 12.95,
     "rule_market_score": 14.5,
-    "hybrid_market_score": 15.9,
+    "hybrid_market_score": 16.1,
     "alert": false,
     "threshold_score": 72.0,
     "top_local_sensitivities": [
