@@ -1,6 +1,7 @@
 (() => {
   const data = window.__RISK_DATA__;
   const history = window.__RISK_HISTORY__ || [];
+  const backtest = window.__BACKTEST_DATA__ || null;
   if (!data) return;
 
   const isV3 = Number(data.version || 0) >= 3;
@@ -163,6 +164,66 @@
   });
 
   renderHistory(history);
+  renderBacktest(backtest);
+
+
+  function renderBacktest(bt){
+    const currentEl = document.getElementById("btCurrent");
+    if (!currentEl) return;
+    if (!bt) {
+      currentEl.textContent = "pending";
+      document.getElementById("btPercentile").textContent = "pending";
+      document.getElementById("btOutsideRate").textContent = "pending";
+      document.getElementById("btP95").textContent = "pending";
+      document.getElementById("backtestChart").innerHTML = '<div style="padding:55px 18px;color:var(--muted);font-size:12px">v5 backtest data is being generated.</div>';
+      return;
+    }
+
+    const cur = bt.current || {};
+    const dist = bt.distribution || {};
+    const audit = bt.alert_audit || {};
+    const outside = audit.outside_labeled_windows_rate_pct || {};
+
+    currentEl.textContent = cur.market_score == null ? "—" : Number(cur.market_score).toFixed(1);
+    document.getElementById("btPercentile").textContent = cur.percentile_outside_labeled_windows == null ? "—" : Number(cur.percentile_outside_labeled_windows).toFixed(1)+"%";
+    document.getElementById("btOutsideRate").textContent = outside["45"] == null ? "—" : Number(outside["45"]).toFixed(1)+"%";
+    document.getElementById("btP95").textContent = dist.outside_windows_p95 == null ? "—" : Number(dist.outside_windows_p95).toFixed(1);
+
+    const rows = (bt.series || []).filter(r => r.score != null);
+    const box = document.getElementById("backtestChart");
+    if (rows.length) {
+      const w=1000,h=200,pad=16;
+      const xs=rows.map((_,i)=>rows.length===1?w/2:pad+i*(w-2*pad)/(rows.length-1));
+      const ys=rows.map(r=>h-pad-(clamp(r.score)/100)*(h-2*pad));
+      let path="";
+      xs.forEach((x,i)=>{path+=(i?" L ":"M ")+x.toFixed(1)+" "+ys[i].toFixed(1)});
+      const eventMarks=(bt.events || []).map(ev=>{
+        if(!ev.max_score_date) return "";
+        const idx=rows.findIndex(r=>r.date>=ev.max_score_date);
+        if(idx<0) return "";
+        return '<circle cx="'+xs[idx]+'" cy="'+ys[idx]+'" r="5" fill="'+scoreColor(ev.max_score)+'"><title>'+esc(ev.name)+' '+esc(ev.max_score)+'</title></circle>';
+      }).join("");
+      box.innerHTML='<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none" aria-label="walk forward backtest">'+
+        '<line x1="0" y1="'+(h-pad-(45/100)*(h-2*pad))+'" x2="'+w+'" y2="'+(h-pad-(45/100)*(h-2*pad))+'" stroke="#ff8b4c" stroke-width="1" stroke-dasharray="6 7" vector-effect="non-scaling-stroke"/>'+
+        '<line x1="0" y1="'+(h-pad-(65/100)*(h-2*pad))+'" x2="'+w+'" y2="'+(h-pad-(65/100)*(h-2*pad))+'" stroke="#ff4f6d" stroke-width="1" stroke-dasharray="6 7" vector-effect="non-scaling-stroke"/>'+
+        '<path d="'+path+'" fill="none" stroke="#72a7ff" stroke-width="3" vector-effect="non-scaling-stroke"/>'+eventMarks+'</svg>';
+    } else {
+      box.innerHTML='<div style="padding:55px 18px;color:var(--muted);font-size:12px">No backtest observations.</div>';
+    }
+
+    const body=document.getElementById("backtestEvents");
+    (bt.events || []).forEach(ev=>{
+      const tr=document.createElement("tr");
+      const lead=ev.lead_days_elevated_vs_reference;
+      tr.innerHTML='<td><strong>'+esc(ev.name)+'</strong><small>'+esc(ev.start)+' → '+esc(ev.end)+'</small></td>'+
+        '<td>'+esc(ev.group)+'</td>'+
+        '<td>'+ (ev.max_score==null?"—":Number(ev.max_score).toFixed(1)) +'<small>'+esc(ev.max_score_date||"—")+'</small></td>'+
+        '<td>'+esc(ev.max_stage==null?"—":ev.max_stage)+'</td>'+
+        '<td>'+esc(ev.first_elevated||"—")+'</td>'+
+        '<td>'+ (lead==null?"—":(lead>=0?lead+"d early":Math.abs(lead)+"d after")) +'</td>';
+      body.appendChild(tr);
+    });
+  }
 
   function renderHistory(rows){
     const box = document.getElementById("historyChart");
