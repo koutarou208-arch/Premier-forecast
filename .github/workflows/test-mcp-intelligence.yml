@@ -1,0 +1,44 @@
+name: Test MCP intelligence retrieval
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "mcp_server.py"
+      - "intelligence_store.py"
+      - "scripts/test_mcp_intelligence.py"
+      - "requirements-intelligence.txt"
+      - ".github/workflows/test-mcp-intelligence.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-mcp-intelligence
+  cancel-in-progress: true
+
+jobs:
+  retrieval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache FastEmbed model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/fastembed
+          key: fastembed-multilingual-minilm-${{ runner.os }}-v1
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --disable-pip-version-check --quiet -r requirements-intelligence.txt
+          python3 -m pip install --disable-pip-version-check --quiet -r requirements-mcp.txt
+
+      - name: Test MCP retrieval from portable state
+        env:
+          MCP_EMBEDDINGS: "on"
+          MCP_EMBEDDING_MODEL: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          FASTEMBED_CACHE_PATH: ~/.cache/fastembed
+        run: python3 scripts/test_mcp_intelligence.py
