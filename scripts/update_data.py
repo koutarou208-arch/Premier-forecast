@@ -6,6 +6,7 @@ import math
 import pathlib
 import statistics
 import urllib.request
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, date
 
@@ -63,13 +64,25 @@ ABS_THRESHOLDS = {
 FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}&cosd={start_date}"
 LOOKBACK = 1260
 
-def fetch_series(series_id, start_date="2018-01-01"):
-    req = urllib.request.Request(
-        FRED_URL.format(series_id=series_id, start_date=start_date),
-        headers={"User-Agent": "global-financial-crisis-watch-v5/5.0"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as r:
-        text = r.read().decode("utf-8")
+def fetch_series(series_id, start_date="2018-01-01", attempts=3):
+    url = FRED_URL.format(series_id=series_id, start_date=start_date)
+    last_error = None
+    text = None
+    for attempt in range(attempts):
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={"User-Agent": "global-financial-crisis-watch-v5/5.0"},
+            )
+            with urllib.request.urlopen(req, timeout=20) as r:
+                text = r.read().decode("utf-8")
+            break
+        except Exception as e:
+            last_error = e
+            if attempt + 1 < attempts:
+                time.sleep(0.6 * (attempt + 1))
+    if text is None:
+        raise last_error or RuntimeError(f"Failed to fetch {series_id}")
     rows = list(csv.reader(io.StringIO(text)))
     result = []
     for row in rows[1:]:
@@ -89,7 +102,7 @@ def safe_series(name, failures, start_date="2018-01-01"):
         failures.append(f"{name}: {e}")
         return []
 
-def fetch_all_series(failures, max_workers=6, start_date="2018-01-01"):
+def fetch_all_series(failures, max_workers=3, start_date="2018-01-01"):
     out = {k: [] for k in SERIES}
     with ThreadPoolExecutor(max_workers=max_workers) as ex:
         futures = {ex.submit(fetch_series, sid, start_date): name for name, sid in SERIES.items()}
