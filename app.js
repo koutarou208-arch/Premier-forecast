@@ -3,6 +3,7 @@
   const history = window.__RISK_HISTORY__ || [];
   const backtest = window.__BACKTEST_DATA__ || null;
   const neural = window.__NN_DATA__ || null;
+  const agent = window.__AGENT_STATE__ || null;
   if (!data) return;
 
   const isV3 = Number(data.version || 0) >= 3;
@@ -165,9 +166,49 @@
   });
 
   renderHistory(history);
+  renderAgent(agent);
   renderNeural(neural);
   renderBacktest(backtest);
 
+
+  function renderAgent(a){
+    const decision=document.getElementById("agentDecision");
+    if(!decision) return;
+    if(!a){
+      decision.textContent="pending";
+      document.getElementById("agentCandidates").textContent="—";
+      document.getElementById("agentObjective").textContent="—";
+      document.getElementById("agentFpr").textContent="—";
+      document.getElementById("agentChange").textContent="No agent cycle yet.";
+      return;
+    }
+    decision.textContent=(a.decision||"—").toUpperCase();
+    decision.style.color=a.decision==="accepted"?"var(--s0)":a.decision==="reject_all"?"var(--s1)":"var(--muted)";
+    document.getElementById("agentCandidates").textContent=a.candidate_count==null?"—":String(a.candidate_count);
+
+    const base=a.baseline||{};
+    const accepted=a.accepted_change||null;
+    const after=accepted&&accepted.metrics?accepted.metrics:null;
+    const beforeObj=base.objective;
+    const afterObj=after?after.objective:beforeObj;
+    document.getElementById("agentObjective").textContent=
+      beforeObj==null?"—":Number(beforeObj).toFixed(3)+" → "+Number(afterObj).toFixed(3);
+
+    const beforeFpr=base.false_positive_rate;
+    const afterFpr=after?after.false_positive_rate:beforeFpr;
+    document.getElementById("agentFpr").textContent=
+      beforeFpr==null?"—":(Number(beforeFpr)*100).toFixed(1)+"% → "+(Number(afterFpr)*100).toFixed(1)+"%";
+
+    const box=document.getElementById("agentChange");
+    if(accepted){
+      const lines=(accepted.changes||[]).map(x =>
+        '<span><b>'+esc(x.field)+'</b> '+esc(x.from)+' → '+esc(x.to)+'</span>'
+      ).join("");
+      box.innerHTML='<strong>'+esc(accepted.description||"accepted")+'</strong>'+lines;
+    }else{
+      box.innerHTML='<strong>No change accepted</strong><span>Existing configuration retained.</span>';
+    }
+  }
 
   function renderNeural(nn){
     const scoreEl = document.getElementById("nnScore");
