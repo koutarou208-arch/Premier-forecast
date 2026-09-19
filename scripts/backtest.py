@@ -35,6 +35,7 @@ PROXY_SERIES = {
     "germany10": "IRLTLT01DEM156N",
     "sofr": "SOFR",
     "iorb": "IORB",
+    "ioer": "IOER",
     "cpff": "CPFF",
     "ted": "TEDRATE",
 }
@@ -141,10 +142,12 @@ def main():
 
     rv_full = core.realized_yield_vol_series(series["dgs10"], 20)
     eu_full = core.common_spread_series(series["italy10"], series["germany10"])
-    funding_full = core.common_spread_series(series["sofr"], series["iorb"])
+    funding_iorb_full = core.common_spread_series(series["sofr"], series["iorb"])
+    funding_ioer_full = core.common_spread_series(series["sofr"], series["ioer"])
     rv_dates = build_index(rv_full)
     eu_dates = build_index(eu_full)
-    funding_dates = build_index(funding_full)
+    funding_iorb_dates = build_index(funding_iorb_full)
+    funding_ioer_dates = build_index(funding_ioer_full)
 
     # Weekly NFCI risk series is the stable historical anchor.
     # Add daily Treasury dates around labeled episodes so short funding shocks are not lost.
@@ -173,7 +176,8 @@ def main():
         ted_s = cut(series["ted"], indices["ted"], day)
         rv_s = cut(rv_full, rv_dates, day)
         eu_s = cut(eu_full, eu_dates, day)
-        funding_s = cut(funding_full, funding_dates, day)
+        funding_iorb_s = cut(funding_iorb_full, funding_iorb_dates, day)
+        funding_ioer_s = cut(funding_ioer_full, funding_ioer_dates, day)
 
         baa_m = metric(baa_s, (2.50, 4.00, 6.00), "daily")
         credit_m = metric(credit_s, (0.00, 0.75, 1.50), "weekly")
@@ -186,11 +190,15 @@ def main():
         oil_m = metric(wti_s, core.ABS_THRESHOLDS["energy_oil"], "daily")
         gas_m = metric(gas_s, core.ABS_THRESHOLDS["energy_gas"], "daily")
 
-        _, funding_now = core.latest(funding_s)
+        _, funding_iorb_now = core.latest(funding_iorb_s)
+        _, funding_ioer_now = core.latest(funding_ioer_s)
         _, ted_now = core.latest(ted_s)
-        if funding_now is not None:
-            funding_m = metric(funding_s, core.ABS_THRESHOLDS["funding_market"], "daily")
+        if funding_iorb_now is not None:
+            funding_m = metric(funding_iorb_s, core.ABS_THRESHOLDS["funding_market"], "daily")
             funding_source = "SOFR-IORB"
+        elif funding_ioer_now is not None:
+            funding_m = metric(funding_ioer_s, core.ABS_THRESHOLDS["funding_market"], "daily")
+            funding_source = "SOFR-IOER"
         elif ted_now is not None:
             funding_m = metric(ted_s, (0.40, 1.00, 2.00), "daily")
             funding_source = "TED legacy"
@@ -298,7 +306,7 @@ def main():
                 "hy_credit": "NFCICREDIT",
                 "leveraged_credit": "NFCIRISK"
             },
-            "historical_funding_fallback": "TEDRATE before SOFR-IORB history",
+            "historical_funding_fallback": "SOFR-IOER before IORB; TEDRATE before SOFR history",
             "manual_event_channels_in_backtest": False,
             "weights": {k: core.WEIGHTS[k] for k in MARKET_KEYS},
         },
