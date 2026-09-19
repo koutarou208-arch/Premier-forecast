@@ -7,6 +7,7 @@ Optional transport: streamable-http
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import pathlib
@@ -19,6 +20,15 @@ from mcp.server import MCPServer
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA = ROOT / "data"
 
+EMBEDDING_MODEL = os.getenv(
+    "MCP_EMBEDDING_MODEL",
+    "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+)
+_EMBEDDER = None
+_EMBEDDER_ERROR = None
+_EMBED_CACHE = {"signature": None, "vectors": None}
+
+
 mcp = MCPServer(
     "Global Financial Crisis Watch",
     instructions=(
@@ -26,7 +36,7 @@ mcp = MCPServer(
         "Use get_current_state for the latest system condition, search_crisis_data "
         "for cross-dataset search, get_indicator for one channel, search_history "
         "for historical snapshots, get_backtest_event for historical validation, "
-        "and get_neural_state for v6 neural early-warning diagnostics. "
+        "and get_neural_state for v6 neural early-warning diagnostics. Hybrid search uses multilingual embeddings when installed. "
         "Do not interpret neural scores as calibrated crisis probabilities."
     ),
 )
@@ -113,6 +123,154 @@ def _search_score(query: str, obj: Any) -> float:
             score += min(3.0, text.count(term) * 0.25)
     return score
 
+def _embedding_mode() -> str:
+    return _normalize(os.getenv("MCP_EMBEDDINGS", "auto"))
+
+def _get_embedder():
+    global _EMBEDDER, _EMBEDDER_ERROR
+    mode = _embedding_mode()
+    if mode in {"0", "false", "off", "disabled", "none"}:
+        _EMBEDDER_ERROR = "disabled by MCP_EMBEDDINGS"
+        return None
+    if _EMBEDDER is not None:
+        return _EMBEDDER
+    if _EMBEDDER_ERROR is not None and mode != "on":
+        return None
+    try:
+        from sentence_transformers import SentenceTransformer
+        _EMBEDDER = SentenceTransformer(EMBEDDING_MODEL)
+        _EMBEDDER_ERROR = None
+        return _EMBEDDER
+    except Exception as e:
+        _EMBEDDER_ERROR = f"{type(e).__name__}: {e}"
+        if mode == "on":
+            raise
+        return None
+
+def _semantic_text(item: dict[str, Any]) -> str:
+    title = str(item.get("title") or "")
+    kind = str(item.get("type") or "")
+    key = str(item.get("key") or "")
+    data = item.get("data") or {}
+    body = json.dumps(data, ensure_ascii=False, sort_keys=True)
+    return f"type: {kind}\nkey: {key}\ntitle: {title}\ndata: {body}"
+
+def _build_search_candidates() -> list[dict[str, Any]]:
+    current = load_current()
+    backtest = load_backtest()
+    neural = load_neural()
+    history = load_history()
+    candidates: list[dict[str, Any]] = []
+
+    for x in current.get("indicators", []):
+        candidates.append({
+            "type": "indicator",
+            "key": x.get("id"),
+            "title": x.get("name"),
+            "data": _indicator_summary(x),
+        })
+    for p in current.get("pillars", []):
+        candidates.append({
+            "type": "pillar",
+            "key": p.get("name"),
+            "title": p.get("name"),
+            "data": p,
+        })
+    for ev in backtest.get("events", []):
+        candidates.append({
+            "type": "backtest_event",
+            "key": ev.get("id"),
+            "title": ev.get("name"),
+            "data": ev,
+        })
+    nn_current = neural.get("current", {}) if neural else {}
+    if nn_current:
+        candidates.append({
+            "type": "neural_current",
+            "key": "neural_current",
+            "title": "Neural Early Warning",
+            "data": nn_current,
+        })
+    agent = load_agent()
+    if agent:
+        candidates.append({
+            "type": "self_improvement_agent",
+            "key": "agent_state",
+            "title": "Self Improvement Agent",
+            "data": agent,
+        })
+    for ev in neural.get("event_evaluation", []) if neural else []:
+        candidates.append({
+            "type": "neural_event",
+            "key": ev.get("id"),
+            "title": ev.get("name"),
+            "data": ev,
+        })
+    for row in history[-90:]:
+        candidates.append({
+            "type": "history",
+            "key": row.get("date"),
+            "title": f"History {row.get('date')}",
+            "data": row,
+        })
+    return candidates
+
+def _semantic_scores(query: str, candidates: list[dict[str, Any]]) -> list[float] | None:
+    model = _get_embedder()
+    if model is None:
+        return None
+
+    texts = [_semantic_text(x) for x in candidates]
+    signature = hashlib.sha256("\n\x1e\n".join(texts).encode("utf-8")).hexdigest()
+    if _EMBED_CACHE["signature"] != signature or _EMBED_CACHE["vectors"] is None:
+        _EMBED_CACHE["vectors"] = model.encode(
+            texts,
+            normalize_embeddings=True,
+            convert_to_numpy=True,
+            show_progress_bar=False,
+        )
+        _EMBED_CACHE["signature"] = signature
+
+    q = model.encode(
+        [query],
+        normalize_embeddings=True,
+        convert_to_numpy=True,
+        show_progress_bar=False,
+    )[0]
+    sims = _EMBED_CACHE["vectors"] @ q
+    return [float(x) for x in sims]
+
+def _hybrid_rank(
+    query: str,
+    candidates: list[dict[str, Any]],
+    semantic: bool = True,
+    lexical_weight: float = 0.45,
+    semantic_weight: float = 0.55,
+) -> tuple[list[tuple[float, float, float | None, dict[str, Any]]], str]:
+    lexical_weight = max(0.0, float(lexical_weight))
+    semantic_weight = max(0.0, float(semantic_weight))
+    total = lexical_weight + semantic_weight
+    if total <= 0:
+        lexical_weight, semantic_weight, total = 1.0, 0.0, 1.0
+    lexical_weight /= total
+    semantic_weight /= total
+
+    semantic_scores = _semantic_scores(query, candidates) if semantic else None
+    mode = "hybrid" if semantic_scores is not None else "lexical"
+    ranked = []
+    for i, item in enumerate(candidates):
+        lexical_raw = _search_score(query, item)
+        lexical_norm = min(1.0, lexical_raw / 12.0)
+        semantic_raw = None if semantic_scores is None else semantic_scores[i]
+        semantic_norm = 0.0 if semantic_raw is None else max(0.0, min(1.0, semantic_raw))
+        final = lexical_norm if semantic_scores is None else (
+            lexical_weight * lexical_norm + semantic_weight * semantic_norm
+        )
+        if final > 0:
+            ranked.append((final, lexical_raw, semantic_raw, item))
+    ranked.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    return ranked, mode
+
 def _indicator_summary(item: dict[str, Any]) -> dict[str, Any]:
     return {
         "id": item.get("id"),
@@ -180,6 +338,26 @@ def get_indicator(name: str) -> dict[str, Any]:
         reverse=True,
     )
     if not ranked or ranked[0][0] <= 0:
+        candidates = [
+            {
+                "type": "indicator",
+                "key": x.get("id"),
+                "title": x.get("name"),
+                "data": _indicator_summary(x),
+            }
+            for x in indicators
+        ]
+        semantic_scores = _semantic_scores(name, candidates)
+        if semantic_scores is not None and semantic_scores:
+            best_i = max(range(len(semantic_scores)), key=lambda i: semantic_scores[i])
+            if semantic_scores[best_i] >= 0.30:
+                return {
+                    "found": True,
+                    "query": name,
+                    "match_mode": "embedding",
+                    "semantic_similarity": round(semantic_scores[best_i], 4),
+                    "indicator": candidates[best_i]["data"],
+                }
         return {
             "found": False,
             "query": name,
@@ -197,89 +375,60 @@ def get_indicator(name: str) -> dict[str, Any]:
     }
 
 @mcp.tool()
-def search_crisis_data(query: str, limit: int = 10) -> dict[str, Any]:
-    """Search current indicators, backtest events, neural diagnostics and recent history."""
+def search_crisis_data(
+    query: str,
+    limit: int = 10,
+    semantic: bool = True,
+    lexical_weight: float = 0.45,
+    semantic_weight: float = 0.55,
+) -> dict[str, Any]:
+    """Hybrid search across current, historical, neural and agent data.
+
+    Uses exact/alias lexical matching plus multilingual sentence embeddings when
+    the optional embedding dependency is installed. Falls back to lexical search
+    without failing the MCP server.
+    """
     limit = max(1, min(int(limit), 50))
-    current = load_current()
-    backtest = load_backtest()
-    neural = load_neural()
-    history = load_history()
-
-    candidates: list[dict[str, Any]] = []
-
-    for x in current.get("indicators", []):
-        candidates.append({
-            "type": "indicator",
-            "key": x.get("id"),
-            "title": x.get("name"),
-            "data": _indicator_summary(x),
-        })
-
-    for p in current.get("pillars", []):
-        candidates.append({
-            "type": "pillar",
-            "key": p.get("name"),
-            "title": p.get("name"),
-            "data": p,
-        })
-
-    for ev in backtest.get("events", []):
-        candidates.append({
-            "type": "backtest_event",
-            "key": ev.get("id"),
-            "title": ev.get("name"),
-            "data": ev,
-        })
-
-    nn_current = neural.get("current", {}) if neural else {}
-    if nn_current:
-        candidates.append({
-            "type": "neural_current",
-            "key": "neural_current",
-            "title": "Neural Early Warning",
-            "data": nn_current,
-        })
-
-    agent = load_agent()
-    if agent:
-        candidates.append({
-            "type": "self_improvement_agent",
-            "key": "agent_state",
-            "title": "Self Improvement Agent",
-            "data": agent,
-        })
-    for ev in neural.get("event_evaluation", []) if neural else []:
-        candidates.append({
-            "type": "neural_event",
-            "key": ev.get("id"),
-            "title": ev.get("name"),
-            "data": ev,
-        })
-
-    for row in history[-90:]:
-        candidates.append({
-            "type": "history",
-            "key": row.get("date"),
-            "title": f"History {row.get('date')}",
-            "data": row,
-        })
-
-    ranked = []
-    for item in candidates:
-        s = _search_score(query, item)
-        if s > 0:
-            ranked.append((s, item))
-    ranked.sort(key=lambda p: p[0], reverse=True)
-
+    candidates = _build_search_candidates()
+    ranked, mode = _hybrid_rank(
+        query,
+        candidates,
+        semantic=semantic,
+        lexical_weight=lexical_weight,
+        semantic_weight=semantic_weight,
+    )
     return {
         "query": query,
         "terms": _query_terms(query),
+        "search_mode": mode,
+        "embedding_model": EMBEDDING_MODEL if mode == "hybrid" else None,
+        "embedding_error": _EMBEDDER_ERROR if mode != "hybrid" and semantic else None,
+        "weights": {
+            "lexical": lexical_weight,
+            "semantic": semantic_weight if mode == "hybrid" else 0.0,
+        },
         "count": min(len(ranked), limit),
         "results": [
-            {**item, "match_score": round(score, 2)}
-            for score, item in ranked[:limit]
+            {
+                **item,
+                "match_score": round(final * 100.0, 2),
+                "lexical_score": round(lexical_raw, 2),
+                "semantic_similarity": None if semantic_raw is None else round(semantic_raw, 4),
+            }
+            for final, lexical_raw, semantic_raw, item in ranked[:limit]
         ],
     }
+
+@mcp.tool()
+def semantic_search_crisis_data(query: str, limit: int = 10) -> dict[str, Any]:
+    """Embedding-first semantic search with Japanese/English multilingual matching."""
+    return search_crisis_data(
+        query=query,
+        limit=limit,
+        semantic=True,
+        lexical_weight=0.15,
+        semantic_weight=0.85,
+    )
 
 @mcp.tool()
 def search_history(
