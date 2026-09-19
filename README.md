@@ -164,6 +164,60 @@ The neural model therefore learns from normalized channel stress states rather t
 - `data/nn_model.json` / `data/nn_model.js` — NN model, metrics and current predictions
 - `data/manual.json` — MOVE / CDX / CLO / Bank CDS / BDC overrides
 
+## Guardrailed self-improvement agent
+
+The repository includes an autonomous validation/improvement loop:
+
+`scripts/self_improve_agent.py`
+
+The agent does **not** rewrite Python code, crisis labels, or historical validation windows. It can only make small bounded changes to:
+
+- market-channel weights
+- Rule/NN hybrid mixing ratio
+
+Cycle:
+
+1. Observe the current backtest, NN ensemble and active model config.
+2. Generate small candidate configurations.
+3. Evaluate candidates using calibration data through 2022-12-31 only.
+4. Check objective improvement, false-positive regression, event recall and event-peak regression.
+5. Accept at most one candidate.
+6. Save an audit record.
+7. Push an accepted `data/model_config.json` change, which triggers a full production/backtest/NN recomputation.
+
+### Holdout isolation
+
+The 2023+ holdout is **report-only**.
+
+It is explicitly excluded from candidate ranking and acceptance. The agent records holdout results after the decision so model drift remains visible without tuning directly to the holdout.
+
+### Current guardrails
+
+- one accepted change per cycle
+- market weights move only 1 point at a time
+- total market weight remains 81
+- Hybrid NN share changes by at most 5 percentage points per cycle
+- minimum calibration objective improvement required
+- maximum allowed false-positive-rate deterioration
+- minimum event recall
+- maximum allowed regression in any calibration-event peak
+- code rewrite disabled
+- label rewrite disabled
+- backtest-window rewrite disabled
+
+### Schedule
+
+`.github/workflows/self-improve-agent.yml` runs weekly at **Sunday 08:00 JST** and can also be launched manually.
+
+Generated audit files:
+
+- `data/model_config.json` — active model configuration
+- `data/agent_policy.json` — immutable guardrail policy unless changed by a human
+- `data/agent_state.json` / `data/agent_state.js` — latest cycle
+- `data/agent_history.json` — accepted/rejected cycle history
+
+The dashboard shows the latest decision, candidate count, objective change, calibration false-positive rate and accepted configuration change.
+
 ## MCP search server
 
 The repository now includes an official MCP Python SDK v2 server: `mcp_server.py`.
@@ -176,6 +230,7 @@ It exposes these tools:
 - `search_history(...)` — filter saved daily history by date / score / stage
 - `get_backtest_event(name)` — retrieve one historical validation episode
 - `get_neural_state(include_models=False)` — v6 neural ensemble diagnostics
+- `get_self_improvement_state()` — latest agent decision, guardrails, candidates and active configuration
 
 Resources:
 
@@ -183,6 +238,7 @@ Resources:
 - `crisis://history`
 - `crisis://backtest`
 - `crisis://neural`
+- `crisis://agent`
 
 ### Install
 
