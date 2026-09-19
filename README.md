@@ -164,6 +164,100 @@ The neural model therefore learns from normalized channel stress states rather t
 - `data/nn_model.json` / `data/nn_model.js` — NN model, metrics and current predictions
 - `data/manual.json` — MOVE / CDX / CLO / Bank CDS / BDC overrides
 
+## MCP search server
+
+The repository now includes an official MCP Python SDK v2 server: `mcp_server.py`.
+
+It exposes these tools:
+
+- `get_current_state()` — latest Systemic / Market / Stage / NN state
+- `get_indicator(name)` — fuzzy/alias lookup for one risk channel
+- `search_crisis_data(query, limit)` — cross-search current indicators, pillars, backtest events, neural events and recent history
+- `search_history(...)` — filter saved daily history by date / score / stage
+- `get_backtest_event(name)` — retrieve one historical validation episode
+- `get_neural_state(include_models=False)` — v6 neural ensemble diagnostics
+
+Resources:
+
+- `crisis://current`
+- `crisis://history`
+- `crisis://backtest`
+- `crisis://neural`
+
+### Install
+
+```bash
+python3 -m pip install -r requirements-mcp.txt
+```
+
+The project pins the official Python SDK to MCP v2:
+
+```
+mcp[cli]>=2,<3
+```
+
+### Local stdio mode
+
+Default:
+
+```bash
+python3 mcp_server.py
+```
+
+Use `mcp.example.json` as a client configuration template. Replace the absolute path with the path to this repository.
+
+Example client entry:
+
+```json
+{
+  "mcpServers": {
+    "global-financial-crisis-watch": {
+      "command": "python3",
+      "args": ["/ABSOLUTE/PATH/TO/Premier-forecast/mcp_server.py"],
+      "env": {
+        "MCP_TRANSPORT": "stdio"
+      }
+    }
+  }
+}
+```
+
+### MCP Inspector
+
+```bash
+mcp dev mcp_server.py
+```
+
+### Streamable HTTP
+
+For a local HTTP endpoint:
+
+```bash
+MCP_TRANSPORT=streamable-http MCP_HOST=127.0.0.1 MCP_PORT=8000 python3 mcp_server.py
+```
+
+Connect the MCP client to:
+
+```
+http://127.0.0.1:8000/mcp
+```
+
+The HTTP transport should be deployed behind proper authentication and transport-security configuration before exposure to the public internet.
+
+### Search examples
+
+Ask the MCP client to:
+
+- 「現在の金融危機スコアを取得」
+- 「repo市場の指標を検索」
+- 「銀行ストレスを検索」
+- 「Private Creditに関係するデータを検索」
+- 「Stage 2以上の履歴を検索」
+- 「2008年金融危機のバックテスト結果を取得」
+- 「現在のNNスコアとholdout AUCを取得」
+
+The search layer includes Japanese/English aliases for common concepts such as Repo, Banking, AI/Data Center, Private Credit, Credit, Energy and Europe.
+
 ## GitHub Actions
 
 Run manually:
