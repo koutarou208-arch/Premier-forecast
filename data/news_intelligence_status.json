@@ -1,4 +1,45 @@
 {
   "version": 1,
-  "status": "pending"
+  "updated_at": "2026-09-19T17:04:05.869680Z",
+  "sources": 16,
+  "source_counts": {
+    "fed_all": 20,
+    "fed_monetary": 15,
+    "fed_liquidity": 15,
+    "bis_media": 10,
+    "ecb_press": 14,
+    "ecb_stats": 15,
+    "gnews_funding": 65,
+    "gnews_systemic_crisis": 100,
+    "gnews_banking": 100,
+    "gnews_credit": 71,
+    "gnews_ai_data_center": 100,
+    "gnews_private_credit": 77,
+    "gnews_japan": 55,
+    "gnews_energy": 100,
+    "gnews_europe": 75,
+    "gnews_japan_credit": 45
+  },
+  "incoming_entries": 877,
+  "articles_retained": 593,
+  "events": 520,
+  "timeseries_rows": 2952,
+  "vector_db": {
+    "path": "/home/runner/work/Premier-forecast/Premier-forecast/data/news.db",
+    "articles": 593,
+    "events": 520,
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "vector_dim": 384,
+    "sqlite_vec_version": "v0.1.9"
+  },
+  "graph_db": {
+    "path": "/home/runner/work/Premier-forecast/Premier-forecast/data/knowledge_graph",
+    "nodes": 1913,
+    "edges": 7313,
+    "engine": "LadybugDB",
+    "load_mode": "CSV COPY FROM"
+  },
+  "graph_error": null,
+  "failures": [],
+  "copyright_mode": "RSS metadata/title/short-summary only; no full article-body mirroring"
 }
