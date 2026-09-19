@@ -6,6 +6,9 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 import mcp_server as s
 
+caps = s.get_search_capabilities(probe_embeddings=False)
+assert caps["lexical_search"] is True
+
 state = s.get_current_state()
 assert state["version"] >= 6
 assert state["systemic_stress_score"] is not None
