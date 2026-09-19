@@ -1,118 +1,195 @@
-# Global Financial Crisis Watch v5
+# Global Financial Crisis Watch v6
 
-世界的な信用収縮をリアルタイム監視しつつ、同じロジックを過去データへ walk-forward 適用して、危機捕捉と警報頻度を継続検証する GitHub Pages ダッシュボードです。
+世界的な信用収縮を、**決定論的ストレスモデル + ニューラルネットEarly-Warningモデル**の二重系で監視する GitHub Pages ダッシュボードです。
 
-## v5: historical validation
+v6では、v5までの12チャネル・5 Pillars・walk-forward backtestを残したまま、過去の市場ストレスパターンから学習する小型MLP ensembleを追加しています。
 
-v5の最大の変更は、**未来データを参照しない walk-forward backtest**です。各過去時点について、その日までに存在したデータだけで Level / Deviation / Velocity / Breadth / Stage を再計算します。
+## v6 neural architecture
 
-- 2007年以降をNFCIベースで週次再計算
-- ラベル済みストレス窓とreference date前120日は日次サンプリングを追加し、短期Funding shockを捕捉
-- 過去検証は長期公開proxyで作る Historical-comparable score を使用し、現在だけ存在するAIイベント手動点は混ぜない
-- FREDのICE BofA OAS系列は2026年4月以降3年ローリングに制限されたため、歴史検証では IG=BAA10Y、Credit=NFCICREDIT、Leveraged=NFCIRISK を使用
-- Fundingの歴史検証は SOFR-IORB → SOFR-IOER → TED spread の順で制度時点に合わせて切り替え
-- 欠損系列は安全=0点にせず、その時点の分母から除外
-- ラベル外期間の警報率も計測
-- 現在のHistorical-comparable scoreが歴史分布の何percentileか表示
-- バックテスト結果は毎回Actionsで再生成
+NNはルールモデルを置き換えません。役割は「今の市場パターンが、過去の危機窓の直前〜危機中にどれだけ似ているか」を別系統で評価することです。
 
-## Validation windows
+- Input: 9 market channels
+- Additional inputs: Breadth / Raw Market Score / Coverage
+- Missingness flags: 9
+- Total input features: 21
+- Hidden layer 1: 12 units
+- Hidden layer 2: 6 units
+- Output: 1 sigmoid unit
+- Ensemble: 5 independent seeds
+- Activation: tanh / tanh / sigmoid
+- L2 regularization + early stopping
+- Positive-class weighting for class imbalance
 
-`data/backtest_config.json` で検証期間を管理します。
+Architecture:
 
-- Global Financial Crisis
-- Euro-area sovereign stress
-- US repo-market stress 2019
-- COVID liquidity shock
-- US regional-bank stress 2023 — holdout
+```
+21 inputs
+   ↓
+12 tanh
+   ↓
+ 6 tanh
+   ↓
+ 1 sigmoid
+   ↓
+Neural Early-Warning Score
+```
 
-`reference_date` はlead表示の計算用アンカーであり、危機の公式な開始日を意味しません。
+## What the NN learns
 
-## Why not auto-optimize the weights?
+Target = 1 when an observation is:
 
-少数の危機イベントだけを最大化するように重みを探索すると過学習しやすいため、v5では重みを自動で書き換えません。まず以下を監査します。
+- inside one of the labeled stress windows, or
+- within 60 calendar days before the stress window begins
 
-- 各危機窓のpeak score
-- 最大Stage
-- Watch / Elevated / Highの初回到達日
-- reference dateに対するlead days
-- ラベル外期間で25 / 45 / 65 / 80を超えた比率
-- ラベル外期間のP90 / P95 / P99
-- 現在Market-only scoreの歴史percentile
+Target = 0 otherwise.
 
-ラベル外で鳴った警報は自動的にfalse positiveとは呼びません。設定していないストレス局面が存在するためです。
+The output is therefore an **Early-Warning similarity score**, not a literal probability that a financial crisis will occur.
 
-## Current production model
+## Temporal split
 
-v4で追加した12チャネル・5 Pillarsはv5でも継続します。
+Random train/test split is not used.
 
-| Channel | Weight | Automatic source / fallback |
+- Train: through 2019-12-31
+- Validation: 2020-01-01 through 2022-12-31
+- Test / holdout: 2023-01-01 onward
+
+This means the 2023 US regional-bank episode is not used to fit the model.
+
+The validation period chooses the alert threshold and controls early stopping. The 2023+ period is held out for final evaluation.
+
+## Hybrid score
+
+v6 keeps three different quantities separate.
+
+- **Systemic Stress Score** — existing 12-channel production score including AI / Private Credit event inputs
+- **Market-only Score** — current public-market / funding / banking layer
+- **Neural Early-Warning Score** — NN output
+
+The optional Hybrid Market score is:
+
+```
+Hybrid Market = 65% × Rule Market Score + 35% × Neural Score
+```
+
+The deterministic Stage 0-4 remains authoritative. The NN is **not allowed to promote the system into Stage 2/3/4 by itself**.
+
+## Ensemble uncertainty
+
+The same architecture is trained five times with different deterministic seeds.
+
+The dashboard reports:
+
+- mean NN score
+- standard deviation across the 5 models
+- validation ROC AUC
+- 2023+ holdout ROC AUC
+- holdout Brier score
+- holdout false-positive rate at the selected alert threshold
+
+A large ensemble standard deviation means the neural prediction is unstable and should receive less confidence.
+
+## Local sensitivity
+
+For the current observation, v6 also measures how much the NN score changes when each input is neutralized one at a time.
+
+This is displayed as **Local Sensitivity**.
+
+It is useful for answering:
+
+> Which current channel is pushing the neural score upward?
+
+This is not causal attribution. It is a local model-sensitivity diagnostic.
+
+## Historical validation
+
+v5's walk-forward engine remains active.
+
+- No future observations are used at each historical point
+- 2007 onward
+- Weekly baseline sampling
+- Daily observations added around labeled stress windows
+- Missing channels are excluded rather than treated as safe
+- Historical Funding proxy follows the regime:
+  - SOFR-IORB
+  - SOFR-IOER
+  - TED spread
+
+## Historical credit-series limitation
+
+FRED's ICE BofA OAS history available to this project is insufficient to reproduce the exact present-day production model back to 2008.
+
+Therefore historical validation uses long-history public proxies:
+
+- IG credit: BAA10Y
+- broad credit: NFCICREDIT
+- leveraged / risk: NFCIRISK
+
+This means the historical-comparable model and current production model are intentionally shown as separate series.
+
+## Current production channels
+
+| Channel | Weight | Source / fallback |
 | --- | ---: | --- |
-| US IG Corporate OAS | 10% | FRED BAMLC0A0CM |
-| US High Yield OAS | 14% | FRED BAMLH0A0HYM2 |
+| US IG Corporate OAS | 10% | BAMLC0A0CM |
+| US High Yield OAS | 14% | BAMLH0A0HYM2 |
 | Leveraged / Structured Credit | 10% | CCC OAS; optional CDX/CLO |
-| St. Louis Financial Stress | 8% | FRED STLFSI4 |
+| St. Louis Financial Stress | 8% | STLFSI4 |
 | Treasury Vol / Liquidity | 8% | DGS10 RV20 + VIX; optional MOVE |
 | Repo / Funding Market | 10% | SOFR - IORB |
 | Bank Short-term Funding | 8% | CPFF; optional Bank CDS |
-| Italy-Bund | 6% | OECD/FRED monthly; optional daily override |
+| Italy-Bund | 6% | OECD/FRED; optional daily override |
 | Energy shock | 7% | WTI + Henry Hub |
 | AI Data-center Financing | 6% | event evidence |
 | Private-credit Liquidity | 8% | event evidence; optional BDC NAV discount |
 | Bank AI-credit Inventory | 5% | syndication / lender evidence |
 
-## Dynamic scoring
+## Dynamic rule score
 
-自動時系列は0-100点に変換します。
+Each automatic market channel is still scored using:
 
-- Level 45% — 絶対水準
-- Deviation 30% — 最大約5年のpercentile + robust Z-score
-- Velocity 25% — 5観測・20観測の悪化速度
-- Breadth overlay — 複数市場の同時悪化時のみ最大+8点
+- Level 45%
+- Deviation 30%
+- Velocity 25%
+- Breadth synchronization overlay
 
-## Production vs historical-comparable
+The neural model therefore learns from normalized channel stress states rather than raw market prices alone.
 
-FRED上のICE BofA系列は2026年4月から直近3年に制限されているため、2008年まで遡る完全同一モデルの再現はできません。v5はここを隠さず、productionとhistorical validationを分離します。
+## Files
 
-- **Production Market-only Score** — 現在のIG/HY/CCC OASなどを使用
-- **Historical-comparable Score** — BAA10Y / NFCICREDIT / NFCIRISKなど長期公開proxyを使用
-
-## Two headline scores
-
-- **Systemic Stress Score** — AI / Private Creditイベント層も含む現在監視用スコア
-- **Market-only Score** — 公開市場・Funding・銀行proxyだけ。現在の市場層を分離するためのスコア
-
-バックテストはHistorical-comparable Scoreを使用します。Production Market-only Scoreとは別系列として表示します。
-
-## Data files
-
-- `data/latest.js` — 現在値
-- `data/history.json` / `data/history.js` — 日次履歴
-- `data/backtest_config.json` — 検証窓
-- `data/backtest.json` / `data/backtest.js` — walk-forward検証結果
-- `data/manual.json` — MOVE / CDX / CLO / Bank CDS / BDCなどの任意実値
-
-## Scripts
-
-- `scripts/update_data.py` — 現在値更新
-- `scripts/backtest.py` — walk-forward historical validation（SOFR-IORB / SOFR-IOER / TED の時代別Funding proxyを使用）
+- `scripts/update_data.py` — production market scoring
+- `scripts/backtest.py` — walk-forward historical validation
+- `scripts/train_nn.py` — v6 neural ensemble training / holdout evaluation
+- `data/latest.js` — current production snapshot
+- `data/backtest.json` / `data/backtest.js` — historical validation
+- `data/nn_model.json` / `data/nn_model.js` — NN model, metrics and current predictions
+- `data/manual.json` — MOVE / CDX / CLO / Bank CDS / BDC overrides
 
 ## GitHub Actions
 
-**Actions -> Update crisis dashboard v5 -> Run workflow**
+Run manually:
 
-実行順序:
+**Actions -> Update crisis dashboard v6 -> Run workflow**
 
-1. Python構文チェック
-2. 現在市場データ更新
-3. walk-forward backtest
-4. v5 payload検証
-5. current snapshot + history + backtestをcommit
+Pipeline:
+
+1. Install NumPy
+2. Validate Python syntax
+3. Refresh production market data
+4. Run walk-forward backtest
+5. Train 5-model MLP ensemble
+6. Validate current / backtest / NN payloads
+7. Commit generated snapshot, history, backtest and NN model
 
 ## GitHub Pages
 
-公開URL: https://koutarou208-arch.github.io/Premier-forecast/
+https://koutarou208-arch.github.io/Premier-forecast/
 
 ## Important
 
-この指数は金融危機の発生確率ではありません。Stress intensity / breadth / transmissionを測る監視指数です。バックテストも将来の危機を保証するものではなく、既知の過去局面でモデルがどう振る舞ったかを検証するためのものです。
+The NN score is **not a calibrated crisis probability**.
+
+There are only a small number of independent historical crisis episodes, and observations inside one crisis are serially correlated. A high AUC on a holdout period does not prove that the model will correctly predict the next crisis.
+
+For that reason v6 is deliberately hybrid:
+
+**deterministic rules for system state + neural network for nonlinear early-warning pattern detection.**
