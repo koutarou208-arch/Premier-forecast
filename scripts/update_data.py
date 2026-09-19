@@ -59,7 +59,7 @@ ABS_THRESHOLDS = {
     "energy_gas": (5.0, 8.0, 12.0),
 }
 
-FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}"
+FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}&cosd=1900-01-01"
 LOOKBACK = 1260
 
 def fetch_series(series_id):
