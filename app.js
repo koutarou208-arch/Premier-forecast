@@ -144,6 +144,13 @@
     ["VIX", d.vix == null ? "—" : Number(d.vix).toFixed(2)],
     ["10Y RV20", d.realized_10y_vol_bps == null ? "—" : Number(d.realized_10y_vol_bps).toFixed(0)+" bp ann."],
     ["MOVE", d.move_manual == null ? "manual未入力" : Number(d.move_manual).toFixed(1)],
+    ["SOFR−IORB", d.sofr_iorb_bps == null ? "—" : Number(d.sofr_iorb_bps).toFixed(1)+" bp"],
+    ["Financial CP−FF", d.cpff == null ? "—" : Number(d.cpff).toFixed(2)+"%"],
+    ["CCC OAS", d.ccc_oas == null ? "—" : Number(d.ccc_oas).toFixed(2)+"%"],
+    ["CDX HY", d.cdx_hy_bps == null ? "manual未入力" : Number(d.cdx_hy_bps).toFixed(0)+" bp"],
+    ["CLO BBB", d.clo_bbb_bps == null ? "manual未入力" : Number(d.clo_bbb_bps).toFixed(0)+" bp"],
+    ["Bank CDS", d.bank_cds_bps == null ? "manual未入力" : Number(d.bank_cds_bps).toFixed(0)+" bp"],
+    ["BDC NAV disc.", d.bdc_discount_pct == null ? "manual未入力" : Number(d.bdc_discount_pct).toFixed(1)+"%"],
     ["Italy–Bund", d.italy_bund_bps == null ? "—" : Number(d.italy_bund_bps).toFixed(0)+" bp"],
     ["WTI", d.wti == null ? "—" : "$"+Number(d.wti).toFixed(2)]
   ];
