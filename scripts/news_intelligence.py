@@ -5,6 +5,7 @@ derive time-series signals, and materialize a Ladybug property graph.
 from __future__ import annotations
 
 import calendar
+import csv
 import hashlib
 import html
 import json
@@ -13,6 +14,7 @@ import pathlib
 import re
 import shutil
 import sys
+import tempfile
 import urllib.parse
 import urllib.request
 from collections import defaultdict
@@ -437,32 +439,55 @@ def build_ladybug_graph(snapshot: dict[str, Any]) -> dict[str, Any]:
             shutil.rmtree(GRAPH_DB_PATH)
         else:
             GRAPH_DB_PATH.unlink()
+
     db = ladybug.Database(str(GRAPH_DB_PATH))
     conn = ladybug.Connection(db)
     conn.execute("CREATE NODE TABLE Node(id STRING, kind STRING, label STRING, metadata STRING, PRIMARY KEY(id))")
     conn.execute("CREATE REL TABLE Related(FROM Node TO Node, rel STRING, weight DOUBLE, metadata STRING)")
-    for n in snapshot["nodes"]:
-        conn.execute(
-            "CREATE (:Node {id:$id, kind:$kind, label:$label, metadata:$metadata})",
-            {"id": n["id"], "kind": n["kind"], "label": n["label"], "metadata": json.dumps(n.get("meta") or {}, ensure_ascii=False)},
-        )
-    for e in snapshot["edges"]:
-        conn.execute(
-            """MATCH (a:Node {id:$src}), (b:Node {id:$dst})
-               CREATE (a)-[:Related {rel:$rel, weight:$weight, metadata:$metadata}]->(b)""",
-            {
-                "src": e["src"], "dst": e["dst"], "rel": e["rel"],
-                "weight": float(e.get("weight") or 0.0),
-                "metadata": json.dumps(e.get("meta") or {}, ensure_ascii=False),
-            },
-        )
-    # Count query validates that the graph was materialized.
+
+    # Ladybug recommends COPY FROM for bulk database creation. The graph DB is
+    # derived from the portable snapshot, so rebuilding is deterministic.
+    with tempfile.TemporaryDirectory(prefix="crisis_graph_") as td:
+        td_path = pathlib.Path(td)
+        nodes_csv = td_path / "nodes.csv"
+        edges_csv = td_path / "edges.csv"
+
+        with nodes_csv.open("w", encoding="utf-8", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["id", "kind", "label", "metadata"])
+            for n in snapshot["nodes"]:
+                w.writerow([
+                    n["id"], n["kind"], n["label"],
+                    json.dumps(n.get("meta") or {}, ensure_ascii=False, separators=(",", ":")),
+                ])
+
+        # Relationship COPY expects FROM and TO primary keys as the first two
+        # columns, followed by relationship properties in schema order.
+        with edges_csv.open("w", encoding="utf-8", newline="") as f:
+            w = csv.writer(f)
+            for e in snapshot["edges"]:
+                w.writerow([
+                    e["src"], e["dst"], e["rel"], float(e.get("weight") or 0.0),
+                    json.dumps(e.get("meta") or {}, ensure_ascii=False, separators=(",", ":")),
+                ])
+
+        nodes_path = nodes_csv.as_posix().replace("'", "''")
+        edges_path = edges_csv.as_posix().replace("'", "''")
+        conn.execute(f"COPY Node FROM '{nodes_path}' (header=true)")
+        conn.execute(f"COPY Related FROM '{edges_path}'")
+
     result = conn.execute("MATCH (n:Node) RETURN count(n)")
     count = result.get_next()[0] if result.has_next() else 0
     del result
     conn.close()
     db.close()
-    return {"path": str(GRAPH_DB_PATH), "nodes": int(count), "edges": len(snapshot["edges"]), "engine": "LadybugDB"}
+    return {
+        "path": str(GRAPH_DB_PATH),
+        "nodes": int(count),
+        "edges": len(snapshot["edges"]),
+        "engine": "LadybugDB",
+        "load_mode": "CSV COPY FROM",
+    }
 
 
 def main():
