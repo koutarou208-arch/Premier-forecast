@@ -1,4 +1,4 @@
-name: Update crisis dashboard v5
+name: Update crisis dashboard v6
 
 on:
   workflow_dispatch:
@@ -10,6 +10,7 @@ on:
     paths:
       - "scripts/update_data.py"
       - "scripts/backtest.py"
+      - "scripts/train_nn.py"
       - "data/manual.json"
       - "data/backtest_config.json"
       - ".github/workflows/update-dashboard.yml"
@@ -29,10 +30,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install neural-network dependency
+        run: python3 -m pip install --disable-pip-version-check --quiet numpy
+
       - name: Validate Python syntax
         run: |
           python3 -m py_compile scripts/update_data.py
           python3 -m py_compile scripts/backtest.py
+          python3 -m py_compile scripts/train_nn.py
 
       - name: Refresh v5 market data
         run: python3 scripts/update_data.py
@@ -40,7 +45,10 @@ jobs:
       - name: Run walk-forward backtest
         run: python3 scripts/backtest.py
 
-      - name: Validate v5 payloads
+      - name: Train v6 neural early-warning ensemble
+        run: python3 scripts/train_nn.py
+
+      - name: Validate v6 payloads
         run: |
           python3 - <<'PY'
           import json, pathlib, re
@@ -49,7 +57,7 @@ jobs:
           m = re.search(r"window.__RISK_DATA__\s*=\s*(\{.*\});\s*$", latest, re.S)
           assert m, "latest.js payload missing"
           payload = json.loads(m.group(1))
-          assert payload["version"] == 5
+          assert payload["version"] in (5, 6)
           assert 0 <= payload["coverage_pct"] <= 100
           assert 0 <= payload["market_coverage_pct"] <= 100
           assert payload["score"] is None or 0 <= payload["score"] <= 100
@@ -64,7 +72,18 @@ jobs:
           assert len(bt["events"]) >= 4
           assert bt["range"]["observations"] > 500
           assert pathlib.Path("data/backtest.js").exists()
-          print("v5 payload + backtest validation OK")
+
+          nn = json.loads(pathlib.Path("data/nn_model.json").read_text())
+          assert nn["version"] == 6
+          assert nn["model_type"] == "MLP ensemble"
+          assert nn["ensemble_size"] >= 3
+          assert 0 <= nn["current"]["production_nn_score"] <= 100
+          assert 0 <= nn["current"]["hybrid_market_score"] <= 100
+          assert 0 <= nn["current"]["threshold_score"] <= 100
+          assert nn["metrics"]["validation"]["roc_auc"] is not None
+          assert nn["metrics"]["test_holdout"]["roc_auc"] is not None
+          assert pathlib.Path("data/nn_model.js").exists()
+          print("v6 payload + backtest + neural model validation OK")
           PY
 
       - name: Commit refreshed snapshot and backtest
@@ -75,7 +94,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/latest.js data/history.js data/history.json data/backtest.js data/backtest.json
-          git commit -m "Update crisis watch v5 snapshot and backtest"
+          git add data/latest.js data/history.js data/history.json data/backtest.js data/backtest.json data/nn_model.js data/nn_model.json
+          git commit -m "Update crisis watch v6 snapshot, backtest and neural model"
           git pull --rebase origin main
           git push
