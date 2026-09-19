@@ -68,7 +68,10 @@ v6 keeps three different quantities separate.
 The optional Hybrid Market score is:
 
 ```
-Hybrid Market = 65% × Rule Market Score + 35% × Neural Score
+Hybrid Market = active_model_config.rule_weight × Rule Market Score
+              + active_model_config.nn_weight × Neural Score
+
+Current agent-tuned mix: 60% Rule / 40% Neural
 ```
 
 The deterministic Stage 0-4 remains authoritative. The NN is **not allowed to promote the system into Stage 2/3/4 by itself**.
@@ -218,6 +221,180 @@ Generated audit files:
 
 The dashboard shows the latest decision, candidate count, objective change, calibration false-positive rate and accepted configuration change.
 
+## News intelligence: vector DB + time series + knowledge graph
+
+The system now maintains a separate news-intelligence layer for evidence retrieval and historical context.
+
+### Sources
+
+The collector uses free/public feeds only:
+
+- Federal Reserve official RSS — all releases, monetary policy, credit/liquidity
+- ECB official RSS — press/speeches/interviews and statistical releases
+- BIS official media-release RSS
+- Google News RSS queries covering systemic risk, repo/funding, banking, corporate credit, private credit, AI data-center financing, energy, Europe and Japan
+
+The collector stores **headline, short RSS summary, URL, source/publisher and publication time**. It does not mirror complete article bodies.
+
+### Durable corpus
+
+Portable source of truth:
+
+- `data/news_corpus.jsonl`
+
+Retention is currently 365 days with a cap of 5,000 retained articles. Articles are deduplicated by normalized title/publisher/day.
+
+Binary database files are intentionally excluded from Git history:
+
+- `data/news.db`
+- `data/knowledge_graph/`
+
+They are deterministically rebuilt from the portable corpus and graph snapshot. This avoids committing a changed multi-megabyte binary every two hours.
+
+### Persistent local vector database
+
+`intelligence_store.py` builds an embedded SQLite database using:
+
+- SQLite
+- FTS5 for lexical/BM25 retrieval
+- `sqlite-vec` for 384-dimensional vector retrieval
+- FastEmbed / ONNX using multilingual MiniLM
+
+Each news item is enriched with:
+
+- topics
+- linked crisis indicators
+- entities
+- event cluster
+- relevance
+- publisher/source trust
+- publication time
+
+### News hybrid retrieval
+
+News retrieval combines:
+
+```
+FTS5 / BM25
+      +
+sqlite-vec semantic nearest neighbours
+      ↓
+Reciprocal Rank Fusion
+      +
+recency
+      +
+source trust
+```
+
+The MCP tool is:
+
+```
+search_news_intelligence(query, limit)
+```
+
+For a query spanning both market state and news evidence:
+
+```
+search_all_intelligence(query, limit)
+```
+
+This performs cross-domain RRF over the structured crisis model and news-vector results.
+
+### Internal time series
+
+Every ingestion cycle rebuilds:
+
+- `data/news_timeseries.json`
+
+Daily rows are stored separately for `topic` and `indicator`, including:
+
+- article count
+- distinct event count
+- distinct publisher count
+- average relevance
+- maximum relevance
+
+MCP:
+
+```
+get_news_timeseries(key, kind, start_date, end_date, days)
+```
+
+This makes the news layer usable as a future quantitative model feature instead of only transient text context.
+
+### Event clustering
+
+Semantically similar articles in the same risk topic and nearby time window are clustered into an event. This reduces a single widely syndicated story from appearing to be many independent events.
+
+The event ID is attached to every article before vector/graph indexing.
+
+### Knowledge graph
+
+The graph layer uses **LadybugDB**, an actively developed embedded property-graph database and successor to KuzuDB.
+
+Portable graph source:
+
+- `data/graph_snapshot.json`
+
+Runtime graph database:
+
+- `data/knowledge_graph/`
+
+Node kinds include:
+
+- Article
+- Event
+- Entity
+- Topic
+- Indicator
+- Source
+- Day
+- HistoricalEpisode
+
+Relationship types include:
+
+- `EVIDENCE_FOR`
+- `MENTIONS`
+- `PUBLISHED_BY`
+- `ABOUT`
+- `IMPACTS`
+- `OBSERVED_ON`
+- `PRECEDES`
+
+Historical validation episodes — GFC, Euro sovereign stress, 2019 repo stress, COVID liquidity shock and 2023 regional banks — are inserted into the same graph and linked to the relevant topics/indicators.
+
+Ladybug is bulk-loaded with `COPY FROM`; nodes/edges are not inserted one at a time.
+
+MCP:
+
+```
+search_event_graph(query, limit)
+get_event_neighborhood(event_id, hops, limit)
+```
+
+### Automated update
+
+`.github/workflows/news-intelligence.yml` runs every two hours.
+
+Pipeline:
+
+1. Fetch feeds in parallel with per-source failure isolation
+2. Deduplicate and retain the portable corpus
+3. Multilingual embedding classification
+4. Event clustering
+5. Build topic/indicator daily time series
+6. Build SQLite FTS5 + sqlite-vec vector DB
+7. Build graph snapshot
+8. Materialize LadybugDB graph
+9. Test BM25/vector hybrid retrieval, Japanese retrieval, time series, graph and MCP integration
+10. Commit only portable intelligence state
+
+### Model-safety boundary
+
+News evidence is **not yet allowed to directly promote Stage 0-4 or change the crisis score**.
+
+The system is collecting the time series first so the news-derived features can later be evaluated out-of-sample. This prevents adding an unbacktested text signal merely because it looks convincing in the current news cycle.
+
 ## MCP search server
 
 The repository now includes an official MCP Python SDK v2 server: `mcp_server.py`.
@@ -232,6 +409,11 @@ It exposes these tools:
 - `get_backtest_event(name)` — retrieve one historical validation episode
 - `get_neural_state(include_models=False)` — v6 neural ensemble diagnostics
 - `get_self_improvement_state()` — latest agent decision, guardrails, candidates and active configuration
+- `search_news_intelligence(query, limit)` — persistent BM25 + vector + RRF news search
+- `search_all_intelligence(query, limit)` — cross-domain structured + news retrieval
+- `get_news_timeseries(...)` — news-derived topic/indicator time series
+- `search_event_graph(query, limit)` — semantic search over knowledge-graph nodes
+- `get_event_neighborhood(event_id, hops, limit)` — graph traversal around an event
 
 Resources:
 
@@ -240,6 +422,9 @@ Resources:
 - `crisis://backtest`
 - `crisis://neural`
 - `crisis://agent`
+- `crisis://news/status`
+- `crisis://news/timeseries`
+- `crisis://graph`
 
 ### Install
 
