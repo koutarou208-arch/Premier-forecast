@@ -2,9 +2,13 @@
   "mcpServers": {
     "global-financial-crisis-watch": {
       "command": "python3",
-      "args": ["/ABSOLUTE/PATH/TO/Premier-forecast/mcp_server.py"],
+      "args": [
+        "/ABSOLUTE/PATH/TO/Premier-forecast/mcp_server.py"
+      ],
       "env": {
-        "MCP_TRANSPORT": "stdio"
+        "MCP_TRANSPORT": "stdio",
+        "MCP_EMBEDDINGS": "on",
+        "MCP_EMBEDDING_MODEL": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
       }
     }
   }
