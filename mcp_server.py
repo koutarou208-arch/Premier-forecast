@@ -25,6 +25,10 @@ EMBEDDING_MODEL = os.getenv(
     "MCP_EMBEDDING_MODEL",
     "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
 )
+FASTEMBED_CACHE = os.getenv(
+    "FASTEMBED_CACHE_PATH",
+    str(pathlib.Path.home() / ".cache" / "fastembed"),
+)
 _EMBEDDER = None
 _EMBEDDER_ERROR = None
 _EMBED_CACHE = {"signature": None, "vectors": None}
@@ -139,7 +143,7 @@ def _get_embedder():
         return None
     try:
         from fastembed import TextEmbedding
-        _EMBEDDER = TextEmbedding(model_name=EMBEDDING_MODEL)
+        _EMBEDDER = TextEmbedding(model_name=EMBEDDING_MODEL, cache_dir=FASTEMBED_CACHE)
         _EMBEDDER_ERROR = None
         return _EMBEDDER
     except Exception as e:
