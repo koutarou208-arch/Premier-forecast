@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "topics": {
+    "funding_liquidity": {
+      "descriptors": [
+        "repo market funding stress dollar liquidity short term funding squeeze",
+        "レポ市場 資金調達 流動性 短期金融市場 ドル調達"
+      ],
+      "aliases": [
+        "repo",
+        "funding",
+        "liquidity",
+        "sofr",
+        "iorb",
+        "money market",
+        "資金調達",
+        "流動性",
+        "短期金融",
+        "レポ"
+      ],
+      "indicators": [
+        "funding_market",
+        "rates_liquidity"
+      ]
+    },
+    "banking": {
+      "descriptors": [
+        "bank run deposit outflow bank funding stress banking crisis emergency lending",
+        "銀行破綻 預金流出 銀行資金調達 銀行危機 緊急融資"
+      ],
+      "aliases": [
+        "bank run",
+        "deposit outflow",
+        "bank funding",
+        "banking crisis",
+        "銀行破綻",
+        "預金流出",
+        "銀行危機"
+      ],
+      "indicators": [
+        "banking_stress",
+        "bank_ai"
+      ]
+    },
+    "corporate_credit": {
+      "descriptors": [
+        "corporate credit stress high yield spread leveraged loans default credit crunch",
+        "社債 信用スプレッド ハイイールド レバレッジドローン デフォルト 信用収縮"
+      ],
+      "aliases": [
+        "high yield",
+        "leveraged loan",
+        "credit spread",
+        "default",
+        "credit crunch",
+        "ハイイールド",
+        "社債",
+        "信用収縮",
+        "デフォルト"
+      ],
+      "indicators": [
+        "ig_credit",
+        "hy_credit",
+        "leveraged_credit"
+      ]
+    },
+    "private_credit": {
+      "descriptors": [
+        "private credit private debt BDC NAV direct lending liquidity stress defaults",
+        "プライベートクレジット 私募債務 BDC NAV ダイレクトレンディング 流動性"
+      ],
+      "aliases": [
+        "private credit",
+        "private debt",
+        "bdc",
+        "direct lending",
+        "プライベートクレジット",
+        "私募債務"
+      ],
+      "indicators": [
+        "private_credit",
+        "leveraged_credit"
+      ]
+    },
+    "ai_data_center": {
+      "descriptors": [
+        "AI data center financing debt hyperscaler infrastructure credit risk capex",
+        "AI データセンター 融資 債務 設備投資 クレジットリスク"
+      ],
+      "aliases": [
+        "data center",
+        "hyperscaler",
+        "ai financing",
+        "AIデータセンター",
+        "データセンター融資"
+      ],
+      "indicators": [
+        "data_center",
+        "private_credit",
+        "bank_ai"
+      ]
+    },
+    "energy_shock": {
+      "descriptors": [
+        "oil supply shock crude price spike energy crisis inflation shock natural gas",
+        "原油 供給ショック エネルギー危機 原油高 ガス価格 インフレ"
+      ],
+      "aliases": [
+        "oil shock",
+        "crude oil",
+        "energy crisis",
+        "natural gas",
+        "原油",
+        "エネルギー危機",
+        "供給ショック"
+      ],
+      "indicators": [
+        "energy"
+      ]
+    },
+    "europe_sovereign": {
+      "descriptors": [
+        "European sovereign debt crisis Italy Germany bond spread fragmentation bank sovereign loop",
+        "欧州債務危機 イタリア国債 ドイツ国債 スプレッド 財政不安"
+      ],
+      "aliases": [
+        "sovereign debt",
+        "italy spread",
+        "bund",
+        "fragmentation",
+        "欧州債務",
+        "イタリア国債"
+      ],
+      "indicators": [
+        "europe"
+      ]
+    },
+    "inflation_rates": {
+      "descriptors": [
+        "inflation surprise interest rate volatility bond yield shock central bank tightening",
+        "インフレ 金利上昇 長期金利 国債ボラティリティ 中央銀行 利上げ"
+      ],
+      "aliases": [
+        "inflation",
+        "yield spike",
+        "rate volatility",
+        "tightening",
+        "インフレ",
+        "金利上昇",
+        "利上げ"
+      ],
+      "indicators": [
+        "rates_liquidity",
+        "energy"
+      ]
+    },
+    "systemic_crisis": {
+      "descriptors": [
+        "systemic financial crisis contagion market freeze global credit contraction financial instability",
+        "システミック金融危機 伝播 市場凍結 世界的信用収縮 金融不安"
+      ],
+      "aliases": [
+        "systemic risk",
+        "financial crisis",
+        "contagion",
+        "market freeze",
+        "金融危機",
+        "システミック",
+        "伝播"
+      ],
+      "indicators": [
+        "ig_credit",
+        "hy_credit",
+        "funding_market",
+        "banking_stress"
+      ]
+    }
+  },
+  "entities": {
+    "Federal Reserve": [
+      "Federal Reserve",
+      "Fed",
+      "FOMC"
+    ],
+    "ECB": [
+      "European Central Bank",
+      "ECB"
+    ],
+    "Bank of Japan": [
+      "Bank of Japan",
+      "BOJ",
+      "日本銀行",
+      "日銀"
+    ],
+    "BIS": [
+      "Bank for International Settlements",
+      "BIS",
+      "Basel Committee"
+    ],
+    "US Treasury": [
+      "U.S. Treasury",
+      "US Treasury",
+      "Treasury Department"
+    ],
+    "Italy": [
+      "Italy",
+      "Italian",
+      "イタリア"
+    ],
+    "Germany": [
+      "Germany",
+      "German",
+      "Bund",
+      "ドイツ"
+    ],
+    "Saudi Arabia": [
+      "Saudi Arabia",
+      "Saudi",
+      "サウジ"
+    ],
+    "OPEC+": [
+      "OPEC",
+      "OPEC+"
+    ],
+    "NVIDIA": [
+      "NVIDIA",
+      "Nvidia"
+    ],
+    "Microsoft": [
+      "Microsoft"
+    ],
+    "Meta": [
+      "Meta Platforms",
+      "Meta"
+    ],
+    "Alphabet": [
+      "Alphabet",
+      "Google"
+    ],
+    "Amazon": [
+      "Amazon",
+      "AWS"
+    ],
+    "Oracle": [
+      "Oracle"
+    ]
+  }
+}
