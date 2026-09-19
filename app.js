@@ -2,6 +2,7 @@
   const data = window.__RISK_DATA__;
   const history = window.__RISK_HISTORY__ || [];
   const backtest = window.__BACKTEST_DATA__ || null;
+  const neural = window.__NN_DATA__ || null;
   if (!data) return;
 
   const isV3 = Number(data.version || 0) >= 3;
@@ -164,8 +165,53 @@
   });
 
   renderHistory(history);
+  renderNeural(neural);
   renderBacktest(backtest);
 
+
+  function renderNeural(nn){
+    const scoreEl = document.getElementById("nnScore");
+    if (!scoreEl) return;
+    if (!nn) {
+      for (const id of ["nnScore","nnUncertainty","nnHybrid","nnThreshold","nnValAuc","nnTestAuc","nnBrier","nnFpr"]) {
+        const el=document.getElementById(id); if(el) el.textContent="pending";
+      }
+      return;
+    }
+
+    const cur = nn.current || {};
+    const metrics = nn.metrics || {};
+    const val = metrics.validation || {};
+    const test = metrics.test_holdout || {};
+    const testAt = test.at_selected_threshold || {};
+
+    scoreEl.textContent = cur.production_nn_score == null ? "—" : Number(cur.production_nn_score).toFixed(1);
+    scoreEl.style.color = scoreColor(cur.production_nn_score);
+    document.getElementById("nnUncertainty").textContent = cur.production_uncertainty_std == null ? "—" : "±"+Number(cur.production_uncertainty_std).toFixed(1);
+    document.getElementById("nnHybrid").textContent = cur.hybrid_market_score == null ? "—" : Number(cur.hybrid_market_score).toFixed(1);
+    document.getElementById("nnThreshold").textContent = cur.threshold_score == null ? "—" : Number(cur.threshold_score).toFixed(1);
+    document.getElementById("nnValAuc").textContent = val.roc_auc == null ? "—" : Number(val.roc_auc).toFixed(3);
+    document.getElementById("nnTestAuc").textContent = test.roc_auc == null ? "—" : Number(test.roc_auc).toFixed(3);
+    document.getElementById("nnBrier").textContent = test.brier == null ? "—" : Number(test.brier).toFixed(3);
+    document.getElementById("nnFpr").textContent = testAt.false_positive_rate == null ? "—" : (Number(testAt.false_positive_rate)*100).toFixed(1)+"%";
+
+    const drivers=document.getElementById("nnDrivers");
+    (cur.top_local_sensitivities || []).forEach(d=>{
+      const row=document.createElement("div");
+      row.className="driver-row";
+      const width=Math.min(100,Math.abs(Number(d.delta_score||0))*8);
+      row.innerHTML='<span>'+esc(d.feature)+'</span><div class="driver-track"><i style="width:'+width+'%"></i></div><b>'+((Number(d.delta_score)>=0?"+":"")+Number(d.delta_score).toFixed(1))+'</b>';
+      drivers.appendChild(row);
+    });
+
+    const events=document.getElementById("nnEvents");
+    (nn.event_evaluation || []).forEach(ev=>{
+      const row=document.createElement("div");
+      row.className="nn-event";
+      row.innerHTML='<span>'+esc(ev.name)+'</span><b>'+esc(ev.peak_nn_score==null?"—":Number(ev.peak_nn_score).toFixed(1))+'</b><small>'+esc(ev.first_alert||"no alert")+'</small>';
+      events.appendChild(row);
+    });
+  }
 
   function renderBacktest(bt){
     const currentEl = document.getElementById("btCurrent");
