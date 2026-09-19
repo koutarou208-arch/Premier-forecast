@@ -1,21 +1,48 @@
-# Global Financial Crisis Watch v4
+# Global Financial Crisis Watch v5
 
-世界的な信用収縮を、企業信用だけでなく **repo資金市場・銀行短期調達・レバレッジド／構造化クレジット・AI/Private Credit・欧州・エネルギー** まで横断して監視する GitHub Pages ダッシュボードです。
+世界的な信用収縮をリアルタイム監視しつつ、同じロジックを過去データへ walk-forward 適用して、危機捕捉と警報頻度を継続検証する GitHub Pages ダッシュボードです。
 
-## v4 additions
+## v5: historical validation
 
-- SOFR − IORB: repo / secured funding pressure
-- 3-Month Financial Commercial Paper − Fed Funds (CPFF): bank / short-term funding proxy
-- CCC & Lower HY OAS: leveraged-credit / structured-credit proxy
-- optional CDX HY 5Y override
-- optional CLO AAA / BBB spread overrides
-- optional representative Bank CDS override
-- optional BDC discount-to-NAV overlay for private credit
-- 12 weighted risk channels and 5 pillars
+v5の最大の変更は、**未来データを参照しない walk-forward backtest**です。各過去時点について、その日までに存在したデータだけで Level / Deviation / Velocity / Breadth / Stage を再計算します。
 
-無料で安定取得できないCDX/CLO/Bank CDS/BDCは、未入力を安全=0点とは扱いません。自動代理指標と手動の実値を明示的に分離し、実値が入った時だけより強いシグナルとして採用します。
+- 2007年以降を週次相当（IG OASの5観測ごと）で再計算
+- Market-only scoreを使用し、現在だけ存在するAIイベント手動点は過去検証に混ぜない
+- SOFR-IORBが存在しない過去期間だけTED spreadを歴史検証専用のFunding proxyとして使用
+- 欠損系列は安全=0点にせず、その時点の分母から除外
+- ラベル外期間の警報率も計測
+- 現在のMarket-only scoreが歴史分布の何percentileか表示
+- バックテスト結果は毎回Actionsで再生成
 
-## 12 risk channels
+## Validation windows
+
+`data/backtest_config.json` で検証期間を管理します。
+
+- Global Financial Crisis
+- Euro-area sovereign stress
+- US repo-market stress 2019
+- COVID liquidity shock
+- US regional-bank stress 2023 — holdout
+
+`reference_date` はlead表示の計算用アンカーであり、危機の公式な開始日を意味しません。
+
+## Why not auto-optimize the weights?
+
+少数の危機イベントだけを最大化するように重みを探索すると過学習しやすいため、v5では重みを自動で書き換えません。まず以下を監査します。
+
+- 各危機窓のpeak score
+- 最大Stage
+- Watch / Elevated / Highの初回到達日
+- reference dateに対するlead days
+- ラベル外期間で25 / 45 / 65 / 80を超えた比率
+- ラベル外期間のP90 / P95 / P99
+- 現在Market-only scoreの歴史percentile
+
+ラベル外で鳴った警報は自動的にfalse positiveとは呼びません。設定していないストレス局面が存在するためです。
+
+## Current production model
+
+v4で追加した12チャネル・5 Pillarsはv5でも継続します。
 
 | Channel | Weight | Automatic source / fallback |
 | --- | ---: | --- |
@@ -32,76 +59,46 @@
 | Private-credit Liquidity | 8% | event evidence; optional BDC NAV discount |
 | Bank AI-credit Inventory | 5% | syndication / lender evidence |
 
-Total = 100%.
-
 ## Dynamic scoring
 
 自動時系列は0-100点に変換します。
 
-- Level 45%: 絶対水準
-- Deviation 30%: 最大約5年のpercentile + robust Z-score
-- Velocity 25%: 5観測・20観測の悪化速度
-- Breadth overlay: 複数市場が同時悪化した場合だけ最大+8点
+- Level 45% — 絶対水準
+- Deviation 30% — 最大約5年のpercentile + robust Z-score
+- Velocity 25% — 5観測・20観測の悪化速度
+- Breadth overlay — 複数市場の同時悪化時のみ最大+8点
 
-欠損は0点にせず分母から除外し、coverage_pct を表示します。
+## Two headline scores
 
-## v4 proxy / override policy
+- **Systemic Stress Score** — AI / Private Creditイベント層も含む現在監視用スコア
+- **Market-only Score** — 公開市場・Funding・銀行proxyだけ。過去バックテストとの比較用
 
-### Leveraged / Structured Credit
+バックテストではMarket-only Scoreのみ使用します。
 
-自動: ICE BofA CCC & Lower US HY OAS (BAMLH0A3HYC)。
-オプション: CDX HY 5Y、CLO AAA、CLO BBB。入力された値の方がよりストレスを示す場合はそちらを採用します。
+## Data files
 
-### Funding Market
+- `data/latest.js` — 現在値
+- `data/history.json` / `data/history.js` — 日次履歴
+- `data/backtest_config.json` — 検証窓
+- `data/backtest.json` / `data/backtest.js` — walk-forward検証結果
+- `data/manual.json` — MOVE / CDX / CLO / Bank CDS / BDCなどの任意実値
 
-SOFR − IORB をbpsで計算します。SOFRがIORBを大きく上回るほど、secured funding / repo pressure のシグナルとして扱います。
+## Scripts
 
-### Banking Stress
+- `scripts/update_data.py` — 現在値更新
+- `scripts/backtest.py` — walk-forward historical validation
 
-自動: 3-Month AA Financial Commercial Paper − Federal Funds Rate (CPFF)。
-オプション: representative bank 5Y CDS。CDSが入力され、より強いストレスを示す場合は上書きします。
+## GitHub Actions
 
-### Private Credit
+**Actions -> Update crisis dashboard v5 -> Run workflow**
 
-既存のファンド償還・ゲート等のイベントスコアに加え、BDC discount-to-NAV を正の割引率で入力可能です。例: NAV比12%ディスカウントなら 12。
+実行順序:
 
-## 5 pillars
-
-- Broad Credit: IG / HY / Leveraged
-- Funding / Liquidity: STLFSI / Treasury vol / SOFR-IORB
-- Banking: CPFF/Bank CDS + Bank AI inventory
-- AI / Private Credit: Data-center / Private Credit / Bank AI inventory
-- Europe / Energy
-
-## Transmission stages
-
-- Stage 0 — CALM
-- Stage 1 — SECTOR REPRICING
-- Stage 2 — CREDIT TRANSMISSION
-- Stage 3 — FUNDING STRESS
-- Stage 4 — SYSTEMIC / FREEZE
-
-Stage 4には Broad Credit、Funding、Banking、Breadth の複数条件を同時に要求します。単一市場の急騰だけではStage 4になりません。
-
-## Manual market overrides
-
-`data/manual.json`:
-
-- `move_index`
-- `europe_daily_spread_bps`
-- `cdx_hy_spread_bps`
-- `clo_aaa_spread_bps`
-- `clo_bbb_spread_bps`
-- `bank_cds_bps`
-- `bdc_discount_pct`
-
-値が不明な場合は null のままにします。
-
-## Refresh
-
-GitHub Actions: **Actions -> Update crisis dashboard v4 -> Run workflow**
-
-平日の定期更新に加え、計算エンジンやmanual inputを変更した時も再計算します。
+1. Python構文チェック
+2. 現在市場データ更新
+3. walk-forward backtest
+4. v5 payload検証
+5. current snapshot + history + backtestをcommit
 
 ## GitHub Pages
 
@@ -109,4 +106,4 @@ GitHub Actions: **Actions -> Update crisis dashboard v4 -> Run workflow**
 
 ## Important
 
-このスコアは金融危機の発生確率ではありません。市場・信用・資金調達のストレス強度と、セクター間の伝播度を測る監視指数です。
+この指数は金融危機の発生確率ではありません。Stress intensity / breadth / transmissionを測る監視指数です。バックテストも将来の危機を保証するものではなく、既知の過去局面でモデルがどう振る舞ったかを検証するためのものです。
