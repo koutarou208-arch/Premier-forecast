@@ -24,11 +24,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Cache Hugging Face model
+      - name: Cache FastEmbed model
         uses: actions/cache@v4
         with:
-          path: ~/.cache/huggingface
-          key: hf-multilingual-minilm-${{ runner.os }}-v1
+          path: ~/.cache/fastembed
+          key: fastembed-multilingual-minilm-${{ runner.os }}-v1
 
       - name: Install MCP and embedding dependencies
         run: |
@@ -39,5 +39,5 @@ jobs:
         env:
           MCP_EMBEDDINGS: "on"
           MCP_EMBEDDING_MODEL: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-          TOKENIZERS_PARALLELISM: "false"
+          FASTEMBED_CACHE_PATH: ~/.cache/fastembed
         run: python3 scripts/test_mcp_embeddings.py
