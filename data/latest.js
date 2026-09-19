@@ -1,6 +1,6 @@
 window.__RISK_DATA__ = {
   "version": 6,
-  "updated_at": "2026-09-19T15:50:12.530043Z",
+  "updated_at": "2026-09-19T15:54:38.589273Z",
   "score": 23.9,
   "raw_score": 23.9,
   "market_score": 14.5,
