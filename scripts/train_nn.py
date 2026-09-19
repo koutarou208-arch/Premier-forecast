@@ -299,7 +299,16 @@ def main():
     nn_prod = float(prod_pred[0]) * 100.0
     nn_hist = float(hist_pred[0]) * 100.0
     rule_market = latest.get("market_score")
-    hybrid_market = None if rule_market is None else 0.65*float(rule_market) + 0.35*nn_prod
+    model_cfg = json.loads(MODEL_CONFIG.read_text(encoding="utf-8")) if MODEL_CONFIG.exists() else {}
+    hybrid_cfg = model_cfg.get("hybrid", {})
+    rule_weight = float(hybrid_cfg.get("rule_weight", 0.65))
+    nn_weight = float(hybrid_cfg.get("nn_weight", 0.35))
+    total_mix = rule_weight + nn_weight
+    if total_mix <= 0:
+        rule_weight, nn_weight, total_mix = 0.65, 0.35, 1.0
+    rule_weight /= total_mix
+    nn_weight /= total_mix
+    hybrid_market = None if rule_market is None else rule_weight*float(rule_market) + nn_weight*nn_prod
 
     payload = {
         "version": 6,
@@ -307,6 +316,8 @@ def main():
         "architecture": [len(FEATURES), 12, 6, 1],
         "activation": "tanh/tanh/sigmoid",
         "ensemble_size": len(models),
+        "active_model_config": model_cfg,
+        "hybrid_mix": {"rule_weight": round(rule_weight,4), "nn_weight": round(nn_weight,4)},
         "target": f"inside labeled stress window or within {LEAD_DAYS} calendar days before its start",
         "temporal_split": {
             "train": f"<= {TRAIN_END.isoformat()}",
