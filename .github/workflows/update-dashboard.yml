@@ -96,5 +96,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/latest.js data/history.js data/history.json data/backtest.js data/backtest.json data/nn_model.js data/nn_model.json
           git commit -m "Update crisis watch v6 snapshot, backtest and neural model"
-          git pull --rebase origin main
-          git push
+          for attempt in 1 2 3 4; do
+            git pull --rebase origin main
+            if git push; then
+              exit 0
+            fi
+            echo "Push race detected; retrying ($attempt/4)"
+            sleep $((attempt * 2))
+          done
+          echo "Failed to push generated v6 data after retries"
+          exit 1
