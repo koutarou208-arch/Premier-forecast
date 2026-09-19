@@ -172,11 +172,11 @@ def historical_delta_percentile(values, horizon, current_delta, higher_is_risk=T
     deltas = [values[i] - values[i - horizon] for i in range(start, len(values))]
     return pct_rank(deltas[:-1] if len(deltas) > 1 else deltas, current_delta, higher_is_risk)
 
-def dynamic_metric(series, absolute_value, thresholds, higher_is_risk=True, short=5, medium=20):
+def dynamic_metric(series, absolute_value, thresholds, higher_is_risk=True, short=5, medium=20, lookback=LOOKBACK):
     if absolute_value is None or not series:
         return None
     values = [v for _, v in series]
-    sample = values[-LOOKBACK:-1] if len(values) > 20 else values[:-1]
+    sample = values[-lookback:-1] if len(values) > 20 else values[:-1]
     if len(sample) < 10:
         return None
 
@@ -193,8 +193,8 @@ def dynamic_metric(series, absolute_value, thresholds, higher_is_risk=True, shor
 
     d_short = delta(short)
     d_medium = delta(medium)
-    p_short = historical_delta_percentile(values, short, d_short, True)
-    p_medium = historical_delta_percentile(values, medium, d_medium, True)
+    p_short = historical_delta_percentile(values, short, d_short, True, lookback=lookback)
+    p_medium = historical_delta_percentile(values, medium, d_medium, True, lookback=lookback)
     velocity = max(
         tail_score_from_percentile(p_short, 70.0) or 0.0,
         tail_score_from_percentile(p_medium, 70.0) or 0.0,
@@ -385,7 +385,7 @@ def main():
 
     ig_m = dynamic_metric(series["ig_oas"], ig, ABS_THRESHOLDS["ig_credit"])
     hy_m = dynamic_metric(series["hy_oas"], hy, ABS_THRESHOLDS["hy_credit"])
-    fs_m = dynamic_metric(series["stlfsi"], stlfsi, ABS_THRESHOLDS["financial_stress"])
+    fs_m = dynamic_metric(series["stlfsi"], stlfsi, ABS_THRESHOLDS["financial_stress"], short=4, medium=13, lookback=260)
 
     sofr_iorb_series = common_spread_series(series["sofr"], series["iorb"])
     sofr_iorb_d, sofr_iorb_bps = latest(sofr_iorb_series)
@@ -415,7 +415,7 @@ def main():
         eu_m = {"score": eu_anchor, "components": {"level": eu_anchor, "deviation": None, "velocity": None}, "stats": {}}
         eu_d = manual.get("europe_daily_spread_bps", {}).get("as_of")
     else:
-        eu_m = dynamic_metric(eu_series, europe_bps, ABS_THRESHOLDS["europe"], short=1, medium=3) if europe_bps is not None else None
+        eu_m = dynamic_metric(eu_series, europe_bps, ABS_THRESHOLDS["europe"], short=1, medium=3, lookback=60) if europe_bps is not None else None
 
     oil_m = dynamic_metric(series["wti"], wti, ABS_THRESHOLDS["energy_oil"]) if wti is not None else None
     gas_m = dynamic_metric(series["gas"], gas, ABS_THRESHOLDS["energy_gas"]) if gas is not None else None
