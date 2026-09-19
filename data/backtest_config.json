@@ -1,0 +1,47 @@
+{
+  "start_date": "2007-01-01",
+  "sampling": "every_5th_IG_observation",
+  "pre_reference_days": 120,
+  "windows": [
+    {
+      "id": "gfc",
+      "name": "Global Financial Crisis",
+      "start": "2007-08-01",
+      "end": "2009-06-30",
+      "reference_date": "2008-09-15",
+      "group": "calibration"
+    },
+    {
+      "id": "euro",
+      "name": "Euro-area sovereign stress",
+      "start": "2011-07-01",
+      "end": "2012-08-31",
+      "reference_date": "2011-11-09",
+      "group": "calibration"
+    },
+    {
+      "id": "repo2019",
+      "name": "US repo-market stress",
+      "start": "2019-09-01",
+      "end": "2019-10-31",
+      "reference_date": "2019-09-17",
+      "group": "calibration"
+    },
+    {
+      "id": "covid",
+      "name": "COVID liquidity shock",
+      "start": "2020-02-20",
+      "end": "2020-05-31",
+      "reference_date": "2020-03-16",
+      "group": "calibration"
+    },
+    {
+      "id": "regional_banks",
+      "name": "US regional-bank stress",
+      "start": "2023-03-01",
+      "end": "2023-05-31",
+      "reference_date": "2023-03-10",
+      "group": "holdout"
+    }
+  ]
+}
