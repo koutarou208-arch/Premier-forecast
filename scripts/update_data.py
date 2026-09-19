@@ -12,6 +12,7 @@ from datetime import datetime, timezone, date
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 MANUAL = ROOT / "data" / "manual.json"
+MODEL_CONFIG = ROOT / "data" / "model_config.json"
 OUTPUT = ROOT / "data" / "latest.js"
 HISTORY_JSON = ROOT / "data" / "history.json"
 HISTORY_JS = ROOT / "data" / "history.js"
@@ -33,7 +34,7 @@ SERIES = {
     "ccc_oas": "BAMLH0A3HYC",
 }
 
-WEIGHTS = {
+DEFAULT_WEIGHTS = {
     "ig_credit": 10,
     "hy_credit": 14,
     "leveraged_credit": 10,
@@ -47,6 +48,17 @@ WEIGHTS = {
     "private_credit": 8,
     "bank_ai": 5,
 }
+
+def load_model_config():
+    try:
+        return json.loads(MODEL_CONFIG.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+MODEL_CONFIG_DATA = load_model_config()
+WEIGHTS = dict(DEFAULT_WEIGHTS)
+WEIGHTS.update(MODEL_CONFIG_DATA.get("market_weights", {}))
+WEIGHTS.update(MODEL_CONFIG_DATA.get("structural_weights", {}))
 
 ABS_THRESHOLDS = {
     "ig_credit": (1.00, 1.50, 2.50),
@@ -627,6 +639,7 @@ def main():
         "flags": flags,
         "pillars": pillars,
         "weights": WEIGHTS,
+        "active_model_config": MODEL_CONFIG_DATA,
         "methodology": {
             "auto_components": {"level_weight":45,"deviation_weight":30,"velocity_weight":25},
             "lookback_observations": LOOKBACK,
