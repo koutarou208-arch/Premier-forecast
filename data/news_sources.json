@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "retention_days": 365,
+  "max_articles": 5000,
+  "official_rss": [
+    {
+      "id": "fed_all",
+      "name": "Federal Reserve — all press releases",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "trust": 1
+    },
+    {
+      "id": "fed_monetary",
+      "name": "Federal Reserve — monetary policy",
+      "url": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+      "trust": 1
+    },
+    {
+      "id": "fed_liquidity",
+      "name": "Federal Reserve — credit and liquidity programs",
+      "url": "https://www.federalreserve.gov/feeds/clp.xml",
+      "trust": 1
+    },
+    {
+      "id": "ecb_press",
+      "name": "ECB — press/speeches/interviews",
+      "url": "https://www.ecb.europa.eu/rss/press.html",
+      "trust": 1
+    },
+    {
+      "id": "ecb_stats",
+      "name": "ECB — statistical press releases",
+      "url": "https://www.ecb.europa.eu/rss/statpress.html",
+      "trust": 1
+    },
+    {
+      "id": "bis_media",
+      "name": "BIS — media releases",
+      "url": "https://www.bis.org/doclist/all_pressrels.rss",
+      "trust": 1
+    }
+  ],
+  "google_news_queries": [
+    {
+      "id": "systemic_crisis",
+      "query": "financial crisis OR systemic risk OR credit crunch",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "funding",
+      "query": "repo market stress OR funding liquidity OR dollar funding stress",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "banking",
+      "query": "bank liquidity stress OR bank run OR bank funding stress",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "credit",
+      "query": "high yield spreads OR leveraged loans OR corporate credit stress",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "private_credit",
+      "query": "private credit defaults OR private debt stress OR BDC NAV",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "ai_data_center",
+      "query": "AI data center debt financing credit risk",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "energy",
+      "query": "oil supply shock OR crude oil surge OR energy crisis",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "europe",
+      "query": "European sovereign debt stress OR Italy bond spread banking stress",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "japan",
+      "query": "日銀 金融政策 銀行 資金調達 信用不安",
+      "locale": "ja",
+      "country": "JP",
+      "ceid": "JP:ja"
+    },
+    {
+      "id": "japan_credit",
+      "query": "日本 クレジット市場 銀行 流動性 金融危機",
+      "locale": "ja",
+      "country": "JP",
+      "ceid": "JP:ja"
+    }
+  ]
+}
