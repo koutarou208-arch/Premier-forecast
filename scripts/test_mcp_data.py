@@ -24,10 +24,15 @@ nn = s.get_neural_state()
 assert nn["available"]
 assert nn["version"] == 6
 
+agent = s.get_self_improvement_state()
+assert agent["available"]
+assert agent["decision"] in {"accepted", "reject_all", "disabled"}
+
 print(json.dumps({
     "current": state["systemic_stress_score"],
     "repo": repo["indicator"]["value"],
     "bank_results": bank["count"],
     "history_results": hist["count"],
     "nn": nn["current"]["production_nn_score"],
+    "agent_decision": agent["decision"],
 }, ensure_ascii=False))
