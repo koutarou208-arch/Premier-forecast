@@ -16,6 +16,7 @@ import sys
 import urllib.parse
 import urllib.request
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 from typing import Any
@@ -471,12 +472,18 @@ def main():
     incoming = []
     failures = []
     source_counts = {}
-    for source in source_list:
-        rows, error = collect_from_source(source)
-        source_counts[source["id"]] = len(rows)
-        incoming.extend(rows)
-        if error:
-            failures.append(error)
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        futures = {pool.submit(collect_from_source, source): source for source in source_list}
+        for future in as_completed(futures):
+            source = futures[future]
+            try:
+                rows, error = future.result()
+            except Exception as e:
+                rows, error = [], f"{source.get('id')}: {type(e).__name__}: {e}"
+            source_counts[source["id"]] = len(rows)
+            incoming.extend(rows)
+            if error:
+                failures.append(error)
 
     existing = load_corpus()
     combined = prune_and_merge(
