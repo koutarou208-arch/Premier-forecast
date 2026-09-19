@@ -30,5 +30,30 @@
     "value": null,
     "as_of": null,
     "note": "Optional current Italy-Bund 10Y spread override. Leave null to use the automatic monthly OECD/FRED Italy minus Germany 10Y spread."
+  },
+  "cdx_hy_spread_bps": {
+    "value": null,
+    "as_of": null,
+    "note": "Optional CDX HY 5Y spread in basis points. Leave null to use CCC OAS as the leveraged-credit proxy."
+  },
+  "clo_aaa_spread_bps": {
+    "value": null,
+    "as_of": null,
+    "note": "Optional US CLO AAA spread in basis points. Used as an override signal when available."
+  },
+  "clo_bbb_spread_bps": {
+    "value": null,
+    "as_of": null,
+    "note": "Optional US CLO BBB spread in basis points. Used as an override signal when available."
+  },
+  "bank_cds_bps": {
+    "value": null,
+    "as_of": null,
+    "note": "Optional representative bank 5Y CDS basket/spread in basis points. Leave null to use financial commercial-paper funding stress as the public proxy."
+  },
+  "bdc_discount_pct": {
+    "value": null,
+    "as_of": null,
+    "note": "Optional BDC/private-credit market discount to NAV in percentage points, entered as a positive discount magnitude (e.g. 12 for a 12% discount)."
   }
 }
