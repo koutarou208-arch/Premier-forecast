@@ -6,7 +6,7 @@ import math
 import pathlib
 import statistics
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 MANUAL = ROOT / "data" / "manual.json"
@@ -39,12 +39,23 @@ WEIGHTS = {
     "bank_ai": 8,
 }
 
+ABS_THRESHOLDS = {
+    "ig_credit": (1.00, 1.50, 2.50),
+    "hy_credit": (4.00, 6.00, 9.00),
+    "financial_stress": (0.00, 1.00, 2.00),
+    "rates_liquidity": (80.0, 110.0, 150.0),
+    "europe": (150.0, 250.0, 400.0),
+    "energy_oil": (100.0, 130.0, 160.0),
+    "energy_gas": (5.0, 8.0, 12.0),
+}
+
 FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}"
+LOOKBACK = 1260
 
 def fetch_series(series_id):
     req = urllib.request.Request(
         FRED_URL.format(series_id=series_id),
-        headers={"User-Agent": "global-financial-crisis-watch-v2/2.0"},
+        headers={"User-Agent": "global-financial-crisis-watch-v3/3.0"},
     )
     with urllib.request.urlopen(req, timeout=30) as r:
         text = r.read().decode("utf-8")
@@ -70,39 +81,186 @@ def safe_series(name, failures):
 def latest(series):
     return series[-1] if series else (None, None)
 
-def asc_score(value, t1, t2, t3):
-    if value is None:
-        return 0
-    if value < t1:
-        return 0
-    if value < t2:
-        return 1
-    if value < t3:
-        return 2
-    return 3
+def clamp(x, lo=0.0, hi=100.0):
+    return max(lo, min(hi, x))
 
-def common_spread(a, b):
+def pct_rank(sample, x, higher_is_risk=True):
+    if x is None or not sample:
+        return None
+    ordered = sorted(sample)
+    le = sum(1 for v in ordered if v <= x)
+    p = 100.0 * le / len(ordered)
+    return p if higher_is_risk else 100.0 - p
+
+def median_mad(sample):
+    if not sample:
+        return None, None
+    med = statistics.median(sample)
+    dev = [abs(v - med) for v in sample]
+    return med, statistics.median(dev)
+
+def robust_z(sample, x, higher_is_risk=True):
+    if x is None or len(sample) < 10:
+        return None
+    med, mad = median_mad(sample)
+    if mad is None or mad == 0:
+        sd = statistics.pstdev(sample)
+        if sd == 0:
+            return 0.0
+        z = (x - med) / sd
+    else:
+        z = (x - med) / (1.4826 * mad)
+    return z if higher_is_risk else -z
+
+def tail_score_from_percentile(p, start=65.0):
+    if p is None:
+        return None
+    if p <= start:
+        return 0.0
+    return clamp((p - start) / (100.0 - start) * 100.0)
+
+def z_score_to_risk(z):
+    if z is None:
+        return None
+    if z <= 0.5:
+        return 0.0
+    if z >= 3.0:
+        return 100.0
+    return (z - 0.5) / 2.5 * 100.0
+
+def absolute_anchor(value, thresholds):
+    if value is None:
+        return None
+    t1, t2, t3 = thresholds
+    if value <= t1:
+        return 0.0
+    if value <= t2:
+        return 33.3 * (value - t1) / (t2 - t1)
+    if value <= t3:
+        return 33.3 + 33.4 * (value - t2) / (t3 - t2)
+    span = max(t3 - t2, 1e-9)
+    return clamp(66.7 + 33.3 * (value - t3) / span)
+
+def historical_delta_percentile(values, horizon, current_delta, higher_is_risk=True, lookback=LOOKBACK):
+    if current_delta is None or len(values) <= horizon + 5:
+        return None
+    start = max(horizon, len(values) - lookback)
+    deltas = [values[i] - values[i - horizon] for i in range(start, len(values))]
+    return pct_rank(deltas[:-1] if len(deltas) > 1 else deltas, current_delta, higher_is_risk)
+
+def dynamic_metric(series, absolute_value, thresholds, higher_is_risk=True, short=5, medium=20):
+    if absolute_value is None or not series:
+        return None
+    values = [v for _, v in series]
+    sample = values[-LOOKBACK:-1] if len(values) > 20 else values[:-1]
+    if len(sample) < 10:
+        return None
+
+    anchor = absolute_anchor(absolute_value, thresholds)
+    p = pct_rank(sample, absolute_value, higher_is_risk)
+    z = robust_z(sample, absolute_value, higher_is_risk)
+    deviation = max(tail_score_from_percentile(p), z_score_to_risk(z))
+
+    def delta(h):
+        if len(values) <= h:
+            return None
+        raw = values[-1] - values[-1-h]
+        return raw if higher_is_risk else -raw
+
+    d_short = delta(short)
+    d_medium = delta(medium)
+    p_short = historical_delta_percentile(values, short, d_short, True)
+    p_medium = historical_delta_percentile(values, medium, d_medium, True)
+    velocity = max(
+        tail_score_from_percentile(p_short, 70.0) or 0.0,
+        tail_score_from_percentile(p_medium, 70.0) or 0.0,
+    )
+
+    score = clamp(0.45 * anchor + 0.30 * deviation + 0.25 * velocity)
+    return {
+        "score": round(score, 1),
+        "components": {
+            "level": round(anchor, 1),
+            "deviation": round(deviation, 1),
+            "velocity": round(velocity, 1),
+        },
+        "stats": {
+            "percentile": None if p is None else round(p, 1),
+            "robust_z": None if z is None else round(z, 2),
+            "delta_5": None if d_short is None else round(d_short, 4),
+            "delta_20": None if d_medium is None else round(d_medium, 4),
+            "velocity_pct_5": None if p_short is None else round(p_short, 1),
+            "velocity_pct_20": None if p_medium is None else round(p_medium, 1),
+        }
+    }
+
+def realized_yield_vol_series(series, window=20):
+    out = []
+    vals = [(d, v) for d, v in series]
+    if len(vals) < window + 2:
+        return out
+    for i in range(window, len(vals)):
+        changes_bps = [(vals[j][1] - vals[j-1][1]) * 100.0 for j in range(i-window+1, i+1)]
+        if len(changes_bps) >= 2:
+            out.append((vals[i][0], statistics.stdev(changes_bps) * math.sqrt(252.0)))
+    return out
+
+def common_spread_series(a, b):
     ma = dict(a)
     mb = dict(b)
     common = sorted(set(ma).intersection(mb))
-    if not common:
-        return None, None
-    d = common[-1]
-    return (ma[d] - mb[d]) * 100.0, d
+    return [(d, (ma[d] - mb[d]) * 100.0) for d in common]
 
-def realized_yield_vol_bps(series, window=20):
-    vals = [v for _, v in series[-(window + 1):]]
-    if len(vals) < 6:
-        return None
-    changes_bps = [(vals[i] - vals[i - 1]) * 100.0 for i in range(1, len(vals))]
-    if len(changes_bps) < 2:
-        return None
-    return statistics.stdev(changes_bps) * math.sqrt(252.0)
+def event_adjusted_score(entry, today):
+    raw = entry.get("score")
+    if raw is None:
+        return None, {}
+    base = clamp(float(raw) / 3.0 * 100.0)
+    conf = str(entry.get("confidence", "medium")).lower()
+    conf_mult = {"high": 1.0, "medium": 0.85, "low": 0.70}.get(conf, 0.85)
+    age_days = None
+    freshness_mult = 1.0
+    as_of = entry.get("as_of")
+    if as_of:
+        try:
+            d = date.fromisoformat(as_of)
+            age_days = max(0, (today - d).days)
+            if age_days > 180:
+                freshness_mult = 0.15
+            elif age_days > 90:
+                freshness_mult = 0.40
+            elif age_days > 60:
+                freshness_mult = 0.65
+            elif age_days > 30:
+                freshness_mult = 0.85
+        except ValueError:
+            freshness_mult = 0.70
+    adjusted = round(base * conf_mult * freshness_mult, 1)
+    return adjusted, {
+        "raw_score_0_3": raw,
+        "confidence": conf,
+        "confidence_multiplier": conf_mult,
+        "age_days": age_days,
+        "freshness_multiplier": freshness_mult,
+    }
 
-def fmt(v, suffix="", digits=2):
-    return "N/A" if v is None else f"{v:.{digits}f}{suffix}"
+def weighted_average(scores):
+    num = den = 0.0
+    for key, score in scores.items():
+        if score is None:
+            continue
+        w = WEIGHTS[key]
+        num += score * w
+        den += w
+    return (round(num / den, 1) if den else None, round(den, 1))
 
-def level(score):
+def pillar_score(scores, keys):
+    vals = [scores[k] for k in keys if scores.get(k) is not None]
+    return round(sum(vals) / len(vals), 1) if vals else None
+
+def score_level(score):
+    if score is None:
+        return "NO DATA"
     if score < 25:
         return "NORMAL"
     if score < 45:
@@ -113,134 +271,142 @@ def level(score):
         return "HIGH"
     return "CRITICAL"
 
-def weighted_score(items):
-    num = 0.0
-    den = 0.0
-    for key, score in items.items():
-        w = WEIGHTS[key]
-        num += (score / 3.0) * 100.0 * w
-        den += w
-    return round(num / den, 1) if den else 0.0
+def breadth_overlay(scores):
+    market_keys = ["ig_credit", "hy_credit", "financial_stress", "rates_liquidity", "europe", "energy"]
+    available = [scores[k] for k in market_keys if scores.get(k) is not None]
+    if not available:
+        return {"score": None, "stressed": 0, "available": 0, "severe": 0}
+    stressed = sum(v >= 45 for v in available)
+    severe = sum(v >= 65 for v in available)
+    return {
+        "score": round(100.0 * stressed / len(available), 1),
+        "stressed": stressed,
+        "available": len(available),
+        "severe": severe
+    }
 
-def pillar_score(scores, keys):
-    if not keys:
+def synchronized_bonus(breadth):
+    if not breadth or breadth["available"] < 4:
         return 0.0
-    return round(sum(scores[k] for k in keys) / (3.0 * len(keys)) * 100.0, 1)
+    if breadth["severe"] >= 4:
+        return 8.0
+    if breadth["stressed"] >= 4:
+        return 5.0
+    if breadth["stressed"] >= 3:
+        return 2.5
+    return 0.0
 
-def transmission_stage(scores):
-    structural = (scores["data_center"] + scores["private_credit"] + scores["bank_ai"]) / 3.0
-    core_credit = max(scores["ig_credit"], scores["hy_credit"])
-    liquidity = max(scores["financial_stress"], scores["rates_liquidity"])
+def transmission_stage(scores, breadth):
+    structural = pillar_score(scores, ["data_center", "private_credit", "bank_ai"]) or 0.0
+    credit = pillar_score(scores, ["ig_credit", "hy_credit"]) or 0.0
+    funding = pillar_score(scores, ["financial_stress", "rates_liquidity"]) or 0.0
+    breadth_score = (breadth or {}).get("score") or 0.0
 
-    if core_credit >= 3 and liquidity >= 3:
-        return 4, "SYSTEMIC / FREEZE", "Broad credit and funding markets are simultaneously in severe stress."
-    if core_credit >= 2 and liquidity >= 2:
-        return 3, "FUNDING STRESS", "Sector stress has propagated into broad credit and market liquidity."
-    if structural >= 1.5 and core_credit >= 1:
-        return 2, "CREDIT TRANSMISSION", "AI/private-credit stress is now accompanied by broader credit repricing."
-    if structural >= 1.0:
-        return 1, "SECTOR REPRICING", "AI infrastructure/private-credit channels show stress, but broad credit transmission is not confirmed."
+    if credit >= 75 and funding >= 70 and breadth_score >= 65:
+        return 4, "SYSTEMIC / FREEZE", "Broad credit and funding markets are simultaneously in severe, synchronized stress."
+    if credit >= 55 and funding >= 50 and breadth_score >= 50:
+        return 3, "FUNDING STRESS", "Broad credit repricing and market-liquidity stress are occurring together."
+    if credit >= 40 and (structural >= 45 or breadth_score >= 35):
+        return 2, "CREDIT TRANSMISSION", "Stress has moved beyond a single sector into broad corporate credit."
+    if structural >= 35:
+        return 1, "SECTOR REPRICING", "AI infrastructure/private-credit channels are stressed, but broad contagion is not confirmed."
     return 0, "CALM", "No material sector-to-system transmission signal."
-
-def make_flags(scores, energy_score, europe_score):
-    flags = []
-    if max(scores["data_center"], scores["private_credit"], scores["bank_ai"]) >= 2:
-        flags.append({"type": "AI_CREDIT", "label": "AI / Private Credit stress is material"})
-    if scores["hy_credit"] >= 2 or scores["ig_credit"] >= 2:
-        flags.append({"type": "CREDIT", "label": "Broad corporate credit spreads are stressed"})
-    if scores["rates_liquidity"] >= 2 or scores["financial_stress"] >= 2:
-        flags.append({"type": "LIQUIDITY", "label": "Market liquidity / volatility is stressed"})
-    if europe_score >= 2:
-        flags.append({"type": "EUROPE", "label": "Euro sovereign fragmentation is elevated"})
-    if energy_score >= 2:
-        flags.append({"type": "ENERGY", "label": "Energy shock is large enough to constrain policy"})
-    if energy_score >= 2 and max(scores["ig_credit"], scores["hy_credit"]) >= 1:
-        flags.append({"type": "COMPOUND", "label": "Energy + credit compound shock"})
-    if not flags:
-        flags.append({"type": "CLEAR", "label": "No cross-market contagion trigger"})
-    return flags
 
 def load_history():
     if not HISTORY_JSON.exists():
         return []
     try:
-        data = json.loads(HISTORY_JSON.read_text(encoding="utf-8"))
-        return data if isinstance(data, list) else []
+        x = json.loads(HISTORY_JSON.read_text(encoding="utf-8"))
+        return x if isinstance(x, list) else []
     except Exception:
         return []
 
 def save_history(history, record):
-    day = record["date"]
-    history = [x for x in history if x.get("date") != day]
+    history = [x for x in history if x.get("date") != record["date"]]
     history.append(record)
     history = sorted(history, key=lambda x: x.get("date", ""))[-365:]
     HISTORY_JSON.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    HISTORY_JS.write_text(
-        "window.__RISK_HISTORY__ = " + json.dumps(history, ensure_ascii=False, indent=2) + ";\n",
-        encoding="utf-8",
-    )
+    HISTORY_JS.write_text("window.__RISK_HISTORY__ = " + json.dumps(history, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
+
+def fmt(v, suffix="", digits=2):
+    return "N/A" if v is None else f"{v:.{digits}f}{suffix}"
+
+def comp_or_empty(metric):
+    return metric["components"] if metric else {"level": None, "deviation": None, "velocity": None}
 
 def main():
+    now = datetime.now(timezone.utc)
+    today = now.date()
     manual = json.loads(MANUAL.read_text(encoding="utf-8"))
     failures = []
     series = {k: safe_series(k, failures) for k in SERIES}
+    latests = {k: latest(s) for k, s in series.items()}
 
-    dates = {}
-    values = {}
-    for k, s in series.items():
-        d, v = latest(s)
-        dates[k] = d
-        values[k] = v
+    ig_d, ig = latests["ig_oas"]
+    hy_d, hy = latests["hy_oas"]
+    fs_d, stlfsi = latests["stlfsi"]
+    vix_d, vix = latests["vix"]
+    wti_d, wti = latests["wti"]
+    gas_d, gas = latests["gas"]
+    d10_d, dgs10 = latests["dgs10"]
+    d2_d, dgs2 = latests["dgs2"]
 
-    ig = values["ig_oas"]
-    hy = values["hy_oas"]
-    stlfsi = values["stlfsi"]
-    vix = values["vix"]
-    wti = values["wti"]
-    gas = values["gas"]
-    dgs10 = values["dgs10"]
-    dgs2 = values["dgs2"]
+    ig_m = dynamic_metric(series["ig_oas"], ig, ABS_THRESHOLDS["ig_credit"])
+    hy_m = dynamic_metric(series["hy_oas"], hy, ABS_THRESHOLDS["hy_credit"])
+    fs_m = dynamic_metric(series["stlfsi"], stlfsi, ABS_THRESHOLDS["financial_stress"])
 
-    ig_score = asc_score(ig, 1.00, 1.50, 2.50)
-    hy_score = asc_score(hy, 4.00, 6.00, 9.00)
-    stlfsi_score = asc_score(stlfsi, 0.00, 1.00, 2.00)
-    vix_score = asc_score(vix, 20.00, 30.00, 40.00)
-
-    realized_vol = realized_yield_vol_bps(series["dgs10"], 20)
-    realized_score = asc_score(realized_vol, 80.0, 110.0, 150.0)
+    rv_series = realized_yield_vol_series(series["dgs10"], 20)
+    rv_d, rv = latest(rv_series)
+    rv_m = dynamic_metric(rv_series, rv, ABS_THRESHOLDS["rates_liquidity"]) if rv is not None else None
+    vix_m = dynamic_metric(series["vix"], vix, (20.0, 30.0, 40.0))
     move_manual = manual.get("move_index", {}).get("value")
-    move_score = asc_score(float(move_manual), 90.0, 120.0, 160.0) if move_manual is not None else 0
-    rates_score = max(realized_score, move_score, vix_score)
+    move_score = None if move_manual is None else absolute_anchor(float(move_manual), (90.0, 120.0, 160.0))
+    rate_candidates = [x for x in [rv_m["score"] if rv_m else None, vix_m["score"] if vix_m else None, move_score] if x is not None]
+    rates_score = max(rate_candidates) if rate_candidates else None
+    rates_components = comp_or_empty(rv_m)
+    if vix_m and (rates_score == vix_m["score"]):
+        rates_components = vix_m["components"]
 
-    italy_bund_bps, italy_bund_date = common_spread(series["italy10"], series["germany10"])
-    europe_override = manual.get("europe_daily_spread_bps", {}).get("value")
-    europe_bps = float(europe_override) if europe_override is not None else italy_bund_bps
-    europe_score = asc_score(europe_bps, 150.0, 250.0, 400.0)
+    eu_series = common_spread_series(series["italy10"], series["germany10"])
+    eu_d, eu_auto = latest(eu_series)
+    eu_override = manual.get("europe_daily_spread_bps", {}).get("value")
+    europe_bps = float(eu_override) if eu_override is not None else eu_auto
+    if eu_override is not None:
+        eu_anchor = absolute_anchor(europe_bps, ABS_THRESHOLDS["europe"])
+        eu_m = {"score": eu_anchor, "components": {"level": eu_anchor, "deviation": None, "velocity": None}, "stats": {}}
+        eu_d = manual.get("europe_daily_spread_bps", {}).get("as_of")
+    else:
+        eu_m = dynamic_metric(eu_series, europe_bps, ABS_THRESHOLDS["europe"], short=1, medium=3) if europe_bps is not None else None
 
-    wti_score = asc_score(wti, 100.0, 130.0, 160.0)
-    gas_score = asc_score(gas, 5.0, 8.0, 12.0)
-    energy_score = max(wti_score, gas_score)
+    oil_m = dynamic_metric(series["wti"], wti, ABS_THRESHOLDS["energy_oil"]) if wti is not None else None
+    gas_m = dynamic_metric(series["gas"], gas, ABS_THRESHOLDS["energy_gas"]) if gas is not None else None
+    energy_candidates = [x for x in [oil_m["score"] if oil_m else None, gas_m["score"] if gas_m else None] if x is not None]
+    energy_score = max(energy_candidates) if energy_candidates else None
+    energy_components = comp_or_empty(oil_m if oil_m and energy_score == oil_m["score"] else gas_m)
 
-    dc_score = int(manual["data_center_financing"]["score"])
-    pc_score = int(manual["private_credit"]["score"])
-    bank_score = int(manual["bank_ai_inventory"]["score"])
+    dc_score, dc_meta = event_adjusted_score(manual["data_center_financing"], today)
+    pc_score, pc_meta = event_adjusted_score(manual["private_credit"], today)
+    bank_score, bank_meta = event_adjusted_score(manual["bank_ai_inventory"], today)
 
     scores = {
-        "ig_credit": ig_score,
-        "hy_credit": hy_score,
-        "financial_stress": stlfsi_score,
-        "rates_liquidity": rates_score,
-        "europe": europe_score,
-        "energy": energy_score,
+        "ig_credit": None if ig_m is None else ig_m["score"],
+        "hy_credit": None if hy_m is None else hy_m["score"],
+        "financial_stress": None if fs_m is None else fs_m["score"],
+        "rates_liquidity": None if rates_score is None else round(rates_score, 1),
+        "europe": None if eu_m is None else round(eu_m["score"], 1),
+        "energy": None if energy_score is None else round(energy_score, 1),
         "data_center": dc_score,
         "private_credit": pc_score,
         "bank_ai": bank_score,
     }
 
-    total = weighted_score(scores)
-    lvl = level(total)
-    stage, stage_label, stage_note = transmission_stage(scores)
-    flags = make_flags(scores, energy_score, europe_score)
+    raw_score, coverage_weight = weighted_average(scores)
+    coverage_pct = round(coverage_weight, 1)
+    breadth = breadth_overlay(scores)
+    bonus = synchronized_bonus(breadth)
+    score = None if raw_score is None else round(clamp(raw_score + bonus), 1)
+    lvl = score_level(score)
+    stage, stage_label, stage_note = transmission_stage(scores, breadth)
 
     pillars = [
         {"name": "Broad Credit", "score": pillar_score(scores, ["ig_credit", "hy_credit"])},
@@ -249,148 +415,122 @@ def main():
         {"name": "Europe / Energy", "score": pillar_score(scores, ["europe", "energy"])},
     ]
 
-    if failures:
-        summary = f"{lvl}: {len(failures)} automatic source(s) failed. Composite is usable only after checking data quality."
+    if coverage_pct < 70:
+        summary = f"{lvl}: data coverage is only {coverage_pct:.0f}%; treat the composite as provisional."
     elif stage >= 3:
-        summary = f"{lvl}: broad credit and liquidity transmission is visible. This is no longer only an AI-sector repricing signal."
+        summary = f"{lvl}: broad credit and funding/liquidity stress are synchronized. Cross-market contagion is visible."
     elif stage == 2:
-        summary = f"{lvl}: structural AI/private-credit stress is beginning to overlap with broader credit repricing."
+        summary = f"{lvl}: stress has begun to propagate into broad corporate credit."
     elif stage == 1:
-        summary = f"{lvl}: AI infrastructure/private-credit stress is material, but broad market contagion is not yet confirmed."
+        summary = f"{lvl}: AI/private-credit stress remains mainly sectoral; broad credit contagion is not yet confirmed."
     else:
         summary = f"{lvl}: no material sector-to-system transmission signal."
 
-    curve = None
-    if dgs10 is not None and dgs2 is not None:
-        curve = (dgs10 - dgs2) * 100.0
+    def indicator(id_, name, score_, value, source, mode, as_of, weight, url, note, components=None, stats=None, quality=None):
+        return {
+            "id": id_, "name": name, "score": score_, "value": value, "source": source, "mode": mode,
+            "as_of": as_of, "weight": weight, "source_url": url, "note": note,
+            "components": components or {"level": None, "deviation": None, "velocity": None},
+            "stats": stats or {}, "quality": quality or {}
+        }
 
     indicators = [
-        {
-            "id": "ig_credit", "name": "US IG Corporate OAS", "score": ig_score,
-            "value": fmt(ig, "%"), "source": "FRED BAMLC0A0CM", "mode": "AUTO",
-            "as_of": dates["ig_oas"], "weight": WEIGHTS["ig_credit"],
-            "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
-            "note": "Broad investment-grade spread. AI-specific stress should eventually appear here if contagion broadens."
-        },
-        {
-            "id": "hy_credit", "name": "US High Yield OAS", "score": hy_score,
-            "value": fmt(hy, "%"), "source": "FRED BAMLH0A0HYM2", "mode": "AUTO",
-            "as_of": dates["hy_oas"], "weight": WEIGHTS["hy_credit"],
-            "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
-            "note": "Core contagion indicator. A sustained move through 6-9% OAS would be materially different from an equity-only correction."
-        },
-        {
-            "id": "financial_stress", "name": "St. Louis Financial Stress", "score": stlfsi_score,
-            "value": fmt(stlfsi, "", 2), "source": "FRED STLFSI4", "mode": "AUTO",
-            "as_of": dates["stlfsi"], "weight": WEIGHTS["financial_stress"],
-            "source_url": "https://fred.stlouisfed.org/series/STLFSI4",
-            "note": "Cross-market financial stress proxy. Positive and rising values signal stress above normal conditions."
-        },
-        {
-            "id": "rates_liquidity", "name": "Treasury Vol / Liquidity", "score": rates_score,
-            "value": f"RV20 {fmt(realized_vol, ' bp')} / VIX {fmt(vix)}" + (f" / MOVE {fmt(float(move_manual))}" if move_manual is not None else ""),
-            "source": "FRED DGS10 + VIXCLS" + (" + manual MOVE" if move_manual is not None else ""),
-            "mode": "HYBRID" if move_manual is not None else "AUTO",
-            "as_of": dates["dgs10"], "weight": WEIGHTS["rates_liquidity"],
-            "source_url": "https://fred.stlouisfed.org/series/DGS10",
-            "note": "RV20 is annualized 20-day realized volatility of daily 10Y Treasury yield changes. It is a MOVE-like proxy, not the MOVE index itself."
-        },
-        {
-            "id": "europe", "name": "Italy-Bund 10Y Spread", "score": europe_score,
-            "value": fmt(europe_bps, " bp", 0), "source": "OECD via FRED" if europe_override is None else "Manual daily override",
-            "mode": "AUTO-MONTHLY" if europe_override is None else "HYBRID",
-            "as_of": italy_bund_date if europe_override is None else manual.get("europe_daily_spread_bps", {}).get("as_of"),
-            "weight": WEIGHTS["europe"],
-            "source_url": "https://fred.stlouisfed.org/graph/?g=j3d3",
-            "note": "Exact Italy minus Germany 10Y benchmark spread using common-date OECD/FRED observations. Monthly unless manually overridden with a current daily spread."
-        },
-        {
-            "id": "energy", "name": "Energy Shock", "score": energy_score,
-            "value": f"WTI ${fmt(wti, '', 2)} / Henry Hub ${fmt(gas, '', 2)}",
-            "source": "FRED DCOILWTICO + DHHNGSP", "mode": "AUTO",
-            "as_of": max([d for d in [dates["wti"], dates["gas"]] if d] or [None]),
-            "weight": WEIGHTS["energy"],
-            "source_url": "https://fred.stlouisfed.org/series/DCOILWTICO",
-            "note": "Uses the more severe oil/gas stress score. High energy stress can limit the ability of central banks to cushion a credit shock."
-        },
-        {
-            "id": "data_center", "name": "AI Data-center Financing", "score": dc_score,
-            "value": "Event score", "source": "Reuters / deal evidence", "mode": "EVENT",
-            "as_of": manual["data_center_financing"].get("as_of"), "weight": WEIGHTS["data_center"],
-            "source_url": manual["data_center_financing"].get("source_url"),
-            "note": manual["data_center_financing"]["note"]
-        },
-        {
-            "id": "private_credit", "name": "Private-credit Liquidity", "score": pc_score,
-            "value": "Event score", "source": "Fund disclosures / Reuters", "mode": "EVENT",
-            "as_of": manual["private_credit"].get("as_of"), "weight": WEIGHTS["private_credit"],
-            "source_url": manual["private_credit"].get("source_url"),
-            "note": manual["private_credit"]["note"]
-        },
-        {
-            "id": "bank_ai", "name": "Bank AI-credit Inventory", "score": bank_score,
-            "value": "Event score", "source": "Syndication / lender evidence", "mode": "EVENT",
-            "as_of": manual["bank_ai_inventory"].get("as_of"), "weight": WEIGHTS["bank_ai"],
-            "source_url": manual["bank_ai_inventory"].get("source_url"),
-            "note": manual["bank_ai_inventory"]["note"]
-        },
+        indicator("ig_credit","US IG Corporate OAS",scores["ig_credit"],fmt(ig,"%"),"FRED BAMLC0A0CM","AUTO-DYNAMIC",ig_d,WEIGHTS["ig_credit"],
+                  "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+                  "45% absolute level + 30% deviation from ~5y history + 25% 5/20-observation deterioration speed.",
+                  comp_or_empty(ig_m), ig_m["stats"] if ig_m else None),
+        indicator("hy_credit","US High Yield OAS",scores["hy_credit"],fmt(hy,"%"),"FRED BAMLH0A0HYM2","AUTO-DYNAMIC",hy_d,WEIGHTS["hy_credit"],
+                  "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
+                  "Core contagion channel. Fast widening can score high even before the absolute OAS reaches crisis thresholds.",
+                  comp_or_empty(hy_m), hy_m["stats"] if hy_m else None),
+        indicator("financial_stress","St. Louis Financial Stress",scores["financial_stress"],fmt(stlfsi,"",2),"FRED STLFSI4","AUTO-DYNAMIC",fs_d,WEIGHTS["financial_stress"],
+                  "https://fred.stlouisfed.org/series/STLFSI4",
+                  "Cross-market stress measured against both fixed anchors and its own recent distribution.",
+                  comp_or_empty(fs_m), fs_m["stats"] if fs_m else None),
+        indicator("rates_liquidity","Treasury Vol / Liquidity",scores["rates_liquidity"],
+                  f"RV20 {fmt(rv,' bp')} / VIX {fmt(vix)}" + (f" / MOVE {fmt(float(move_manual))}" if move_manual is not None else ""),
+                  "FRED DGS10 + VIXCLS","AUTO/HYBRID",rv_d or d10_d,WEIGHTS["rates_liquidity"],
+                  "https://fred.stlouisfed.org/series/DGS10",
+                  "Uses the strongest signal from 10Y realized yield volatility, VIX, and optional MOVE. Missing inputs are not treated as zero.",
+                  rates_components, {"rv": rv, "move": move_manual, "vix": vix}),
+        indicator("europe","Italy-Bund 10Y Spread",scores["europe"],fmt(europe_bps," bp",0),
+                  "OECD via FRED" if eu_override is None else "Manual daily override",
+                  "AUTO-DYNAMIC" if eu_override is None else "HYBRID",eu_d,WEIGHTS["europe"],
+                  "https://fred.stlouisfed.org/graph/?g=j3d3",
+                  "Monthly automatic series uses level/deviation/velocity. A daily manual override uses the absolute anchor only.",
+                  comp_or_empty(eu_m), eu_m["stats"] if eu_m else None),
+        indicator("energy","Energy Shock",scores["energy"],f"WTI ${fmt(wti,'',2)} / Henry Hub ${fmt(gas,'',2)}",
+                  "FRED DCOILWTICO + DHHNGSP","AUTO-DYNAMIC",max([x for x in [wti_d,gas_d] if x] or [None]),WEIGHTS["energy"],
+                  "https://fred.stlouisfed.org/series/DCOILWTICO",
+                  "Uses the more stressed oil/gas signal; fast shocks matter even before absolute prices reach extreme thresholds.",
+                  energy_components, {"oil_score": oil_m["score"] if oil_m else None, "gas_score": gas_m["score"] if gas_m else None}),
+        indicator("data_center","AI Data-center Financing",scores["data_center"],"Event score","Reuters / deal evidence","EVENT-DECAY",manual["data_center_financing"].get("as_of"),WEIGHTS["data_center"],
+                  manual["data_center_financing"].get("source_url"),manual["data_center_financing"]["note"],
+                  {"level": scores["data_center"], "deviation": None, "velocity": None}, dc_meta, {"confidence": manual["data_center_financing"].get("confidence")}),
+        indicator("private_credit","Private-credit Liquidity",scores["private_credit"],"Event score","Fund disclosures / Reuters","EVENT-DECAY",manual["private_credit"].get("as_of"),WEIGHTS["private_credit"],
+                  manual["private_credit"].get("source_url"),manual["private_credit"]["note"],
+                  {"level": scores["private_credit"], "deviation": None, "velocity": None}, pc_meta, {"confidence": manual["private_credit"].get("confidence")}),
+        indicator("bank_ai","Bank AI-credit Inventory",scores["bank_ai"],"Event score","Syndication / lender evidence","EVENT-DECAY",manual["bank_ai_inventory"].get("as_of"),WEIGHTS["bank_ai"],
+                  manual["bank_ai_inventory"].get("source_url"),manual["bank_ai_inventory"]["note"],
+                  {"level": scores["bank_ai"], "deviation": None, "velocity": None}, bank_meta, {"confidence": manual["bank_ai_inventory"].get("confidence")}),
     ]
 
-    diagnostics = {
-        "us10y": dgs10,
-        "us2y": dgs2,
-        "curve_2s10s_bps": curve,
-        "vix": vix,
-        "realized_10y_vol_bps": realized_vol,
-        "move_manual": move_manual,
-        "italy_bund_bps": europe_bps,
-        "italy_bund_frequency": "manual daily" if europe_override is not None else "monthly",
-        "wti": wti,
-        "gas": gas,
-    }
+    flags = []
+    if breadth["score"] is not None and breadth["score"] >= 50:
+        flags.append({"type":"BREADTH","label":f"Cross-market breadth {breadth['score']:.0f}%"})
+    if bonus > 0:
+        flags.append({"type":"SYNC","label":f"Synchronized-stress overlay +{bonus:.1f}"})
+    if (pillar_score(scores, ["data_center","private_credit","bank_ai"]) or 0) >= 45:
+        flags.append({"type":"AI_CREDIT","label":"AI / Private Credit stress is material"})
+    if coverage_pct < 80:
+        flags.append({"type":"DATA","label":f"Data coverage {coverage_pct:.0f}%"})
+    if not flags:
+        flags.append({"type":"CLEAR","label":"No cross-market contagion trigger"})
 
-    now = datetime.now(timezone.utc)
+    curve = None if dgs10 is None or dgs2 is None else (dgs10 - dgs2) * 100.0
     payload = {
-        "version": 2,
-        "updated_at": now.isoformat().replace("+00:00", "Z"),
-        "score": total,
+        "version": 3,
+        "updated_at": now.isoformat().replace("+00:00","Z"),
+        "score": score,
+        "raw_score": raw_score,
+        "synchronization_bonus": bonus,
         "level": lvl,
         "summary": summary,
-        "transmission": {"stage": stage, "label": stage_label, "note": stage_note},
+        "coverage_pct": coverage_pct,
+        "breadth": breadth,
+        "transmission": {"stage":stage,"label":stage_label,"note":stage_note},
         "flags": flags,
         "pillars": pillars,
         "weights": WEIGHTS,
-        "diagnostics": diagnostics,
+        "methodology": {
+            "auto_components": {"level_weight":45,"deviation_weight":30,"velocity_weight":25},
+            "lookback_observations": LOOKBACK,
+            "missing_data_policy": "exclude_and_renormalize",
+            "event_decay": "confidence multiplier plus age-based decay after 30 days"
+        },
+        "diagnostics": {
+            "us10y": dgs10, "us2y": dgs2, "curve_2s10s_bps": curve, "vix": vix,
+            "realized_10y_vol_bps": rv, "move_manual": move_manual,
+            "italy_bund_bps": europe_bps, "wti": wti, "gas": gas
+        },
         "data_failures": failures,
-        "indicators": indicators,
+        "indicators": indicators
     }
 
-    OUTPUT.write_text(
-        "window.__RISK_DATA__ = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n",
-        encoding="utf-8",
-    )
+    OUTPUT.write_text("window.__RISK_DATA__ = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
 
     history = load_history()
     save_history(history, {
-        "date": now.date().isoformat(),
-        "score": total,
-        "level": lvl,
-        "stage": stage,
+        "date": now.date().isoformat(), "score": score, "raw_score": raw_score, "level": lvl, "stage": stage,
+        "coverage_pct": coverage_pct, "breadth": breadth["score"], "synchronization_bonus": bonus,
         "pillars": {x["name"]: x["score"] for x in pillars},
-        "hy_oas": hy,
-        "ig_oas": ig,
-        "stlfsi": stlfsi,
-        "rates_vol": realized_vol,
-        "italy_bund_bps": europe_bps,
-        "wti": wti,
+        "hy_oas": hy, "ig_oas": ig, "stlfsi": stlfsi, "rates_vol": rv,
+        "italy_bund_bps": europe_bps, "wti": wti
     })
 
     print(json.dumps({
-        "version": 2,
-        "score": total,
-        "level": lvl,
-        "stage": stage,
-        "failures": failures,
+        "version":3,"score":score,"raw_score":raw_score,"level":lvl,"stage":stage,
+        "coverage_pct":coverage_pct,"breadth":breadth,"bonus":bonus,"failures":failures
     }, ensure_ascii=False))
 
 if __name__ == "__main__":
