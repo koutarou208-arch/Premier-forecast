@@ -306,7 +306,7 @@ def main():
         },
         {
             "id": "energy", "name": "Energy Shock", "score": energy_score,
-            "value": f"WTI {fmt(wti, '$', 2)} / Henry Hub {fmt(gas, '$', 2)}",
+            "value": f"WTI ${fmt(wti, '', 2)} / Henry Hub ${fmt(gas, '', 2)}",
             "source": "FRED DCOILWTICO + DHHNGSP", "mode": "AUTO",
             "as_of": max([d for d in [dates["wti"], dates["gas"]] if d] or [None]),
             "weight": WEIGHTS["energy"],
