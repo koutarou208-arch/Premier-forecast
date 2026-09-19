@@ -13,6 +13,7 @@ on:
       - "scripts/train_nn.py"
       - "data/manual.json"
       - "data/backtest_config.json"
+      - "data/model_config.json"
       - ".github/workflows/update-dashboard.yml"
 
 permissions:
