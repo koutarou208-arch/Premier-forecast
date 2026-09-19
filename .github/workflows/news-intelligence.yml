@@ -12,6 +12,8 @@ on:
       - "scripts/news_intelligence.py"
       - "scripts/test_news_intelligence.py"
       - "intelligence_store.py"
+      - "mcp_server.py"
+      - "scripts/test_mcp_intelligence.py"
       - "data/news_sources.json"
       - "data/news_taxonomy.json"
       - "requirements-intelligence.txt"
@@ -39,13 +41,17 @@ jobs:
           key: fastembed-multilingual-minilm-${{ runner.os }}-v1
 
       - name: Install intelligence dependencies
-        run: python3 -m pip install --disable-pip-version-check --quiet -r requirements-intelligence.txt
+        run: |
+          python3 -m pip install --disable-pip-version-check --quiet -r requirements-intelligence.txt
+          python3 -m pip install --disable-pip-version-check --quiet -r requirements-mcp.txt
 
       - name: Validate syntax
         run: |
           python3 -m py_compile intelligence_store.py
           python3 -m py_compile scripts/news_intelligence.py
           python3 -m py_compile scripts/test_news_intelligence.py
+          python3 -m py_compile scripts/test_mcp_intelligence.py
+          python3 -m py_compile mcp_server.py
 
       - name: Collect, embed, vectorize, time-series and graph
         env:
@@ -57,7 +63,9 @@ jobs:
         env:
           MCP_EMBEDDING_MODEL: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
           FASTEMBED_CACHE_PATH: ~/.cache/fastembed
-        run: python3 scripts/test_news_intelligence.py
+        run: |
+          python3 scripts/test_news_intelligence.py
+          python3 scripts/test_mcp_intelligence.py
 
       - name: Commit portable intelligence state
         run: |
