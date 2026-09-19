@@ -67,6 +67,37 @@
       <p class="chart-note">平日更新ごとに履歴を保存。蓄積されるほど「悪化の速度」が見えるようになります。</p>
     </section>
 
+    <section class="agent-panel">
+      <div class="history-head">
+        <div>
+          <p class="eyebrow">SELF-IMPROVEMENT AGENT</p>
+          <h2>検証してから自己改善</h2>
+        </div>
+        <span class="validation-badge agent-badge">GUARDRAILED</span>
+      </div>
+      <p class="backtest-intro">2022年までのcalibrationだけで候補を評価。2023年以降のholdoutは採否に使わず、コード・ラベル・危機窓も自動変更しません。</p>
+      <div class="validation-metrics">
+        <div class="quality-card"><span>LAST DECISION</span><strong id="agentDecision">—</strong><small>accepted / reject_all</small></div>
+        <div class="quality-card"><span>CANDIDATES</span><strong id="agentCandidates">—</strong><small>今回比較した候補数</small></div>
+        <div class="quality-card"><span>OBJECTIVE</span><strong id="agentObjective">—</strong><small>before → after</small></div>
+        <div class="quality-card"><span>FPR</span><strong id="agentFpr">—</strong><small>calibration誤警報率</small></div>
+      </div>
+      <div class="agent-grid">
+        <div>
+          <p class="eyebrow">ACCEPTED CHANGE</p>
+          <div id="agentChange" class="agent-change">—</div>
+        </div>
+        <div>
+          <p class="eyebrow">GUARDRAILS</p>
+          <div class="guardrail-list">
+            <span>Holdout used for selection <b>NO</b></span>
+            <span>Code rewrite <b>NO</b></span>
+            <span>Max accepted changes/cycle <b>1</b></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="nn-panel">
       <div class="history-head">
         <div>
@@ -178,6 +209,7 @@
   <script src="data/history.js"></script>
   <script src="data/backtest.js"></script>
   <script src="data/nn_model.js"></script>
+  <script src="data/agent_state.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
