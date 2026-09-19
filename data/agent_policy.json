@@ -37,5 +37,6 @@
     "allow_label_rewrite": false,
     "allow_backtest_window_rewrite": false,
     "max_accepted_changes_per_cycle": 1
-  }
+  },
+  "description": "Guardrailed calibration-only self-improvement; 2023+ holdout is report-only."
 }
