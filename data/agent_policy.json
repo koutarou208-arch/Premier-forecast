@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "enabled": true,
+  "optimization_cutoff": "2022-12-31",
+  "holdout_start": "2023-01-01",
+  "lead_days": 60,
+  "candidate_generation": {
+    "weight_step": 1,
+    "max_total_l1_change_per_cycle": 2,
+    "min_market_weight": 4,
+    "max_market_weight": 18,
+    "hybrid_nn_candidates": [0.2, 0.25, 0.3, 0.35, 0.4, 0.45]
+  },
+  "acceptance": {
+    "min_objective_improvement": 0.005,
+    "max_false_positive_rate_increase": 0.01,
+    "max_event_peak_regression": 8.0,
+    "min_event_recall": 0.75
+  },
+  "objective_weights": {
+    "roc_auc": 0.35,
+    "average_precision": 0.25,
+    "event_recall": 0.2,
+    "specificity": 0.2
+  },
+  "safety": {
+    "holdout_used_for_selection": false,
+    "allow_code_rewrite": false,
+    "allow_label_rewrite": false,
+    "allow_backtest_window_rewrite": false,
+    "max_accepted_changes_per_cycle": 1
+  }
+}
