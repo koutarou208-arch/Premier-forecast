@@ -39,7 +39,7 @@ jobs:
           python3 -m py_compile scripts/backtest.py
           python3 -m py_compile scripts/train_nn.py
 
-      - name: Refresh v5 market data
+      - name: Refresh v6 market data
         run: python3 scripts/update_data.py
 
       - name: Run walk-forward backtest
@@ -57,7 +57,7 @@ jobs:
           m = re.search(r"window.__RISK_DATA__\s*=\s*(\{.*\});\s*$", latest, re.S)
           assert m, "latest.js payload missing"
           payload = json.loads(m.group(1))
-          assert payload["version"] in (5, 6)
+          assert payload["version"] == 6
           assert 0 <= payload["coverage_pct"] <= 100
           assert 0 <= payload["market_coverage_pct"] <= 100
           assert payload["score"] is None or 0 <= payload["score"] <= 100
