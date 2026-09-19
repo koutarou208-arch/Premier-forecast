@@ -60,4 +60,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/latest.js data/history.js data/history.json
           git commit -m "Update crisis watch v4 snapshot"
+          git pull --rebase origin main
           git push
