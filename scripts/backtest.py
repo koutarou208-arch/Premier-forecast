@@ -93,7 +93,7 @@ def read_latest():
 def main():
     cfg = json.loads(CONFIG.read_text(encoding="utf-8"))
     failures = []
-    series = {k: core.safe_series(k, failures) for k in core.SERIES}
+    series = core.fetch_all_series(failures)
 
     # Historical-only funding proxy for periods before SOFR/IORB history.
     try:
