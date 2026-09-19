@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "updated_at": "2026-09-19T16:00:57.446038Z",
+    "decision": "accepted",
+    "accepted_change": {
+      "description": "NN weight 0.35 -> 0.40",
+      "changes": [
+        {
+          "field": "hybrid.rule_weight",
+          "from": 0.65,
+          "to": 0.6
+        },
+        {
+          "field": "hybrid.nn_weight",
+          "from": 0.35,
+          "to": 0.4
+        }
+      ],
+      "metrics": {
+        "objective": 0.870146212773825,
+        "roc_auc": 0.8735700499011393,
+        "average_precision": 0.9273542230941699,
+        "event_recall": 0.75,
+        "false_positive_rate": 0.0872093023255814,
+        "specificity": 0.9127906976744186,
+        "threshold": 34.5,
+        "event_peaks": {
+          "gfc": 93.80172735307912,
+          "euro": 53.25649084889577,
+          "repo2019": 20.336512289728695,
+          "covid": 80.44193569697535
+        }
+      }
+    },
+    "baseline_objective": 0.857333631219731,
+    "active_config": {
+      "version": 1,
+      "market_weights": {
+        "ig_credit": 10,
+        "hy_credit": 14,
+        "leveraged_credit": 10,
+        "financial_stress": 8,
+        "rates_liquidity": 8,
+        "funding_market": 10,
+        "banking_stress": 8,
+        "europe": 6,
+        "energy": 7
+      },
+      "structural_weights": {
+        "data_center": 6,
+        "private_credit": 8,
+        "bank_ai": 5
+      },
+      "hybrid": {
+        "rule_weight": 0.6,
+        "nn_weight": 0.4
+      },
+      "source": "self_improvement_agent",
+      "last_agent_change": {
+        "at": "2026-09-19T16:00:57.446038Z",
+        "description": "NN weight 0.35 -> 0.40",
+        "baseline_objective": 0.857334,
+        "candidate_objective": 0.870146
+      }
+    }
+  }
+]

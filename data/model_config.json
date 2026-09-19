@@ -17,9 +17,14 @@
     "bank_ai": 5
   },
   "hybrid": {
-    "rule_weight": 0.65,
-    "nn_weight": 0.35
+    "rule_weight": 0.6,
+    "nn_weight": 0.4
   },
-  "source": "human_seed_v6",
-  "last_agent_change": null
+  "source": "self_improvement_agent",
+  "last_agent_change": {
+    "at": "2026-09-19T16:00:57.446038Z",
+    "description": "NN weight 0.35 -> 0.40",
+    "baseline_objective": 0.857334,
+    "candidate_objective": 0.870146
+  }
 }
