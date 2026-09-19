@@ -1,0 +1,80 @@
+name: Update news intelligence
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every 2 hours at minute 17.
+    - cron: "17 */2 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/news_intelligence.py"
+      - "scripts/test_news_intelligence.py"
+      - "intelligence_store.py"
+      - "data/news_sources.json"
+      - "data/news_taxonomy.json"
+      - "requirements-intelligence.txt"
+      - ".github/workflows/news-intelligence.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-intelligence
+  cancel-in-progress: true
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Cache FastEmbed model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/fastembed
+          key: fastembed-multilingual-minilm-${{ runner.os }}-v1
+
+      - name: Install intelligence dependencies
+        run: python3 -m pip install --disable-pip-version-check --quiet -r requirements-intelligence.txt
+
+      - name: Validate syntax
+        run: |
+          python3 -m py_compile intelligence_store.py
+          python3 -m py_compile scripts/news_intelligence.py
+          python3 -m py_compile scripts/test_news_intelligence.py
+
+      - name: Collect, embed, vectorize, time-series and graph
+        env:
+          MCP_EMBEDDING_MODEL: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          FASTEMBED_CACHE_PATH: ~/.cache/fastembed
+        run: python3 scripts/news_intelligence.py
+
+      - name: Validate intelligence layer
+        env:
+          MCP_EMBEDDING_MODEL: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+          FASTEMBED_CACHE_PATH: ~/.cache/fastembed
+        run: python3 scripts/test_news_intelligence.py
+
+      - name: Commit portable intelligence state
+        run: |
+          if git diff --quiet; then
+            echo "No intelligence changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/news_corpus.jsonl data/news_timeseries.json data/graph_snapshot.json data/news_intelligence_status.json
+          git commit -m "Update news vector, time-series and graph intelligence"
+          for attempt in 1 2 3 4; do
+            git pull --rebase origin main
+            if git push; then
+              exit 0
+            fi
+            echo "Push race detected; retrying ($attempt/4)"
+            sleep $((attempt * 2))
+          done
+          exit 1
