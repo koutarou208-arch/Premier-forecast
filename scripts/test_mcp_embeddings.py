@@ -13,6 +13,9 @@ os.environ.setdefault(
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 import mcp_server as s
 
+caps = s.get_search_capabilities(probe_embeddings=True)
+assert caps["embedding_model_loaded"] is True, caps
+
 cases = [
     ("短期の資金調達が詰まり始めている兆候", {"funding_market", "banking_stress", "rates_liquidity"}),
     ("AI向けデータセンター融資の悪化", {"data_center", "private_credit", "bank_ai"}),
