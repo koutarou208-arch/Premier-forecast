@@ -147,8 +147,18 @@ def main():
     funding_dates = build_index(funding_full)
 
     # Weekly NFCI risk series is the stable historical anchor.
+    # Add daily Treasury dates around labeled episodes so short funding shocks are not lost.
     anchor = [(d, v) for d, v in series["nfci_risk"] if d >= cfg["start_date"]]
-    sample_dates = [d for d, _ in anchor]
+    sample_set = {d for d, _ in anchor}
+    pre_days = int(cfg.get("pre_reference_days", 120))
+    for w in cfg["windows"]:
+        start = min(parse_day(w["start"]), parse_day(w["reference_date"]) - timedelta(days=pre_days))
+        end = parse_day(w["end"])
+        for d, _ in series["dgs10"]:
+            dd = parse_day(d)
+            if start <= dd <= end:
+                sample_set.add(d)
+    sample_dates = sorted(sample_set)
 
     rows = []
     for day in sample_dates:
@@ -279,7 +289,7 @@ def main():
         "version": 5,
         "method": {
             "lookahead": False,
-            "sampling": "weekly_NFCI_observations",
+            "sampling": cfg["sampling"],
             "market_only": True,
             "exact_production_replication": False,
             "surrogate_reason": "ICE BofA FRED series are restricted to a rolling 3-year history from April 2026.",
