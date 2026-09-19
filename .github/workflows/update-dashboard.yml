@@ -62,7 +62,7 @@ jobs:
           assert bt["method"]["lookahead"] is False
           assert bt["method"]["market_only"] is True
           assert len(bt["events"]) >= 4
-          assert bt["range"]["observations"] > 100
+          assert bt["range"]["observations"] > 500
           assert pathlib.Path("data/backtest.js").exists()
           print("v5 payload + backtest validation OK")
           PY
