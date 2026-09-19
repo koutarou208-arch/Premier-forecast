@@ -552,32 +552,113 @@ def get_news_timeseries(
 
 @mcp.tool()
 def search_event_graph(query: str, limit: int = 10) -> dict[str, Any]:
-    """Hybrid lexical/embedding search over knowledge-graph nodes."""
+    """Hybrid semantic+lexical graph search without re-embedding the full graph.
+
+    Semantic seeds come from the persistent sqlite-vec news index and the existing
+    structured semantic search. Those seed IDs are then reranked/expanded against
+    the graph snapshot. This keeps graph retrieval fast even as the graph grows.
+    """
     graph = load_graph_snapshot()
-    candidates = [
-        {
+    nodes = {n.get("id"): n for n in graph.get("nodes", []) if n.get("id")}
+    limit = max(1, min(int(limit), 50))
+
+    scores: dict[str, dict[str, Any]] = {}
+
+    # 1) Lexical graph-node evidence.
+    lexical_ranked = []
+    for node_id, node in nodes.items():
+        s = _search_score(query, node)
+        if s > 0:
+            lexical_ranked.append((s, node_id))
+    lexical_ranked.sort(reverse=True)
+    for rank, (raw, node_id) in enumerate(lexical_ranked[:100], start=1):
+        rec = scores.setdefault(node_id, {"rrf": 0.0, "sources": [], "lexical_score": 0.0})
+        rec["rrf"] += 1.0 / (60 + rank)
+        rec["sources"].append("graph_lexical")
+        rec["lexical_score"] = raw
+
+    # 2) Semantic news-vector evidence -> event/article/entity/topic/indicator graph seeds.
+    news = search_news_intelligence(query, limit=min(30, max(10, limit * 3)))
+    if news.get("available", True):
+        for rank, item in enumerate(news.get("results", []), start=1):
+            seed_ids = []
+            if item.get("doc_id"):
+                seed_ids.append("article:" + str(item["doc_id"]))
+            if item.get("event_id"):
+                seed_ids.append("event:" + str(item["event_id"]))
+            for topic in item.get("topics") or []:
+                seed_ids.append("topic:" + str(topic))
+            for indicator in item.get("indicators") or []:
+                seed_ids.append("indicator:" + str(indicator))
+            for entity in item.get("entities") or []:
+                seed_ids.append("entity:" + str(entity))
+            for node_id in seed_ids:
+                if node_id not in nodes:
+                    continue
+                rec = scores.setdefault(node_id, {"rrf": 0.0, "sources": [], "lexical_score": 0.0})
+                rec["rrf"] += 1.0 / (60 + rank)
+                if "news_vector" not in rec["sources"]:
+                    rec["sources"].append("news_vector")
+                sem = item.get("semantic_similarity")
+                if sem is not None:
+                    rec["semantic_similarity"] = max(float(sem), float(rec.get("semantic_similarity") or -1.0))
+
+    # 3) Existing structured semantic search seeds historical episodes/topics.
+    structured = search_crisis_data(
+        query=query,
+        limit=min(20, max(8, limit * 2)),
+        semantic=True,
+        lexical_weight=0.20,
+        semantic_weight=0.80,
+    )
+    historical_map = {
+        "gfc": "historical:gfc",
+        "euro": "historical:euro",
+        "repo2019": "historical:repo2019",
+        "covid": "historical:covid",
+        "regional_banks": "historical:regional_banks",
+    }
+    for rank, item in enumerate(structured.get("results", []), start=1):
+        candidates = []
+        key = str(item.get("key") or "")
+        if key in historical_map:
+            candidates.append(historical_map[key])
+        if item.get("type") == "indicator":
+            candidates.append("indicator:" + key)
+        for node_id in candidates:
+            if node_id not in nodes:
+                continue
+            rec = scores.setdefault(node_id, {"rrf": 0.0, "sources": [], "lexical_score": 0.0})
+            rec["rrf"] += 1.0 / (60 + rank)
+            if "structured_semantic" not in rec["sources"]:
+                rec["sources"].append("structured_semantic")
+            sem = item.get("semantic_similarity")
+            if sem is not None:
+                rec["semantic_similarity"] = max(float(sem), float(rec.get("semantic_similarity") or -1.0))
+
+    ranked = sorted(scores.items(), key=lambda kv: kv[1]["rrf"], reverse=True)
+    results = []
+    for node_id, meta in ranked[:limit]:
+        results.append({
             "type": "graph_node",
-            "key": n.get("id"),
-            "title": n.get("label"),
-            "data": n,
-        }
-        for n in graph.get("nodes", [])
-    ]
-    ranked, mode = _hybrid_rank(query, candidates, semantic=True, lexical_weight=0.35, semantic_weight=0.65)
+            "key": node_id,
+            "title": nodes[node_id].get("label"),
+            "data": nodes[node_id],
+            "hybrid_graph_score": round(meta["rrf"], 8),
+            "retrieval_sources": meta["sources"],
+            "lexical_score": round(float(meta.get("lexical_score") or 0.0), 2),
+            "semantic_similarity": (
+                None if meta.get("semantic_similarity") is None
+                else round(float(meta["semantic_similarity"]), 4)
+            ),
+        })
+
     return {
         "query": query,
-        "search_mode": mode,
+        "search_mode": "graph lexical + sqlite-vec semantic seeds + structured semantic seeds + RRF",
         "graph_stats": graph.get("stats", {}),
-        "count": min(len(ranked), max(1, min(int(limit), 50))),
-        "results": [
-            {
-                **item,
-                "match_score": round(score * 100.0, 2),
-                "lexical_score": round(lexical, 2),
-                "semantic_similarity": None if semantic is None else round(semantic, 4),
-            }
-            for score, lexical, semantic, item in ranked[:max(1, min(int(limit), 50))]
-        ],
+        "count": len(results),
+        "results": results,
     }
 
 @mcp.tool()
