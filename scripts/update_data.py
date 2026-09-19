@@ -65,7 +65,7 @@ LOOKBACK = 1260
 def fetch_series(series_id):
     req = urllib.request.Request(
         FRED_URL.format(series_id=series_id),
-        headers={"User-Agent": "global-financial-crisis-watch-v4/4.0"},
+        headers={"User-Agent": "global-financial-crisis-watch-v5/5.0"},
     )
     with urllib.request.urlopen(req, timeout=30) as r:
         text = r.read().decode("utf-8")
@@ -464,6 +464,16 @@ def main():
     breadth = breadth_overlay(scores)
     bonus = synchronized_bonus(breadth)
     score = None if raw_score is None else round(clamp(raw_score + bonus), 1)
+
+    market_keys = [
+        "ig_credit", "hy_credit", "leveraged_credit", "financial_stress",
+        "rates_liquidity", "funding_market", "banking_stress", "europe", "energy"
+    ]
+    market_scores = {k: scores.get(k) for k in market_keys}
+    market_raw_score, market_covered_weight = weighted_average(market_scores)
+    market_total_weight = sum(WEIGHTS[k] for k in market_keys)
+    market_coverage_pct = round(100.0 * market_covered_weight / market_total_weight, 1) if market_total_weight else 0.0
+    market_score = None if market_raw_score is None else round(clamp(market_raw_score + bonus), 1)
     lvl = score_level(score)
     stage, stage_label, stage_note = transmission_stage(scores, breadth)
 
@@ -574,10 +584,13 @@ def main():
 
     curve = None if dgs10 is None or dgs2 is None else (dgs10 - dgs2) * 100.0
     payload = {
-        "version": 4,
+        "version": 5,
         "updated_at": now.isoformat().replace("+00:00","Z"),
         "score": score,
         "raw_score": raw_score,
+        "market_score": market_score,
+        "market_raw_score": market_raw_score,
+        "market_coverage_pct": market_coverage_pct,
         "synchronization_bonus": bonus,
         "level": lvl,
         "summary": summary,
@@ -592,7 +605,8 @@ def main():
             "lookback_observations": LOOKBACK,
             "missing_data_policy": "exclude_and_renormalize",
             "event_decay": "confidence multiplier plus age-based decay after 30 days",
-            "v4_layers": "SOFR-IORB funding, financial CP spread, CCC OAS, optional CDX/CLO/bank-CDS/BDC overrides"
+            "v4_layers": "SOFR-IORB funding, financial CP spread, CCC OAS, optional CDX/CLO/bank-CDS/BDC overrides",
+            "v5_validation": "walk-forward historical backtest uses market-only score; no future observations are allowed"
         },
         "diagnostics": {
             "us10y": dgs10, "us2y": dgs2, "curve_2s10s_bps": curve, "vix": vix,
@@ -611,8 +625,9 @@ def main():
 
     history = load_history()
     save_history(history, {
-        "date": now.date().isoformat(), "score": score, "raw_score": raw_score, "level": lvl, "stage": stage,
-        "coverage_pct": coverage_pct, "breadth": breadth["score"], "synchronization_bonus": bonus,
+        "date": now.date().isoformat(), "score": score, "raw_score": raw_score, "market_score": market_score,
+        "level": lvl, "stage": stage, "coverage_pct": coverage_pct, "market_coverage_pct": market_coverage_pct,
+        "breadth": breadth["score"], "synchronization_bonus": bonus,
         "pillars": {x["name"]: x["score"] for x in pillars},
         "hy_oas": hy, "ig_oas": ig, "ccc_oas": ccc_oas, "stlfsi": stlfsi, "rates_vol": rv,
         "sofr_iorb_bps": sofr_iorb_bps, "cpff": cpff,
@@ -620,7 +635,7 @@ def main():
     })
 
     print(json.dumps({
-        "version":4,"score":score,"raw_score":raw_score,"level":lvl,"stage":stage,
+        "version":5,"score":score,"market_score":market_score,"raw_score":raw_score,"level":lvl,"stage":stage,
         "coverage_pct":coverage_pct,"breadth":breadth,"bonus":bonus,"failures":failures
     }, ensure_ascii=False))
 
