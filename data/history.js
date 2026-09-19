@@ -1,0 +1,20 @@
+window.__RISK_HISTORY__ = [
+  {
+    "date": "2026-09-19",
+    "score": 33.3,
+    "level": "WATCH",
+    "stage": 1,
+    "pillars": {
+      "Broad Credit": 0.0,
+      "Funding / Liquidity": 0.0,
+      "AI / Private Credit": 66.7,
+      "Europe / Energy": 16.7
+    },
+    "hy_oas": 2.7,
+    "ig_oas": 0.78,
+    "stlfsi": -0.85,
+    "rates_vol": null,
+    "italy_bund_bps": null,
+    "wti": 100.3
+  }
+];
