@@ -226,7 +226,8 @@ It exposes these tools:
 
 - `get_current_state()` — latest Systemic / Market / Stage / NN state
 - `get_indicator(name)` — fuzzy/alias lookup for one risk channel
-- `search_crisis_data(query, limit)` — cross-search current indicators, pillars, backtest events, neural events and recent history
+- `search_crisis_data(query, limit, semantic=True)` — hybrid lexical + embedding search across current indicators, pillars, backtest events, neural events and recent history
+- `semantic_search_crisis_data(query, limit)` — embedding-first multilingual semantic search
 - `search_history(...)` — filter saved daily history by date / score / stage
 - `get_backtest_event(name)` — retrieve one historical validation episode
 - `get_neural_state(include_models=False)` — v6 neural ensemble diagnostics
@@ -299,6 +300,51 @@ http://127.0.0.1:8000/mcp
 ```
 
 The HTTP transport should be deployed behind proper authentication and transport-security configuration before exposure to the public internet.
+
+### Multilingual embedding search
+
+MCP search now supports a hybrid ranker:
+
+```
+final relevance
+  = lexical / alias matching
+  + multilingual embedding cosine similarity
+```
+
+The embedding model is:
+
+```
+sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+```
+
+It maps Japanese and English sentences into the same dense vector space, so semantically equivalent wording can match even when the literal keywords differ.
+
+Install the optional semantic-search dependency:
+
+```bash
+python3 -m pip install -r requirements-embeddings.txt
+```
+
+Then enable embeddings:
+
+```bash
+MCP_EMBEDDINGS=on python3 mcp_server.py
+```
+
+Environment variables:
+
+- `MCP_EMBEDDINGS=on` — require semantic embedding search; startup/search fails if the model cannot load
+- `MCP_EMBEDDINGS=auto` — default; use embeddings when installed, otherwise fall back to lexical/alias search
+- `MCP_EMBEDDINGS=off` — disable embedding search
+- `MCP_EMBEDDING_MODEL` — override the sentence-transformer model
+
+`search_crisis_data()` uses a default 45% lexical / 55% semantic hybrid score.
+
+`semantic_search_crisis_data()` is embedding-first: 15% lexical / 85% semantic.
+
+The candidate corpus includes current indicators, pillars, historical backtest episodes, neural diagnostics, self-improvement-agent state and the latest 90 saved history rows. Candidate embeddings are cached in memory and rebuilt only when the underlying corpus changes.
+
+If the optional embedding package is unavailable, the normal MCP server remains usable and automatically falls back to the existing deterministic lexical search.
 
 ### Search examples
 
