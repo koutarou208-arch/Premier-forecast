@@ -6,12 +6,14 @@
 
 v5の最大の変更は、**未来データを参照しない walk-forward backtest**です。各過去時点について、その日までに存在したデータだけで Level / Deviation / Velocity / Breadth / Stage を再計算します。
 
-- 2007年以降を週次相当（IG OASの5観測ごと）で再計算
-- Market-only scoreを使用し、現在だけ存在するAIイベント手動点は過去検証に混ぜない
+- 2007年以降をNFCIベースで週次再計算
+- ラベル済みストレス窓とreference date前120日は日次サンプリングを追加し、短期Funding shockを捕捉
+- 過去検証は長期公開proxyで作る Historical-comparable score を使用し、現在だけ存在するAIイベント手動点は混ぜない
+- FREDのICE BofA OAS系列は2026年4月以降3年ローリングに制限されたため、歴史検証では IG=BAA10Y、Credit=NFCICREDIT、Leveraged=NFCIRISK を使用
 - SOFR-IORBが存在しない過去期間だけTED spreadを歴史検証専用のFunding proxyとして使用
 - 欠損系列は安全=0点にせず、その時点の分母から除外
 - ラベル外期間の警報率も計測
-- 現在のMarket-only scoreが歴史分布の何percentileか表示
+- 現在のHistorical-comparable scoreが歴史分布の何percentileか表示
 - バックテスト結果は毎回Actionsで再生成
 
 ## Validation windows
@@ -68,12 +70,19 @@ v4で追加した12チャネル・5 Pillarsはv5でも継続します。
 - Velocity 25% — 5観測・20観測の悪化速度
 - Breadth overlay — 複数市場の同時悪化時のみ最大+8点
 
+## Production vs historical-comparable
+
+FRED上のICE BofA系列は2026年4月から直近3年に制限されているため、2008年まで遡る完全同一モデルの再現はできません。v5はここを隠さず、productionとhistorical validationを分離します。
+
+- **Production Market-only Score** — 現在のIG/HY/CCC OASなどを使用
+- **Historical-comparable Score** — BAA10Y / NFCICREDIT / NFCIRISKなど長期公開proxyを使用
+
 ## Two headline scores
 
 - **Systemic Stress Score** — AI / Private Creditイベント層も含む現在監視用スコア
-- **Market-only Score** — 公開市場・Funding・銀行proxyだけ。過去バックテストとの比較用
+- **Market-only Score** — 公開市場・Funding・銀行proxyだけ。現在の市場層を分離するためのスコア
 
-バックテストではMarket-only Scoreのみ使用します。
+バックテストはHistorical-comparable Scoreを使用します。Production Market-only Scoreとは別系列として表示します。
 
 ## Data files
 
