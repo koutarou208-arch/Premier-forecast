@@ -53,7 +53,7 @@ def max_signal(values):
     vals = [x for x in values if x is not None]
     return max(vals) if vals else None
 
-def fetch_proxies(failures, start_date="1990-01-01", max_workers=5):
+def fetch_proxies(failures, start_date="1990-01-01", max_workers=3):
     out = {k: [] for k in PROXY_SERIES}
     with ThreadPoolExecutor(max_workers=max_workers) as ex:
         futs = {
