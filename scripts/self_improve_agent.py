@@ -235,8 +235,12 @@ def candidate_configs(config, policy):
                 "config": cand,
             })
 
+    max_hybrid_step = float(policy["candidate_generation"].get("max_hybrid_step", 0.05))
+    current_nn_weight = float(config["hybrid"]["nn_weight"])
     for nn_weight in policy["candidate_generation"]["hybrid_nn_candidates"]:
-        if abs(float(nn_weight)-float(config["hybrid"]["nn_weight"])) < 1e-9:
+        if abs(float(nn_weight)-current_nn_weight) < 1e-9:
+            continue
+        if abs(float(nn_weight)-current_nn_weight) > max_hybrid_step + 1e-9:
             continue
         cand = deepcopy(config)
         cand["hybrid"]["nn_weight"] = float(nn_weight)
