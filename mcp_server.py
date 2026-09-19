@@ -84,6 +84,9 @@ def load_backtest() -> dict[str, Any]:
 def load_neural() -> dict[str, Any]:
     return _read_json(DATA / "nn_model.json", {})
 
+def load_agent() -> dict[str, Any]:
+    return _read_json(DATA / "agent_state.json", {})
+
 def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", str(text or "").strip().lower())
 
@@ -236,6 +239,15 @@ def search_crisis_data(query: str, limit: int = 10) -> dict[str, Any]:
             "title": "Neural Early Warning",
             "data": nn_current,
         })
+
+    agent = load_agent()
+    if agent:
+        candidates.append({
+            "type": "self_improvement_agent",
+            "key": "agent_state",
+            "title": "Self Improvement Agent",
+            "data": agent,
+        })
     for ev in neural.get("event_evaluation", []) if neural else []:
         candidates.append({
             "type": "neural_event",
@@ -344,6 +356,25 @@ def get_backtest_event(name: str) -> dict[str, Any]:
     }
 
 @mcp.tool()
+def get_self_improvement_state() -> dict[str, Any]:
+    """Return the latest self-improvement decision, guardrails, candidates and active config."""
+    agent = load_agent()
+    if not agent:
+        return {"available": False}
+    return {
+        "available": True,
+        "updated_at": agent.get("updated_at"),
+        "decision": agent.get("decision"),
+        "policy_summary": agent.get("policy_summary"),
+        "baseline": agent.get("baseline"),
+        "accepted_change": agent.get("accepted_change"),
+        "candidate_count": agent.get("candidate_count"),
+        "top_candidates": agent.get("top_candidates"),
+        "active_config": agent.get("active_config"),
+        "holdout_report": agent.get("holdout_report"),
+    }
+
+@mcp.tool()
 def get_neural_state(include_models: bool = False) -> dict[str, Any]:
     """Return v6 neural early-warning metrics and current inference."""
     nn = load_neural()
@@ -376,6 +407,11 @@ def current_resource() -> str:
 def backtest_resource() -> str:
     """Walk-forward historical validation payload."""
     return json.dumps(load_backtest(), ensure_ascii=False, indent=2)
+
+@mcp.resource("crisis://agent", mime_type="application/json")
+def agent_resource() -> str:
+    """Latest guarded self-improvement agent state."""
+    return json.dumps(load_agent(), ensure_ascii=False, indent=2)
 
 @mcp.resource("crisis://neural", mime_type="application/json")
 def neural_resource() -> str:
