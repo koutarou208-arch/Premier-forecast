@@ -72,7 +72,7 @@ def fetch_series(series_id, start_date="2018-01-01", attempts=3):
         try:
             req = urllib.request.Request(
                 url,
-                headers={"User-Agent": "global-financial-crisis-watch-v5/5.0"},
+                headers={"User-Agent": "global-financial-crisis-watch-v6/6.0"},
             )
             with urllib.request.urlopen(req, timeout=20) as r:
                 text = r.read().decode("utf-8")
@@ -611,7 +611,7 @@ def main():
 
     curve = None if dgs10 is None or dgs2 is None else (dgs10 - dgs2) * 100.0
     payload = {
-        "version": 5,
+        "version": 6,
         "updated_at": now.isoformat().replace("+00:00","Z"),
         "score": score,
         "raw_score": raw_score,
@@ -633,7 +633,8 @@ def main():
             "missing_data_policy": "exclude_and_renormalize",
             "event_decay": "confidence multiplier plus age-based decay after 30 days",
             "v4_layers": "SOFR-IORB funding, financial CP spread, CCC OAS, optional CDX/CLO/bank-CDS/BDC overrides",
-            "v5_validation": "walk-forward historical backtest uses market-only score; no future observations are allowed"
+            "v5_validation": "walk-forward historical backtest uses market-only score; no future observations are allowed",
+            "v6_neural": "separate neural ensemble is trained on historical-comparable channel scores; deterministic Stage remains authoritative"
         },
         "diagnostics": {
             "us10y": dgs10, "us2y": dgs2, "curve_2s10s_bps": curve, "vix": vix,
@@ -662,7 +663,7 @@ def main():
     })
 
     print(json.dumps({
-        "version":5,"score":score,"market_score":market_score,"raw_score":raw_score,"level":lvl,"stage":stage,
+        "version":6,"score":score,"market_score":market_score,"raw_score":raw_score,"level":lvl,"stage":stage,
         "coverage_pct":coverage_pct,"breadth":breadth,"bonus":bonus,"failures":failures
     }, ensure_ascii=False))
 
