@@ -1,0 +1,18 @@
+{
+  "data_center_financing": {
+    "score": 1,
+    "note": "Watch: financing markets are active, but repricing/warehouse risk should be monitored. Update from current deal evidence."
+  },
+  "private_credit": {
+    "score": 1,
+    "note": "Watch: monitor redemption requests, gates, NAV marks and lender concentration."
+  },
+  "bank_ai_inventory": {
+    "score": 1,
+    "note": "Watch: monitor underwritten-but-unsold AI/data-center loans and syndication discounts."
+  },
+  "europe_sovereign_spread_bps": {
+    "value": 140,
+    "note": "Manual placeholder. Replace with a current Italy 10Y minus Germany 10Y spread or another chosen euro-area sovereign stress benchmark."
+  }
+}
