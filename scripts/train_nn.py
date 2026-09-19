@@ -12,6 +12,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 BACKTEST = ROOT / "data" / "backtest.json"
 CONFIG = ROOT / "data" / "backtest_config.json"
 LATEST = ROOT / "data" / "latest.js"
+MODEL_CONFIG = ROOT / "data" / "model_config.json"
 OUT_JSON = ROOT / "data" / "nn_model.json"
 OUT_JS = ROOT / "data" / "nn_model.js"
 
