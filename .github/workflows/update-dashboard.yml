@@ -14,6 +14,8 @@ on:
       - "data/manual.json"
       - "data/backtest_config.json"
       - "data/model_config.json"
+      - "mcp_server.py"
+      - "scripts/test_mcp_data.py"
       - ".github/workflows/update-dashboard.yml"
 
 permissions:
