@@ -1,6 +1,6 @@
 window.__RISK_DATA__ = {
-  "version": 5,
-  "updated_at": "2026-09-19T15:11:30.224409Z",
+  "version": 6,
+  "updated_at": "2026-09-19T15:50:12.530043Z",
   "score": 23.9,
   "raw_score": 23.9,
   "market_score": 14.5,
@@ -73,7 +73,8 @@ window.__RISK_DATA__ = {
     "missing_data_policy": "exclude_and_renormalize",
     "event_decay": "confidence multiplier plus age-based decay after 30 days",
     "v4_layers": "SOFR-IORB funding, financial CP spread, CCC OAS, optional CDX/CLO/bank-CDS/BDC overrides",
-    "v5_validation": "walk-forward historical backtest uses market-only score; no future observations are allowed"
+    "v5_validation": "walk-forward historical backtest uses market-only score; no future observations are allowed",
+    "v6_neural": "separate neural ensemble is trained on historical-comparable channel scores; deterministic Stage remains authoritative"
   },
   "diagnostics": {
     "us10y": 4.94,
