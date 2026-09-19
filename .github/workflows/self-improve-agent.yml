@@ -1,0 +1,82 @@
+name: Self-improvement agent
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Sunday 08:00 JST = Saturday 23:00 UTC
+    - cron: "0 23 * * 6"
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/self_improve_agent.py"
+      - "data/agent_policy.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: self-improvement-agent
+  cancel-in-progress: true
+
+jobs:
+  improve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install dependency
+        run: python3 -m pip install --disable-pip-version-check --quiet numpy
+
+      - name: Validate agent syntax
+        run: python3 -m py_compile scripts/self_improve_agent.py
+
+      - name: Run guarded self-improvement cycle
+        run: python3 scripts/self_improve_agent.py
+
+      - name: Validate agent decision
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+
+          state = json.loads(pathlib.Path("data/agent_state.json").read_text())
+          policy = json.loads(pathlib.Path("data/agent_policy.json").read_text())
+          config = json.loads(pathlib.Path("data/model_config.json").read_text())
+
+          assert state["decision"] in {"accepted", "reject_all", "disabled"}
+          if state["decision"] != "disabled":
+              assert state["policy_summary"]["holdout_used_for_selection"] is False
+              assert state["policy_summary"]["allow_code_rewrite"] is False
+              assert state["candidate_count"] > 0
+              assert 0 <= state["baseline"]["false_positive_rate"] <= 1
+              assert 0 <= state["baseline"]["event_recall"] <= 1
+
+          market = config["market_weights"]
+          structural = config["structural_weights"]
+          assert sum(market.values()) == 81
+          assert sum(structural.values()) == 19
+          assert abs(config["hybrid"]["rule_weight"] + config["hybrid"]["nn_weight"] - 1.0) < 1e-9
+          assert all(policy["candidate_generation"]["min_market_weight"] <= v <= policy["candidate_generation"]["max_market_weight"] for v in market.values())
+          print("self-improvement guardrails OK")
+          PY
+
+      - name: Commit agent audit and accepted config
+        run: |
+          if git diff --quiet; then
+            echo "No agent state changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/model_config.json data/agent_state.json data/agent_state.js data/agent_history.json
+          git commit -m "Run guarded self-improvement cycle"
+          for attempt in 1 2 3 4; do
+            git pull --rebase origin main
+            if git push; then
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          exit 1
