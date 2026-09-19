@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import json
+import pathlib
+import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 import mcp_server as s
 
 state = s.get_current_state()
