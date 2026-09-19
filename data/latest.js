@@ -1,8 +1,11 @@
 window.__RISK_DATA__ = {
-  "version": 4,
-  "updated_at": "2026-09-19T14:45:48.348878Z",
+  "version": 5,
+  "updated_at": "2026-09-19T15:07:18.107107Z",
   "score": 23.9,
   "raw_score": 23.9,
+  "market_score": 14.5,
+  "market_raw_score": 14.5,
+  "market_coverage_pct": 100.0,
   "synchronization_bonus": 0.0,
   "level": "NORMAL",
   "summary": "NORMAL: AI/private-credit stress remains mainly sectoral; broad credit contagion is not yet confirmed.",
@@ -69,7 +72,8 @@ window.__RISK_DATA__ = {
     "lookback_observations": 1260,
     "missing_data_policy": "exclude_and_renormalize",
     "event_decay": "confidence multiplier plus age-based decay after 30 days",
-    "v4_layers": "SOFR-IORB funding, financial CP spread, CCC OAS, optional CDX/CLO/bank-CDS/BDC overrides"
+    "v4_layers": "SOFR-IORB funding, financial CP spread, CCC OAS, optional CDX/CLO/bank-CDS/BDC overrides",
+    "v5_validation": "walk-forward historical backtest uses market-only score; no future observations are allowed"
   },
   "diagnostics": {
     "us10y": 4.94,
@@ -187,12 +191,12 @@ window.__RISK_DATA__ = {
         "velocity": 0.0
       },
       "stats": {
-        "percentile": 7.0,
-        "robust_z": -0.95,
-        "delta_5": -0.0794,
-        "delta_20": -0.1764,
-        "velocity_pct_5": 43.1,
-        "velocity_pct_20": 41.4
+        "percentile": 6.2,
+        "robust_z": -1.03,
+        "delta_5": -0.0204,
+        "delta_20": -0.0815,
+        "velocity_pct_5": 47.1,
+        "velocity_pct_20": 39.0
       },
       "quality": {}
     },
@@ -284,12 +288,12 @@ window.__RISK_DATA__ = {
         "velocity": 0.0
       },
       "stats": {
-        "percentile": 32.7,
-        "robust_z": -0.39,
+        "percentile": 10.2,
+        "robust_z": -0.98,
         "delta_5": -0.4325,
         "delta_20": 1.336,
-        "velocity_pct_5": 51.2,
-        "velocity_pct_20": 59.7
+        "velocity_pct_5": 59.3,
+        "velocity_pct_20": 64.4
       },
       "quality": {}
     },
