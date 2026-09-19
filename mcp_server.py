@@ -8,6 +8,7 @@ Optional transport: streamable-http
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 import os
 import pathlib
@@ -285,6 +286,31 @@ def _indicator_summary(item: dict[str, Any]) -> dict[str, Any]:
         "note": item.get("note"),
         "source": item.get("source"),
         "source_url": item.get("source_url"),
+    }
+
+@mcp.tool()
+def get_search_capabilities(probe_embeddings: bool = False) -> dict[str, Any]:
+    """Report lexical and embedding-search availability.
+
+    Set probe_embeddings=true to actually load the embedding model.
+    """
+    installed = importlib.util.find_spec("sentence_transformers") is not None
+    loaded = _EMBEDDER is not None
+    if probe_embeddings and _embedding_mode() not in {"0", "false", "off", "disabled", "none"}:
+        try:
+            loaded = _get_embedder() is not None
+        except Exception:
+            loaded = False
+    return {
+        "lexical_search": True,
+        "alias_search": True,
+        "embedding_mode": _embedding_mode(),
+        "embedding_package_installed": installed,
+        "embedding_model": EMBEDDING_MODEL,
+        "embedding_model_loaded": loaded,
+        "embedding_error": _EMBEDDER_ERROR,
+        "hybrid_default_weights": {"lexical": 0.45, "semantic": 0.55},
+        "semantic_first_weights": {"lexical": 0.15, "semantic": 0.85},
     }
 
 @mcp.tool()
