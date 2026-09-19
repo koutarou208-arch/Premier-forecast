@@ -6,6 +6,7 @@ import math
 import pathlib
 import statistics
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, date
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -59,7 +60,7 @@ ABS_THRESHOLDS = {
     "energy_gas": (5.0, 8.0, 12.0),
 }
 
-FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}&cosd=1900-01-01"
+FRED_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}&cosd=1990-01-01"
 LOOKBACK = 1260
 
 def fetch_series(series_id):
@@ -87,6 +88,19 @@ def safe_series(name, failures):
     except Exception as e:
         failures.append(f"{name}: {e}")
         return []
+
+def fetch_all_series(failures, max_workers=6):
+    out = {k: [] for k in SERIES}
+    with ThreadPoolExecutor(max_workers=max_workers) as ex:
+        futures = {ex.submit(fetch_series, sid): name for name, sid in SERIES.items()}
+        for fut in as_completed(futures):
+            name = futures[fut]
+            try:
+                out[name] = fut.result()
+            except Exception as e:
+                failures.append(f"{name}: {e}")
+                out[name] = []
+    return out
 
 def latest(series):
     return series[-1] if series else (None, None)
@@ -353,7 +367,7 @@ def main():
     today = now.date()
     manual = json.loads(MANUAL.read_text(encoding="utf-8"))
     failures = []
-    series = {k: safe_series(k, failures) for k in SERIES}
+    series = fetch_all_series(failures)
     latests = {k: latest(s) for k, s in series.items()}
 
     ig_d, ig = latests["ig_oas"]
