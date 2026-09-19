@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#070b12">
-  <title>Global Financial Crisis Watch v3</title>
+  <title>Global Financial Crisis Watch v4</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,10 +13,10 @@
       <div>
         <div class="titleline">
           <p class="eyebrow">GLOBAL FINANCIAL CRISIS WATCH</p>
-          <span class="vtag">v3</span>
+          <span class="vtag">v4</span>
         </div>
         <h1>信用収縮 早期警戒システム</h1>
-        <p class="sub">現在水準・過去平均との差・悪化速度・複数市場の同時悪化を統合し、信用収縮の伝播を監視。</p>
+        <p class="sub">企業信用に加え、repo資金市場・銀行短期調達・レバレッジド／構造化クレジットまで統合し、信用収縮の伝播を監視。</p>
       </div>
       <div class="hero-actions">
         <div class="updated" id="updated">更新時刻 —</div>
@@ -48,7 +48,7 @@
     <section class="pillar-wrap">
       <div class="section-head compact">
         <div>
-          <p class="eyebrow">4 PILLARS</p>
+          <p class="eyebrow">5 PILLARS</p>
           <h2>どこでストレスが発生しているか</h2>
         </div>
       </div>
@@ -80,10 +80,10 @@
 
     <section class="section-head">
       <div>
-        <p class="eyebrow">9 RISK CHANNELS</p>
+        <p class="eyebrow">12 RISK CHANNELS</p>
         <h2>詳細モニター</h2>
       </div>
-      <p>自動指標は Level 45% + Deviation 30% + Velocity 25% で0〜100点化。イベント指標は信頼度と経過日数で減衰します。</p>
+      <p>v4はSOFR−IORB、金融CPスプレッド、CCC OASを自動追加。CDX/CLO/銀行CDS/BDCは入力時だけ上乗せし、代理指標と実値を区別します。</p>
     </section>
 
     <section class="grid" id="grid"></section>
@@ -111,7 +111,7 @@
 
     <footer>
       <p>Monitoring tool only — 予測・売買推奨ではありません。</p>
-      <p>v3は欠損を安全扱いせず分母から除外。イベントスコアは信頼度・鮮度で減衰します。</p>
+      <p>v4も欠損を安全扱いせず分母から除外。CDX/CLO/銀行CDS/BDCの未入力は0点ではなく、自動代理指標で補完します。</p>
     </footer>
   </main>
 
