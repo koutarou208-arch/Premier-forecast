@@ -47,7 +47,7 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 40.0,
     "max_event_score": 40.0
   },
@@ -60,7 +60,7 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 40.0,
     "max_event_score": 40.0
   },
@@ -73,7 +73,7 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 26.0,
     "max_event_score": 40.0
   },
@@ -99,7 +99,7 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 31.0,
     "max_event_score": 40.0
   },
@@ -125,7 +125,7 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 40.0,
     "max_event_score": 40.0
   },
@@ -138,7 +138,7 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 40.0,
     "max_event_score": 40.0
   },
@@ -151,7 +151,20 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
+    "avg_event_score": 40.0,
+    "max_event_score": 40.0
+  },
+  {
+    "day": "2025-09-22",
+    "kind": "modality",
+    "key": "military_threat",
+    "event_count": 1,
+    "physical_events": 1,
+    "critical_infrastructure_events": 1,
+    "attributed_events": 0,
+    "military_response_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 40.0,
     "max_event_score": 40.0
   },
@@ -164,7 +177,7 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 24.67,
     "max_event_score": 40.0
   },
@@ -177,7 +190,7 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 40.0,
     "max_event_score": 40.0
   },
@@ -190,7 +203,7 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 40.0,
     "max_event_score": 40.0
   },
@@ -203,7 +216,7 @@
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
-    "explicit_threat_events": 0,
+    "explicit_threat_events": 1,
     "avg_event_score": 40.0,
     "max_event_score": 40.0
   },
