@@ -32,7 +32,7 @@ rows = [
         "doc_id": "a2",
         "event_id": "evt2",
         "event_label": "Rail incident under investigation",
-        "title": "France investigates railway obstruction; Russian involvement is possible but unconfirmed",
+        "title": "France investigates railway obstruction and possible involvement by Russia",
         "summary": "Authorities opened an investigation. No evidence has established responsibility.",
         "publisher": "Example News",
         "published_at": "2026-09-11T10:00:00Z",
