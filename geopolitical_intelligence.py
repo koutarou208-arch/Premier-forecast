@@ -38,6 +38,7 @@ DIPLOMATIC_RESPONSES = {
 EUROPEAN_TARGET_ACTORS = {
     "Germany", "Poland", "Romania", "France", "United Kingdom", "EU", "NATO",
 }
+CORE_GEOPOLITICAL_ACTORS = {"Russia", "NATO", "EU", "Ukraine"}
 OFFICIAL_PUBLISHER_MARKERS = (
     "NATO", "Council of the EU", "European Council", "European Commission",
     "Bundesregierung", "Federal Government", "Ministry", "Government",
@@ -220,8 +221,16 @@ def enrich_geopolitical_articles(
 
         query_theme = str(article.get("query_theme") or "")
         geopolitical = bool(
-            modalities or targets or responses or attributions
+            modalities
+            or attributions
             or query_theme.startswith(("geopolitics_", "nato_", "eu_"))
+            or (
+                targets
+                and (
+                    responses
+                    or bool(set(actors) & CORE_GEOPOLITICAL_ACTORS)
+                )
+            )
         )
 
         dims = {
