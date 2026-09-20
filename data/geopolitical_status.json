@@ -1,10 +1,52 @@
 {
   "version": 1,
-  "status": "pending",
-  "geopolitical_escalation_index": null,
+  "as_of": "2026-09-19T21:29:02Z",
+  "window_days": 90,
+  "geopolitical_escalation_index": 71.3,
   "interpretation": "state index only; not a probability of war or attribution confidence",
+  "components": {
+    "top_quartile_event_severity": 41.8,
+    "event_density": 100.0,
+    "cross_border_breadth": 100.0,
+    "response_intensity": 25.0,
+    "thirty_day_momentum": 100.0
+  },
+  "counts": {
+    "events": 39,
+    "recent_30d_events": 20,
+    "previous_30d_events": 10,
+    "physical_events": 6,
+    "critical_infrastructure_events": 11,
+    "reported_attribution_events": 0,
+    "unattributed_events": 38,
+    "disputed_attribution_records": 0,
+    "military_response_events": 0,
+    "explicit_threat_events": 3
+  },
+  "campaigns": [
+    {
+      "actor": "Germany",
+      "event_count": 1,
+      "first_seen": "2026-09-04T07:00:00Z",
+      "last_seen": "2026-09-04T07:00:00Z",
+      "max_event_score": 30.0,
+      "modalities": [
+        "sabotage"
+      ],
+      "targets": [],
+      "responses": []
+    }
+  ],
+  "market_transmission_candidates": [
+    "banking_stress",
+    "energy",
+    "europe",
+    "financial_stress",
+    "rates_liquidity"
+  ],
   "model_boundary": {
     "changes_stage_0_4": false,
-    "changes_financial_crisis_score": false
+    "changes_financial_crisis_score": false,
+    "reason": "Geopolitical text signals remain observational until enough history exists for out-of-sample validation."
   }
 }
