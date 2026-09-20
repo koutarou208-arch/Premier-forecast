@@ -12,6 +12,7 @@ from __future__ import annotations
 import json
 import math
 import pathlib
+import re
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from typing import Any
@@ -55,10 +56,29 @@ def _text(article: dict[str, Any]) -> str:
     ]).lower()
 
 
+def _alias_positions(text: str, alias: str) -> list[int]:
+    alias_l = str(alias).lower()
+    compact = re.sub(r"[^a-z0-9]", "", alias_l)
+    if compact and len(compact) <= 3 and re.fullmatch(r"[a-z0-9.]+", alias_l):
+        pattern = re.compile(
+            r"(?<![a-z0-9])" + re.escape(alias_l) + r"(?![a-z0-9])"
+        )
+        return [m.start() for m in pattern.finditer(text)]
+    out = []
+    start = 0
+    while True:
+        pos = text.find(alias_l, start)
+        if pos < 0:
+            break
+        out.append(pos)
+        start = pos + max(1, len(alias_l))
+    return out
+
+
 def _matches(text: str, mapping: dict[str, list[str]]) -> list[str]:
     out = []
     for key, aliases in mapping.items():
-        if any(str(alias).lower() in text for alias in aliases):
+        if any(_alias_positions(text, str(alias)) for alias in aliases):
             out.append(key)
     return sorted(set(out))
 
@@ -80,14 +100,8 @@ def _actor_positions(text: str, actor_map: dict[str, list[str]]) -> list[tuple[i
     positions = []
     for actor, aliases in actor_map.items():
         for alias in aliases:
-            alias_l = str(alias).lower()
-            start = 0
-            while True:
-                pos = text.find(alias_l, start)
-                if pos < 0:
-                    break
+            for pos in _alias_positions(text, str(alias)):
                 positions.append((pos, actor))
-                start = pos + max(1, len(alias_l))
     return sorted(set(positions))
 
 
