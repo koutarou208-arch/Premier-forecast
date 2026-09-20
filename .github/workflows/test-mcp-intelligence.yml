@@ -8,6 +8,8 @@ on:
     paths:
       - "mcp_server.py"
       - "intelligence_store.py"
+      - "geopolitical_intelligence.py"
+      - "data/geopolitical_taxonomy.json"
       - "scripts/test_mcp_intelligence.py"
       - "requirements-intelligence.txt"
       - ".github/workflows/test-mcp-intelligence.yml"
