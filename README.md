@@ -395,6 +395,52 @@ News evidence is **not yet allowed to directly promote Stage 0-4 or change the c
 
 The system is collecting the time series first so the news-derived features can later be evaluated out-of-sample. This prevents adding an unbacktested text signal merely because it looks convincing in the current news cycle.
 
+## Geopolitical / hybrid escalation intelligence
+
+The news layer now includes a separate observational geopolitical model for hybrid threats and escalation patterns.
+
+It extracts and stores:
+
+- actor mentions
+- reported attribution / suspicion / dispute status
+- attack or pressure modality
+- target class
+- military / diplomatic / investigative response
+- potential market-transmission channels
+
+The system deliberately separates:
+
+```text
+actor mentioned in an article
+        !=
+source reports attribution to that actor
+        !=
+independently confirmed responsibility
+```
+
+Outputs:
+
+- `data/geopolitical_status.json` — 90-day state summary and Geopolitical Escalation Index
+- `data/geopolitical_timeseries.json` — event-level daily series
+- graph nodes for Actor / Target / Modality / Response / Campaign
+
+The Geopolitical Escalation Index combines event severity, event density, cross-border breadth, response intensity and 30-day momentum.
+
+**It is not a probability of war.**
+
+Geopolitical news is report-only with respect to the production financial model:
+
+- it does not directly change the financial-crisis score
+- it does not change deterministic Stage 0–4
+- market-transmission links are stored as hypotheses for later validation
+
+MCP tools:
+
+- `get_geopolitical_state()`
+- `search_geopolitical_events(query, limit)`
+- `get_geopolitical_timeline(...)`
+- `get_geopolitical_campaign(actor, hops, limit)`
+
 ## MCP search server
 
 The repository now includes an official MCP Python SDK v2 server: `mcp_server.py`.
