@@ -30,11 +30,20 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from intelligence_store import build_database, embed_texts, load_corpus, save_corpus, semantic_text
+from geopolitical_intelligence import (
+    build_geopolitical_events,
+    build_geopolitical_status,
+    build_geopolitical_timeseries,
+    enrich_geopolitical_articles,
+)
 
 DATA = ROOT / "data"
 SOURCES_PATH = DATA / "news_sources.json"
 TAXONOMY_PATH = DATA / "news_taxonomy.json"
+GEOPOLITICAL_TAXONOMY_PATH = DATA / "geopolitical_taxonomy.json"
 TIMESERIES_PATH = DATA / "news_timeseries.json"
+GEOPOLITICAL_TIMESERIES_PATH = DATA / "geopolitical_timeseries.json"
+GEOPOLITICAL_STATUS_PATH = DATA / "geopolitical_status.json"
 GRAPH_SNAPSHOT_PATH = DATA / "graph_snapshot.json"
 STATUS_PATH = DATA / "news_intelligence_status.json"
 BACKTEST_PATH = DATA / "backtest.json"
@@ -356,7 +365,13 @@ def build_graph_snapshot(rows: list[dict[str, Any]]) -> dict[str, Any]:
         add_edge(aid, sid, "PUBLISHED_BY", r.get("trust") or 0.5)
         eid = "event:" + str(r.get("event_id") or "unclustered")
         events[str(r.get("event_id") or "unclustered")].append(r)
-        add_node(eid, "Event", r.get("event_label") or r["title"])
+        add_node(
+            eid,
+            "Event",
+            r.get("event_label") or r["title"],
+            geopolitical=bool(r.get("geopolitical")),
+            geopolitical_event_score=r.get("geopolitical_event_score"),
+        )
         add_edge(aid, eid, "EVIDENCE_FOR", r.get("relevance") or 0.0, published_at=r.get("published_at"))
         day = (r.get("published_at") or "")[:10]
         if day:
@@ -375,6 +390,75 @@ def build_graph_snapshot(rows: list[dict[str, Any]]) -> dict[str, Any]:
             nid = "entity:" + entity
             add_node(nid, "Entity", entity)
             add_edge(aid, nid, "MENTIONS", 1.0)
+
+        if r.get("geopolitical"):
+            for actor in r.get("geopolitical_actors", []):
+                gid = "actor:" + actor
+                add_node(gid, "Actor", actor)
+                add_edge(aid, gid, "MENTIONS_ACTOR", 1.0)
+            for attribution in r.get("reported_attributions", []):
+                actor = attribution.get("actor")
+                status = attribution.get("status")
+                if actor:
+                    gid = "actor:" + actor
+                    add_node(gid, "Actor", actor)
+                    add_edge(
+                        eid, gid, "REPORTED_ATTRIBUTION", 1.0,
+                        attribution_status=status,
+                        epistemic_note="reported claim/status; not independently confirmed by graph",
+                    )
+            for target in r.get("geopolitical_targets", []):
+                gid = "target:" + target
+                add_node(gid, "Target", target)
+                add_edge(eid, gid, "TARGETS", 1.0)
+            for modality in r.get("geopolitical_modalities", []):
+                gid = "modality:" + modality
+                add_node(gid, "Modality", modality)
+                add_edge(eid, gid, "USES_MODALITY", 1.0)
+            for response in r.get("geopolitical_responses", []):
+                gid = "response:" + response
+                add_node(gid, "Response", response)
+                add_edge(eid, gid, "ASSOCIATED_RESPONSE", 1.0)
+            for indicator in r.get("market_transmission_candidates", []):
+                iid = "indicator:" + indicator
+                add_node(iid, "Indicator", indicator)
+                add_edge(
+                    eid, iid, "POTENTIAL_MARKET_CHANNEL", 1.0,
+                    hypothetical=True,
+                    note="transmission hypothesis; does not alter production score",
+                )
+
+    # Reported-attribution campaign threads. These group events by actor only
+    # when the news text itself contains attribution/suspicion cues.
+    geo_events = build_geopolitical_events(rows)
+    by_attributed_actor: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for ge in geo_events:
+        for attribution in ge.get("reported_attributions", []):
+            actor = attribution.get("actor")
+            if actor:
+                by_attributed_actor[actor].append(ge)
+    for actor, actor_events in by_attributed_actor.items():
+        cid = "campaign:" + actor
+        add_node(
+            cid, "Campaign", actor + " reported-attribution thread",
+            epistemic_note="aggregates reported attributions; not an independent finding of responsibility",
+        )
+        aid = "actor:" + actor
+        add_node(aid, "Actor", actor)
+        add_edge(cid, aid, "REPORTED_ACTOR_THREAD", 1.0)
+        actor_events.sort(key=lambda x: x.get("first_seen") or "")
+        for ge in actor_events:
+            eid = "event:" + ge["event_id"]
+            if eid in nodes:
+                add_edge(cid, eid, "HAS_EVENT", 1.0)
+        for prev, nxt in zip(actor_events, actor_events[1:]):
+            add_edge(
+                "event:" + prev["event_id"],
+                "event:" + nxt["event_id"],
+                "CAMPAIGN_PRECEDES",
+                1.0,
+                actor=actor,
+            )
 
     # Temporal edges between news event clusters in the same top-level topic.
     event_meta = []
@@ -493,6 +577,7 @@ def build_ladybug_graph(snapshot: dict[str, Any]) -> dict[str, Any]:
 def main():
     config = json.loads(SOURCES_PATH.read_text(encoding="utf-8"))
     taxonomy = json.loads(TAXONOMY_PATH.read_text(encoding="utf-8"))
+    geopolitical_taxonomy = json.loads(GEOPOLITICAL_TAXONOMY_PATH.read_text(encoding="utf-8"))
     source_list = build_source_list(config)
     incoming = []
     failures = []
@@ -517,16 +602,31 @@ def main():
         int(config.get("max_articles", 5000)),
     )
     classify_articles(combined, taxonomy)
-    # Filter only after semantic classification. Official feeds get a slightly lower floor.
+    enrich_geopolitical_articles(combined, geopolitical_taxonomy)
+    # Financial relevance filtering must not drop geopolitical/hybrid-threat events.
+    # They are retained for the observational geopolitical layer but still do not
+    # alter the production financial crisis score.
     combined = [
         r for r in combined
-        if float(r.get("relevance") or 0.0) >= (0.20 if float(r.get("trust") or 0) >= 0.95 else 0.25)
+        if r.get("geopolitical")
+        or float(r.get("relevance") or 0.0) >= (0.20 if float(r.get("trust") or 0) >= 0.95 else 0.25)
     ]
     cluster_events(combined)
     save_corpus(combined)
 
     timeseries = build_timeseries(combined)
     TIMESERIES_PATH.write_text(json.dumps(timeseries, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
+
+    geopolitical_timeseries = build_geopolitical_timeseries(combined)
+    GEOPOLITICAL_TIMESERIES_PATH.write_text(
+        json.dumps(geopolitical_timeseries, ensure_ascii=False, indent=2)+"\n",
+        encoding="utf-8",
+    )
+    geopolitical_status = build_geopolitical_status(combined, window_days=90)
+    GEOPOLITICAL_STATUS_PATH.write_text(
+        json.dumps(geopolitical_status, ensure_ascii=False, indent=2)+"\n",
+        encoding="utf-8",
+    )
 
     vector_status = build_database(combined)
 
@@ -551,6 +651,9 @@ def main():
         "articles_retained": len(combined),
         "events": len(event_ids),
         "timeseries_rows": len(timeseries),
+        "geopolitical_timeseries_rows": len(geopolitical_timeseries),
+        "geopolitical_events_90d": geopolitical_status.get("counts", {}).get("events", 0),
+        "geopolitical_escalation_index": geopolitical_status.get("geopolitical_escalation_index"),
         "vector_db": vector_status,
         "graph_db": graph_status,
         "graph_error": graph_error,
