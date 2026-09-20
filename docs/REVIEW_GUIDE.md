@@ -479,7 +479,23 @@ Approve only if:
 
 ---
 
-# 11. Acceptance checklist — automation
+# 11. Acceptance checklist — geopolitical / hybrid-threat intelligence
+
+Approve only if:
+
+- [ ] actor mention is stored separately from reported attribution
+- [ ] suspected / disputed attribution is not rewritten as confirmed responsibility
+- [ ] the event has a timestamp and source
+- [ ] physical attack, infrastructure target, military response and explicit threat are separate dimensions
+- [ ] duplicate reporting is clustered at event level
+- [ ] campaign threads use reported-attribution evidence, not mere co-mention
+- [ ] market-transmission links are labeled as hypotheses/candidates
+- [ ] Geopolitical Escalation Index is described as a state index, not war probability
+- [ ] geopolitical text cannot directly change Stage 0-4 or the financial-crisis score
+- [ ] a synthetic unit test checks attribution handling
+
+---
+# 12. Acceptance checklist — automation
 
 Approve only if:
 
@@ -492,7 +508,7 @@ Approve only if:
 
 ---
 
-# 12. What you should ask when someone explains this system
+# 13. What you should ask when someone explains this system
 
 You can use these exact questions in a meeting:
 
@@ -511,7 +527,7 @@ If the implementer cannot answer these clearly, the deliverable is not review-re
 
 ---
 
-# 13. Current architecture verdict
+# 14. Current architecture verdict
 
 The implementation is a strong prototype / research system.
 
