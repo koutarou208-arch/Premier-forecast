@@ -323,7 +323,69 @@ Important implementation detail:
 
 ---
 
-## 11. Automation
+## 11. Geopolitical / hybrid escalation layer
+
+Purpose:
+
+> Detect whether separate hybrid-threat events are forming an escalating pattern over time without converting allegations into facts.
+
+Pipeline:
+
+```text
+Hybrid-threat news
+  ↓
+Actor / Modality / Target / Response extraction
+  ↓
+Reported attribution kept separate
+  ↓
+Event-level severity dimensions
+  ↓
+90-day geopolitical time series
+  ↓
+Reported-attribution campaign threads
+  ↓
+Geopolitical Escalation Index
+```
+
+Important fields:
+
+- `geopolitical_actors` — actors mentioned in the article
+- `reported_attributions` — who the source reports as attributed/suspected; this is not independent confirmation
+- `geopolitical_modalities` — sabotage, drone, cyber, arson, military threat, etc.
+- `geopolitical_targets` — energy, transport, military logistics, critical infrastructure, etc.
+- `geopolitical_responses` — intercept, sanctions, investigation, infrastructure protection, etc.
+- `market_transmission_candidates` — possible financial channels to investigate, not automatic causation
+
+Durable outputs:
+
+- `data/geopolitical_status.json`
+- `data/geopolitical_timeseries.json`
+
+Graph additions:
+
+- Actor
+- Target
+- Modality
+- Response
+- Campaign
+
+New relationships:
+
+- `MENTIONS_ACTOR`
+- `REPORTED_ATTRIBUTION`
+- `TARGETS`
+- `USES_MODALITY`
+- `ASSOCIATED_RESPONSE`
+- `POTENTIAL_MARKET_CHANNEL`
+- `HAS_EVENT`
+- `CAMPAIGN_PRECEDES`
+
+Safety/model boundary:
+
+> The geopolitical index is not a probability of war and does not change the production financial-crisis score or Stage 0-4.
+
+---
+## 12. Automation
 
 ### Market dashboard
 
@@ -354,7 +416,7 @@ Runs weekly and evaluates bounded configuration changes.
 
 ---
 
-## 12. The five things a non-programmer should review
+## 13. The five things a non-programmer should review
 
 For every feature, ask only these five questions:
 
