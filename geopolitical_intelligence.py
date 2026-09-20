@@ -490,6 +490,7 @@ def build_geopolitical_status(
 
     attribution_threads: dict[str, list[dict[str, Any]]] = defaultdict(list)
     disputed = 0
+    suspected_records = 0
     unattributed = 0
     for e in selected:
         attrs = e.get("reported_attributions") or []
@@ -498,10 +499,12 @@ def build_geopolitical_status(
         for a in attrs:
             actor = a.get("actor")
             status = a.get("status")
-            if actor:
+            if status in {"reported_attributed", "reported_attribution_disputed"} and actor:
                 attribution_threads[actor].append(e)
             if status == "reported_attribution_disputed":
                 disputed += 1
+            if status == "suspected":
+                suspected_records += 1
 
     campaigns = []
     for actor, actor_events in attribution_threads.items():
@@ -523,7 +526,8 @@ def build_geopolitical_status(
         "as_of": as_of.isoformat().replace("+00:00", "Z"),
         "window_days": window_days,
         "geopolitical_escalation_index": round(index, 1),
-        "interpretation": "state index only; not a probability of war or attribution confidence",
+        "interpretation": "experimental state index only; not a probability of war or attribution confidence",
+        "calibration_status": "experimental_unvalidated",
         "components": {
             "top_quartile_event_severity": round(severity, 1),
             "event_density": round(density, 1),
@@ -540,6 +544,7 @@ def build_geopolitical_status(
             "reported_attribution_events": sum(bool((e.get("dimensions") or {}).get("reported_attribution")) for e in selected),
             "unattributed_events": unattributed,
             "disputed_attribution_records": disputed,
+            "suspected_attribution_records": suspected_records,
             "military_response_events": sum(bool((e.get("dimensions") or {}).get("military_response")) for e in selected),
             "explicit_threat_events": sum(bool((e.get("dimensions") or {}).get("explicit_threat")) for e in selected),
         },
