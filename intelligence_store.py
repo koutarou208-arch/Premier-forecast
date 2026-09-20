@@ -83,6 +83,10 @@ def semantic_text(article: dict[str, Any]) -> str:
         "topics " + " ".join(article.get("topics") or []),
         "indicators " + " ".join(article.get("indicators") or []),
         "entities " + " ".join(article.get("entities") or []),
+        "geopolitical actors " + " ".join(article.get("geopolitical_actors") or []),
+        "geopolitical modalities " + " ".join(article.get("geopolitical_modalities") or []),
+        "geopolitical targets " + " ".join(article.get("geopolitical_targets") or []),
+        "geopolitical responses " + " ".join(article.get("geopolitical_responses") or []),
     ]
     return "\n".join(x for x in parts if x).strip()
 
@@ -131,7 +135,16 @@ def build_database(rows: list[dict[str, Any]] | None = None, path: pathlib.Path 
         event_id TEXT,
         topics_json TEXT,
         indicators_json TEXT,
-        entities_json TEXT
+        entities_json TEXT,
+        geopolitical INTEGER,
+        geopolitical_event_score REAL,
+        geopolitical_actors_json TEXT,
+        geopolitical_modalities_json TEXT,
+        geopolitical_targets_json TEXT,
+        geopolitical_responses_json TEXT,
+        reported_attributions_json TEXT,
+        market_transmission_candidates_json TEXT,
+        geopolitical_dimensions_json TEXT
     );
     CREATE VIRTUAL TABLE article_fts USING fts5(
         title, summary, publisher, topics, indicators, entities,
@@ -164,8 +177,12 @@ def build_database(rows: list[dict[str, Any]] | None = None, path: pathlib.Path 
             """INSERT INTO articles(
                 id, doc_id, title, summary, url, source_id, source_name, publisher,
                 published_at, fetched_at, language, query_theme, trust, relevance,
-                event_id, topics_json, indicators_json, entities_json
-            ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                event_id, topics_json, indicators_json, entities_json,
+                geopolitical, geopolitical_event_score, geopolitical_actors_json,
+                geopolitical_modalities_json, geopolitical_targets_json,
+                geopolitical_responses_json, reported_attributions_json,
+                market_transmission_candidates_json, geopolitical_dimensions_json
+            ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (
                 idx,
                 article.get("doc_id"),
@@ -185,6 +202,15 @@ def build_database(rows: list[dict[str, Any]] | None = None, path: pathlib.Path 
                 json.dumps(article.get("topics") or [], ensure_ascii=False),
                 json.dumps(article.get("indicators") or [], ensure_ascii=False),
                 json.dumps(article.get("entities") or [], ensure_ascii=False),
+                1 if article.get("geopolitical") else 0,
+                float(article.get("geopolitical_event_score") or 0.0),
+                json.dumps(article.get("geopolitical_actors") or [], ensure_ascii=False),
+                json.dumps(article.get("geopolitical_modalities") or [], ensure_ascii=False),
+                json.dumps(article.get("geopolitical_targets") or [], ensure_ascii=False),
+                json.dumps(article.get("geopolitical_responses") or [], ensure_ascii=False),
+                json.dumps(article.get("reported_attributions") or [], ensure_ascii=False),
+                json.dumps(article.get("market_transmission_candidates") or [], ensure_ascii=False),
+                json.dumps(article.get("geopolitical_dimensions") or {}, ensure_ascii=False),
             ),
         )
         conn.execute(
@@ -271,13 +297,25 @@ def _fts_query(query: str) -> str:
 
 def _row_to_article(row: sqlite3.Row) -> dict[str, Any]:
     out = dict(row)
-    for field in ("topics_json", "indicators_json", "entities_json"):
+    list_fields = (
+        "topics_json", "indicators_json", "entities_json",
+        "geopolitical_actors_json", "geopolitical_modalities_json",
+        "geopolitical_targets_json", "geopolitical_responses_json",
+        "reported_attributions_json", "market_transmission_candidates_json",
+    )
+    for field in list_fields:
         key = field.replace("_json", "")
         try:
             out[key] = json.loads(out.pop(field) or "[]")
         except Exception:
             out[key] = []
             out.pop(field, None)
+    try:
+        out["geopolitical_dimensions"] = json.loads(out.pop("geopolitical_dimensions_json") or "{}")
+    except Exception:
+        out["geopolitical_dimensions"] = {}
+        out.pop("geopolitical_dimensions_json", None)
+    out["geopolitical"] = bool(out.get("geopolitical"))
     return out
 
 
