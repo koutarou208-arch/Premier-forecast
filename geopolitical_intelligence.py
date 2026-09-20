@@ -76,6 +76,47 @@ def _source_class(article: dict[str, Any]) -> str:
     return "news_report"
 
 
+def _actor_positions(text: str, actor_map: dict[str, list[str]]) -> list[tuple[int, str]]:
+    positions = []
+    for actor, aliases in actor_map.items():
+        for alias in aliases:
+            alias_l = str(alias).lower()
+            start = 0
+            while True:
+                pos = text.find(alias_l, start)
+                if pos < 0:
+                    break
+                positions.append((pos, actor))
+                start = pos + max(1, len(alias_l))
+    return sorted(set(positions))
+
+
+def _nearest_actor(
+    text: str,
+    actor_positions: list[tuple[int, str]],
+    cue: str,
+    *,
+    max_distance: int = 100,
+) -> list[str]:
+    cue_l = str(cue).lower()
+    found = []
+    start = 0
+    while True:
+        pos = text.find(cue_l, start)
+        if pos < 0:
+            break
+        distances = sorted(
+            (abs(actor_pos - pos), actor)
+            for actor_pos, actor in actor_positions
+            if abs(actor_pos - pos) <= max_distance
+        )
+        if distances:
+            best = distances[0][0]
+            found.extend(actor for dist, actor in distances if dist == best)
+        start = pos + max(1, len(cue_l))
+    return sorted(set(found))
+
+
 def _reported_attributions(
     text: str,
     actors: list[str],
@@ -83,23 +124,35 @@ def _reported_attributions(
 ) -> list[dict[str, str]]:
     if not actors:
         return []
+
     attr = taxonomy.get("attribution", {})
-    has_attr = _has_any(text, attr.get("attributed_cues", []))
-    has_suspect = _has_any(text, attr.get("suspected_cues", []))
-    has_dispute = _has_any(text, attr.get("dispute_cues", []))
-    if not (has_attr or has_suspect):
-        return []
+    actor_map = {
+        actor: taxonomy.get("actors", {}).get(actor, [actor])
+        for actor in actors
+    }
+    positions = _actor_positions(text, actor_map)
 
-    if has_attr and has_dispute:
-        status = "reported_attribution_disputed"
-    elif has_attr:
-        status = "reported_attributed"
-    else:
-        status = "suspected"
+    attributed = set()
+    suspected = set()
+    disputed = set()
 
-    # We deliberately retain all actor mentions as candidates instead of
-    # pretending a lightweight lexical parser can resolve grammatical agency.
-    return [{"actor": actor, "status": status} for actor in actors]
+    for cue in attr.get("attributed_cues", []):
+        attributed.update(_nearest_actor(text, positions, cue))
+    for cue in attr.get("suspected_cues", []):
+        suspected.update(_nearest_actor(text, positions, cue))
+    for cue in attr.get("dispute_cues", []):
+        disputed.update(_nearest_actor(text, positions, cue))
+
+    results = []
+    for actor in sorted(attributed | suspected):
+        if actor in attributed and actor in disputed:
+            status = "reported_attribution_disputed"
+        elif actor in attributed:
+            status = "reported_attributed"
+        else:
+            status = "suspected"
+        results.append({"actor": actor, "status": status})
+    return results
 
 
 def _transmission_indicators(
