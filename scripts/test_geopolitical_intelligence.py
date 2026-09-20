@@ -57,7 +57,7 @@ assert "Russia" in rows[0]["geopolitical_actors"]
 assert "explosive_drone" in rows[0]["geopolitical_modalities"]
 assert rows[0]["geopolitical_dimensions"]["critical_infrastructure"] is True
 assert rows[0]["geopolitical_dimensions"]["military_response"] is True
-assert any(x["status"] == "reported_attributed" for x in rows[0]["reported_attributions"])
+assert rows[0]["reported_attributions"] == [{"actor": "Russia", "status": "reported_attributed"}], rows[0]["reported_attributions"]
 
 assert rows[1]["geopolitical"] is True
 assert rows[1]["reported_attributions"]
