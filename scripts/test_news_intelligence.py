@@ -33,6 +33,17 @@ assert {"EVIDENCE_FOR","ABOUT","IMPACTS","PRECEDES"}.issubset(rels), rels
 series = json.loads((ROOT / "data" / "news_timeseries.json").read_text())
 assert series, "empty timeseries"
 
+geo_status = json.loads((ROOT / "data" / "geopolitical_status.json").read_text())
+geo_series = json.loads((ROOT / "data" / "geopolitical_timeseries.json").read_text())
+assert 0 <= geo_status["geopolitical_escalation_index"] <= 100, geo_status
+assert geo_status["model_boundary"]["changes_stage_0_4"] is False, geo_status
+assert geo_status["model_boundary"]["changes_financial_crisis_score"] is False, geo_status
+assert geo_series, "empty geopolitical timeseries"
+
+if geo_status["counts"]["events"] > 0:
+    assert {"Actor","Target","Modality","Response"} & kinds, kinds
+    assert {"MENTIONS_ACTOR","TARGETS","USES_MODALITY"} & rels, rels
+
 print(json.dumps({
     "articles": status["articles_retained"],
     "events": status["events"],
@@ -41,4 +52,6 @@ print(json.dumps({
     "graph_edges": graph["stats"]["edges"],
     "funding_top": [x["title"] for x in funding["results"][:3]],
     "japan_top": [x["title"] for x in japan["results"][:3]],
+    "geopolitical_index": geo_status["geopolitical_escalation_index"],
+    "geopolitical_events_90d": geo_status["counts"]["events"],
 }, ensure_ascii=False))
