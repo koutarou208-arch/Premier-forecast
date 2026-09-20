@@ -63,5 +63,41 @@
         "candidate_objective": 0.870146
       }
     }
+  },
+  {
+    "updated_at": "2026-09-20T00:36:43.426004Z",
+    "decision": "reject_all",
+    "accepted_change": null,
+    "baseline_objective": 0.870146212773825,
+    "active_config": {
+      "version": 1,
+      "market_weights": {
+        "ig_credit": 10,
+        "hy_credit": 14,
+        "leveraged_credit": 10,
+        "financial_stress": 8,
+        "rates_liquidity": 8,
+        "funding_market": 10,
+        "banking_stress": 8,
+        "europe": 6,
+        "energy": 7
+      },
+      "structural_weights": {
+        "data_center": 6,
+        "private_credit": 8,
+        "bank_ai": 5
+      },
+      "hybrid": {
+        "rule_weight": 0.6,
+        "nn_weight": 0.4
+      },
+      "source": "self_improvement_agent",
+      "last_agent_change": {
+        "at": "2026-09-19T16:00:57.446038Z",
+        "description": "NN weight 0.35 -> 0.40",
+        "baseline_objective": 0.857334,
+        "candidate_objective": 0.870146
+      }
+    }
   }
 ]
