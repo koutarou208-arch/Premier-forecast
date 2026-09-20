@@ -1,0 +1,409 @@
+{
+  "version": 1,
+  "description": "Conservative geopolitical/hybrid-threat ontology. It stores reported attribution separately from event facts and never treats an allegation as confirmed solely because it appeared in news text.",
+  "actors": {
+    "Russia": [
+      "Russia",
+      "Russian Federation",
+      "Russian",
+      "Moscow",
+      "Kremlin",
+      "ロシア",
+      "ロシア政府",
+      "モスクワ",
+      "クレムリン"
+    ],
+    "NATO": [
+      "NATO",
+      "North Atlantic Treaty Organization",
+      "北大西洋条約機構",
+      "NATO軍"
+    ],
+    "EU": [
+      "European Union",
+      "EU",
+      "欧州連合"
+    ],
+    "Ukraine": [
+      "Ukraine",
+      "Ukrainian",
+      "ウクライナ"
+    ],
+    "Germany": [
+      "Germany",
+      "German",
+      "Berlin",
+      "ドイツ",
+      "ベルリン"
+    ],
+    "Poland": [
+      "Poland",
+      "Polish",
+      "Warsaw",
+      "ポーランド",
+      "ワルシャワ"
+    ],
+    "Romania": [
+      "Romania",
+      "Romanian",
+      "ルーマニア"
+    ],
+    "France": [
+      "France",
+      "French",
+      "Paris",
+      "フランス",
+      "パリ"
+    ],
+    "United Kingdom": [
+      "United Kingdom",
+      "Britain",
+      "British",
+      "UK",
+      "London",
+      "英国",
+      "イギリス",
+      "ロンドン"
+    ],
+    "United States": [
+      "United States",
+      "U.S.",
+      "US",
+      "Washington",
+      "米国",
+      "アメリカ",
+      "ワシントン"
+    ]
+  },
+  "modalities": {
+    "sabotage": [
+      "sabotage",
+      "sabotaged",
+      "破壊工作",
+      "妨害工作"
+    ],
+    "explosive_drone": [
+      "explosive drone",
+      "bomb drone",
+      "armed drone",
+      "爆弾ドローン",
+      "爆発物付きドローン",
+      "攻撃ドローン"
+    ],
+    "drone_incursion": [
+      "drone incursion",
+      "unidentified drone",
+      "drone over",
+      "ドローン侵入",
+      "ドローン飛来",
+      "無人機侵入"
+    ],
+    "airspace_violation": [
+      "airspace violation",
+      "entered airspace",
+      "airspace incursion",
+      "領空侵犯",
+      "領空侵入"
+    ],
+    "missile_incursion": [
+      "missile landed",
+      "missile strike",
+      "cruise missile",
+      "rocket strike",
+      "ミサイル着弾",
+      "巡航ミサイル",
+      "ロケット攻撃"
+    ],
+    "arson": [
+      "arson",
+      "set fire",
+      "firebomb",
+      "放火"
+    ],
+    "cyber_attack": [
+      "cyberattack",
+      "cyber attack",
+      "malicious cyber",
+      "サイバー攻撃",
+      "サイバー活動"
+    ],
+    "electronic_interference": [
+      "electronic interference",
+      "GPS jamming",
+      "GNSS interference",
+      "electronic warfare",
+      "電子妨害",
+      "GPS妨害",
+      "GNSS妨害"
+    ],
+    "infrastructure_interference": [
+      "rail obstruction",
+      "railway sabotage",
+      "infrastructure disruption",
+      "cable cut",
+      "pipeline sabotage",
+      "線路妨害",
+      "鉄道妨害",
+      "インフラ妨害",
+      "ケーブル切断"
+    ],
+    "assassination_plot": [
+      "assassination attempt",
+      "assassination plot",
+      "殺害計画",
+      "暗殺未遂",
+      "暗殺計画"
+    ],
+    "information_operation": [
+      "disinformation",
+      "foreign information manipulation",
+      "propaganda",
+      "偽情報",
+      "情報工作",
+      "プロパガンダ"
+    ],
+    "economic_coercion": [
+      "economic coercion",
+      "energy coercion",
+      "economic pressure",
+      "経済的威圧",
+      "エネルギー威圧"
+    ],
+    "military_threat": [
+      "legitimate target",
+      "declaration of war",
+      "military target",
+      "threatened to strike",
+      "attack NATO",
+      "正当な標的",
+      "宣戦布告",
+      "軍事標的",
+      "攻撃すると警告"
+    ]
+  },
+  "targets": {
+    "critical_infrastructure": [
+      "critical infrastructure",
+      "重要インフラ",
+      "重要インフラ施設"
+    ],
+    "energy": [
+      "energy infrastructure",
+      "gas project",
+      "gas facility",
+      "pipeline",
+      "power grid",
+      "oil terminal",
+      "エネルギー施設",
+      "ガス事業",
+      "パイプライン",
+      "電力網"
+    ],
+    "transport": [
+      "transport infrastructure",
+      "airport",
+      "railway",
+      "railroad",
+      "station",
+      "port",
+      "空港",
+      "鉄道",
+      "線路",
+      "駅",
+      "港"
+    ],
+    "military_logistics": [
+      "military logistics",
+      "military cargo",
+      "military aid hub",
+      "NATO logistics",
+      "軍需品",
+      "軍事物流",
+      "軍事輸送",
+      "NATO補給"
+    ],
+    "military_facility": [
+      "military base",
+      "air base",
+      "army base",
+      "military facility",
+      "基地",
+      "軍施設",
+      "空軍基地"
+    ],
+    "civil_aviation": [
+      "civil aviation",
+      "cargo aircraft",
+      "cargo plane",
+      "airport operations",
+      "民間航空",
+      "貨物機"
+    ],
+    "undersea_infrastructure": [
+      "undersea cable",
+      "subsea cable",
+      "undersea infrastructure",
+      "海底ケーブル",
+      "海底インフラ"
+    ],
+    "communications": [
+      "communications infrastructure",
+      "telecom",
+      "communications network",
+      "通信インフラ",
+      "通信網"
+    ],
+    "government": [
+      "government building",
+      "parliament",
+      "ministry",
+      "embassy",
+      "consulate",
+      "政府施設",
+      "議会",
+      "省庁",
+      "大使館",
+      "総領事館"
+    ]
+  },
+  "responses": {
+    "air_intercept": [
+      "scrambled",
+      "fighter jets scrambled",
+      "F-16",
+      "intercepted",
+      "緊急発進",
+      "スクランブル",
+      "迎撃"
+    ],
+    "sanctions": [
+      "sanctions",
+      "sanctioned",
+      "restrictive measures",
+      "制裁",
+      "制裁措置"
+    ],
+    "diplomatic_expulsion": [
+      "expelled diplomat",
+      "diplomatic expulsion",
+      "persona non grata",
+      "外交官追放"
+    ],
+    "consulate_closure": [
+      "consulate closure",
+      "close the consulate",
+      "consulate closed",
+      "総領事館閉鎖",
+      "領事館閉鎖"
+    ],
+    "infrastructure_protection": [
+      "protect critical infrastructure",
+      "infrastructure protection",
+      "heightened security",
+      "重要インフラ防護",
+      "警備強化"
+    ],
+    "military_alert": [
+      "military alert",
+      "raised readiness",
+      "combat readiness",
+      "military response",
+      "警戒態勢",
+      "即応態勢",
+      "軍事対応"
+    ],
+    "investigation": [
+      "investigation",
+      "investigating",
+      "probe launched",
+      "捜査",
+      "調査",
+      "関与を捜査"
+    ],
+    "collective_statement": [
+      "NATO statement",
+      "EU statement",
+      "joint statement",
+      "collective response",
+      "共同声明",
+      "NATO声明",
+      "EU声明"
+    ]
+  },
+  "attribution": {
+    "attributed_cues": [
+      "responsible for",
+      "responsibility for",
+      "attributed to",
+      "blamed",
+      "blames",
+      "behind the attack",
+      "carried out by",
+      "linked to",
+      "ロシアの責任",
+      "責任がある",
+      "関与を断定",
+      "背後に",
+      "による攻撃",
+      "の関与を認定"
+    ],
+    "suspected_cues": [
+      "suspected",
+      "possible involvement",
+      "investigating possible",
+      "may be linked",
+      "believed to be",
+      "疑い",
+      "可能性",
+      "関与を調査",
+      "関与の可能性"
+    ],
+    "dispute_cues": [
+      "denied",
+      "denies",
+      "rejected the allegation",
+      "no evidence",
+      "unfounded",
+      "否定",
+      "根拠がない",
+      "関与を否定"
+    ]
+  },
+  "market_transmission": {
+    "critical_infrastructure": [
+      "financial_stress",
+      "europe"
+    ],
+    "energy": [
+      "energy",
+      "rates_liquidity",
+      "europe"
+    ],
+    "transport": [
+      "europe",
+      "financial_stress"
+    ],
+    "military_logistics": [
+      "europe",
+      "financial_stress"
+    ],
+    "undersea_infrastructure": [
+      "financial_stress",
+      "europe"
+    ],
+    "military_threat": [
+      "energy",
+      "europe",
+      "financial_stress"
+    ],
+    "cyber_attack": [
+      "financial_stress",
+      "banking_stress"
+    ],
+    "economic_coercion": [
+      "energy",
+      "europe",
+      "rates_liquidity"
+    ]
+  }
+}
