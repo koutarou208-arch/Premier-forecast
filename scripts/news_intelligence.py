@@ -435,7 +435,8 @@ def build_graph_snapshot(rows: list[dict[str, Any]]) -> dict[str, Any]:
     for ge in geo_events:
         for attribution in ge.get("reported_attributions", []):
             actor = attribution.get("actor")
-            if actor:
+            status = attribution.get("status")
+            if actor and status in {"reported_attributed", "reported_attribution_disputed"}:
                 by_attributed_actor[actor].append(ge)
     for actor, actor_events in by_attributed_actor.items():
         cid = "campaign:" + actor
