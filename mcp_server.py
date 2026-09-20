@@ -41,7 +41,7 @@ mcp = MCPServer(
         "Use get_current_state for the latest system condition, search_crisis_data "
         "for cross-dataset search, get_indicator for one channel, search_history "
         "for historical snapshots, get_backtest_event for historical validation, "
-        "and get_neural_state for v6 neural early-warning diagnostics. Use search_news_intelligence for BM25+vector news search, search_all_intelligence for cross-domain retrieval, get_news_timeseries for event history, and search_event_graph/get_event_neighborhood for graph retrieval. Hybrid search uses multilingual embeddings when installed. "
+        "and get_neural_state for v6 neural early-warning diagnostics. Use search_news_intelligence for BM25+vector news search, search_all_intelligence for cross-domain retrieval, get_news_timeseries for event history, and search_event_graph/get_event_neighborhood for graph retrieval. Use get_geopolitical_state, search_geopolitical_events, get_geopolitical_timeline and get_geopolitical_campaign for the observational hybrid-threat layer. Hybrid search uses multilingual embeddings when installed. "
         "Do not interpret neural scores as calibrated crisis probabilities."
     ),
 )
@@ -110,6 +110,12 @@ def load_news_timeseries() -> list[dict[str, Any]]:
 
 def load_graph_snapshot() -> dict[str, Any]:
     return _read_json(DATA / "graph_snapshot.json", {"nodes": [], "edges": [], "stats": {}})
+
+def load_geopolitical_status() -> dict[str, Any]:
+    return _read_json(DATA / "geopolitical_status.json", {})
+
+def load_geopolitical_timeseries() -> list[dict[str, Any]]:
+    return _read_json(DATA / "geopolitical_timeseries.json", [])
 
 def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", str(text or "").strip().lower())
@@ -328,6 +334,8 @@ def get_search_capabilities(probe_embeddings: bool = False) -> dict[str, Any]:
             and importlib.util.find_spec("fastembed") is not None
         ),
         "graph_snapshot_present": (DATA / "graph_snapshot.json").exists(),
+        "geopolitical_status_present": (DATA / "geopolitical_status.json").exists(),
+        "geopolitical_timeseries_present": (DATA / "geopolitical_timeseries.json").exists(),
         "ladybug_installed": importlib.util.find_spec("ladybug") is not None,
     }
 
@@ -337,6 +345,7 @@ def get_current_state() -> dict[str, Any]:
     current = load_current()
     neural = load_neural()
     nn_current = neural.get("current", {}) if neural else {}
+    geopolitical = load_geopolitical_status()
     return {
         "updated_at": current.get("updated_at"),
         "version": current.get("version"),
@@ -358,6 +367,13 @@ def get_current_state() -> dict[str, Any]:
             "alert_threshold": nn_current.get("threshold_score"),
         },
         "data_failures": current.get("data_failures", []),
+        "geopolitical": {
+            "as_of": geopolitical.get("as_of"),
+            "escalation_index": geopolitical.get("geopolitical_escalation_index"),
+            "components": geopolitical.get("components"),
+            "counts": geopolitical.get("counts"),
+            "model_boundary": geopolitical.get("model_boundary"),
+        } if geopolitical else {"available": False},
     }
 
 @mcp.tool()
@@ -592,6 +608,15 @@ def search_event_graph(query: str, limit: int = 10) -> dict[str, Any]:
                 seed_ids.append("indicator:" + str(indicator))
             for entity in item.get("entities") or []:
                 seed_ids.append("entity:" + str(entity))
+            for actor in item.get("geopolitical_actors") or []:
+                seed_ids.append("actor:" + str(actor))
+                seed_ids.append("campaign:" + str(actor))
+            for target in item.get("geopolitical_targets") or []:
+                seed_ids.append("target:" + str(target))
+            for modality in item.get("geopolitical_modalities") or []:
+                seed_ids.append("modality:" + str(modality))
+            for response in item.get("geopolitical_responses") or []:
+                seed_ids.append("response:" + str(response))
             for node_id in seed_ids:
                 if node_id not in nodes:
                     continue
@@ -713,6 +738,95 @@ def get_news_intelligence_status() -> dict[str, Any]:
         "graph_stats": load_graph_snapshot().get("stats", {}),
         "timeseries_rows": len(load_news_timeseries()),
     }
+
+@mcp.tool()
+def get_geopolitical_state() -> dict[str, Any]:
+    """Return the observational geopolitical/hybrid escalation layer.
+
+    The index is a state indicator, not a probability of war. It does not change
+    the production financial-crisis score or Stage 0-4.
+    """
+    status = load_geopolitical_status()
+    if not status:
+        return {"available": False}
+    return {"available": True, **status}
+
+@mcp.tool()
+def search_geopolitical_events(query: str, limit: int = 10) -> dict[str, Any]:
+    """Hybrid-search geopolitical/hybrid-threat news while preserving attribution metadata."""
+    requested = max(1, min(int(limit), 30))
+    raw = search_news_intelligence(query, limit=min(50, requested * 4))
+    if not raw.get("available", True):
+        return raw
+    results = [x for x in raw.get("results", []) if x.get("geopolitical")]
+    return {
+        "query": query,
+        "mode": raw.get("mode"),
+        "count": min(len(results), requested),
+        "results": results[:requested],
+        "epistemic_note": (
+            "Actor mentions and reported attribution are separate fields. "
+            "reported_attributions records what sources report; it is not an independent finding of responsibility."
+        ),
+    }
+
+@mcp.tool()
+def get_geopolitical_timeline(
+    actor: str | None = None,
+    days: int = 90,
+    attribution_only: bool = False,
+    min_event_score: float | None = None,
+) -> dict[str, Any]:
+    """Return geopolitical event time-series rows, optionally filtered by actor."""
+    rows = load_geopolitical_timeseries()
+    end = date.today()
+    start = end - __import__("datetime").timedelta(days=max(1, int(days)))
+    wanted_kind = "reported_attribution" if attribution_only else None
+    out = []
+    for row in rows:
+        try:
+            d = date.fromisoformat(row.get("day", ""))
+        except Exception:
+            continue
+        if d < start or d > end:
+            continue
+        if wanted_kind and row.get("kind") != wanted_kind:
+            continue
+        if actor is not None:
+            if row.get("kind") not in {"actor_mention", "reported_attribution"}:
+                continue
+            if _normalize(row.get("key")) != _normalize(actor):
+                continue
+        if min_event_score is not None and float(row.get("max_event_score") or 0.0) < float(min_event_score):
+            continue
+        out.append(row)
+    return {
+        "filters": {
+            "actor": actor,
+            "days": days,
+            "attribution_only": attribution_only,
+            "min_event_score": min_event_score,
+        },
+        "count": len(out),
+        "results": out,
+    }
+
+@mcp.tool()
+def get_geopolitical_campaign(actor: str, hops: int = 2, limit: int = 200) -> dict[str, Any]:
+    """Traverse the graph around a reported-attribution actor campaign thread."""
+    target = "campaign:" + actor
+    result = get_event_neighborhood(target, hops=hops, limit=limit)
+    if not result.get("found"):
+        # Try canonical actor labels surfaced in current status.
+        status = load_geopolitical_status()
+        for campaign in status.get("campaigns", []):
+            if _normalize(campaign.get("actor")) == _normalize(actor):
+                return get_event_neighborhood(
+                    "campaign:" + str(campaign["actor"]),
+                    hops=hops,
+                    limit=limit,
+                )
+    return result
 
 @mcp.tool()
 def search_history(
@@ -865,6 +979,16 @@ def news_timeseries_resource() -> str:
 def graph_resource() -> str:
     """Portable knowledge-graph snapshot."""
     return json.dumps(load_graph_snapshot(), ensure_ascii=False, indent=2)
+
+@mcp.resource("crisis://geopolitical/status", mime_type="application/json")
+def geopolitical_status_resource() -> str:
+    """Observational geopolitical/hybrid escalation state."""
+    return json.dumps(load_geopolitical_status(), ensure_ascii=False, indent=2)
+
+@mcp.resource("crisis://geopolitical/timeseries", mime_type="application/json")
+def geopolitical_timeseries_resource() -> str:
+    """Geopolitical/hybrid event time series."""
+    return json.dumps(load_geopolitical_timeseries(), ensure_ascii=False, indent=2)
 
 @mcp.resource("crisis://history", mime_type="application/json")
 def history_resource() -> str:
