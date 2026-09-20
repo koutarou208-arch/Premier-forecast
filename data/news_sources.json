@@ -110,6 +110,55 @@
       "locale": "ja",
       "country": "JP",
       "ceid": "JP:ja"
+    },
+    {
+      "id": "geopolitics_hybrid_europe",
+      "query": "Russia hybrid attack Europe NATO sabotage drone critical infrastructure",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "nato_hybrid",
+      "query": "site:nato.int Russia hybrid threats sabotage critical infrastructure drone",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "eu_hybrid",
+      "query": "site:consilium.europa.eu Russian hybrid threats sabotage critical infrastructure",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "geopolitics_airspace",
+      "query": "NATO airspace violation drone missile Poland Romania Germany Russia",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "geopolitics_infrastructure",
+      "query": "Europe sabotage critical infrastructure railway energy airport undersea cable Russia",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "geopolitics_threats",
+      "query": "Russia threat NATO Europe military target declaration of war warning",
+      "locale": "en-US",
+      "country": "US",
+      "ceid": "US:en"
+    },
+    {
+      "id": "geopolitics_japan",
+      "query": "ロシア 欧州 ハイブリッド攻撃 NATO ドローン 破壊工作 重要インフラ",
+      "locale": "ja",
+      "country": "JP",
+      "ceid": "JP:ja"
     }
   ]
 }
