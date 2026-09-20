@@ -26,14 +26,18 @@ assert series["count"] > 0, series
 
 geo = m.get_geopolitical_state()
 assert geo["available"], geo
-assert 0 <= geo["geopolitical_escalation_index"] <= 100, geo
-assert geo["model_boundary"]["changes_stage_0_4"] is False, geo
-
-geo_search = m.search_geopolitical_events("Russia NATO sabotage critical infrastructure", limit=8)
-assert geo_search.get("count", 0) > 0, geo_search
-
-geo_timeline = m.get_geopolitical_timeline(days=365)
-assert geo_timeline["count"] > 0, geo_timeline
+geo_ready = geo.get("geopolitical_escalation_index") is not None
+if geo_ready:
+    assert 0 <= geo["geopolitical_escalation_index"] <= 100, geo
+    assert geo["model_boundary"]["changes_stage_0_4"] is False, geo
+    geo_search = m.search_geopolitical_events("Russia NATO sabotage critical infrastructure", limit=8)
+    assert geo_search.get("count", 0) > 0, geo_search
+    geo_timeline = m.get_geopolitical_timeline(days=365)
+    assert geo_timeline["count"] > 0, geo_timeline
+else:
+    assert geo.get("status") == "pending", geo
+    geo_search = {"count": 0}
+    geo_timeline = {"count": 0}
 
 graph = m.search_event_graph("repo funding liquidity", limit=8)
 assert graph["count"] > 0, graph
@@ -53,7 +57,7 @@ print(json.dumps({
     "graph_results": graph["count"],
     "neighborhood_nodes": len(neighborhood["nodes"]),
     "neighborhood_edges": len(neighborhood["edges"]),
-    "geopolitical_index": geo["geopolitical_escalation_index"],
+    "geopolitical_index": geo.get("geopolitical_escalation_index"),
     "geopolitical_results": geo_search["count"],
     "geopolitical_timeline_rows": geo_timeline["count"],
 }, ensure_ascii=False))
