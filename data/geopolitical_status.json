@@ -2,41 +2,30 @@
   "version": 1,
   "as_of": "2026-09-19T21:29:02Z",
   "window_days": 90,
-  "geopolitical_escalation_index": 71.3,
-  "interpretation": "state index only; not a probability of war or attribution confidence",
+  "geopolitical_escalation_index": 71.2,
+  "interpretation": "experimental state index only; not a probability of war or attribution confidence",
+  "calibration_status": "experimental_unvalidated",
   "components": {
-    "top_quartile_event_severity": 41.8,
+    "top_quartile_event_severity": 41.6,
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
     "response_intensity": 25.0,
     "thirty_day_momentum": 100.0
   },
   "counts": {
-    "events": 39,
-    "recent_30d_events": 20,
+    "events": 41,
+    "recent_30d_events": 22,
     "previous_30d_events": 10,
-    "physical_events": 6,
-    "critical_infrastructure_events": 11,
+    "physical_events": 8,
+    "critical_infrastructure_events": 12,
     "reported_attribution_events": 0,
-    "unattributed_events": 38,
+    "unattributed_events": 40,
     "disputed_attribution_records": 0,
+    "suspected_attribution_records": 1,
     "military_response_events": 0,
     "explicit_threat_events": 3
   },
-  "campaigns": [
-    {
-      "actor": "Germany",
-      "event_count": 1,
-      "first_seen": "2026-09-04T07:00:00Z",
-      "last_seen": "2026-09-04T07:00:00Z",
-      "max_event_score": 30.0,
-      "modalities": [
-        "sabotage"
-      ],
-      "targets": [],
-      "responses": []
-    }
-  ],
+  "campaigns": [],
   "market_transmission_candidates": [
     "banking_stress",
     "energy",
