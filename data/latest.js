@@ -1,6 +1,6 @@
 window.__RISK_DATA__ = {
   "version": 6,
-  "updated_at": "2026-09-20T02:07:45.377944Z",
+  "updated_at": "2026-09-21T01:16:40.877408Z",
   "score": 23.9,
   "raw_score": 23.9,
   "market_score": 14.5,
@@ -370,7 +370,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 2,
+        "age_days": 3,
         "freshness_multiplier": 1.0
       },
       "quality": {
@@ -397,7 +397,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 2,
+        "age_days": 3,
         "freshness_multiplier": 1.0,
         "bdc_discount_pct": null,
         "bdc_score": null
@@ -426,7 +426,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "medium",
         "confidence_multiplier": 0.85,
-        "age_days": 2,
+        "age_days": 3,
         "freshness_multiplier": 1.0
       },
       "quality": {
