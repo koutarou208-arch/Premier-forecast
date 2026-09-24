@@ -1,18 +1,18 @@
 window.__RISK_DATA__ = {
   "version": 6,
-  "updated_at": "2026-09-23T01:34:04.854812Z",
-  "score": 22.7,
-  "raw_score": 22.7,
-  "market_score": 13.0,
-  "market_raw_score": 13.0,
+  "updated_at": "2026-09-24T01:30:13.007441Z",
+  "score": 21.7,
+  "raw_score": 21.7,
+  "market_score": 11.7,
+  "market_raw_score": 11.7,
   "market_coverage_pct": 100.0,
   "synchronization_bonus": 0.0,
   "level": "NORMAL",
   "summary": "NORMAL: AI/private-credit stress remains mainly sectoral; broad credit contagion is not yet confirmed.",
   "coverage_pct": 100.0,
   "breadth": {
-    "score": 22.2,
-    "stressed": 2,
+    "score": 0.0,
+    "stressed": 0,
     "available": 9,
     "severe": 0
   },
@@ -30,11 +30,11 @@ window.__RISK_DATA__ = {
   "pillars": [
     {
       "name": "Broad Credit",
-      "score": 15.5
+      "score": 14.2
     },
     {
       "name": "Funding / Liquidity",
-      "score": 4.3
+      "score": 6.1
     },
     {
       "name": "Banking",
@@ -46,7 +46,7 @@ window.__RISK_DATA__ = {
     },
     {
       "name": "Europe / Energy",
-      "score": 26.7
+      "score": 17.6
     }
   ],
   "weights": {
@@ -108,19 +108,19 @@ window.__RISK_DATA__ = {
   },
   "diagnostics": {
     "us10y": 4.96,
-    "us2y": 4.76,
-    "curve_2s10s_bps": 20.000000000000018,
-    "vix": 14.87,
-    "realized_10y_vol_bps": 71.53269403419303,
+    "us2y": 4.71,
+    "curve_2s10s_bps": 25.0,
+    "vix": 14.21,
+    "realized_10y_vol_bps": 69.11866226775668,
     "move_manual": null,
     "italy_bund_bps": 80.59799999999998,
-    "wti": 107.02,
-    "gas": 2.97,
-    "sofr": 3.85,
+    "wti": 96.41,
+    "gas": 2.9,
+    "sofr": 3.87,
     "iorb": 3.9,
-    "sofr_iorb_bps": -4.999999999999982,
+    "sofr_iorb_bps": -2.9999999999999805,
     "cpff": 0.19,
-    "ccc_oas": 10.77,
+    "ccc_oas": 10.75,
     "cdx_hy_bps": null,
     "clo_aaa_bps": null,
     "clo_bbb_bps": null,
@@ -136,7 +136,7 @@ window.__RISK_DATA__ = {
       "value": "0.77%",
       "source": "FRED BAMLC0A0CM",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-09-21",
+      "as_of": "2026-09-22",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
       "note": "45% absolute level + 30% deviation from ~5y history + 25% 5/20-observation deterioration speed.",
@@ -146,12 +146,12 @@ window.__RISK_DATA__ = {
         "velocity": 0.0
       },
       "stats": {
-        "percentile": 13.4,
+        "percentile": 13.5,
         "robust_z": -0.77,
         "delta_5": -0.03,
         "delta_20": -0.04,
-        "velocity_pct_5": 21.2,
-        "velocity_pct_20": 34.3
+        "velocity_pct_5": 21.3,
+        "velocity_pct_20": 34.4
       },
       "quality": {}
     },
@@ -159,10 +159,10 @@ window.__RISK_DATA__ = {
       "id": "hy_credit",
       "name": "US High Yield OAS",
       "score": 0.0,
-      "value": "2.66%",
+      "value": "2.68%",
       "source": "FRED BAMLH0A0HYM2",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-09-21",
+      "as_of": "2026-09-22",
       "weight": 14,
       "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
       "note": "Core contagion channel. Fast widening can score high even before the absolute OAS reaches crisis thresholds.",
@@ -172,33 +172,33 @@ window.__RISK_DATA__ = {
         "velocity": 0.0
       },
       "stats": {
-        "percentile": 5.7,
-        "robust_z": -1.11,
-        "delta_5": -0.05,
-        "delta_20": -0.03,
-        "velocity_pct_5": 40.6,
-        "velocity_pct_20": 57.1
+        "percentile": 8.5,
+        "robust_z": -1.06,
+        "delta_5": -0.08,
+        "delta_20": -0.02,
+        "velocity_pct_5": 30.1,
+        "velocity_pct_20": 59.7
       },
       "quality": {}
     },
     {
       "id": "leveraged_credit",
       "name": "Leveraged / Structured Credit",
-      "score": 46.5,
-      "value": "CCC OAS 10.77%",
+      "score": 42.7,
+      "value": "CCC OAS 10.75%",
       "source": "FRED CCC OAS + optional CDX/CLO",
       "mode": "AUTO/OVERRIDE",
-      "as_of": "2026-09-21",
+      "as_of": "2026-09-22",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/series/BAMLH0A3HYC",
       "note": "CCC OAS is the automatic leveraged-credit proxy. Optional CDX HY and CLO AAA/BBB spreads can override when they show more stress.",
       "components": {
-        "level": 23.1,
-        "deviation": 97.1,
-        "velocity": 28.0
+        "level": 22.9,
+        "deviation": 95.3,
+        "velocity": 15.5
       },
       "stats": {
-        "ccc_oas": 10.77,
+        "ccc_oas": 10.75,
         "cdx_hy_bps": null,
         "clo_aaa_bps": null,
         "clo_bbb_bps": null
@@ -209,10 +209,10 @@ window.__RISK_DATA__ = {
       "id": "financial_stress",
       "name": "St. Louis Financial Stress",
       "score": 0.0,
-      "value": "-0.85",
+      "value": "-0.91",
       "source": "FRED STLFSI4",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-09-11",
+      "as_of": "2026-09-18",
       "weight": 8,
       "source_url": "https://fred.stlouisfed.org/series/STLFSI4",
       "note": "Cross-market stress measured against both fixed anchors and its own recent distribution.",
@@ -222,61 +222,61 @@ window.__RISK_DATA__ = {
         "velocity": 0.0
       },
       "stats": {
-        "percentile": 6.2,
-        "robust_z": -1.03,
-        "delta_5": -0.0204,
-        "delta_20": -0.0815,
-        "velocity_pct_5": 47.1,
-        "velocity_pct_20": 39.0
+        "percentile": 2.3,
+        "robust_z": -1.24,
+        "delta_5": -0.098,
+        "delta_20": 0.041,
+        "velocity_pct_5": 35.9,
+        "velocity_pct_20": 58.3
       },
       "quality": {}
     },
     {
       "id": "rates_liquidity",
       "name": "Treasury Vol / Liquidity",
-      "score": 2.8,
-      "value": "RV20 71.53 bp / VIX 14.87",
+      "score": 0.0,
+      "value": "RV20 69.12 bp / VIX 14.21",
       "source": "FRED DGS10 + VIXCLS",
       "mode": "AUTO/HYBRID",
-      "as_of": "2026-09-21",
+      "as_of": "2026-09-22",
       "weight": 8,
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "note": "Uses the strongest signal from 10Y realized yield volatility, VIX, and optional MOVE. Missing inputs are not treated as zero.",
       "components": {
         "level": 0.0,
         "deviation": 0.0,
-        "velocity": 11.0
+        "velocity": 0.0
       },
       "stats": {
-        "rv": 71.53269403419303,
+        "rv": 69.11866226775668,
         "move": null,
-        "vix": 14.87
+        "vix": 14.21
       },
       "quality": {}
     },
     {
       "id": "funding_market",
       "name": "Repo / Funding Market",
-      "score": 10.2,
-      "value": "-5.0 bp",
+      "score": 18.3,
+      "value": "-3.0 bp",
       "source": "FRED SOFR - IORB",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-09-21",
+      "as_of": "2026-09-22",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/graph/?id=SOFR,IORB",
       "note": "Positive SOFR-IORB pressure is monitored against absolute thresholds, its own distribution and deterioration velocity.",
       "components": {
         "level": 0.0,
-        "deviation": 34.0,
+        "deviation": 60.9,
         "velocity": 0.0
       },
       "stats": {
-        "percentile": 75.6,
-        "robust_z": 1.35,
+        "percentile": 80.5,
+        "robust_z": 2.02,
         "delta_5": -2.0,
-        "delta_20": -5.0,
-        "velocity_pct_5": 18.9,
-        "velocity_pct_20": 7.8
+        "delta_20": -3.0,
+        "velocity_pct_5": 19.0,
+        "velocity_pct_20": 12.8
       },
       "quality": {}
     },
@@ -331,21 +331,21 @@ window.__RISK_DATA__ = {
     {
       "id": "energy",
       "name": "Energy Shock",
-      "score": 53.4,
-      "value": "WTI $107.02 / Henry Hub $2.97",
+      "score": 35.2,
+      "value": "WTI $96.41 / Henry Hub $2.90",
       "source": "FRED DCOILWTICO + DHHNGSP",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-09-15",
+      "as_of": "2026-09-22",
       "weight": 7,
       "source_url": "https://fred.stlouisfed.org/series/DCOILWTICO",
       "note": "Uses the more stressed oil/gas signal; fast shocks matter even before absolute prices reach extreme thresholds.",
       "components": {
-        "level": 7.8,
-        "deviation": 86.6,
-        "velocity": 95.8
+        "level": 0.0,
+        "deviation": 65.1,
+        "velocity": 62.9
       },
       "stats": {
-        "oil_score": 53.4,
+        "oil_score": 35.2,
         "gas_score": 0.0
       },
       "quality": {}
@@ -370,7 +370,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 5,
+        "age_days": 6,
         "freshness_multiplier": 1.0
       },
       "quality": {
@@ -397,7 +397,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 5,
+        "age_days": 6,
         "freshness_multiplier": 1.0,
         "bdc_discount_pct": null,
         "bdc_score": null
@@ -426,7 +426,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "medium",
         "confidence_multiplier": 0.85,
-        "age_days": 5,
+        "age_days": 6,
         "freshness_multiplier": 1.0
       },
       "quality": {
