@@ -756,7 +756,7 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5653,
+    "avg_relevance": 0.5639,
     "max_relevance": 0.5812
   },
   {
@@ -766,7 +766,7 @@
     "article_count": 7,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.5453,
+    "avg_relevance": 0.5443,
     "max_relevance": 0.5812
   },
   {
@@ -786,7 +786,7 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5653,
+    "avg_relevance": 0.5639,
     "max_relevance": 0.5812
   },
   {
@@ -796,7 +796,7 @@
     "article_count": 7,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.5453,
+    "avg_relevance": 0.5443,
     "max_relevance": 0.5812
   },
   {
@@ -806,7 +806,7 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 8,
-    "avg_relevance": 0.5226,
+    "avg_relevance": 0.5217,
     "max_relevance": 0.5812
   },
   {
@@ -1218,6 +1218,16 @@
     "publisher_count": 2,
     "avg_relevance": 0.5876,
     "max_relevance": 0.5952
+  },
+  {
+    "day": "2025-10-15",
+    "kind": "topic",
+    "key": "geopolitical_hybrid",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.5171,
+    "max_relevance": 0.5171
   },
   {
     "day": "2025-10-15",
@@ -1866,8 +1876,18 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.4839,
-    "max_relevance": 0.4839
+    "avg_relevance": 0.5751,
+    "max_relevance": 0.5751
+  },
+  {
+    "day": "2025-10-22",
+    "kind": "indicator",
+    "key": "europe",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.5751,
+    "max_relevance": 0.5751
   },
   {
     "day": "2025-10-22",
@@ -1876,8 +1896,18 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.4839,
-    "max_relevance": 0.4839
+    "avg_relevance": 0.5751,
+    "max_relevance": 0.5751
+  },
+  {
+    "day": "2025-10-22",
+    "kind": "topic",
+    "key": "europe_sovereign",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.5751,
+    "max_relevance": 0.5751
   },
   {
     "day": "2025-10-22",
@@ -1886,8 +1916,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.4839,
-    "max_relevance": 0.4839
+    "avg_relevance": 0.5751,
+    "max_relevance": 0.5751
   },
   {
     "day": "2025-10-23",
@@ -3826,8 +3856,8 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 6,
-    "avg_relevance": 0.5563,
-    "max_relevance": 0.5961
+    "avg_relevance": 0.5567,
+    "max_relevance": 0.5983
   },
   {
     "day": "2025-11-12",
@@ -3836,8 +3866,8 @@
     "article_count": 7,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.5403,
-    "max_relevance": 0.5961
+    "avg_relevance": 0.5406,
+    "max_relevance": 0.5983
   },
   {
     "day": "2025-11-12",
@@ -3856,8 +3886,8 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 6,
-    "avg_relevance": 0.5563,
-    "max_relevance": 0.5961
+    "avg_relevance": 0.5567,
+    "max_relevance": 0.5983
   },
   {
     "day": "2025-11-12",
@@ -3866,8 +3896,8 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 6,
-    "avg_relevance": 0.5563,
-    "max_relevance": 0.5961
+    "avg_relevance": 0.5567,
+    "max_relevance": 0.5983
   },
   {
     "day": "2025-11-12",
@@ -3876,8 +3906,8 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 6,
-    "avg_relevance": 0.5563,
-    "max_relevance": 0.5961
+    "avg_relevance": 0.5567,
+    "max_relevance": 0.5983
   },
   {
     "day": "2025-11-12",
@@ -3886,8 +3916,8 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.565,
-    "max_relevance": 0.5961
+    "avg_relevance": 0.5656,
+    "max_relevance": 0.5983
   },
   {
     "day": "2025-11-12",
@@ -3916,8 +3946,8 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.565,
-    "max_relevance": 0.5961
+    "avg_relevance": 0.5656,
+    "max_relevance": 0.5983
   },
   {
     "day": "2025-11-12",
@@ -3936,8 +3966,8 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.565,
-    "max_relevance": 0.5961
+    "avg_relevance": 0.5656,
+    "max_relevance": 0.5983
   },
   {
     "day": "2025-11-12",
@@ -3946,8 +3976,8 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 6,
-    "avg_relevance": 0.5563,
-    "max_relevance": 0.5961
+    "avg_relevance": 0.5567,
+    "max_relevance": 0.5983
   },
   {
     "day": "2025-11-13",
@@ -5283,20 +5313,20 @@
     "day": "2025-11-25",
     "kind": "indicator",
     "key": "banking_stress",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 4,
-    "publisher_count": 5,
-    "avg_relevance": 0.6202,
+    "publisher_count": 6,
+    "avg_relevance": 0.6135,
     "max_relevance": 0.647
   },
   {
     "day": "2025-11-25",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.6101,
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 3,
+    "avg_relevance": 0.6001,
     "max_relevance": 0.6105
   },
   {
@@ -5313,40 +5343,40 @@
     "day": "2025-11-25",
     "kind": "indicator",
     "key": "funding_market",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 5,
-    "publisher_count": 5,
-    "avg_relevance": 0.6177,
+    "publisher_count": 6,
+    "avg_relevance": 0.6114,
     "max_relevance": 0.647
   },
   {
     "day": "2025-11-25",
     "kind": "indicator",
     "key": "hy_credit",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 3,
-    "publisher_count": 3,
-    "avg_relevance": 0.6228,
+    "publisher_count": 4,
+    "avg_relevance": 0.6121,
     "max_relevance": 0.647
   },
   {
     "day": "2025-11-25",
     "kind": "indicator",
     "key": "ig_credit",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 3,
-    "publisher_count": 3,
-    "avg_relevance": 0.6228,
+    "publisher_count": 4,
+    "avg_relevance": 0.6121,
     "max_relevance": 0.647
   },
   {
     "day": "2025-11-25",
     "kind": "indicator",
     "key": "rates_liquidity",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 5,
-    "publisher_count": 5,
-    "avg_relevance": 0.6177,
+    "publisher_count": 6,
+    "avg_relevance": 0.6114,
     "max_relevance": 0.647
   },
   {
@@ -5383,10 +5413,10 @@
     "day": "2025-11-25",
     "kind": "topic",
     "key": "funding_liquidity",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 5,
-    "publisher_count": 5,
-    "avg_relevance": 0.6177,
+    "publisher_count": 6,
+    "avg_relevance": 0.6114,
     "max_relevance": 0.647
   },
   {
@@ -5403,20 +5433,20 @@
     "day": "2025-11-25",
     "kind": "topic",
     "key": "inflation_rates",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.6101,
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 3,
+    "avg_relevance": 0.6001,
     "max_relevance": 0.6105
   },
   {
     "day": "2025-11-25",
     "kind": "topic",
     "key": "systemic_crisis",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 3,
-    "publisher_count": 3,
-    "avg_relevance": 0.6228,
+    "publisher_count": 4,
+    "avg_relevance": 0.6121,
     "max_relevance": 0.647
   },
   {
@@ -5516,8 +5546,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5418,
-    "max_relevance": 0.5418
+    "avg_relevance": 0.5383,
+    "max_relevance": 0.5383
   },
   {
     "day": "2025-12-01",
@@ -5986,8 +6016,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.6566,
-    "max_relevance": 0.6566
+    "avg_relevance": 0.6524,
+    "max_relevance": 0.6524
   },
   {
     "day": "2025-12-08",
@@ -6006,8 +6036,8 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.5522,
-    "max_relevance": 0.6566
+    "avg_relevance": 0.5508,
+    "max_relevance": 0.6524
   },
   {
     "day": "2025-12-08",
@@ -6016,8 +6046,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6183,
-    "max_relevance": 0.6566
+    "avg_relevance": 0.6162,
+    "max_relevance": 0.6524
   },
   {
     "day": "2025-12-08",
@@ -6026,8 +6056,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6183,
-    "max_relevance": 0.6566
+    "avg_relevance": 0.6162,
+    "max_relevance": 0.6524
   },
   {
     "day": "2025-12-08",
@@ -6036,8 +6066,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6183,
-    "max_relevance": 0.6566
+    "avg_relevance": 0.6162,
+    "max_relevance": 0.6524
   },
   {
     "day": "2025-12-08",
@@ -6046,8 +6076,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6183,
-    "max_relevance": 0.6566
+    "avg_relevance": 0.6162,
+    "max_relevance": 0.6524
   },
   {
     "day": "2025-12-08",
@@ -6076,8 +6106,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6183,
-    "max_relevance": 0.6566
+    "avg_relevance": 0.6162,
+    "max_relevance": 0.6524
   },
   {
     "day": "2025-12-08",
@@ -6096,8 +6126,8 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.5522,
-    "max_relevance": 0.6566
+    "avg_relevance": 0.5508,
+    "max_relevance": 0.6524
   },
   {
     "day": "2025-12-08",
@@ -6136,8 +6166,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.6566,
-    "max_relevance": 0.6566
+    "avg_relevance": 0.6524,
+    "max_relevance": 0.6524
   },
   {
     "day": "2025-12-09",
@@ -7133,50 +7163,50 @@
     "day": "2025-12-16",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 6,
+    "article_count": 7,
     "event_count": 1,
-    "publisher_count": 6,
-    "avg_relevance": 0.5206,
+    "publisher_count": 7,
+    "avg_relevance": 0.529,
     "max_relevance": 0.58
   },
   {
     "day": "2025-12-16",
     "kind": "indicator",
     "key": "europe",
-    "article_count": 6,
+    "article_count": 7,
     "event_count": 1,
-    "publisher_count": 6,
-    "avg_relevance": 0.5206,
+    "publisher_count": 7,
+    "avg_relevance": 0.529,
     "max_relevance": 0.58
   },
   {
     "day": "2025-12-16",
     "kind": "topic",
     "key": "energy_shock",
-    "article_count": 6,
+    "article_count": 7,
     "event_count": 1,
-    "publisher_count": 6,
-    "avg_relevance": 0.5206,
+    "publisher_count": 7,
+    "avg_relevance": 0.529,
     "max_relevance": 0.58
   },
   {
     "day": "2025-12-16",
     "kind": "topic",
     "key": "europe_sovereign",
-    "article_count": 6,
+    "article_count": 7,
     "event_count": 1,
-    "publisher_count": 6,
-    "avg_relevance": 0.5206,
+    "publisher_count": 7,
+    "avg_relevance": 0.529,
     "max_relevance": 0.58
   },
   {
     "day": "2025-12-16",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 6,
+    "article_count": 7,
     "event_count": 1,
-    "publisher_count": 6,
-    "avg_relevance": 0.5206,
+    "publisher_count": 7,
+    "avg_relevance": 0.529,
     "max_relevance": 0.58
   },
   {
@@ -7406,7 +7436,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5773,
+    "avg_relevance": 0.5968,
     "max_relevance": 0.6733
   },
   {
@@ -7416,27 +7446,27 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5773,
+    "avg_relevance": 0.5968,
     "max_relevance": 0.6733
   },
   {
     "day": "2025-12-19",
     "kind": "indicator",
     "key": "hy_credit",
-    "article_count": 1,
+    "article_count": 2,
     "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.6733,
+    "publisher_count": 2,
+    "avg_relevance": 0.6655,
     "max_relevance": 0.6733
   },
   {
     "day": "2025-12-19",
     "kind": "indicator",
     "key": "ig_credit",
-    "article_count": 1,
+    "article_count": 2,
     "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.6733,
+    "publisher_count": 2,
+    "avg_relevance": 0.6655,
     "max_relevance": 0.6733
   },
   {
@@ -7446,18 +7476,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6266,
+    "avg_relevance": 0.6655,
     "max_relevance": 0.6733
-  },
-  {
-    "day": "2025-12-19",
-    "kind": "indicator",
-    "key": "private_credit",
-    "article_count": 1,
-    "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.58,
-    "max_relevance": 0.58
   },
   {
     "day": "2025-12-19",
@@ -7466,7 +7486,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5773,
+    "avg_relevance": 0.5968,
     "max_relevance": 0.6733
   },
   {
@@ -7483,10 +7503,10 @@
     "day": "2025-12-19",
     "kind": "topic",
     "key": "corporate_credit",
-    "article_count": 1,
+    "article_count": 2,
     "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.6733,
+    "publisher_count": 2,
+    "avg_relevance": 0.6655,
     "max_relevance": 0.6733
   },
   {
@@ -7506,7 +7526,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5773,
+    "avg_relevance": 0.5968,
     "max_relevance": 0.6733
   },
   {
@@ -7526,18 +7546,8 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5773,
+    "avg_relevance": 0.5968,
     "max_relevance": 0.6733
-  },
-  {
-    "day": "2025-12-19",
-    "kind": "topic",
-    "key": "private_credit",
-    "article_count": 1,
-    "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.58,
-    "max_relevance": 0.58
   },
   {
     "day": "2025-12-21",
@@ -8584,9 +8594,9 @@
     "kind": "indicator",
     "key": "bank_ai",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.6038,
+    "avg_relevance": 0.6017,
     "max_relevance": 0.6215
   },
   {
@@ -8604,9 +8614,9 @@
     "kind": "indicator",
     "key": "data_center",
     "article_count": 2,
-    "event_count": 1,
+    "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6039,
+    "avg_relevance": 0.6008,
     "max_relevance": 0.6215
   },
   {
@@ -8614,9 +8624,9 @@
     "kind": "indicator",
     "key": "funding_market",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.6038,
+    "avg_relevance": 0.6017,
     "max_relevance": 0.6215
   },
   {
@@ -8644,9 +8654,9 @@
     "kind": "indicator",
     "key": "leveraged_credit",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.6038,
+    "avg_relevance": 0.6017,
     "max_relevance": 0.6215
   },
   {
@@ -8654,9 +8664,9 @@
     "kind": "indicator",
     "key": "private_credit",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.6038,
+    "avg_relevance": 0.6017,
     "max_relevance": 0.6215
   },
   {
@@ -8664,9 +8674,9 @@
     "kind": "indicator",
     "key": "rates_liquidity",
     "article_count": 2,
-    "event_count": 1,
+    "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6039,
+    "avg_relevance": 0.6008,
     "max_relevance": 0.6215
   },
   {
@@ -8674,9 +8684,9 @@
     "kind": "topic",
     "key": "ai_data_center",
     "article_count": 2,
-    "event_count": 1,
+    "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6039,
+    "avg_relevance": 0.6008,
     "max_relevance": 0.6215
   },
   {
@@ -8694,9 +8704,9 @@
     "kind": "topic",
     "key": "funding_liquidity",
     "article_count": 2,
-    "event_count": 1,
+    "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6039,
+    "avg_relevance": 0.6008,
     "max_relevance": 0.6215
   },
   {
@@ -8704,9 +8714,9 @@
     "kind": "topic",
     "key": "private_credit",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.6038,
+    "avg_relevance": 0.6017,
     "max_relevance": 0.6215
   },
   {
@@ -10866,8 +10876,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.4892,
-    "max_relevance": 0.4892
+    "avg_relevance": 0.4928,
+    "max_relevance": 0.4928
   },
   {
     "day": "2026-02-03",
@@ -10886,7 +10896,7 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.4792,
+    "avg_relevance": 0.4804,
     "max_relevance": 0.5198
   },
   {
@@ -10896,7 +10906,7 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.4811,
+    "avg_relevance": 0.4823,
     "max_relevance": 0.5198
   },
   {
@@ -10906,7 +10916,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.61,
+    "avg_relevance": 0.6109,
     "max_relevance": 0.7648
   },
   {
@@ -10916,7 +10926,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.61,
+    "avg_relevance": 0.6109,
     "max_relevance": 0.7648
   },
   {
@@ -10946,7 +10956,7 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.4811,
+    "avg_relevance": 0.4823,
     "max_relevance": 0.5198
   },
   {
@@ -10986,7 +10996,7 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.4811,
+    "avg_relevance": 0.4823,
     "max_relevance": 0.5198
   },
   {
@@ -11006,7 +11016,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5045,
+    "avg_relevance": 0.5063,
     "max_relevance": 0.5198
   },
   {
@@ -11026,8 +11036,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.4892,
-    "max_relevance": 0.4892
+    "avg_relevance": 0.4928,
+    "max_relevance": 0.4928
   },
   {
     "day": "2026-02-04",
@@ -11186,7 +11196,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6503,
+    "avg_relevance": 0.6501,
     "max_relevance": 0.7401
   },
   {
@@ -11196,7 +11206,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.6384,
+    "avg_relevance": 0.6382,
     "max_relevance": 0.7401
   },
   {
@@ -11216,7 +11226,7 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.6505,
+    "avg_relevance": 0.6502,
     "max_relevance": 0.7401
   },
   {
@@ -11226,7 +11236,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.6384,
+    "avg_relevance": 0.6382,
     "max_relevance": 0.7401
   },
   {
@@ -11236,7 +11246,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.6384,
+    "avg_relevance": 0.6382,
     "max_relevance": 0.7401
   },
   {
@@ -11246,8 +11256,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6055,
-    "max_relevance": 0.6086
+    "avg_relevance": 0.605,
+    "max_relevance": 0.6078
   },
   {
     "day": "2026-02-05",
@@ -11276,7 +11286,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6503,
+    "avg_relevance": 0.6501,
     "max_relevance": 0.7401
   },
   {
@@ -11286,8 +11296,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6055,
-    "max_relevance": 0.6086
+    "avg_relevance": 0.605,
+    "max_relevance": 0.6078
   },
   {
     "day": "2026-02-05",
@@ -11336,7 +11346,7 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.6505,
+    "avg_relevance": 0.6502,
     "max_relevance": 0.7401
   },
   {
@@ -11523,10 +11533,10 @@
     "day": "2026-02-10",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 4,
+    "article_count": 5,
     "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.5739,
+    "publisher_count": 5,
+    "avg_relevance": 0.5607,
     "max_relevance": 0.6267
   },
   {
@@ -11633,10 +11643,10 @@
     "day": "2026-02-10",
     "kind": "topic",
     "key": "energy_shock",
-    "article_count": 2,
+    "article_count": 3,
     "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.5452,
+    "publisher_count": 3,
+    "avg_relevance": 0.5327,
     "max_relevance": 0.5946
   },
   {
@@ -11663,10 +11673,10 @@
     "day": "2026-02-10",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.5519,
+    "publisher_count": 4,
+    "avg_relevance": 0.5409,
     "max_relevance": 0.58
   },
   {
@@ -11996,8 +12006,18 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.4304,
-    "max_relevance": 0.4409
+    "avg_relevance": 0.4446,
+    "max_relevance": 0.4484
+  },
+  {
+    "day": "2026-02-14",
+    "kind": "indicator",
+    "key": "europe",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.4484,
+    "max_relevance": 0.4484
   },
   {
     "day": "2026-02-14",
@@ -12006,8 +12026,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.4304,
-    "max_relevance": 0.4409
+    "avg_relevance": 0.4446,
+    "max_relevance": 0.4484
   },
   {
     "day": "2026-02-14",
@@ -12016,8 +12036,18 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.4304,
-    "max_relevance": 0.4409
+    "avg_relevance": 0.4446,
+    "max_relevance": 0.4484
+  },
+  {
+    "day": "2026-02-14",
+    "kind": "topic",
+    "key": "europe_sovereign",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.4484,
+    "max_relevance": 0.4484
   },
   {
     "day": "2026-02-14",
@@ -12026,17 +12056,17 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.4304,
-    "max_relevance": 0.4409
+    "avg_relevance": 0.4446,
+    "max_relevance": 0.4484
   },
   {
     "day": "2026-02-14",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 2,
+    "article_count": 1,
     "event_count": 1,
-    "publisher_count": 2,
-    "avg_relevance": 0.4304,
+    "publisher_count": 1,
+    "avg_relevance": 0.4409,
     "max_relevance": 0.4409
   },
   {
@@ -12046,8 +12076,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.4304,
-    "max_relevance": 0.4409
+    "avg_relevance": 0.4446,
+    "max_relevance": 0.4484
   },
   {
     "day": "2026-02-17",
@@ -12216,8 +12246,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5871,
-    "max_relevance": 0.5942
+    "avg_relevance": 0.6029,
+    "max_relevance": 0.6258
   },
   {
     "day": "2026-02-18",
@@ -12246,8 +12276,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5871,
-    "max_relevance": 0.5942
+    "avg_relevance": 0.6029,
+    "max_relevance": 0.6258
   },
   {
     "day": "2026-02-18",
@@ -12256,8 +12286,8 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5883,
-    "max_relevance": 0.599
+    "avg_relevance": 0.5962,
+    "max_relevance": 0.6258
   },
   {
     "day": "2026-02-18",
@@ -12266,8 +12296,8 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5883,
-    "max_relevance": 0.599
+    "avg_relevance": 0.5962,
+    "max_relevance": 0.6258
   },
   {
     "day": "2026-02-18",
@@ -12276,8 +12306,8 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.5911,
-    "max_relevance": 0.599
+    "avg_relevance": 0.6016,
+    "max_relevance": 0.6258
   },
   {
     "day": "2026-02-18",
@@ -12286,8 +12316,8 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.5911,
-    "max_relevance": 0.599
+    "avg_relevance": 0.6016,
+    "max_relevance": 0.6258
   },
   {
     "day": "2026-02-18",
@@ -12306,8 +12336,8 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.5911,
-    "max_relevance": 0.599
+    "avg_relevance": 0.6016,
+    "max_relevance": 0.6258
   },
   {
     "day": "2026-02-18",
@@ -12336,8 +12366,8 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.5911,
-    "max_relevance": 0.599
+    "avg_relevance": 0.6016,
+    "max_relevance": 0.6258
   },
   {
     "day": "2026-02-18",
@@ -12346,8 +12376,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5871,
-    "max_relevance": 0.5942
+    "avg_relevance": 0.6029,
+    "max_relevance": 0.6258
   },
   {
     "day": "2026-02-19",
@@ -12556,8 +12586,8 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.541,
-    "max_relevance": 0.6084
+    "avg_relevance": 0.5496,
+    "max_relevance": 0.6343
   },
   {
     "day": "2026-02-20",
@@ -12596,8 +12626,8 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 5,
-    "avg_relevance": 0.5412,
-    "max_relevance": 0.6084
+    "avg_relevance": 0.5444,
+    "max_relevance": 0.6343
   },
   {
     "day": "2026-02-20",
@@ -12606,8 +12636,8 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 5,
-    "avg_relevance": 0.5412,
-    "max_relevance": 0.6084
+    "avg_relevance": 0.5444,
+    "max_relevance": 0.6343
   },
   {
     "day": "2026-02-20",
@@ -12656,8 +12686,8 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.541,
-    "max_relevance": 0.6084
+    "avg_relevance": 0.5496,
+    "max_relevance": 0.6343
   },
   {
     "day": "2026-02-20",
@@ -12676,8 +12706,8 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.541,
-    "max_relevance": 0.6084
+    "avg_relevance": 0.5496,
+    "max_relevance": 0.6343
   },
   {
     "day": "2026-02-20",
@@ -12686,8 +12716,8 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 5,
-    "avg_relevance": 0.5412,
-    "max_relevance": 0.6084
+    "avg_relevance": 0.5444,
+    "max_relevance": 0.6343
   },
   {
     "day": "2026-02-20",
@@ -12944,7 +12974,7 @@
     "kind": "indicator",
     "key": "banking_stress",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 3,
     "avg_relevance": 0.6458,
     "max_relevance": 0.6732
@@ -12964,7 +12994,7 @@
     "kind": "indicator",
     "key": "europe",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 3,
     "avg_relevance": 0.5779,
     "max_relevance": 0.6732
@@ -12974,7 +13004,7 @@
     "kind": "indicator",
     "key": "funding_market",
     "article_count": 6,
-    "event_count": 4,
+    "event_count": 5,
     "publisher_count": 5,
     "avg_relevance": 0.6339,
     "max_relevance": 0.7061
@@ -12984,7 +13014,7 @@
     "kind": "indicator",
     "key": "hy_credit",
     "article_count": 5,
-    "event_count": 4,
+    "event_count": 5,
     "publisher_count": 5,
     "avg_relevance": 0.6479,
     "max_relevance": 0.7061
@@ -12994,7 +13024,7 @@
     "kind": "indicator",
     "key": "ig_credit",
     "article_count": 5,
-    "event_count": 4,
+    "event_count": 5,
     "publisher_count": 5,
     "avg_relevance": 0.6479,
     "max_relevance": 0.7061
@@ -13064,7 +13094,7 @@
     "kind": "topic",
     "key": "europe_sovereign",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 3,
     "avg_relevance": 0.5779,
     "max_relevance": 0.6732
@@ -13104,7 +13134,7 @@
     "kind": "topic",
     "key": "systemic_crisis",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 3,
     "avg_relevance": 0.6458,
     "max_relevance": 0.6732
@@ -13773,10 +13803,10 @@
     "day": "2026-03-02",
     "kind": "indicator",
     "key": "banking_stress",
-    "article_count": 2,
+    "article_count": 3,
     "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.6172,
+    "publisher_count": 3,
+    "avg_relevance": 0.6048,
     "max_relevance": 0.6545
   },
   {
@@ -13803,50 +13833,50 @@
     "day": "2026-03-02",
     "kind": "indicator",
     "key": "funding_market",
-    "article_count": 4,
+    "article_count": 5,
     "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.6125,
+    "publisher_count": 5,
+    "avg_relevance": 0.606,
     "max_relevance": 0.6545
   },
   {
     "day": "2026-03-02",
     "kind": "indicator",
     "key": "hy_credit",
-    "article_count": 4,
+    "article_count": 5,
     "event_count": 4,
-    "publisher_count": 4,
-    "avg_relevance": 0.6011,
+    "publisher_count": 5,
+    "avg_relevance": 0.5969,
     "max_relevance": 0.6545
   },
   {
     "day": "2026-03-02",
     "kind": "indicator",
     "key": "ig_credit",
-    "article_count": 4,
+    "article_count": 5,
     "event_count": 4,
-    "publisher_count": 4,
-    "avg_relevance": 0.6011,
+    "publisher_count": 5,
+    "avg_relevance": 0.5969,
     "max_relevance": 0.6545
   },
   {
     "day": "2026-03-02",
     "kind": "indicator",
     "key": "leveraged_credit",
-    "article_count": 4,
+    "article_count": 5,
     "event_count": 4,
-    "publisher_count": 4,
-    "avg_relevance": 0.6011,
+    "publisher_count": 5,
+    "avg_relevance": 0.5969,
     "max_relevance": 0.6545
   },
   {
     "day": "2026-03-02",
     "kind": "indicator",
     "key": "private_credit",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 3,
-    "publisher_count": 3,
-    "avg_relevance": 0.5834,
+    "publisher_count": 4,
+    "avg_relevance": 0.5825,
     "max_relevance": 0.5901
   },
   {
@@ -13863,10 +13893,10 @@
     "day": "2026-03-02",
     "kind": "topic",
     "key": "corporate_credit",
-    "article_count": 4,
+    "article_count": 5,
     "event_count": 4,
-    "publisher_count": 4,
-    "avg_relevance": 0.6011,
+    "publisher_count": 5,
+    "avg_relevance": 0.5969,
     "max_relevance": 0.6545
   },
   {
@@ -13913,20 +13943,20 @@
     "day": "2026-03-02",
     "kind": "topic",
     "key": "private_credit",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 3,
-    "publisher_count": 3,
-    "avg_relevance": 0.5834,
+    "publisher_count": 4,
+    "avg_relevance": 0.5825,
     "max_relevance": 0.5901
   },
   {
     "day": "2026-03-02",
     "kind": "topic",
     "key": "systemic_crisis",
-    "article_count": 2,
+    "article_count": 3,
     "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.6172,
+    "publisher_count": 3,
+    "avg_relevance": 0.6048,
     "max_relevance": 0.6545
   },
   {
@@ -14094,9 +14124,9 @@
     "kind": "indicator",
     "key": "energy",
     "article_count": 4,
-    "event_count": 3,
+    "event_count": 4,
     "publisher_count": 2,
-    "avg_relevance": 0.4989,
+    "avg_relevance": 0.4982,
     "max_relevance": 0.5274
   },
   {
@@ -14104,9 +14134,9 @@
     "kind": "indicator",
     "key": "funding_market",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 2,
-    "avg_relevance": 0.5111,
+    "avg_relevance": 0.5103,
     "max_relevance": 0.5274
   },
   {
@@ -14154,9 +14184,9 @@
     "kind": "indicator",
     "key": "rates_liquidity",
     "article_count": 4,
-    "event_count": 3,
+    "event_count": 4,
     "publisher_count": 2,
-    "avg_relevance": 0.4989,
+    "avg_relevance": 0.4982,
     "max_relevance": 0.5274
   },
   {
@@ -14186,17 +14216,17 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5053,
-    "max_relevance": 0.5053
+    "avg_relevance": 0.5029,
+    "max_relevance": 0.5029
   },
   {
     "day": "2026-03-04",
     "kind": "topic",
     "key": "funding_liquidity",
     "article_count": 3,
-    "event_count": 2,
+    "event_count": 3,
     "publisher_count": 2,
-    "avg_relevance": 0.5111,
+    "avg_relevance": 0.5103,
     "max_relevance": 0.5274
   },
   {
@@ -14204,9 +14234,9 @@
     "kind": "topic",
     "key": "inflation_rates",
     "article_count": 4,
-    "event_count": 3,
+    "event_count": 4,
     "publisher_count": 2,
-    "avg_relevance": 0.4989,
+    "avg_relevance": 0.4982,
     "max_relevance": 0.5274
   },
   {
@@ -14786,7 +14816,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6336,
+    "avg_relevance": 0.6344,
     "max_relevance": 0.6822
   },
   {
@@ -14796,7 +14826,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6201,
+    "avg_relevance": 0.6211,
     "max_relevance": 0.6538
   },
   {
@@ -14806,7 +14836,7 @@
     "article_count": 5,
     "event_count": 4,
     "publisher_count": 4,
-    "avg_relevance": 0.6435,
+    "avg_relevance": 0.644,
     "max_relevance": 0.7367
   },
   {
@@ -14836,7 +14866,7 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.6344,
+    "avg_relevance": 0.635,
     "max_relevance": 0.7367
   },
   {
@@ -14846,8 +14876,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5832,
-    "max_relevance": 0.5864
+    "avg_relevance": 0.5841,
+    "max_relevance": 0.5883
   },
   {
     "day": "2026-03-10",
@@ -14856,7 +14886,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5724,
+    "avg_relevance": 0.5736,
     "max_relevance": 0.58
   },
   {
@@ -14886,7 +14916,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6336,
+    "avg_relevance": 0.6344,
     "max_relevance": 0.6822
   },
   {
@@ -14896,7 +14926,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6201,
+    "avg_relevance": 0.6211,
     "max_relevance": 0.6538
   },
   {
@@ -14906,7 +14936,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5724,
+    "avg_relevance": 0.5736,
     "max_relevance": 0.58
   },
   {
@@ -14916,8 +14946,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5864,
-    "max_relevance": 0.5864
+    "avg_relevance": 0.5883,
+    "max_relevance": 0.5883
   },
   {
     "day": "2026-03-10",
@@ -14926,8 +14956,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5648,
-    "max_relevance": 0.5648
+    "avg_relevance": 0.5673,
+    "max_relevance": 0.5673
   },
   {
     "day": "2026-03-10",
@@ -14936,8 +14966,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5832,
-    "max_relevance": 0.5864
+    "avg_relevance": 0.5841,
+    "max_relevance": 0.5883
   },
   {
     "day": "2026-03-10",
@@ -15656,7 +15686,7 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 6,
-    "avg_relevance": 0.5582,
+    "avg_relevance": 0.5576,
     "max_relevance": 0.682
   },
   {
@@ -15666,7 +15696,7 @@
     "article_count": 7,
     "event_count": 5,
     "publisher_count": 7,
-    "avg_relevance": 0.5743,
+    "avg_relevance": 0.5738,
     "max_relevance": 0.682
   },
   {
@@ -15676,7 +15706,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.5616,
+    "avg_relevance": 0.5608,
     "max_relevance": 0.682
   },
   {
@@ -15696,7 +15726,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5912,
+    "avg_relevance": 0.5904,
     "max_relevance": 0.6709
   },
   {
@@ -15706,7 +15736,7 @@
     "article_count": 5,
     "event_count": 4,
     "publisher_count": 5,
-    "avg_relevance": 0.6158,
+    "avg_relevance": 0.6151,
     "max_relevance": 0.682
   },
   {
@@ -15716,7 +15746,7 @@
     "article_count": 6,
     "event_count": 5,
     "publisher_count": 6,
-    "avg_relevance": 0.5977,
+    "avg_relevance": 0.5971,
     "max_relevance": 0.682
   },
   {
@@ -15726,7 +15756,7 @@
     "article_count": 6,
     "event_count": 5,
     "publisher_count": 6,
-    "avg_relevance": 0.5977,
+    "avg_relevance": 0.5971,
     "max_relevance": 0.682
   },
   {
@@ -15746,7 +15776,7 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 6,
-    "avg_relevance": 0.5708,
+    "avg_relevance": 0.5702,
     "max_relevance": 0.682
   },
   {
@@ -15766,7 +15796,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.5616,
+    "avg_relevance": 0.5608,
     "max_relevance": 0.682
   },
   {
@@ -15806,7 +15836,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5912,
+    "avg_relevance": 0.5904,
     "max_relevance": 0.6709
   },
   {
@@ -15846,7 +15876,7 @@
     "article_count": 5,
     "event_count": 4,
     "publisher_count": 5,
-    "avg_relevance": 0.6158,
+    "avg_relevance": 0.6151,
     "max_relevance": 0.682
   },
   {
@@ -16133,11 +16163,11 @@
     "day": "2026-03-19",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 1,
+    "article_count": 2,
     "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.5884,
-    "max_relevance": 0.5884
+    "publisher_count": 2,
+    "avg_relevance": 0.5979,
+    "max_relevance": 0.6074
   },
   {
     "day": "2026-03-19",
@@ -16153,10 +16183,10 @@
     "day": "2026-03-19",
     "kind": "indicator",
     "key": "funding_market",
-    "article_count": 6,
+    "article_count": 7,
     "event_count": 4,
-    "publisher_count": 6,
-    "avg_relevance": 0.6081,
+    "publisher_count": 7,
+    "avg_relevance": 0.608,
     "max_relevance": 0.7331
   },
   {
@@ -16183,31 +16213,31 @@
     "day": "2026-03-19",
     "kind": "indicator",
     "key": "leveraged_credit",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 3,
-    "publisher_count": 5,
-    "avg_relevance": 0.5831,
-    "max_relevance": 0.5884
+    "publisher_count": 6,
+    "avg_relevance": 0.5872,
+    "max_relevance": 0.6074
   },
   {
     "day": "2026-03-19",
     "kind": "indicator",
     "key": "private_credit",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 3,
-    "publisher_count": 5,
-    "avg_relevance": 0.5831,
-    "max_relevance": 0.5884
+    "publisher_count": 6,
+    "avg_relevance": 0.5872,
+    "max_relevance": 0.6074
   },
   {
     "day": "2026-03-19",
     "kind": "indicator",
     "key": "rates_liquidity",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.5852,
-    "max_relevance": 0.5884
+    "publisher_count": 4,
+    "avg_relevance": 0.5907,
+    "max_relevance": 0.6074
   },
   {
     "day": "2026-03-19",
@@ -16233,31 +16263,31 @@
     "day": "2026-03-19",
     "kind": "topic",
     "key": "funding_liquidity",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.5852,
-    "max_relevance": 0.5884
+    "publisher_count": 4,
+    "avg_relevance": 0.5907,
+    "max_relevance": 0.6074
   },
   {
     "day": "2026-03-19",
     "kind": "topic",
     "key": "inflation_rates",
-    "article_count": 1,
+    "article_count": 2,
     "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.5884,
-    "max_relevance": 0.5884
+    "publisher_count": 2,
+    "avg_relevance": 0.5979,
+    "max_relevance": 0.6074
   },
   {
     "day": "2026-03-19",
     "kind": "topic",
     "key": "private_credit",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 3,
-    "publisher_count": 5,
-    "avg_relevance": 0.5831,
-    "max_relevance": 0.5884
+    "publisher_count": 6,
+    "avg_relevance": 0.5872,
+    "max_relevance": 0.6074
   },
   {
     "day": "2026-03-19",
@@ -16584,9 +16614,9 @@
     "kind": "indicator",
     "key": "europe",
     "article_count": 2,
-    "event_count": 1,
+    "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6687,
+    "avg_relevance": 0.6653,
     "max_relevance": 0.7507
   },
   {
@@ -16626,7 +16656,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5927,
+    "avg_relevance": 0.5894,
     "max_relevance": 0.5987
   },
   {
@@ -16636,8 +16666,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5867,
-    "max_relevance": 0.5867
+    "avg_relevance": 0.58,
+    "max_relevance": 0.58
   },
   {
     "day": "2026-03-22",
@@ -16674,9 +16704,9 @@
     "kind": "topic",
     "key": "europe_sovereign",
     "article_count": 2,
-    "event_count": 1,
+    "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.6687,
+    "avg_relevance": 0.6653,
     "max_relevance": 0.7507
   },
   {
@@ -16686,8 +16716,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5867,
-    "max_relevance": 0.5867
+    "avg_relevance": 0.58,
+    "max_relevance": 0.58
   },
   {
     "day": "2026-03-22",
@@ -16706,8 +16736,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5867,
-    "max_relevance": 0.5867
+    "avg_relevance": 0.58,
+    "max_relevance": 0.58
   },
   {
     "day": "2026-03-22",
@@ -16736,7 +16766,7 @@
     "article_count": 7,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.6196,
+    "avg_relevance": 0.6182,
     "max_relevance": 0.7369
   },
   {
@@ -16766,8 +16796,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6165,
-    "max_relevance": 0.6236
+    "avg_relevance": 0.6117,
+    "max_relevance": 0.614
   },
   {
     "day": "2026-03-23",
@@ -16776,8 +16806,8 @@
     "article_count": 6,
     "event_count": 3,
     "publisher_count": 6,
-    "avg_relevance": 0.6001,
-    "max_relevance": 0.6236
+    "avg_relevance": 0.5985,
+    "max_relevance": 0.614
   },
   {
     "day": "2026-03-23",
@@ -16786,7 +16816,7 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.6355,
+    "avg_relevance": 0.6335,
     "max_relevance": 0.7369
   },
   {
@@ -16796,7 +16826,7 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.6355,
+    "avg_relevance": 0.6335,
     "max_relevance": 0.7369
   },
   {
@@ -16876,8 +16906,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6165,
-    "max_relevance": 0.6236
+    "avg_relevance": 0.6117,
+    "max_relevance": 0.614
   },
   {
     "day": "2026-03-23",
@@ -16896,8 +16926,8 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.4439,
-    "max_relevance": 0.6236
+    "avg_relevance": 0.4415,
+    "max_relevance": 0.614
   },
   {
     "day": "2026-03-23",
@@ -16916,8 +16946,8 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.6101,
-    "max_relevance": 0.6236
+    "avg_relevance": 0.6077,
+    "max_relevance": 0.614
   },
   {
     "day": "2026-03-24",
@@ -16956,8 +16986,8 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.5796,
-    "max_relevance": 0.6281
+    "avg_relevance": 0.58,
+    "max_relevance": 0.6298
   },
   {
     "day": "2026-03-24",
@@ -16966,7 +16996,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.611,
+    "avg_relevance": 0.6115,
     "max_relevance": 0.6788
   },
   {
@@ -16996,7 +17026,7 @@
     "article_count": 6,
     "event_count": 2,
     "publisher_count": 6,
-    "avg_relevance": 0.597,
+    "avg_relevance": 0.5973,
     "max_relevance": 0.6788
   },
   {
@@ -17006,7 +17036,7 @@
     "article_count": 6,
     "event_count": 2,
     "publisher_count": 6,
-    "avg_relevance": 0.597,
+    "avg_relevance": 0.5973,
     "max_relevance": 0.6788
   },
   {
@@ -17016,7 +17046,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.611,
+    "avg_relevance": 0.6115,
     "max_relevance": 0.6788
   },
   {
@@ -17046,8 +17076,8 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.5796,
-    "max_relevance": 0.6281
+    "avg_relevance": 0.58,
+    "max_relevance": 0.6298
   },
   {
     "day": "2026-03-24",
@@ -17056,7 +17086,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.611,
+    "avg_relevance": 0.6115,
     "max_relevance": 0.6788
   },
   {
@@ -17076,7 +17106,7 @@
     "article_count": 6,
     "event_count": 2,
     "publisher_count": 6,
-    "avg_relevance": 0.597,
+    "avg_relevance": 0.5973,
     "max_relevance": 0.6788
   },
   {
@@ -18086,8 +18116,8 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6502,
-    "max_relevance": 0.7166
+    "avg_relevance": 0.6512,
+    "max_relevance": 0.7195
   },
   {
     "day": "2026-04-01",
@@ -18106,8 +18136,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6853,
-    "max_relevance": 0.7166
+    "avg_relevance": 0.6867,
+    "max_relevance": 0.7195
   },
   {
     "day": "2026-04-01",
@@ -18116,8 +18146,8 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.6221,
-    "max_relevance": 0.7166
+    "avg_relevance": 0.6227,
+    "max_relevance": 0.7195
   },
   {
     "day": "2026-04-01",
@@ -18126,8 +18156,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6853,
-    "max_relevance": 0.7166
+    "avg_relevance": 0.6867,
+    "max_relevance": 0.7195
   },
   {
     "day": "2026-04-01",
@@ -18136,8 +18166,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6853,
-    "max_relevance": 0.7166
+    "avg_relevance": 0.6867,
+    "max_relevance": 0.7195
   },
   {
     "day": "2026-04-01",
@@ -18146,8 +18176,8 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.6221,
-    "max_relevance": 0.7166
+    "avg_relevance": 0.6227,
+    "max_relevance": 0.7195
   },
   {
     "day": "2026-04-01",
@@ -18156,8 +18186,8 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.6221,
-    "max_relevance": 0.7166
+    "avg_relevance": 0.6227,
+    "max_relevance": 0.7195
   },
   {
     "day": "2026-04-01",
@@ -18196,8 +18226,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6853,
-    "max_relevance": 0.7166
+    "avg_relevance": 0.6867,
+    "max_relevance": 0.7195
   },
   {
     "day": "2026-04-01",
@@ -18226,8 +18256,8 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.6221,
-    "max_relevance": 0.7166
+    "avg_relevance": 0.6227,
+    "max_relevance": 0.7195
   },
   {
     "day": "2026-04-01",
@@ -18236,8 +18266,8 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6853,
-    "max_relevance": 0.7166
+    "avg_relevance": 0.6867,
+    "max_relevance": 0.7195
   },
   {
     "day": "2026-04-03",
@@ -18813,10 +18843,10 @@
     "day": "2026-04-09",
     "kind": "indicator",
     "key": "banking_stress",
-    "article_count": 3,
-    "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.5249,
+    "article_count": 4,
+    "event_count": 3,
+    "publisher_count": 4,
+    "avg_relevance": 0.5426,
     "max_relevance": 0.7275
   },
   {
@@ -18832,6 +18862,16 @@
   {
     "day": "2026-04-09",
     "kind": "indicator",
+    "key": "energy",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.5957,
+    "max_relevance": 0.5957
+  },
+  {
+    "day": "2026-04-09",
+    "kind": "indicator",
     "key": "europe",
     "article_count": 2,
     "event_count": 1,
@@ -18843,30 +18883,30 @@
     "day": "2026-04-09",
     "kind": "indicator",
     "key": "funding_market",
-    "article_count": 4,
-    "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.5387,
+    "article_count": 5,
+    "event_count": 4,
+    "publisher_count": 5,
+    "avg_relevance": 0.5501,
     "max_relevance": 0.7275
   },
   {
     "day": "2026-04-09",
     "kind": "indicator",
     "key": "hy_credit",
-    "article_count": 4,
-    "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.5387,
+    "article_count": 5,
+    "event_count": 4,
+    "publisher_count": 5,
+    "avg_relevance": 0.5501,
     "max_relevance": 0.7275
   },
   {
     "day": "2026-04-09",
     "kind": "indicator",
     "key": "ig_credit",
-    "article_count": 4,
-    "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.5387,
+    "article_count": 5,
+    "event_count": 4,
+    "publisher_count": 5,
+    "avg_relevance": 0.5501,
     "max_relevance": 0.7275
   },
   {
@@ -18893,11 +18933,11 @@
     "day": "2026-04-09",
     "kind": "indicator",
     "key": "rates_liquidity",
-    "article_count": 1,
-    "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.58,
-    "max_relevance": 0.58
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.5878,
+    "max_relevance": 0.5957
   },
   {
     "day": "2026-04-09",
@@ -18943,11 +18983,21 @@
     "day": "2026-04-09",
     "kind": "topic",
     "key": "funding_liquidity",
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.5878,
+    "max_relevance": 0.5957
+  },
+  {
+    "day": "2026-04-09",
+    "kind": "topic",
+    "key": "inflation_rates",
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.58,
-    "max_relevance": 0.58
+    "avg_relevance": 0.5957,
+    "max_relevance": 0.5957
   },
   {
     "day": "2026-04-09",
@@ -18963,10 +19013,10 @@
     "day": "2026-04-09",
     "kind": "topic",
     "key": "systemic_crisis",
-    "article_count": 3,
-    "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.5249,
+    "article_count": 4,
+    "event_count": 3,
+    "publisher_count": 4,
+    "avg_relevance": 0.5426,
     "max_relevance": 0.7275
   },
   {
@@ -19353,50 +19403,50 @@
     "day": "2026-04-14",
     "kind": "indicator",
     "key": "banking_stress",
-    "article_count": 1,
-    "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.6101,
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.595,
     "max_relevance": 0.6101
   },
   {
     "day": "2026-04-14",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 1,
-    "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.5602,
-    "max_relevance": 0.5602
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.5701,
+    "max_relevance": 0.58
   },
   {
     "day": "2026-04-14",
     "kind": "indicator",
     "key": "funding_market",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.5852,
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 3,
+    "avg_relevance": 0.5834,
     "max_relevance": 0.6101
   },
   {
     "day": "2026-04-14",
     "kind": "indicator",
     "key": "hy_credit",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.5852,
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 3,
+    "avg_relevance": 0.5834,
     "max_relevance": 0.6101
   },
   {
     "day": "2026-04-14",
     "kind": "indicator",
     "key": "ig_credit",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.5852,
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 3,
+    "avg_relevance": 0.5834,
     "max_relevance": 0.6101
   },
   {
@@ -19413,10 +19463,10 @@
     "day": "2026-04-14",
     "kind": "indicator",
     "key": "rates_liquidity",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.5852,
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 3,
+    "avg_relevance": 0.5834,
     "max_relevance": 0.6101
   },
   {
@@ -19442,11 +19492,21 @@
   {
     "day": "2026-04-14",
     "kind": "topic",
+    "key": "energy_shock",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.58,
+    "max_relevance": 0.58
+  },
+  {
+    "day": "2026-04-14",
+    "kind": "topic",
     "key": "funding_liquidity",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.5852,
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 3,
+    "avg_relevance": 0.5834,
     "max_relevance": 0.6101
   },
   {
@@ -19463,10 +19523,10 @@
     "day": "2026-04-14",
     "kind": "topic",
     "key": "systemic_crisis",
-    "article_count": 1,
-    "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.6101,
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.595,
     "max_relevance": 0.6101
   },
   {
@@ -19986,8 +20046,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.4849,
-    "max_relevance": 0.4889
+    "avg_relevance": 0.4854,
+    "max_relevance": 0.4899
   },
   {
     "day": "2026-04-22",
@@ -20006,7 +20066,7 @@
     "article_count": 9,
     "event_count": 6,
     "publisher_count": 9,
-    "avg_relevance": 0.5588,
+    "avg_relevance": 0.5589,
     "max_relevance": 0.5812
   },
   {
@@ -20016,7 +20076,7 @@
     "article_count": 9,
     "event_count": 6,
     "publisher_count": 9,
-    "avg_relevance": 0.5588,
+    "avg_relevance": 0.5589,
     "max_relevance": 0.5812
   },
   {
@@ -20026,7 +20086,7 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 8,
-    "avg_relevance": 0.5562,
+    "avg_relevance": 0.5564,
     "max_relevance": 0.58
   },
   {
@@ -20036,7 +20096,7 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 8,
-    "avg_relevance": 0.5562,
+    "avg_relevance": 0.5564,
     "max_relevance": 0.58
   },
   {
@@ -20066,7 +20126,7 @@
     "article_count": 7,
     "event_count": 5,
     "publisher_count": 7,
-    "avg_relevance": 0.5528,
+    "avg_relevance": 0.553,
     "max_relevance": 0.58
   },
   {
@@ -20086,8 +20146,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.4849,
-    "max_relevance": 0.4889
+    "avg_relevance": 0.4854,
+    "max_relevance": 0.4899
   },
   {
     "day": "2026-04-22",
@@ -20106,7 +20166,7 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 8,
-    "avg_relevance": 0.5562,
+    "avg_relevance": 0.5564,
     "max_relevance": 0.58
   },
   {
@@ -20316,7 +20376,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5345,
+    "avg_relevance": 0.5335,
     "max_relevance": 0.58
   },
   {
@@ -20336,7 +20396,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5724,
+    "avg_relevance": 0.5705,
     "max_relevance": 0.5761
   },
   {
@@ -20356,7 +20416,7 @@
     "article_count": 6,
     "event_count": 5,
     "publisher_count": 6,
-    "avg_relevance": 0.5428,
+    "avg_relevance": 0.5422,
     "max_relevance": 0.58
   },
   {
@@ -20366,7 +20426,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5345,
+    "avg_relevance": 0.5335,
     "max_relevance": 0.58
   },
   {
@@ -20376,7 +20436,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5345,
+    "avg_relevance": 0.5335,
     "max_relevance": 0.58
   },
   {
@@ -20446,7 +20506,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5724,
+    "avg_relevance": 0.5705,
     "max_relevance": 0.5761
   },
   {
@@ -20476,7 +20536,7 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.5613,
+    "avg_relevance": 0.56,
     "max_relevance": 0.5761
   },
   {
@@ -20496,8 +20556,8 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.5193,
-    "max_relevance": 0.5688
+    "avg_relevance": 0.518,
+    "max_relevance": 0.565
   },
   {
     "day": "2026-04-27",
@@ -20613,30 +20673,30 @@
     "day": "2026-04-28",
     "kind": "indicator",
     "key": "bank_ai",
-    "article_count": 1,
+    "article_count": 2,
     "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.6874,
+    "publisher_count": 2,
+    "avg_relevance": 0.6718,
     "max_relevance": 0.6874
   },
   {
     "day": "2026-04-28",
     "kind": "indicator",
     "key": "banking_stress",
-    "article_count": 4,
+    "article_count": 6,
     "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.6554,
+    "publisher_count": 6,
+    "avg_relevance": 0.643,
     "max_relevance": 0.6992
   },
   {
     "day": "2026-04-28",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 4,
-    "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.6286,
+    "article_count": 6,
+    "event_count": 4,
+    "publisher_count": 6,
+    "avg_relevance": 0.625,
     "max_relevance": 0.6992
   },
   {
@@ -20653,30 +20713,30 @@
     "day": "2026-04-28",
     "kind": "indicator",
     "key": "funding_market",
-    "article_count": 6,
+    "article_count": 8,
     "event_count": 5,
-    "publisher_count": 6,
-    "avg_relevance": 0.6407,
+    "publisher_count": 8,
+    "avg_relevance": 0.6351,
     "max_relevance": 0.6992
   },
   {
     "day": "2026-04-28",
     "kind": "indicator",
     "key": "hy_credit",
-    "article_count": 5,
+    "article_count": 7,
     "event_count": 4,
-    "publisher_count": 5,
-    "avg_relevance": 0.6529,
+    "publisher_count": 7,
+    "avg_relevance": 0.6429,
     "max_relevance": 0.6992
   },
   {
     "day": "2026-04-28",
     "kind": "indicator",
     "key": "ig_credit",
-    "article_count": 5,
+    "article_count": 7,
     "event_count": 4,
-    "publisher_count": 5,
-    "avg_relevance": 0.6529,
+    "publisher_count": 7,
+    "avg_relevance": 0.6429,
     "max_relevance": 0.6992
   },
   {
@@ -20703,20 +20763,20 @@
     "day": "2026-04-28",
     "kind": "indicator",
     "key": "rates_liquidity",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 4,
-    "publisher_count": 5,
-    "avg_relevance": 0.6314,
+    "publisher_count": 6,
+    "avg_relevance": 0.6228,
     "max_relevance": 0.6992
   },
   {
     "day": "2026-04-28",
     "kind": "topic",
     "key": "banking",
-    "article_count": 1,
+    "article_count": 2,
     "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.6874,
+    "publisher_count": 2,
+    "avg_relevance": 0.6718,
     "max_relevance": 0.6874
   },
   {
@@ -20733,10 +20793,10 @@
     "day": "2026-04-28",
     "kind": "topic",
     "key": "energy_shock",
-    "article_count": 3,
-    "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.6447,
+    "article_count": 4,
+    "event_count": 3,
+    "publisher_count": 4,
+    "avg_relevance": 0.6476,
     "max_relevance": 0.6992
   },
   {
@@ -20753,20 +20813,20 @@
     "day": "2026-04-28",
     "kind": "topic",
     "key": "funding_liquidity",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 3,
-    "publisher_count": 3,
-    "avg_relevance": 0.6009,
+    "publisher_count": 4,
+    "avg_relevance": 0.5957,
     "max_relevance": 0.6428
   },
   {
     "day": "2026-04-28",
     "kind": "topic",
     "key": "inflation_rates",
-    "article_count": 4,
+    "article_count": 5,
     "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.6286,
+    "publisher_count": 5,
+    "avg_relevance": 0.6188,
     "max_relevance": 0.6992
   },
   {
@@ -20783,10 +20843,10 @@
     "day": "2026-04-28",
     "kind": "topic",
     "key": "systemic_crisis",
-    "article_count": 4,
+    "article_count": 6,
     "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.6554,
+    "publisher_count": 6,
+    "avg_relevance": 0.643,
     "max_relevance": 0.6992
   },
   {
@@ -21166,7 +21226,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.5904,
+    "avg_relevance": 0.5938,
     "max_relevance": 0.6323
   },
   {
@@ -21176,8 +21236,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5248,
-    "max_relevance": 0.529
+    "avg_relevance": 0.5299,
+    "max_relevance": 0.5308
   },
   {
     "day": "2026-05-01",
@@ -21206,7 +21266,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.575,
+    "avg_relevance": 0.5776,
     "max_relevance": 0.6323
   },
   {
@@ -21216,7 +21276,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.575,
+    "avg_relevance": 0.5776,
     "max_relevance": 0.6323
   },
   {
@@ -21226,7 +21286,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.5904,
+    "avg_relevance": 0.5938,
     "max_relevance": 0.6323
   },
   {
@@ -21246,8 +21306,8 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5248,
-    "max_relevance": 0.529
+    "avg_relevance": 0.5299,
+    "max_relevance": 0.5308
   },
   {
     "day": "2026-05-01",
@@ -21256,7 +21316,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.5904,
+    "avg_relevance": 0.5938,
     "max_relevance": 0.6323
   },
   {
@@ -21266,7 +21326,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.575,
+    "avg_relevance": 0.5776,
     "max_relevance": 0.6323
   },
   {
@@ -21763,10 +21823,10 @@
     "day": "2026-05-05",
     "kind": "indicator",
     "key": "banking_stress",
-    "article_count": 4,
-    "event_count": 2,
-    "publisher_count": 4,
-    "avg_relevance": 0.7097,
+    "article_count": 5,
+    "event_count": 3,
+    "publisher_count": 5,
+    "avg_relevance": 0.6837,
     "max_relevance": 0.7432
   },
   {
@@ -21783,40 +21843,40 @@
     "day": "2026-05-05",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.6902,
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 3,
+    "avg_relevance": 0.6535,
     "max_relevance": 0.7004
   },
   {
     "day": "2026-05-05",
     "kind": "indicator",
     "key": "funding_market",
-    "article_count": 3,
-    "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.7079,
+    "article_count": 4,
+    "event_count": 3,
+    "publisher_count": 4,
+    "avg_relevance": 0.6759,
     "max_relevance": 0.7432
   },
   {
     "day": "2026-05-05",
     "kind": "indicator",
     "key": "hy_credit",
-    "article_count": 6,
-    "event_count": 2,
-    "publisher_count": 6,
-    "avg_relevance": 0.6742,
+    "article_count": 7,
+    "event_count": 3,
+    "publisher_count": 7,
+    "avg_relevance": 0.6608,
     "max_relevance": 0.7432
   },
   {
     "day": "2026-05-05",
     "kind": "indicator",
     "key": "ig_credit",
-    "article_count": 6,
-    "event_count": 2,
-    "publisher_count": 6,
-    "avg_relevance": 0.6742,
+    "article_count": 7,
+    "event_count": 3,
+    "publisher_count": 7,
+    "avg_relevance": 0.6608,
     "max_relevance": 0.7432
   },
   {
@@ -21843,10 +21903,10 @@
     "day": "2026-05-05",
     "kind": "indicator",
     "key": "rates_liquidity",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.6902,
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 3,
+    "avg_relevance": 0.6535,
     "max_relevance": 0.7004
   },
   {
@@ -21883,20 +21943,20 @@
     "day": "2026-05-05",
     "kind": "topic",
     "key": "energy_shock",
-    "article_count": 1,
-    "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.68,
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.63,
     "max_relevance": 0.68
   },
   {
     "day": "2026-05-05",
     "kind": "topic",
     "key": "inflation_rates",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.6902,
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 3,
+    "avg_relevance": 0.6535,
     "max_relevance": 0.7004
   },
   {
@@ -21913,10 +21973,10 @@
     "day": "2026-05-05",
     "kind": "topic",
     "key": "systemic_crisis",
-    "article_count": 3,
-    "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.7079,
+    "article_count": 4,
+    "event_count": 3,
+    "publisher_count": 4,
+    "avg_relevance": 0.6759,
     "max_relevance": 0.7432
   },
   {
@@ -23076,8 +23136,8 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5405,
-    "max_relevance": 0.7074
+    "avg_relevance": 0.5424,
+    "max_relevance": 0.717
   },
   {
     "day": "2026-05-13",
@@ -23096,8 +23156,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.7074,
-    "max_relevance": 0.7074
+    "avg_relevance": 0.717,
+    "max_relevance": 0.717
   },
   {
     "day": "2026-05-13",
@@ -23106,8 +23166,8 @@
     "article_count": 7,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.6043,
-    "max_relevance": 0.7074
+    "avg_relevance": 0.6057,
+    "max_relevance": 0.717
   },
   {
     "day": "2026-05-13",
@@ -23116,8 +23176,8 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5405,
-    "max_relevance": 0.7074
+    "avg_relevance": 0.5424,
+    "max_relevance": 0.717
   },
   {
     "day": "2026-05-13",
@@ -23126,8 +23186,8 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5405,
-    "max_relevance": 0.7074
+    "avg_relevance": 0.5424,
+    "max_relevance": 0.717
   },
   {
     "day": "2026-05-13",
@@ -23136,8 +23196,8 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5128,
-    "max_relevance": 0.7074
+    "avg_relevance": 0.5152,
+    "max_relevance": 0.717
   },
   {
     "day": "2026-05-13",
@@ -23146,8 +23206,8 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5128,
-    "max_relevance": 0.7074
+    "avg_relevance": 0.5152,
+    "max_relevance": 0.717
   },
   {
     "day": "2026-05-13",
@@ -23196,8 +23256,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.7074,
-    "max_relevance": 0.7074
+    "avg_relevance": 0.717,
+    "max_relevance": 0.717
   },
   {
     "day": "2026-05-13",
@@ -23236,8 +23296,8 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5128,
-    "max_relevance": 0.7074
+    "avg_relevance": 0.5152,
+    "max_relevance": 0.717
   },
   {
     "day": "2026-05-13",
@@ -23246,8 +23306,8 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6463,
-    "max_relevance": 0.7074
+    "avg_relevance": 0.6495,
+    "max_relevance": 0.717
   },
   {
     "day": "2026-05-14",
@@ -24536,7 +24596,7 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.5967,
+    "avg_relevance": 0.5999,
     "max_relevance": 0.6161
   },
   {
@@ -24556,7 +24616,7 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.5967,
+    "avg_relevance": 0.5999,
     "max_relevance": 0.6161
   },
   {
@@ -24566,7 +24626,7 @@
     "article_count": 7,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.5569,
+    "avg_relevance": 0.5579,
     "max_relevance": 0.6161
   },
   {
@@ -24576,7 +24636,7 @@
     "article_count": 7,
     "event_count": 3,
     "publisher_count": 7,
-    "avg_relevance": 0.5839,
+    "avg_relevance": 0.5849,
     "max_relevance": 0.624
   },
   {
@@ -24626,7 +24686,7 @@
     "article_count": 5,
     "event_count": 2,
     "publisher_count": 5,
-    "avg_relevance": 0.6085,
+    "avg_relevance": 0.6098,
     "max_relevance": 0.624
   },
   {
@@ -24646,7 +24706,7 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.5967,
+    "avg_relevance": 0.5999,
     "max_relevance": 0.6161
   },
   {
@@ -24666,7 +24726,7 @@
     "article_count": 6,
     "event_count": 3,
     "publisher_count": 6,
-    "avg_relevance": 0.5527,
+    "avg_relevance": 0.5539,
     "max_relevance": 0.6161
   },
   {
@@ -24676,7 +24736,7 @@
     "article_count": 7,
     "event_count": 3,
     "publisher_count": 7,
-    "avg_relevance": 0.5839,
+    "avg_relevance": 0.5849,
     "max_relevance": 0.624
   },
   {
@@ -24766,7 +24826,7 @@
     "article_count": 9,
     "event_count": 7,
     "publisher_count": 9,
-    "avg_relevance": 0.5944,
+    "avg_relevance": 0.5954,
     "max_relevance": 0.671
   },
   {
@@ -24786,7 +24846,7 @@
     "article_count": 7,
     "event_count": 6,
     "publisher_count": 7,
-    "avg_relevance": 0.5985,
+    "avg_relevance": 0.5998,
     "max_relevance": 0.671
   },
   {
@@ -24796,7 +24856,7 @@
     "article_count": 9,
     "event_count": 6,
     "publisher_count": 9,
-    "avg_relevance": 0.6229,
+    "avg_relevance": 0.624,
     "max_relevance": 0.671
   },
   {
@@ -24806,7 +24866,7 @@
     "article_count": 9,
     "event_count": 6,
     "publisher_count": 9,
-    "avg_relevance": 0.6229,
+    "avg_relevance": 0.624,
     "max_relevance": 0.671
   },
   {
@@ -24816,7 +24876,7 @@
     "article_count": 7,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.5997,
+    "avg_relevance": 0.6011,
     "max_relevance": 0.667
   },
   {
@@ -24836,7 +24896,7 @@
     "article_count": 8,
     "event_count": 6,
     "publisher_count": 8,
-    "avg_relevance": 0.5908,
+    "avg_relevance": 0.5919,
     "max_relevance": 0.671
   },
   {
@@ -24856,7 +24916,7 @@
     "article_count": 6,
     "event_count": 3,
     "publisher_count": 6,
-    "avg_relevance": 0.6135,
+    "avg_relevance": 0.6151,
     "max_relevance": 0.667
   },
   {
@@ -24866,7 +24926,7 @@
     "article_count": 5,
     "event_count": 4,
     "publisher_count": 5,
-    "avg_relevance": 0.6105,
+    "avg_relevance": 0.6104,
     "max_relevance": 0.671
   },
   {
@@ -24886,7 +24946,7 @@
     "article_count": 4,
     "event_count": 4,
     "publisher_count": 4,
-    "avg_relevance": 0.566,
+    "avg_relevance": 0.5684,
     "max_relevance": 0.6615
   },
   {
@@ -24896,7 +24956,7 @@
     "article_count": 8,
     "event_count": 6,
     "publisher_count": 8,
-    "avg_relevance": 0.5908,
+    "avg_relevance": 0.5919,
     "max_relevance": 0.671
   },
   {
@@ -24926,7 +24986,7 @@
     "article_count": 6,
     "event_count": 3,
     "publisher_count": 6,
-    "avg_relevance": 0.6394,
+    "avg_relevance": 0.6409,
     "max_relevance": 0.7098
   },
   {
@@ -24936,7 +24996,7 @@
     "article_count": 8,
     "event_count": 4,
     "publisher_count": 8,
-    "avg_relevance": 0.6246,
+    "avg_relevance": 0.6257,
     "max_relevance": 0.7098
   },
   {
@@ -24946,7 +25006,7 @@
     "article_count": 9,
     "event_count": 4,
     "publisher_count": 9,
-    "avg_relevance": 0.6196,
+    "avg_relevance": 0.6206,
     "max_relevance": 0.7098
   },
   {
@@ -24956,7 +25016,7 @@
     "article_count": 7,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.6309,
+    "avg_relevance": 0.6322,
     "max_relevance": 0.7098
   },
   {
@@ -24966,7 +25026,7 @@
     "article_count": 7,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.6309,
+    "avg_relevance": 0.6322,
     "max_relevance": 0.7098
   },
   {
@@ -24996,7 +25056,7 @@
     "article_count": 9,
     "event_count": 4,
     "publisher_count": 9,
-    "avg_relevance": 0.6196,
+    "avg_relevance": 0.6206,
     "max_relevance": 0.7098
   },
   {
@@ -25016,7 +25076,7 @@
     "article_count": 5,
     "event_count": 2,
     "publisher_count": 5,
-    "avg_relevance": 0.6513,
+    "avg_relevance": 0.6531,
     "max_relevance": 0.7098
   },
   {
@@ -25026,7 +25086,7 @@
     "article_count": 7,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.6272,
+    "avg_relevance": 0.6284,
     "max_relevance": 0.7098
   },
   {
@@ -25056,7 +25116,7 @@
     "article_count": 6,
     "event_count": 3,
     "publisher_count": 6,
-    "avg_relevance": 0.6394,
+    "avg_relevance": 0.6409,
     "max_relevance": 0.7098
   },
   {
@@ -25322,42 +25382,72 @@
   {
     "day": "2026-05-31",
     "kind": "indicator",
-    "key": "energy",
-    "article_count": 3,
+    "key": "banking_stress",
+    "article_count": 1,
     "event_count": 1,
-    "publisher_count": 3,
-    "avg_relevance": 0.5311,
-    "max_relevance": 0.5464
+    "publisher_count": 1,
+    "avg_relevance": 0.5623,
+    "max_relevance": 0.5623
+  },
+  {
+    "day": "2026-05-31",
+    "kind": "indicator",
+    "key": "energy",
+    "article_count": 4,
+    "event_count": 1,
+    "publisher_count": 4,
+    "avg_relevance": 0.5335,
+    "max_relevance": 0.5623
   },
   {
     "day": "2026-05-31",
     "kind": "indicator",
     "key": "funding_market",
-    "article_count": 2,
+    "article_count": 3,
     "event_count": 1,
-    "publisher_count": 2,
-    "avg_relevance": 0.539,
-    "max_relevance": 0.5464
+    "publisher_count": 3,
+    "avg_relevance": 0.5468,
+    "max_relevance": 0.5623
+  },
+  {
+    "day": "2026-05-31",
+    "kind": "indicator",
+    "key": "hy_credit",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.5623,
+    "max_relevance": 0.5623
+  },
+  {
+    "day": "2026-05-31",
+    "kind": "indicator",
+    "key": "ig_credit",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.5623,
+    "max_relevance": 0.5623
   },
   {
     "day": "2026-05-31",
     "kind": "indicator",
     "key": "rates_liquidity",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 1,
-    "publisher_count": 3,
-    "avg_relevance": 0.5311,
-    "max_relevance": 0.5464
+    "publisher_count": 4,
+    "avg_relevance": 0.5335,
+    "max_relevance": 0.5623
   },
   {
     "day": "2026-05-31",
     "kind": "topic",
     "key": "energy_shock",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 1,
-    "publisher_count": 3,
-    "avg_relevance": 0.5311,
-    "max_relevance": 0.5464
+    "publisher_count": 4,
+    "avg_relevance": 0.5335,
+    "max_relevance": 0.5623
   },
   {
     "day": "2026-05-31",
@@ -25373,11 +25463,21 @@
     "day": "2026-05-31",
     "kind": "topic",
     "key": "inflation_rates",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 1,
-    "publisher_count": 3,
-    "avg_relevance": 0.5311,
-    "max_relevance": 0.5464
+    "publisher_count": 4,
+    "avg_relevance": 0.5335,
+    "max_relevance": 0.5623
+  },
+  {
+    "day": "2026-05-31",
+    "kind": "topic",
+    "key": "systemic_crisis",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.5623,
+    "max_relevance": 0.5623
   },
   {
     "day": "2026-06-01",
@@ -25713,9 +25813,9 @@
     "day": "2026-06-02",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
     "avg_relevance": 0.58,
     "max_relevance": 0.58
   },
@@ -25743,11 +25843,11 @@
     "day": "2026-06-03",
     "kind": "indicator",
     "key": "bank_ai",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.5976,
-    "max_relevance": 0.6329
+    "publisher_count": 4,
+    "avg_relevance": 0.611,
+    "max_relevance": 0.6512
   },
   {
     "day": "2026-06-03",
@@ -25756,8 +25856,8 @@
     "article_count": 3,
     "event_count": 1,
     "publisher_count": 3,
-    "avg_relevance": 0.6231,
-    "max_relevance": 0.6379
+    "avg_relevance": 0.6407,
+    "max_relevance": 0.6512
   },
   {
     "day": "2026-06-03",
@@ -25776,8 +25876,8 @@
     "article_count": 8,
     "event_count": 3,
     "publisher_count": 8,
-    "avg_relevance": 0.5964,
-    "max_relevance": 0.6379
+    "avg_relevance": 0.603,
+    "max_relevance": 0.6512
   },
   {
     "day": "2026-06-03",
@@ -25796,8 +25896,8 @@
     "article_count": 4,
     "event_count": 1,
     "publisher_count": 4,
-    "avg_relevance": 0.616,
-    "max_relevance": 0.6379
+    "avg_relevance": 0.6292,
+    "max_relevance": 0.6512
   },
   {
     "day": "2026-06-03",
@@ -25806,8 +25906,8 @@
     "article_count": 3,
     "event_count": 1,
     "publisher_count": 3,
-    "avg_relevance": 0.6231,
-    "max_relevance": 0.6379
+    "avg_relevance": 0.6407,
+    "max_relevance": 0.6512
   },
   {
     "day": "2026-06-03",
@@ -25816,8 +25916,8 @@
     "article_count": 3,
     "event_count": 1,
     "publisher_count": 3,
-    "avg_relevance": 0.6231,
-    "max_relevance": 0.6379
+    "avg_relevance": 0.6407,
+    "max_relevance": 0.6512
   },
   {
     "day": "2026-06-03",
@@ -25843,10 +25943,10 @@
     "day": "2026-06-03",
     "kind": "indicator",
     "key": "rates_liquidity",
-    "article_count": 5,
+    "article_count": 4,
     "event_count": 2,
-    "publisher_count": 5,
-    "avg_relevance": 0.5982,
+    "publisher_count": 4,
+    "avg_relevance": 0.5981,
     "max_relevance": 0.6379
   },
   {
@@ -25863,11 +25963,11 @@
     "day": "2026-06-03",
     "kind": "topic",
     "key": "banking",
-    "article_count": 1,
+    "article_count": 2,
     "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.6329,
-    "max_relevance": 0.6329
+    "publisher_count": 2,
+    "avg_relevance": 0.6421,
+    "max_relevance": 0.6512
   },
   {
     "day": "2026-06-03",
@@ -25876,8 +25976,8 @@
     "article_count": 6,
     "event_count": 2,
     "publisher_count": 6,
-    "avg_relevance": 0.6019,
-    "max_relevance": 0.6379
+    "avg_relevance": 0.6106,
+    "max_relevance": 0.6512
   },
   {
     "day": "2026-06-03",
@@ -25893,11 +25993,11 @@
     "day": "2026-06-03",
     "kind": "topic",
     "key": "funding_liquidity",
-    "article_count": 2,
+    "article_count": 1,
     "event_count": 1,
-    "publisher_count": 2,
-    "avg_relevance": 0.5967,
-    "max_relevance": 0.5986
+    "publisher_count": 1,
+    "avg_relevance": 0.5947,
+    "max_relevance": 0.5947
   },
   {
     "day": "2026-06-03",
@@ -25936,8 +26036,8 @@
     "article_count": 3,
     "event_count": 1,
     "publisher_count": 3,
-    "avg_relevance": 0.6231,
-    "max_relevance": 0.6379
+    "avg_relevance": 0.6407,
+    "max_relevance": 0.6512
   },
   {
     "day": "2026-06-05",
@@ -25946,7 +26046,7 @@
     "article_count": 5,
     "event_count": 4,
     "publisher_count": 5,
-    "avg_relevance": 0.4784,
+    "avg_relevance": 0.4768,
     "max_relevance": 0.5238
   },
   {
@@ -25966,7 +26066,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5145,
+    "avg_relevance": 0.5104,
     "max_relevance": 0.5238
   },
   {
@@ -25976,7 +26076,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5145,
+    "avg_relevance": 0.5104,
     "max_relevance": 0.5238
   },
   {
@@ -25986,7 +26086,7 @@
     "article_count": 5,
     "event_count": 4,
     "publisher_count": 5,
-    "avg_relevance": 0.4784,
+    "avg_relevance": 0.4768,
     "max_relevance": 0.5238
   },
   {
@@ -26006,7 +26106,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5145,
+    "avg_relevance": 0.5104,
     "max_relevance": 0.5238
   },
   {
@@ -26026,7 +26126,7 @@
     "article_count": 2,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5145,
+    "avg_relevance": 0.5104,
     "max_relevance": 0.5238
   },
   {
@@ -26796,7 +26896,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.4858,
+    "avg_relevance": 0.4879,
     "max_relevance": 0.521
   },
   {
@@ -26856,7 +26956,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.4858,
+    "avg_relevance": 0.4879,
     "max_relevance": 0.521
   },
   {
@@ -27116,7 +27216,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.4502,
+    "avg_relevance": 0.4477,
     "max_relevance": 0.508
   },
   {
@@ -27156,7 +27256,7 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5174,
+    "avg_relevance": 0.5159,
     "max_relevance": 0.5975
   },
   {
@@ -27166,7 +27266,7 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5174,
+    "avg_relevance": 0.5159,
     "max_relevance": 0.5975
   },
   {
@@ -27216,7 +27316,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.4502,
+    "avg_relevance": 0.4477,
     "max_relevance": 0.508
   },
   {
@@ -27236,7 +27336,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.4567,
+    "avg_relevance": 0.4548,
     "max_relevance": 0.508
   },
   {
@@ -27256,7 +27356,7 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5174,
+    "avg_relevance": 0.5159,
     "max_relevance": 0.5975
   },
   {
@@ -29423,30 +29523,30 @@
     "day": "2026-07-06",
     "kind": "indicator",
     "key": "bank_ai",
-    "article_count": 4,
+    "article_count": 5,
     "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.6198,
+    "publisher_count": 5,
+    "avg_relevance": 0.6118,
     "max_relevance": 0.665
   },
   {
     "day": "2026-07-06",
     "kind": "indicator",
     "key": "banking_stress",
-    "article_count": 2,
-    "event_count": 1,
-    "publisher_count": 2,
-    "avg_relevance": 0.5918,
+    "article_count": 3,
+    "event_count": 2,
+    "publisher_count": 3,
+    "avg_relevance": 0.5879,
     "max_relevance": 0.6036
   },
   {
     "day": "2026-07-06",
     "kind": "indicator",
     "key": "data_center",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.6251,
+    "publisher_count": 4,
+    "avg_relevance": 0.6139,
     "max_relevance": 0.665
   },
   {
@@ -29473,60 +29573,60 @@
     "day": "2026-07-06",
     "kind": "indicator",
     "key": "funding_market",
-    "article_count": 2,
-    "event_count": 1,
-    "publisher_count": 2,
-    "avg_relevance": 0.5918,
+    "article_count": 3,
+    "event_count": 2,
+    "publisher_count": 3,
+    "avg_relevance": 0.5879,
     "max_relevance": 0.6036
   },
   {
     "day": "2026-07-06",
     "kind": "indicator",
     "key": "hy_credit",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 3,
-    "publisher_count": 5,
-    "avg_relevance": 0.6118,
+    "publisher_count": 6,
+    "avg_relevance": 0.6065,
     "max_relevance": 0.665
   },
   {
     "day": "2026-07-06",
     "kind": "indicator",
     "key": "ig_credit",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 3,
-    "publisher_count": 5,
-    "avg_relevance": 0.6118,
+    "publisher_count": 6,
+    "avg_relevance": 0.6065,
     "max_relevance": 0.665
   },
   {
     "day": "2026-07-06",
     "kind": "indicator",
     "key": "leveraged_credit",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.6251,
+    "publisher_count": 4,
+    "avg_relevance": 0.6139,
     "max_relevance": 0.665
   },
   {
     "day": "2026-07-06",
     "kind": "indicator",
     "key": "private_credit",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.6251,
+    "publisher_count": 4,
+    "avg_relevance": 0.6139,
     "max_relevance": 0.665
   },
   {
     "day": "2026-07-06",
     "kind": "topic",
     "key": "ai_data_center",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.6251,
+    "publisher_count": 4,
+    "avg_relevance": 0.6139,
     "max_relevance": 0.665
   },
   {
@@ -29583,20 +29683,20 @@
     "day": "2026-07-06",
     "kind": "topic",
     "key": "private_credit",
-    "article_count": 3,
+    "article_count": 4,
     "event_count": 2,
-    "publisher_count": 3,
-    "avg_relevance": 0.6251,
+    "publisher_count": 4,
+    "avg_relevance": 0.6139,
     "max_relevance": 0.665
   },
   {
     "day": "2026-07-06",
     "kind": "topic",
     "key": "systemic_crisis",
-    "article_count": 2,
-    "event_count": 1,
-    "publisher_count": 2,
-    "avg_relevance": 0.5918,
+    "article_count": 3,
+    "event_count": 2,
+    "publisher_count": 3,
+    "avg_relevance": 0.5879,
     "max_relevance": 0.6036
   },
   {
@@ -30122,12 +30222,32 @@
   {
     "day": "2026-07-10",
     "kind": "indicator",
-    "key": "banking_stress",
+    "key": "bank_ai",
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5945,
-    "max_relevance": 0.5945
+    "avg_relevance": 0.7071,
+    "max_relevance": 0.7071
+  },
+  {
+    "day": "2026-07-10",
+    "kind": "indicator",
+    "key": "banking_stress",
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.6508,
+    "max_relevance": 0.7071
+  },
+  {
+    "day": "2026-07-10",
+    "kind": "indicator",
+    "key": "data_center",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.7071,
+    "max_relevance": 0.7071
   },
   {
     "day": "2026-07-10",
@@ -30142,32 +30262,52 @@
   {
     "day": "2026-07-10",
     "kind": "indicator",
-    "key": "funding_market",
-    "article_count": 3,
+    "key": "europe",
+    "article_count": 1,
     "event_count": 1,
-    "publisher_count": 3,
-    "avg_relevance": 0.5581,
-    "max_relevance": 0.5945
+    "publisher_count": 1,
+    "avg_relevance": 0.7071,
+    "max_relevance": 0.7071
+  },
+  {
+    "day": "2026-07-10",
+    "kind": "indicator",
+    "key": "funding_market",
+    "article_count": 4,
+    "event_count": 2,
+    "publisher_count": 4,
+    "avg_relevance": 0.5954,
+    "max_relevance": 0.7071
   },
   {
     "day": "2026-07-10",
     "kind": "indicator",
     "key": "hy_credit",
-    "article_count": 1,
-    "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.5945,
-    "max_relevance": 0.5945
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.6508,
+    "max_relevance": 0.7071
   },
   {
     "day": "2026-07-10",
     "kind": "indicator",
     "key": "ig_credit",
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.6508,
+    "max_relevance": 0.7071
+  },
+  {
+    "day": "2026-07-10",
+    "kind": "indicator",
+    "key": "private_credit",
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5945,
-    "max_relevance": 0.5945
+    "avg_relevance": 0.7071,
+    "max_relevance": 0.7071
   },
   {
     "day": "2026-07-10",
@@ -30182,12 +30322,32 @@
   {
     "day": "2026-07-10",
     "kind": "topic",
+    "key": "ai_data_center",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.7071,
+    "max_relevance": 0.7071
+  },
+  {
+    "day": "2026-07-10",
+    "kind": "topic",
     "key": "energy_shock",
     "article_count": 3,
     "event_count": 1,
     "publisher_count": 3,
     "avg_relevance": 0.5581,
     "max_relevance": 0.5945
+  },
+  {
+    "day": "2026-07-10",
+    "kind": "topic",
+    "key": "europe_sovereign",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.7071,
+    "max_relevance": 0.7071
   },
   {
     "day": "2026-07-10",
@@ -30213,11 +30373,11 @@
     "day": "2026-07-10",
     "kind": "topic",
     "key": "systemic_crisis",
-    "article_count": 1,
-    "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.5945,
-    "max_relevance": 0.5945
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.6508,
+    "max_relevance": 0.7071
   },
   {
     "day": "2026-07-11",
@@ -30483,10 +30643,10 @@
     "day": "2026-07-15",
     "kind": "indicator",
     "key": "banking_stress",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 5,
-    "publisher_count": 5,
-    "avg_relevance": 0.5466,
+    "publisher_count": 6,
+    "avg_relevance": 0.5024,
     "max_relevance": 0.6214
   },
   {
@@ -30523,30 +30683,30 @@
     "day": "2026-07-15",
     "kind": "indicator",
     "key": "funding_market",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 5,
-    "publisher_count": 5,
-    "avg_relevance": 0.5466,
+    "publisher_count": 6,
+    "avg_relevance": 0.5024,
     "max_relevance": 0.6214
   },
   {
     "day": "2026-07-15",
     "kind": "indicator",
     "key": "hy_credit",
-    "article_count": 7,
+    "article_count": 8,
     "event_count": 6,
-    "publisher_count": 7,
-    "avg_relevance": 0.5561,
+    "publisher_count": 8,
+    "avg_relevance": 0.5218,
     "max_relevance": 0.6214
   },
   {
     "day": "2026-07-15",
     "kind": "indicator",
     "key": "ig_credit",
-    "article_count": 7,
+    "article_count": 8,
     "event_count": 6,
-    "publisher_count": 7,
-    "avg_relevance": 0.5561,
+    "publisher_count": 8,
+    "avg_relevance": 0.5218,
     "max_relevance": 0.6214
   },
   {
@@ -30663,10 +30823,10 @@
     "day": "2026-07-15",
     "kind": "topic",
     "key": "systemic_crisis",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 5,
-    "publisher_count": 5,
-    "avg_relevance": 0.5466,
+    "publisher_count": 6,
+    "avg_relevance": 0.5024,
     "max_relevance": 0.6214
   },
   {
@@ -31756,7 +31916,7 @@
     "article_count": 7,
     "event_count": 5,
     "publisher_count": 6,
-    "avg_relevance": 0.6187,
+    "avg_relevance": 0.6275,
     "max_relevance": 0.6645
   },
   {
@@ -31766,7 +31926,7 @@
     "article_count": 5,
     "event_count": 4,
     "publisher_count": 5,
-    "avg_relevance": 0.6002,
+    "avg_relevance": 0.5987,
     "max_relevance": 0.6397
   },
   {
@@ -31776,7 +31936,7 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 5,
-    "avg_relevance": 0.6152,
+    "avg_relevance": 0.6255,
     "max_relevance": 0.6645
   },
   {
@@ -31786,7 +31946,7 @@
     "article_count": 7,
     "event_count": 5,
     "publisher_count": 7,
-    "avg_relevance": 0.6026,
+    "avg_relevance": 0.6016,
     "max_relevance": 0.6397
   },
   {
@@ -31806,7 +31966,7 @@
     "article_count": 7,
     "event_count": 5,
     "publisher_count": 7,
-    "avg_relevance": 0.6089,
+    "avg_relevance": 0.6167,
     "max_relevance": 0.6645
   },
   {
@@ -31816,7 +31976,7 @@
     "article_count": 7,
     "event_count": 6,
     "publisher_count": 7,
-    "avg_relevance": 0.5978,
+    "avg_relevance": 0.5967,
     "max_relevance": 0.6397
   },
   {
@@ -31826,7 +31986,7 @@
     "article_count": 7,
     "event_count": 6,
     "publisher_count": 7,
-    "avg_relevance": 0.5978,
+    "avg_relevance": 0.5967,
     "max_relevance": 0.6397
   },
   {
@@ -31836,7 +31996,7 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.6105,
+    "avg_relevance": 0.6229,
     "max_relevance": 0.6645
   },
   {
@@ -31846,7 +32006,7 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 5,
-    "avg_relevance": 0.6152,
+    "avg_relevance": 0.6255,
     "max_relevance": 0.6645
   },
   {
@@ -31856,7 +32016,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.623,
+    "avg_relevance": 0.6436,
     "max_relevance": 0.6645
   },
   {
@@ -31866,7 +32026,7 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 5,
-    "avg_relevance": 0.6152,
+    "avg_relevance": 0.6255,
     "max_relevance": 0.6645
   },
   {
@@ -31896,7 +32056,7 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 6,
-    "avg_relevance": 0.6019,
+    "avg_relevance": 0.6006,
     "max_relevance": 0.6397
   },
   {
@@ -31916,7 +32076,7 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.6308,
+    "avg_relevance": 0.6618,
     "max_relevance": 0.6645
   },
   {
@@ -31926,7 +32086,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5642,
+    "avg_relevance": 0.5624,
     "max_relevance": 0.6104
   },
   {
@@ -31946,7 +32106,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.6217,
+    "avg_relevance": 0.6372,
     "max_relevance": 0.6645
   },
   {
@@ -31956,7 +32116,7 @@
     "article_count": 5,
     "event_count": 4,
     "publisher_count": 5,
-    "avg_relevance": 0.6002,
+    "avg_relevance": 0.5987,
     "max_relevance": 0.6397
   },
   {
@@ -32476,7 +32636,7 @@
     "article_count": 10,
     "event_count": 6,
     "publisher_count": 9,
-    "avg_relevance": 0.6282,
+    "avg_relevance": 0.6289,
     "max_relevance": 0.6992
   },
   {
@@ -32496,7 +32656,7 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 7,
-    "avg_relevance": 0.6403,
+    "avg_relevance": 0.6411,
     "max_relevance": 0.6992
   },
   {
@@ -32556,7 +32716,7 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.6755,
+    "avg_relevance": 0.6768,
     "max_relevance": 0.6992
   },
   {
@@ -32566,7 +32726,7 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 7,
-    "avg_relevance": 0.6403,
+    "avg_relevance": 0.6411,
     "max_relevance": 0.6992
   },
   {
@@ -32586,7 +32746,7 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 7,
-    "avg_relevance": 0.6403,
+    "avg_relevance": 0.6411,
     "max_relevance": 0.6992
   },
   {
@@ -32646,7 +32806,7 @@
     "article_count": 5,
     "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.6409,
+    "avg_relevance": 0.6422,
     "max_relevance": 0.68
   },
   {
@@ -32666,7 +32826,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.6732,
+    "avg_relevance": 0.6748,
     "max_relevance": 0.6992
   },
   {
@@ -33766,8 +33926,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5592,
-    "max_relevance": 0.5592
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
   },
   {
     "day": "2026-08-07",
@@ -33776,8 +33936,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5592,
-    "max_relevance": 0.5592
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
   },
   {
     "day": "2026-08-07",
@@ -33786,7 +33946,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.5731,
+    "avg_relevance": 0.5706,
     "max_relevance": 0.58
   },
   {
@@ -33796,8 +33956,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5592,
-    "max_relevance": 0.5592
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
   },
   {
     "day": "2026-08-07",
@@ -33806,8 +33966,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5592,
-    "max_relevance": 0.5592
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
   },
   {
     "day": "2026-08-07",
@@ -33816,17 +33976,17 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.5731,
+    "avg_relevance": 0.5706,
     "max_relevance": 0.58
   },
   {
     "day": "2026-08-07",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 2,
-    "event_count": 1,
-    "publisher_count": 2,
-    "avg_relevance": 0.58,
+    "article_count": 3,
+    "event_count": 2,
+    "publisher_count": 3,
+    "avg_relevance": 0.5706,
     "max_relevance": 0.58
   },
   {
@@ -33836,8 +33996,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5592,
-    "max_relevance": 0.5592
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
   },
   {
     "day": "2026-08-08",
@@ -33846,8 +34006,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5592,
-    "max_relevance": 0.5592
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
   },
   {
     "day": "2026-08-08",
@@ -33856,8 +34016,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5592,
-    "max_relevance": 0.5592
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
   },
   {
     "day": "2026-08-08",
@@ -33866,8 +34026,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5592,
-    "max_relevance": 0.5592
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
   },
   {
     "day": "2026-08-08",
@@ -33876,8 +34036,8 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5592,
-    "max_relevance": 0.5592
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
   },
   {
     "day": "2026-08-08",
@@ -33886,8 +34046,18 @@
     "article_count": 1,
     "event_count": 1,
     "publisher_count": 1,
-    "avg_relevance": 0.5592,
-    "max_relevance": 0.5592
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
+  },
+  {
+    "day": "2026-08-08",
+    "kind": "topic",
+    "key": "geopolitical_hybrid",
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.5517,
+    "max_relevance": 0.5517
   },
   {
     "day": "2026-08-09",
@@ -34033,10 +34203,10 @@
     "day": "2026-08-10",
     "kind": "indicator",
     "key": "europe",
-    "article_count": 2,
+    "article_count": 3,
     "event_count": 1,
-    "publisher_count": 2,
-    "avg_relevance": 0.5007,
+    "publisher_count": 3,
+    "avg_relevance": 0.4882,
     "max_relevance": 0.549
   },
   {
@@ -34133,10 +34303,10 @@
     "day": "2026-08-10",
     "kind": "topic",
     "key": "europe_sovereign",
-    "article_count": 2,
+    "article_count": 3,
     "event_count": 1,
-    "publisher_count": 2,
-    "avg_relevance": 0.5007,
+    "publisher_count": 3,
+    "avg_relevance": 0.4882,
     "max_relevance": 0.549
   },
   {
@@ -34156,7 +34326,7 @@
     "article_count": 5,
     "event_count": 2,
     "publisher_count": 5,
-    "avg_relevance": 0.5315,
+    "avg_relevance": 0.5334,
     "max_relevance": 0.6036
   },
   {
@@ -34983,10 +35153,10 @@
     "day": "2026-08-17",
     "kind": "indicator",
     "key": "bank_ai",
-    "article_count": 7,
+    "article_count": 8,
     "event_count": 5,
-    "publisher_count": 7,
-    "avg_relevance": 0.6327,
+    "publisher_count": 8,
+    "avg_relevance": 0.6451,
     "max_relevance": 0.7571
   },
   {
@@ -34996,7 +35166,7 @@
     "article_count": 10,
     "event_count": 6,
     "publisher_count": 10,
-    "avg_relevance": 0.6158,
+    "avg_relevance": 0.6222,
     "max_relevance": 0.7571
   },
   {
@@ -35014,9 +35184,9 @@
     "kind": "indicator",
     "key": "energy",
     "article_count": 10,
-    "event_count": 7,
+    "event_count": 6,
     "publisher_count": 10,
-    "avg_relevance": 0.6168,
+    "avg_relevance": 0.6232,
     "max_relevance": 0.7571
   },
   {
@@ -35036,7 +35206,7 @@
     "article_count": 10,
     "event_count": 7,
     "publisher_count": 10,
-    "avg_relevance": 0.6169,
+    "avg_relevance": 0.6233,
     "max_relevance": 0.7571
   },
   {
@@ -35044,9 +35214,9 @@
     "kind": "indicator",
     "key": "hy_credit",
     "article_count": 13,
-    "event_count": 10,
+    "event_count": 9,
     "publisher_count": 13,
-    "avg_relevance": 0.6191,
+    "avg_relevance": 0.624,
     "max_relevance": 0.7571
   },
   {
@@ -35054,9 +35224,9 @@
     "kind": "indicator",
     "key": "ig_credit",
     "article_count": 13,
-    "event_count": 10,
+    "event_count": 9,
     "publisher_count": 13,
-    "avg_relevance": 0.6191,
+    "avg_relevance": 0.624,
     "max_relevance": 0.7571
   },
   {
@@ -35064,7 +35234,7 @@
     "kind": "indicator",
     "key": "leveraged_credit",
     "article_count": 7,
-    "event_count": 6,
+    "event_count": 5,
     "publisher_count": 7,
     "avg_relevance": 0.6014,
     "max_relevance": 0.7084
@@ -35074,9 +35244,9 @@
     "kind": "indicator",
     "key": "private_credit",
     "article_count": 9,
-    "event_count": 7,
+    "event_count": 6,
     "publisher_count": 9,
-    "avg_relevance": 0.5966,
+    "avg_relevance": 0.5967,
     "max_relevance": 0.7084
   },
   {
@@ -35084,7 +35254,7 @@
     "kind": "indicator",
     "key": "rates_liquidity",
     "article_count": 9,
-    "event_count": 8,
+    "event_count": 7,
     "publisher_count": 9,
     "avg_relevance": 0.5927,
     "max_relevance": 0.6569
@@ -35103,10 +35273,10 @@
     "day": "2026-08-17",
     "kind": "topic",
     "key": "banking",
-    "article_count": 4,
+    "article_count": 5,
     "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.6402,
+    "publisher_count": 5,
+    "avg_relevance": 0.6585,
     "max_relevance": 0.7571
   },
   {
@@ -35114,7 +35284,7 @@
     "kind": "topic",
     "key": "corporate_credit",
     "article_count": 5,
-    "event_count": 5,
+    "event_count": 4,
     "publisher_count": 5,
     "avg_relevance": 0.61,
     "max_relevance": 0.7084
@@ -35126,7 +35296,7 @@
     "article_count": 6,
     "event_count": 3,
     "publisher_count": 6,
-    "avg_relevance": 0.6162,
+    "avg_relevance": 0.6269,
     "max_relevance": 0.7571
   },
   {
@@ -35153,18 +35323,18 @@
     "day": "2026-08-17",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 2,
-    "avg_relevance": 0.624,
-    "max_relevance": 0.6679
+    "article_count": 1,
+    "event_count": 1,
+    "publisher_count": 1,
+    "avg_relevance": 0.58,
+    "max_relevance": 0.58
   },
   {
     "day": "2026-08-17",
     "kind": "topic",
     "key": "inflation_rates",
     "article_count": 5,
-    "event_count": 5,
+    "event_count": 4,
     "publisher_count": 5,
     "avg_relevance": 0.6101,
     "max_relevance": 0.6569
@@ -35174,7 +35344,7 @@
     "kind": "topic",
     "key": "private_credit",
     "article_count": 7,
-    "event_count": 6,
+    "event_count": 5,
     "publisher_count": 7,
     "avg_relevance": 0.6014,
     "max_relevance": 0.7084
@@ -35186,7 +35356,7 @@
     "article_count": 8,
     "event_count": 5,
     "publisher_count": 8,
-    "avg_relevance": 0.6247,
+    "avg_relevance": 0.6327,
     "max_relevance": 0.7571
   },
   {
@@ -35194,9 +35364,9 @@
     "kind": "indicator",
     "key": "bank_ai",
     "article_count": 5,
-    "event_count": 4,
+    "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5404,
+    "avg_relevance": 0.5407,
     "max_relevance": 0.6433
   },
   {
@@ -35214,9 +35384,9 @@
     "kind": "indicator",
     "key": "data_center",
     "article_count": 5,
-    "event_count": 4,
+    "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5404,
+    "avg_relevance": 0.5407,
     "max_relevance": 0.6433
   },
   {
@@ -35224,9 +35394,9 @@
     "kind": "indicator",
     "key": "energy",
     "article_count": 5,
-    "event_count": 3,
+    "event_count": 2,
     "publisher_count": 5,
-    "avg_relevance": 0.5538,
+    "avg_relevance": 0.5541,
     "max_relevance": 0.6889
   },
   {
@@ -35284,9 +35454,9 @@
     "kind": "indicator",
     "key": "private_credit",
     "article_count": 5,
-    "event_count": 4,
+    "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5404,
+    "avg_relevance": 0.5407,
     "max_relevance": 0.6433
   },
   {
@@ -35304,9 +35474,9 @@
     "kind": "topic",
     "key": "ai_data_center",
     "article_count": 5,
-    "event_count": 4,
+    "event_count": 3,
     "publisher_count": 5,
-    "avg_relevance": 0.5404,
+    "avg_relevance": 0.5407,
     "max_relevance": 0.6433
   },
   {
@@ -35324,9 +35494,9 @@
     "kind": "topic",
     "key": "energy_shock",
     "article_count": 5,
-    "event_count": 3,
+    "event_count": 2,
     "publisher_count": 5,
-    "avg_relevance": 0.5538,
+    "avg_relevance": 0.5541,
     "max_relevance": 0.6889
   },
   {
@@ -35354,9 +35524,9 @@
     "kind": "topic",
     "key": "geopolitical_hybrid",
     "article_count": 6,
-    "event_count": 4,
+    "event_count": 3,
     "publisher_count": 6,
-    "avg_relevance": 0.5219,
+    "avg_relevance": 0.5221,
     "max_relevance": 0.5854
   },
   {
@@ -35393,10 +35563,10 @@
     "day": "2026-08-19",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 6,
-    "event_count": 4,
-    "publisher_count": 6,
-    "avg_relevance": 0.5476,
+    "article_count": 7,
+    "event_count": 5,
+    "publisher_count": 7,
+    "avg_relevance": 0.5277,
     "max_relevance": 0.613
   },
   {
@@ -35423,20 +35593,20 @@
     "day": "2026-08-19",
     "kind": "indicator",
     "key": "rates_liquidity",
-    "article_count": 6,
-    "event_count": 4,
-    "publisher_count": 6,
-    "avg_relevance": 0.5476,
+    "article_count": 7,
+    "event_count": 5,
+    "publisher_count": 7,
+    "avg_relevance": 0.5277,
     "max_relevance": 0.613
   },
   {
     "day": "2026-08-19",
     "kind": "topic",
     "key": "energy_shock",
-    "article_count": 5,
-    "event_count": 3,
-    "publisher_count": 5,
-    "avg_relevance": 0.5474,
+    "article_count": 6,
+    "event_count": 4,
+    "publisher_count": 6,
+    "avg_relevance": 0.5242,
     "max_relevance": 0.613
   },
   {
@@ -35463,20 +35633,20 @@
     "day": "2026-08-19",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 1,
-    "event_count": 1,
-    "publisher_count": 1,
-    "avg_relevance": 0.4976,
+    "article_count": 2,
+    "event_count": 2,
+    "publisher_count": 2,
+    "avg_relevance": 0.4529,
     "max_relevance": 0.4976
   },
   {
     "day": "2026-08-19",
     "kind": "topic",
     "key": "inflation_rates",
-    "article_count": 6,
-    "event_count": 4,
-    "publisher_count": 6,
-    "avg_relevance": 0.5476,
+    "article_count": 7,
+    "event_count": 5,
+    "publisher_count": 7,
+    "avg_relevance": 0.5277,
     "max_relevance": 0.613
   },
   {
@@ -37433,19 +37603,19 @@
     "day": "2026-09-07",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 1,
-    "event_count": 1,
+    "article_count": 2,
+    "event_count": 2,
     "publisher_count": 1,
-    "avg_relevance": 0.4828,
-    "max_relevance": 0.4828
+    "avg_relevance": 0.5314,
+    "max_relevance": 0.58
   },
   {
     "day": "2026-09-07",
     "kind": "indicator",
     "key": "europe",
-    "article_count": 1,
+    "article_count": 2,
     "event_count": 1,
-    "publisher_count": 1,
+    "publisher_count": 2,
     "avg_relevance": 0.58,
     "max_relevance": 0.58
   },
@@ -37453,19 +37623,19 @@
     "day": "2026-09-07",
     "kind": "topic",
     "key": "energy_shock",
-    "article_count": 1,
-    "event_count": 1,
+    "article_count": 2,
+    "event_count": 2,
     "publisher_count": 1,
-    "avg_relevance": 0.4828,
-    "max_relevance": 0.4828
+    "avg_relevance": 0.5314,
+    "max_relevance": 0.58
   },
   {
     "day": "2026-09-07",
     "kind": "topic",
     "key": "europe_sovereign",
-    "article_count": 1,
+    "article_count": 2,
     "event_count": 1,
-    "publisher_count": 1,
+    "publisher_count": 2,
     "avg_relevance": 0.58,
     "max_relevance": 0.58
   },
@@ -37473,10 +37643,10 @@
     "day": "2026-09-07",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 2,
+    "article_count": 3,
     "event_count": 2,
     "publisher_count": 2,
-    "avg_relevance": 0.5314,
+    "avg_relevance": 0.5476,
     "max_relevance": 0.58
   },
   {
@@ -37646,7 +37816,7 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.5054,
+    "avg_relevance": 0.502,
     "max_relevance": 0.5092
   },
   {
@@ -37656,7 +37826,7 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.5054,
+    "avg_relevance": 0.502,
     "max_relevance": 0.5092
   },
   {
@@ -37746,7 +37916,7 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.5054,
+    "avg_relevance": 0.502,
     "max_relevance": 0.5092
   },
   {
@@ -37756,7 +37926,7 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.5054,
+    "avg_relevance": 0.502,
     "max_relevance": 0.5092
   },
   {
@@ -37776,7 +37946,7 @@
     "article_count": 2,
     "event_count": 1,
     "publisher_count": 2,
-    "avg_relevance": 0.5054,
+    "avg_relevance": 0.502,
     "max_relevance": 0.5092
   },
   {
@@ -37806,7 +37976,7 @@
     "article_count": 15,
     "event_count": 8,
     "publisher_count": 11,
-    "avg_relevance": 0.561,
+    "avg_relevance": 0.5605,
     "max_relevance": 0.6906
   },
   {
@@ -37816,7 +37986,7 @@
     "article_count": 8,
     "event_count": 2,
     "publisher_count": 5,
-    "avg_relevance": 0.5526,
+    "avg_relevance": 0.5517,
     "max_relevance": 0.58
   },
   {
@@ -37886,7 +38056,7 @@
     "article_count": 14,
     "event_count": 8,
     "publisher_count": 10,
-    "avg_relevance": 0.5598,
+    "avg_relevance": 0.5593,
     "max_relevance": 0.6906
   },
   {
@@ -37896,7 +38066,7 @@
     "article_count": 8,
     "event_count": 2,
     "publisher_count": 5,
-    "avg_relevance": 0.5526,
+    "avg_relevance": 0.5517,
     "max_relevance": 0.58
   },
   {
@@ -37916,7 +38086,7 @@
     "article_count": 11,
     "event_count": 4,
     "publisher_count": 7,
-    "avg_relevance": 0.536,
+    "avg_relevance": 0.5354,
     "max_relevance": 0.58
   },
   {
@@ -37976,7 +38146,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5839,
+    "avg_relevance": 0.5845,
     "max_relevance": 0.6819
   },
   {
@@ -37986,7 +38156,7 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 6,
-    "avg_relevance": 0.5606,
+    "avg_relevance": 0.561,
     "max_relevance": 0.6867
   },
   {
@@ -38086,7 +38256,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 4,
-    "avg_relevance": 0.5839,
+    "avg_relevance": 0.5845,
     "max_relevance": 0.6819
   },
   {
@@ -38096,7 +38266,7 @@
     "article_count": 6,
     "event_count": 4,
     "publisher_count": 6,
-    "avg_relevance": 0.5606,
+    "avg_relevance": 0.561,
     "max_relevance": 0.6867
   },
   {
@@ -38116,7 +38286,7 @@
     "article_count": 4,
     "event_count": 2,
     "publisher_count": 4,
-    "avg_relevance": 0.5585,
+    "avg_relevance": 0.559,
     "max_relevance": 0.58
   },
   {
@@ -38226,7 +38396,7 @@
     "article_count": 4,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.6355,
+    "avg_relevance": 0.6356,
     "max_relevance": 0.7101
   },
   {
@@ -38236,7 +38406,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6898,
+    "avg_relevance": 0.69,
     "max_relevance": 0.7101
   },
   {
@@ -38256,8 +38426,8 @@
     "article_count": 13,
     "event_count": 5,
     "publisher_count": 12,
-    "avg_relevance": 0.5721,
-    "max_relevance": 0.6881
+    "avg_relevance": 0.5722,
+    "max_relevance": 0.6887
   },
   {
     "day": "2026-09-14",
@@ -38276,7 +38446,7 @@
     "article_count": 5,
     "event_count": 4,
     "publisher_count": 3,
-    "avg_relevance": 0.6181,
+    "avg_relevance": 0.6182,
     "max_relevance": 0.7101
   },
   {
@@ -38286,7 +38456,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6898,
+    "avg_relevance": 0.69,
     "max_relevance": 0.7101
   },
   {
@@ -38296,7 +38466,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6898,
+    "avg_relevance": 0.69,
     "max_relevance": 0.7101
   },
   {
@@ -38346,7 +38516,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6898,
+    "avg_relevance": 0.69,
     "max_relevance": 0.7101
   },
   {
@@ -38357,7 +38527,7 @@
     "event_count": 4,
     "publisher_count": 11,
     "avg_relevance": 0.5741,
-    "max_relevance": 0.6881
+    "max_relevance": 0.6887
   },
   {
     "day": "2026-09-14",
@@ -38416,7 +38586,7 @@
     "article_count": 3,
     "event_count": 2,
     "publisher_count": 3,
-    "avg_relevance": 0.6898,
+    "avg_relevance": 0.69,
     "max_relevance": 0.7101
   },
   {
@@ -38446,8 +38616,8 @@
     "article_count": 9,
     "event_count": 2,
     "publisher_count": 9,
-    "avg_relevance": 0.5655,
-    "max_relevance": 0.6106
+    "avg_relevance": 0.5647,
+    "max_relevance": 0.5984
   },
   {
     "day": "2026-09-15",
@@ -38455,8 +38625,8 @@
     "key": "europe",
     "article_count": 13,
     "event_count": 3,
-    "publisher_count": 13,
-    "avg_relevance": 0.5752,
+    "publisher_count": 12,
+    "avg_relevance": 0.5746,
     "max_relevance": 0.648
   },
   {
@@ -38506,8 +38676,8 @@
     "article_count": 9,
     "event_count": 2,
     "publisher_count": 9,
-    "avg_relevance": 0.5655,
-    "max_relevance": 0.6106
+    "avg_relevance": 0.5647,
+    "max_relevance": 0.5984
   },
   {
     "day": "2026-09-15",
@@ -38515,8 +38685,8 @@
     "key": "europe_sovereign",
     "article_count": 13,
     "event_count": 3,
-    "publisher_count": 13,
-    "avg_relevance": 0.5752,
+    "publisher_count": 12,
+    "avg_relevance": 0.5746,
     "max_relevance": 0.648
   },
   {
@@ -38525,9 +38695,9 @@
     "key": "geopolitical_hybrid",
     "article_count": 12,
     "event_count": 2,
-    "publisher_count": 12,
-    "avg_relevance": 0.5691,
-    "max_relevance": 0.6106
+    "publisher_count": 11,
+    "avg_relevance": 0.5685,
+    "max_relevance": 0.5984
   },
   {
     "day": "2026-09-15",
@@ -38714,9 +38884,9 @@
     "kind": "indicator",
     "key": "energy",
     "article_count": 14,
-    "event_count": 7,
+    "event_count": 6,
     "publisher_count": 13,
-    "avg_relevance": 0.557,
+    "avg_relevance": 0.5573,
     "max_relevance": 0.659
   },
   {
@@ -38724,9 +38894,9 @@
     "kind": "indicator",
     "key": "europe",
     "article_count": 6,
-    "event_count": 2,
+    "event_count": 1,
     "publisher_count": 6,
-    "avg_relevance": 0.5665,
+    "avg_relevance": 0.5672,
     "max_relevance": 0.5984
   },
   {
@@ -38804,9 +38974,9 @@
     "kind": "topic",
     "key": "energy_shock",
     "article_count": 13,
-    "event_count": 6,
+    "event_count": 5,
     "publisher_count": 12,
-    "avg_relevance": 0.5552,
+    "avg_relevance": 0.5555,
     "max_relevance": 0.659
   },
   {
@@ -38814,9 +38984,9 @@
     "kind": "topic",
     "key": "europe_sovereign",
     "article_count": 6,
-    "event_count": 2,
+    "event_count": 1,
     "publisher_count": 6,
-    "avg_relevance": 0.5665,
+    "avg_relevance": 0.5672,
     "max_relevance": 0.5984
   },
   {
@@ -38834,9 +39004,9 @@
     "kind": "topic",
     "key": "geopolitical_hybrid",
     "article_count": 9,
-    "event_count": 4,
+    "event_count": 3,
     "publisher_count": 8,
-    "avg_relevance": 0.5447,
+    "avg_relevance": 0.5452,
     "max_relevance": 0.5984
   },
   {
@@ -38893,20 +39063,20 @@
     "day": "2026-09-18",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 21,
-    "event_count": 6,
-    "publisher_count": 20,
-    "avg_relevance": 0.5648,
+    "article_count": 23,
+    "event_count": 7,
+    "publisher_count": 22,
+    "avg_relevance": 0.5661,
     "max_relevance": 0.7575
   },
   {
     "day": "2026-09-18",
     "kind": "indicator",
     "key": "europe",
-    "article_count": 24,
+    "article_count": 25,
     "event_count": 5,
-    "publisher_count": 24,
-    "avg_relevance": 0.57,
+    "publisher_count": 25,
+    "avg_relevance": 0.5704,
     "max_relevance": 0.7801
   },
   {
@@ -38943,20 +39113,20 @@
     "day": "2026-09-18",
     "kind": "indicator",
     "key": "leveraged_credit",
-    "article_count": 3,
-    "event_count": 3,
-    "publisher_count": 2,
-    "avg_relevance": 0.4424,
+    "article_count": 4,
+    "event_count": 4,
+    "publisher_count": 3,
+    "avg_relevance": 0.4768,
     "max_relevance": 0.5969
   },
   {
     "day": "2026-09-18",
     "kind": "indicator",
     "key": "private_credit",
-    "article_count": 3,
-    "event_count": 3,
-    "publisher_count": 2,
-    "avg_relevance": 0.4424,
+    "article_count": 4,
+    "event_count": 4,
+    "publisher_count": 3,
+    "avg_relevance": 0.4768,
     "max_relevance": 0.5969
   },
   {
@@ -39003,20 +39173,20 @@
     "day": "2026-09-18",
     "kind": "topic",
     "key": "energy_shock",
-    "article_count": 19,
-    "event_count": 4,
-    "publisher_count": 18,
-    "avg_relevance": 0.5747,
+    "article_count": 21,
+    "event_count": 5,
+    "publisher_count": 20,
+    "avg_relevance": 0.5752,
     "max_relevance": 0.7575
   },
   {
     "day": "2026-09-18",
     "kind": "topic",
     "key": "europe_sovereign",
-    "article_count": 24,
+    "article_count": 25,
     "event_count": 5,
-    "publisher_count": 24,
-    "avg_relevance": 0.57,
+    "publisher_count": 25,
+    "avg_relevance": 0.5704,
     "max_relevance": 0.7801
   },
   {
@@ -39033,10 +39203,10 @@
     "day": "2026-09-18",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 22,
-    "event_count": 3,
-    "publisher_count": 22,
-    "avg_relevance": 0.5624,
+    "article_count": 24,
+    "event_count": 4,
+    "publisher_count": 24,
+    "avg_relevance": 0.5638,
     "max_relevance": 0.616
   },
   {
@@ -39053,11 +39223,11 @@
     "day": "2026-09-18",
     "kind": "topic",
     "key": "private_credit",
-    "article_count": 2,
-    "event_count": 2,
-    "publisher_count": 1,
-    "avg_relevance": 0.3651,
-    "max_relevance": 0.3942
+    "article_count": 3,
+    "event_count": 3,
+    "publisher_count": 2,
+    "avg_relevance": 0.4368,
+    "max_relevance": 0.58
   },
   {
     "day": "2026-09-18",
@@ -39113,10 +39283,10 @@
     "day": "2026-09-19",
     "kind": "indicator",
     "key": "europe",
-    "article_count": 16,
+    "article_count": 17,
     "event_count": 4,
-    "publisher_count": 16,
-    "avg_relevance": 0.5531,
+    "publisher_count": 17,
+    "avg_relevance": 0.5509,
     "max_relevance": 0.6222
   },
   {
@@ -39213,10 +39383,10 @@
     "day": "2026-09-19",
     "kind": "topic",
     "key": "europe_sovereign",
-    "article_count": 16,
+    "article_count": 17,
     "event_count": 4,
-    "publisher_count": 16,
-    "avg_relevance": 0.5531,
+    "publisher_count": 17,
+    "avg_relevance": 0.5509,
     "max_relevance": 0.6222
   },
   {
@@ -39233,10 +39403,10 @@
     "day": "2026-09-19",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 17,
+    "article_count": 18,
     "event_count": 5,
-    "publisher_count": 16,
-    "avg_relevance": 0.5428,
+    "publisher_count": 17,
+    "avg_relevance": 0.5413,
     "max_relevance": 0.6222
   },
   {
@@ -39453,20 +39623,20 @@
     "day": "2026-09-21",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 15,
-    "event_count": 4,
-    "publisher_count": 11,
-    "avg_relevance": 0.5364,
+    "article_count": 16,
+    "event_count": 5,
+    "publisher_count": 12,
+    "avg_relevance": 0.5273,
     "max_relevance": 0.6644
   },
   {
     "day": "2026-09-21",
     "kind": "indicator",
     "key": "europe",
-    "article_count": 21,
-    "event_count": 6,
-    "publisher_count": 20,
-    "avg_relevance": 0.4894,
+    "article_count": 22,
+    "event_count": 7,
+    "publisher_count": 21,
+    "avg_relevance": 0.4849,
     "max_relevance": 0.6644
   },
   {
@@ -39513,20 +39683,20 @@
     "day": "2026-09-21",
     "kind": "topic",
     "key": "energy_shock",
-    "article_count": 13,
-    "event_count": 3,
-    "publisher_count": 10,
-    "avg_relevance": 0.5388,
+    "article_count": 14,
+    "event_count": 4,
+    "publisher_count": 11,
+    "avg_relevance": 0.5283,
     "max_relevance": 0.6644
   },
   {
     "day": "2026-09-21",
     "kind": "topic",
     "key": "europe_sovereign",
-    "article_count": 21,
-    "event_count": 6,
-    "publisher_count": 20,
-    "avg_relevance": 0.4894,
+    "article_count": 22,
+    "event_count": 7,
+    "publisher_count": 21,
+    "avg_relevance": 0.4849,
     "max_relevance": 0.6644
   },
   {
@@ -39543,10 +39713,10 @@
     "day": "2026-09-21",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 24,
-    "event_count": 7,
-    "publisher_count": 21,
-    "avg_relevance": 0.4882,
+    "article_count": 25,
+    "event_count": 8,
+    "publisher_count": 22,
+    "avg_relevance": 0.4858,
     "max_relevance": 0.6644
   },
   {
@@ -39596,7 +39766,7 @@
     "article_count": 7,
     "event_count": 7,
     "publisher_count": 7,
-    "avg_relevance": 0.496,
+    "avg_relevance": 0.4951,
     "max_relevance": 0.58
   },
   {
@@ -39606,7 +39776,7 @@
     "article_count": 5,
     "event_count": 5,
     "publisher_count": 5,
-    "avg_relevance": 0.4571,
+    "avg_relevance": 0.4558,
     "max_relevance": 0.58
   },
   {
@@ -39666,7 +39836,7 @@
     "article_count": 4,
     "event_count": 4,
     "publisher_count": 4,
-    "avg_relevance": 0.4924,
+    "avg_relevance": 0.4909,
     "max_relevance": 0.5759
   },
   {
@@ -39676,7 +39846,7 @@
     "article_count": 5,
     "event_count": 5,
     "publisher_count": 5,
-    "avg_relevance": 0.4571,
+    "avg_relevance": 0.4558,
     "max_relevance": 0.58
   },
   {
@@ -39696,7 +39866,7 @@
     "article_count": 6,
     "event_count": 5,
     "publisher_count": 6,
-    "avg_relevance": 0.4729,
+    "avg_relevance": 0.4718,
     "max_relevance": 0.5235
   },
   {
@@ -39743,20 +39913,20 @@
     "day": "2026-09-23",
     "kind": "indicator",
     "key": "energy",
-    "article_count": 7,
+    "article_count": 8,
     "event_count": 5,
-    "publisher_count": 6,
-    "avg_relevance": 0.5148,
+    "publisher_count": 7,
+    "avg_relevance": 0.505,
     "max_relevance": 0.58
   },
   {
     "day": "2026-09-23",
     "kind": "indicator",
     "key": "europe",
-    "article_count": 6,
+    "article_count": 7,
     "event_count": 4,
-    "publisher_count": 5,
-    "avg_relevance": 0.498,
+    "publisher_count": 6,
+    "avg_relevance": 0.4842,
     "max_relevance": 0.58
   },
   {
@@ -39766,7 +39936,7 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 2,
-    "avg_relevance": 0.523,
+    "avg_relevance": 0.5347,
     "max_relevance": 0.58
   },
   {
@@ -39796,7 +39966,7 @@
     "article_count": 4,
     "event_count": 4,
     "publisher_count": 3,
-    "avg_relevance": 0.5168,
+    "avg_relevance": 0.5255,
     "max_relevance": 0.58
   },
   {
@@ -39813,20 +39983,20 @@
     "day": "2026-09-23",
     "kind": "topic",
     "key": "energy_shock",
-    "article_count": 5,
+    "article_count": 6,
     "event_count": 3,
-    "publisher_count": 4,
-    "avg_relevance": 0.5051,
+    "publisher_count": 5,
+    "avg_relevance": 0.4936,
     "max_relevance": 0.58
   },
   {
     "day": "2026-09-23",
     "kind": "topic",
     "key": "europe_sovereign",
-    "article_count": 6,
+    "article_count": 7,
     "event_count": 4,
-    "publisher_count": 5,
-    "avg_relevance": 0.498,
+    "publisher_count": 6,
+    "avg_relevance": 0.4842,
     "max_relevance": 0.58
   },
   {
@@ -39836,17 +40006,17 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 2,
-    "avg_relevance": 0.523,
+    "avg_relevance": 0.5347,
     "max_relevance": 0.58
   },
   {
     "day": "2026-09-23",
     "kind": "topic",
     "key": "geopolitical_hybrid",
-    "article_count": 6,
+    "article_count": 7,
     "event_count": 3,
-    "publisher_count": 5,
-    "avg_relevance": 0.5032,
+    "publisher_count": 7,
+    "avg_relevance": 0.4887,
     "max_relevance": 0.58
   },
   {
@@ -39856,7 +40026,7 @@
     "article_count": 3,
     "event_count": 3,
     "publisher_count": 3,
-    "avg_relevance": 0.5301,
+    "avg_relevance": 0.5417,
     "max_relevance": 0.58
   },
   {
