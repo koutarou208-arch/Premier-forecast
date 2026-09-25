@@ -208,6 +208,19 @@
     "max_event_score": 14.0
   },
   {
+    "day": "2025-10-02",
+    "kind": "overall",
+    "key": "geopolitical_hybrid",
+    "event_count": 1,
+    "physical_events": 0,
+    "critical_infrastructure_events": 0,
+    "attributed_events": 0,
+    "military_response_events": 0,
+    "explicit_threat_events": 0,
+    "avg_event_score": 0.0,
+    "max_event_score": 0.0
+  },
+  {
     "day": "2025-10-03",
     "kind": "actor_mention",
     "key": "EU",
@@ -2185,6 +2198,19 @@
   },
   {
     "day": "2026-02-12",
+    "kind": "overall",
+    "key": "geopolitical_hybrid",
+    "event_count": 1,
+    "physical_events": 0,
+    "critical_infrastructure_events": 0,
+    "attributed_events": 0,
+    "military_response_events": 0,
+    "explicit_threat_events": 0,
+    "avg_event_score": 0.0,
+    "max_event_score": 0.0
+  },
+  {
+    "day": "2026-02-16",
     "kind": "overall",
     "key": "geopolitical_hybrid",
     "event_count": 1,
@@ -5174,32 +5200,6 @@
     "max_event_score": 12.0
   },
   {
-    "day": "2026-09-14",
-    "kind": "actor_mention",
-    "key": "NATO",
-    "event_count": 1,
-    "physical_events": 0,
-    "critical_infrastructure_events": 0,
-    "attributed_events": 0,
-    "military_response_events": 0,
-    "explicit_threat_events": 0,
-    "avg_event_score": 12.0,
-    "max_event_score": 12.0
-  },
-  {
-    "day": "2026-09-14",
-    "kind": "overall",
-    "key": "geopolitical_hybrid",
-    "event_count": 1,
-    "physical_events": 0,
-    "critical_infrastructure_events": 0,
-    "attributed_events": 0,
-    "military_response_events": 0,
-    "explicit_threat_events": 0,
-    "avg_event_score": 12.0,
-    "max_event_score": 12.0
-  },
-  {
     "day": "2026-09-17",
     "kind": "actor_mention",
     "key": "EU",
@@ -5567,7 +5567,7 @@
     "day": "2026-09-24",
     "kind": "actor_mention",
     "key": "NATO",
-    "event_count": 2,
+    "event_count": 1,
     "physical_events": 0,
     "critical_infrastructure_events": 0,
     "attributed_events": 0,
@@ -5619,13 +5619,13 @@
     "day": "2026-09-24",
     "kind": "overall",
     "key": "geopolitical_hybrid",
-    "event_count": 4,
+    "event_count": 3,
     "physical_events": 1,
     "critical_infrastructure_events": 2,
     "attributed_events": 0,
     "military_response_events": 0,
     "explicit_threat_events": 0,
-    "avg_event_score": 24.5,
+    "avg_event_score": 28.67,
     "max_event_score": 46.0
   },
   {
