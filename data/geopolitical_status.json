@@ -2,24 +2,24 @@
   "version": 1,
   "as_of": "2026-09-26T08:17:14Z",
   "window_days": 90,
-  "geopolitical_escalation_index": 70.3,
+  "geopolitical_escalation_index": 70.5,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
   "calibration_status": "experimental_unvalidated",
   "components": {
-    "top_quartile_event_severity": 38.7,
+    "top_quartile_event_severity": 39.3,
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
     "response_intensity": 25.0,
     "thirty_day_momentum": 100.0
   },
   "counts": {
-    "events": 70,
-    "recent_30d_events": 41,
+    "events": 67,
+    "recent_30d_events": 38,
     "previous_30d_events": 19,
-    "physical_events": 11,
+    "physical_events": 10,
     "critical_infrastructure_events": 18,
     "reported_attribution_events": 1,
-    "unattributed_events": 66,
+    "unattributed_events": 62,
     "disputed_attribution_records": 0,
     "suspected_attribution_records": 4,
     "military_response_events": 1,
@@ -29,15 +29,18 @@
     {
       "actor": "Russia",
       "event_count": 1,
-      "first_seen": "2026-09-10T07:00:00Z",
+      "first_seen": "2026-09-06T01:40:00Z",
       "last_seen": "2026-09-26T08:17:14Z",
       "max_event_score": 46.0,
       "modalities": [
+        "cyber_attack",
         "drone_incursion",
         "military_threat",
+        "missile_incursion",
         "sabotage"
       ],
       "targets": [
+        "government",
         "undersea_infrastructure"
       ],
       "responses": []
