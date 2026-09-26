@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "as_of": "2026-09-25T15:14:00Z",
+  "as_of": "2026-09-26T08:17:14Z",
   "window_days": 90,
   "geopolitical_escalation_index": 70.3,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
@@ -13,19 +13,36 @@
     "thirty_day_momentum": 100.0
   },
   "counts": {
-    "events": 70,
-    "recent_30d_events": 42,
-    "previous_30d_events": 16,
+    "events": 69,
+    "recent_30d_events": 40,
+    "previous_30d_events": 19,
     "physical_events": 11,
     "critical_infrastructure_events": 18,
-    "reported_attribution_events": 0,
-    "unattributed_events": 66,
+    "reported_attribution_events": 1,
+    "unattributed_events": 64,
     "disputed_attribution_records": 0,
     "suspected_attribution_records": 4,
     "military_response_events": 1,
     "explicit_threat_events": 3
   },
-  "campaigns": [],
+  "campaigns": [
+    {
+      "actor": "Russia",
+      "event_count": 1,
+      "first_seen": "2026-09-10T07:00:00Z",
+      "last_seen": "2026-09-26T08:17:14Z",
+      "max_event_score": 46.0,
+      "modalities": [
+        "drone_incursion",
+        "military_threat",
+        "sabotage"
+      ],
+      "targets": [
+        "undersea_infrastructure"
+      ],
+      "responses": []
+    }
+  ],
   "market_transmission_candidates": [
     "banking_stress",
     "energy",
