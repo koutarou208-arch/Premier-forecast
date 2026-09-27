@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "as_of": "2026-09-26T08:17:14Z",
+  "as_of": "2026-09-26T16:34:41Z",
   "window_days": 90,
-  "geopolitical_escalation_index": 70.5,
+  "geopolitical_escalation_index": 70.0,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
   "calibration_status": "experimental_unvalidated",
   "components": {
@@ -10,16 +10,16 @@
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
     "response_intensity": 25.0,
-    "thirty_day_momentum": 100.0
+    "thirty_day_momentum": 97.4
   },
   "counts": {
-    "events": 67,
-    "recent_30d_events": 38,
+    "events": 66,
+    "recent_30d_events": 37,
     "previous_30d_events": 19,
     "physical_events": 10,
-    "critical_infrastructure_events": 18,
+    "critical_infrastructure_events": 17,
     "reported_attribution_events": 1,
-    "unattributed_events": 63,
+    "unattributed_events": 61,
     "disputed_attribution_records": 0,
     "suspected_attribution_records": 4,
     "military_response_events": 1,
@@ -30,7 +30,7 @@
       "actor": "Russia",
       "event_count": 1,
       "first_seen": "2026-09-06T01:40:00Z",
-      "last_seen": "2026-09-26T08:17:14Z",
+      "last_seen": "2026-09-26T16:34:41Z",
       "max_event_score": 46.0,
       "modalities": [
         "cyber_attack",
@@ -40,10 +40,13 @@
         "sabotage"
       ],
       "targets": [
+        "critical_infrastructure",
         "government",
         "undersea_infrastructure"
       ],
-      "responses": []
+      "responses": [
+        "infrastructure_protection"
+      ]
     }
   ],
   "market_transmission_candidates": [
