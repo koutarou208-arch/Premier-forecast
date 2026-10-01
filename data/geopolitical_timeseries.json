@@ -5926,31 +5926,5 @@
     "explicit_threat_events": 0,
     "avg_event_score": 12.0,
     "max_event_score": 12.0
-  },
-  {
-    "day": "2026-09-30",
-    "kind": "actor_mention",
-    "key": "Russia",
-    "event_count": 1,
-    "physical_events": 0,
-    "critical_infrastructure_events": 0,
-    "attributed_events": 0,
-    "military_response_events": 0,
-    "explicit_threat_events": 0,
-    "avg_event_score": 10.0,
-    "max_event_score": 10.0
-  },
-  {
-    "day": "2026-09-30",
-    "kind": "overall",
-    "key": "geopolitical_hybrid",
-    "event_count": 1,
-    "physical_events": 0,
-    "critical_infrastructure_events": 0,
-    "attributed_events": 0,
-    "military_response_events": 0,
-    "explicit_threat_events": 0,
-    "avg_event_score": 10.0,
-    "max_event_score": 10.0
   }
 ]
