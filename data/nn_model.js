@@ -173,38 +173,38 @@ window.__NN_DATA__ = {
     }
   },
   "current": {
-    "production_nn_score": 20.4,
-    "production_uncertainty_std": 14.67,
+    "production_nn_score": 20.7,
+    "production_uncertainty_std": 14.49,
     "historical_comparable_nn_score": 12.6,
     "historical_comparable_uncertainty_std": 10.77,
-    "rule_market_score": 24.1,
-    "hybrid_market_score": 22.6,
+    "rule_market_score": 25.1,
+    "hybrid_market_score": 23.3,
     "alert": false,
     "threshold_score": 73.0,
     "top_local_sensitivities": [
       {
         "feature": "coverage_pct",
-        "delta_score": -24.28
+        "delta_score": -24.91
       },
       {
         "feature": "leveraged_credit",
-        "delta_score": 5.06
+        "delta_score": 4.59
       },
       {
         "feature": "breadth",
-        "delta_score": 2.49
-      },
-      {
-        "feature": "hy_credit",
-        "delta_score": 2.02
+        "delta_score": 2.47
       },
       {
         "feature": "energy",
-        "delta_score": 1.86
+        "delta_score": 2.01
       },
       {
-        "feature": "ig_credit",
-        "delta_score": 0.74
+        "feature": "hy_credit",
+        "delta_score": 2.0
+      },
+      {
+        "feature": "raw_score",
+        "delta_score": 0.83
       }
     ]
   },
