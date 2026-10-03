@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "as_of": "2026-10-02T17:27:00Z",
+  "as_of": "2026-10-03T04:00:00Z",
   "window_days": 90,
   "geopolitical_escalation_index": 72.0,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
@@ -13,13 +13,13 @@
     "thirty_day_momentum": 100.0
   },
   "counts": {
-    "events": 74,
-    "recent_30d_events": 46,
+    "events": 73,
+    "recent_30d_events": 45,
     "previous_30d_events": 17,
     "physical_events": 10,
     "critical_infrastructure_events": 16,
     "reported_attribution_events": 1,
-    "unattributed_events": 70,
+    "unattributed_events": 69,
     "disputed_attribution_records": 0,
     "suspected_attribution_records": 4,
     "military_response_events": 2,
@@ -30,7 +30,7 @@
       "actor": "Russia",
       "event_count": 1,
       "first_seen": "2026-09-06T01:40:00Z",
-      "last_seen": "2026-10-02T17:27:00Z",
+      "last_seen": "2026-10-03T04:00:00Z",
       "max_event_score": 46.0,
       "modalities": [
         "drone_incursion",
