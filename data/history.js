@@ -334,5 +334,33 @@ window.__RISK_HISTORY__ = [
     "cpff": 0.19,
     "italy_bund_bps": 80.59799999999998,
     "wti": 96.16
+  },
+  {
+    "date": "2026-10-05",
+    "score": 33.3,
+    "raw_score": 33.3,
+    "market_score": 26.0,
+    "level": "WATCH",
+    "stage": 2,
+    "coverage_pct": 100.0,
+    "market_coverage_pct": 100.0,
+    "breadth": 11.1,
+    "synchronization_bonus": 0.0,
+    "pillars": {
+      "Broad Credit": 41.8,
+      "Funding / Liquidity": 8.7,
+      "Banking": 43.8,
+      "AI / Private Credit": 63.4,
+      "Europe / Energy": 16.7
+    },
+    "hy_oas": 3.24,
+    "ig_oas": 0.86,
+    "ccc_oas": 12.15,
+    "stlfsi": -0.8074,
+    "rates_vol": 86.00887347122656,
+    "sofr_iorb_bps": -2.9999999999999805,
+    "cpff": 0.28,
+    "italy_bund_bps": 80.59799999999998,
+    "wti": 96.16
   }
 ];

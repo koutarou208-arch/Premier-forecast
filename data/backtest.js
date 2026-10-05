@@ -31,7 +31,7 @@ window.__BACKTEST_DATA__ = {
     "observations": 1954
   },
   "current": {
-    "production_market_score": 25.1,
+    "production_market_score": 26.0,
     "historical_comparable_score": 11.3,
     "percentile_all_history": 35.1,
     "percentile_outside_labeled_windows": 55.7
