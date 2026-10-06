@@ -1,14 +1,14 @@
 window.__RISK_DATA__ = {
   "version": 6,
-  "updated_at": "2026-10-05T02:08:43.484971Z",
-  "score": 33.3,
-  "raw_score": 33.3,
-  "market_score": 26.0,
-  "market_raw_score": 26.0,
+  "updated_at": "2026-10-06T03:08:56.533663Z",
+  "score": 31.3,
+  "raw_score": 31.3,
+  "market_score": 23.6,
+  "market_raw_score": 23.6,
   "market_coverage_pct": 100.0,
   "synchronization_bonus": 0.0,
   "level": "WATCH",
-  "summary": "WATCH: stress has begun to propagate into broad corporate credit.",
+  "summary": "WATCH: AI/private-credit stress remains mainly sectoral; broad credit contagion is not yet confirmed.",
   "coverage_pct": 100.0,
   "breadth": {
     "score": 11.1,
@@ -17,9 +17,9 @@ window.__RISK_DATA__ = {
     "severe": 1
   },
   "transmission": {
-    "stage": 2,
-    "label": "CREDIT TRANSMISSION",
-    "note": "Stress has moved beyond a single sector into broad and leveraged corporate credit."
+    "stage": 1,
+    "label": "SECTOR REPRICING",
+    "note": "AI/private-credit or banking channels are stressed, but broad contagion is not confirmed."
   },
   "flags": [
     {
@@ -34,11 +34,11 @@ window.__RISK_DATA__ = {
   "pillars": [
     {
       "name": "Broad Credit",
-      "score": 41.8
+      "score": 35.4
     },
     {
       "name": "Funding / Liquidity",
-      "score": 8.7
+      "score": 10.1
     },
     {
       "name": "Banking",
@@ -111,20 +111,20 @@ window.__RISK_DATA__ = {
     "v6_neural": "separate neural ensemble is trained on historical-comparable channel scores; deterministic Stage remains authoritative"
   },
   "diagnostics": {
-    "us10y": 5.24,
-    "us2y": 4.78,
-    "curve_2s10s_bps": 46.0,
-    "vix": 16.39,
-    "realized_10y_vol_bps": 86.00887347122656,
+    "us10y": 5.28,
+    "us2y": 4.83,
+    "curve_2s10s_bps": 45.000000000000014,
+    "vix": 15.31,
+    "realized_10y_vol_bps": 84.70363193605029,
     "move_manual": null,
     "italy_bund_bps": 80.59799999999998,
     "wti": 96.16,
     "gas": 3.18,
-    "sofr": 3.87,
+    "sofr": 3.88,
     "iorb": 3.9,
-    "sofr_iorb_bps": -2.9999999999999805,
+    "sofr_iorb_bps": -2.0000000000000018,
     "cpff": 0.28,
-    "ccc_oas": 12.15,
+    "ccc_oas": 12.02,
     "cdx_hy_bps": null,
     "clo_aaa_bps": null,
     "clo_bbb_bps": null,
@@ -136,73 +136,73 @@ window.__RISK_DATA__ = {
     {
       "id": "ig_credit",
       "name": "US IG Corporate OAS",
-      "score": 23.0,
-      "value": "0.86%",
+      "score": 17.5,
+      "value": "0.85%",
       "source": "FRED BAMLC0A0CM",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-02",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
       "note": "45% absolute level + 30% deviation from ~5y history + 25% 5/20-observation deterioration speed.",
       "components": {
         "level": 0.0,
         "deviation": 0.0,
-        "velocity": 91.9
+        "velocity": 70.0
       },
       "stats": {
-        "percentile": 53.1,
-        "robust_z": 0.16,
-        "delta_5": 0.07,
-        "delta_20": 0.05,
-        "velocity_pct_5": 97.6,
-        "velocity_pct_20": 84.4
+        "percentile": 51.7,
+        "robust_z": 0.1,
+        "delta_5": 0.04,
+        "delta_20": 0.04,
+        "velocity_pct_5": 91.0,
+        "velocity_pct_20": 80.8
       },
       "quality": {}
     },
     {
       "id": "hy_credit",
       "name": "US High Yield OAS",
-      "score": 32.7,
-      "value": "3.24%",
+      "score": 20.6,
+      "value": "3.10%",
       "source": "FRED BAMLH0A0HYM2",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-02",
       "weight": 14,
       "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
       "note": "Core contagion channel. Fast widening can score high even before the absolute OAS reaches crisis thresholds.",
       "components": {
         "level": 0.0,
-        "deviation": 29.0,
-        "velocity": 96.2
+        "deviation": 0.0,
+        "velocity": 82.5
       },
       "stats": {
-        "percentile": 75.2,
-        "robust_z": 0.67,
-        "delta_5": 0.44,
-        "delta_20": 0.59,
-        "velocity_pct_5": 98.8,
-        "velocity_pct_20": 97.4
+        "percentile": 56.8,
+        "robust_z": 0.25,
+        "delta_5": 0.17,
+        "delta_20": 0.42,
+        "velocity_pct_5": 91.9,
+        "velocity_pct_20": 94.8
       },
       "quality": {}
     },
     {
       "id": "leveraged_credit",
       "name": "Leveraged / Structured Credit",
-      "score": 69.6,
-      "value": "CCC OAS 12.15%",
+      "score": 68.1,
+      "value": "CCC OAS 12.02%",
       "source": "FRED CCC OAS + optional CDX/CLO",
       "mode": "AUTO/OVERRIDE",
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-02",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/series/BAMLH0A3HYC",
       "note": "CCC OAS is the automatic leveraged-credit proxy. Optional CDX HY and CLO AAA/BBB spreads can override when they show more stress.",
       "components": {
-        "level": 33.9,
+        "level": 33.4,
         "deviation": 100.0,
-        "velocity": 97.4
+        "velocity": 92.3
       },
       "stats": {
-        "ccc_oas": 12.15,
+        "ccc_oas": 12.02,
         "cdx_hy_bps": null,
         "clo_aaa_bps": null,
         "clo_bbb_bps": null
@@ -238,49 +238,49 @@ window.__RISK_DATA__ = {
     {
       "id": "rates_liquidity",
       "name": "Treasury Vol / Liquidity",
-      "score": 7.7,
-      "value": "RV20 86.01 bp / VIX 16.39",
+      "score": 8.0,
+      "value": "RV20 84.70 bp / VIX 15.31",
       "source": "FRED DGS10 + VIXCLS",
       "mode": "AUTO/HYBRID",
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-02",
       "weight": 8,
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "note": "Uses the strongest signal from 10Y realized yield volatility, VIX, and optional MOVE. Missing inputs are not treated as zero.",
       "components": {
-        "level": 6.7,
+        "level": 5.2,
         "deviation": 0.0,
-        "velocity": 18.7
+        "velocity": 22.4
       },
       "stats": {
-        "rv": 86.00887347122656,
+        "rv": 84.70363193605029,
         "move": null,
-        "vix": 16.39
+        "vix": 15.31
       },
       "quality": {}
     },
     {
       "id": "funding_market",
       "name": "Repo / Funding Market",
-      "score": 18.3,
-      "value": "-3.0 bp",
+      "score": 22.3,
+      "value": "-2.0 bp",
       "source": "FRED SOFR - IORB",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-02",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/graph/?id=SOFR,IORB",
       "note": "Positive SOFR-IORB pressure is monitored against absolute thresholds, its own distribution and deterioration velocity.",
       "components": {
         "level": 0.0,
-        "deviation": 60.9,
+        "deviation": 74.4,
         "velocity": 0.0
       },
       "stats": {
-        "percentile": 80.1,
-        "robust_z": 2.02,
-        "delta_5": -1.0,
+        "percentile": 82.9,
+        "robust_z": 2.36,
+        "delta_5": -2.0,
         "delta_20": -3.0,
-        "velocity_pct_5": 34.8,
-        "velocity_pct_20": 13.0
+        "velocity_pct_5": 19.1,
+        "velocity_pct_20": 11.8
       },
       "quality": {}
     },
@@ -374,7 +374,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 17,
+        "age_days": 18,
         "freshness_multiplier": 1.0
       },
       "quality": {
@@ -401,7 +401,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 17,
+        "age_days": 18,
         "freshness_multiplier": 1.0,
         "bdc_discount_pct": null,
         "bdc_score": null
@@ -430,7 +430,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "medium",
         "confidence_multiplier": 0.85,
-        "age_days": 17,
+        "age_days": 18,
         "freshness_multiplier": 1.0
       },
       "quality": {
