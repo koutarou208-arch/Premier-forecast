@@ -1,27 +1,27 @@
 {
   "version": 1,
-  "as_of": "2026-10-05T13:15:16Z",
+  "as_of": "2026-10-07T01:41:24Z",
   "window_days": 90,
-  "geopolitical_escalation_index": 71.7,
+  "geopolitical_escalation_index": 73.2,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
   "calibration_status": "experimental_unvalidated",
   "components": {
-    "top_quartile_event_severity": 36.9,
+    "top_quartile_event_severity": 35.5,
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
-    "response_intensity": 37.5,
+    "response_intensity": 50.0,
     "thirty_day_momentum": 100.0
   },
   "counts": {
-    "events": 75,
-    "recent_30d_events": 43,
+    "events": 68,
+    "recent_30d_events": 36,
     "previous_30d_events": 18,
-    "physical_events": 9,
-    "critical_infrastructure_events": 15,
+    "physical_events": 5,
+    "critical_infrastructure_events": 14,
     "reported_attribution_events": 1,
-    "unattributed_events": 71,
+    "unattributed_events": 65,
     "disputed_attribution_records": 0,
-    "suspected_attribution_records": 4,
+    "suspected_attribution_records": 3,
     "military_response_events": 2,
     "explicit_threat_events": 3
   },
@@ -29,21 +29,30 @@
     {
       "actor": "Russia",
       "event_count": 1,
-      "first_seen": "2026-09-06T01:40:00Z",
-      "last_seen": "2026-10-03T04:00:00Z",
-      "max_event_score": 46.0,
+      "first_seen": "2026-08-07T07:00:00Z",
+      "last_seen": "2026-10-05T13:15:16Z",
+      "max_event_score": 56.0,
       "modalities": [
+        "airspace_violation",
+        "cyber_attack",
         "drone_incursion",
+        "explosive_drone",
         "military_threat",
+        "missile_incursion",
         "sabotage"
       ],
       "targets": [
         "critical_infrastructure",
+        "energy",
         "government",
+        "military_facility",
+        "transport",
         "undersea_infrastructure"
       ],
       "responses": [
-        "infrastructure_protection"
+        "collective_statement",
+        "investigation",
+        "sanctions"
       ]
     }
   ],
