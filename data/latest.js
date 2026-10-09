@@ -1,10 +1,10 @@
 window.__RISK_DATA__ = {
   "version": 6,
-  "updated_at": "2026-10-08T02:46:10.418005Z",
-  "score": 30.6,
-  "raw_score": 30.6,
-  "market_score": 22.7,
-  "market_raw_score": 22.7,
+  "updated_at": "2026-10-09T02:59:30.747206Z",
+  "score": 28.7,
+  "raw_score": 28.7,
+  "market_score": 20.4,
+  "market_raw_score": 20.4,
   "market_coverage_pct": 100.0,
   "synchronization_bonus": 0.0,
   "level": "WATCH",
@@ -34,11 +34,11 @@ window.__RISK_DATA__ = {
   "pillars": [
     {
       "name": "Broad Credit",
-      "score": 29.5
+      "score": 29.6
     },
     {
       "name": "Funding / Liquidity",
-      "score": 23.8
+      "score": 17.4
     },
     {
       "name": "Banking",
@@ -111,20 +111,20 @@ window.__RISK_DATA__ = {
     "v6_neural": "separate neural ensemble is trained on historical-comparable channel scores; deterministic Stage remains authoritative"
   },
   "diagnostics": {
-    "us10y": 5.27,
-    "us2y": 4.79,
-    "curve_2s10s_bps": 47.99999999999996,
-    "vix": 15.01,
-    "realized_10y_vol_bps": 87.74922401816131,
+    "us10y": 5.28,
+    "us2y": 4.77,
+    "curve_2s10s_bps": 51.00000000000007,
+    "vix": 15.08,
+    "realized_10y_vol_bps": 87.8398662639188,
     "move_manual": null,
     "italy_bund_bps": 80.59799999999998,
     "wti": 96.24,
     "gas": 3.03,
-    "sofr": 3.9,
+    "sofr": 3.88,
     "iorb": 3.9,
-    "sofr_iorb_bps": 0.0,
+    "sofr_iorb_bps": -2.0000000000000018,
     "cpff": 0.19,
-    "ccc_oas": 12.14,
+    "ccc_oas": 12.29,
     "cdx_hy_bps": null,
     "clo_aaa_bps": null,
     "clo_bbb_bps": null,
@@ -136,73 +136,73 @@ window.__RISK_DATA__ = {
     {
       "id": "ig_credit",
       "name": "US IG Corporate OAS",
-      "score": 0.5,
-      "value": "0.83%",
+      "score": 0.0,
+      "value": "0.82%",
       "source": "FRED BAMLC0A0CM",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-10-06",
+      "as_of": "2026-10-07",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
       "note": "45% absolute level + 30% deviation from ~5y history + 25% 5/20-observation deterioration speed.",
       "components": {
         "level": 0.0,
         "deviation": 0.0,
-        "velocity": 2.1
+        "velocity": 0.0
       },
       "stats": {
-        "percentile": 46.6,
-        "robust_z": -0.1,
-        "delta_5": -0.01,
-        "delta_20": 0.02,
-        "velocity_pct_5": 49.7,
-        "velocity_pct_20": 70.6
+        "percentile": 43.2,
+        "robust_z": -0.19,
+        "delta_5": -0.02,
+        "delta_20": 0.01,
+        "velocity_pct_5": 33.9,
+        "velocity_pct_20": 65.3
       },
       "quality": {}
     },
     {
       "id": "hy_credit",
       "name": "US High Yield OAS",
-      "score": 19.4,
-      "value": "3.03%",
+      "score": 19.8,
+      "value": "3.09%",
       "source": "FRED BAMLH0A0HYM2",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-10-06",
+      "as_of": "2026-10-07",
       "weight": 14,
       "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
       "note": "Core contagion channel. Fast widening can score high even before the absolute OAS reaches crisis thresholds.",
       "components": {
         "level": 0.0,
         "deviation": 0.0,
-        "velocity": 77.7
+        "velocity": 79.1
       },
       "stats": {
-        "percentile": 50.6,
-        "robust_z": 0.03,
-        "delta_5": -0.05,
-        "delta_20": 0.36,
-        "velocity_pct_5": 38.4,
-        "velocity_pct_20": 93.3
+        "percentile": 55.4,
+        "robust_z": 0.21,
+        "delta_5": -0.03,
+        "delta_20": 0.38,
+        "velocity_pct_5": 45.9,
+        "velocity_pct_20": 93.7
       },
       "quality": {}
     },
     {
       "id": "leveraged_credit",
       "name": "Leveraged / Structured Credit",
-      "score": 68.5,
-      "value": "CCC OAS 12.14%",
+      "score": 69.1,
+      "value": "CCC OAS 12.29%",
       "source": "FRED CCC OAS + optional CDX/CLO",
       "mode": "AUTO/OVERRIDE",
-      "as_of": "2026-10-06",
+      "as_of": "2026-10-07",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/series/BAMLH0A3HYC",
       "note": "CCC OAS is the automatic leveraged-credit proxy. Optional CDX HY and CLO AAA/BBB spreads can override when they show more stress.",
       "components": {
-        "level": 33.9,
+        "level": 34.5,
         "deviation": 100.0,
-        "velocity": 93.0
+        "velocity": 94.3
       },
       "stats": {
-        "ccc_oas": 12.14,
+        "ccc_oas": 12.29,
         "cdx_hy_bps": null,
         "clo_aaa_bps": null,
         "clo_bbb_bps": null
@@ -238,49 +238,49 @@ window.__RISK_DATA__ = {
     {
       "id": "rates_liquidity",
       "name": "Treasury Vol / Liquidity",
-      "score": 15.2,
-      "value": "RV20 87.75 bp / VIX 15.01",
+      "score": 15.3,
+      "value": "RV20 87.84 bp / VIX 15.08",
       "source": "FRED DGS10 + VIXCLS",
       "mode": "AUTO/HYBRID",
-      "as_of": "2026-10-06",
+      "as_of": "2026-10-07",
       "weight": 8,
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "note": "Uses the strongest signal from 10Y realized yield volatility, VIX, and optional MOVE. Missing inputs are not treated as zero.",
       "components": {
-        "level": 8.6,
+        "level": 8.7,
         "deviation": 0.0,
-        "velocity": 45.2
+        "velocity": 45.5
       },
       "stats": {
-        "rv": 87.74922401816131,
+        "rv": 87.8398662639188,
         "move": null,
-        "vix": 15.01
+        "vix": 15.08
       },
       "quality": {}
     },
     {
       "id": "funding_market",
       "name": "Repo / Funding Market",
-      "score": 41.4,
-      "value": "0.0 bp",
+      "score": 22.3,
+      "value": "-2.0 bp",
       "source": "FRED SOFR - IORB",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-10-06",
+      "as_of": "2026-10-07",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/graph/?id=SOFR,IORB",
       "note": "Positive SOFR-IORB pressure is monitored against absolute thresholds, its own distribution and deterioration velocity.",
       "components": {
         "level": 0.0,
-        "deviation": 100.0,
-        "velocity": 45.7
+        "deviation": 74.4,
+        "velocity": 0.0
       },
       "stats": {
-        "percentile": 90.7,
-        "robust_z": 3.04,
-        "delta_5": 2.0,
-        "delta_20": 1.0,
-        "velocity_pct_5": 83.7,
-        "velocity_pct_20": 71.8
+        "percentile": 82.8,
+        "robust_z": 2.36,
+        "delta_5": -2.0,
+        "delta_20": -1.0,
+        "velocity_pct_5": 19.1,
+        "velocity_pct_20": 23.4
       },
       "quality": {}
     },
@@ -374,7 +374,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 20,
+        "age_days": 21,
         "freshness_multiplier": 1.0
       },
       "quality": {
@@ -401,7 +401,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 20,
+        "age_days": 21,
         "freshness_multiplier": 1.0,
         "bdc_discount_pct": null,
         "bdc_score": null
@@ -430,7 +430,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "medium",
         "confidence_multiplier": 0.85,
-        "age_days": 20,
+        "age_days": 21,
         "freshness_multiplier": 1.0
       },
       "quality": {
