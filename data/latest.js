@@ -1,6 +1,6 @@
 window.__RISK_DATA__ = {
   "version": 6,
-  "updated_at": "2026-10-12T02:30:45.536945Z",
+  "updated_at": "2026-10-13T03:40:25.387163Z",
   "score": 27.6,
   "raw_score": 27.6,
   "market_score": 19.1,
@@ -114,7 +114,7 @@ window.__RISK_DATA__ = {
     "us10y": 5.22,
     "us2y": 4.75,
     "curve_2s10s_bps": 46.99999999999997,
-    "vix": 15.41,
+    "vix": 14.84,
     "realized_10y_vol_bps": 84.51552333276126,
     "move_manual": null,
     "italy_bund_bps": 80.59799999999998,
@@ -239,7 +239,7 @@ window.__RISK_DATA__ = {
       "id": "rates_liquidity",
       "name": "Treasury Vol / Liquidity",
       "score": 2.7,
-      "value": "RV20 84.52 bp / VIX 15.41",
+      "value": "RV20 84.52 bp / VIX 14.84",
       "source": "FRED DGS10 + VIXCLS",
       "mode": "AUTO/HYBRID",
       "as_of": "2026-10-08",
@@ -254,7 +254,7 @@ window.__RISK_DATA__ = {
       "stats": {
         "rv": 84.51552333276126,
         "move": null,
-        "vix": 15.41
+        "vix": 14.84
       },
       "quality": {}
     },
@@ -374,7 +374,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 24,
+        "age_days": 25,
         "freshness_multiplier": 1.0
       },
       "quality": {
@@ -401,7 +401,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 24,
+        "age_days": 25,
         "freshness_multiplier": 1.0,
         "bdc_discount_pct": null,
         "bdc_score": null
@@ -430,7 +430,7 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "medium",
         "confidence_multiplier": 0.85,
-        "age_days": 24,
+        "age_days": 25,
         "freshness_multiplier": 1.0
       },
       "quality": {
