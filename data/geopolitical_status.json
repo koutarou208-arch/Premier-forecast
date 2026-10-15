@@ -2,24 +2,24 @@
   "version": 1,
   "as_of": "2026-10-15T06:45:11Z",
   "window_days": 90,
-  "geopolitical_escalation_index": 72.6,
+  "geopolitical_escalation_index": 74.8,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
   "calibration_status": "experimental_unvalidated",
   "components": {
-    "top_quartile_event_severity": 33.8,
+    "top_quartile_event_severity": 34.7,
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
-    "response_intensity": 50.0,
+    "response_intensity": 62.5,
     "thirty_day_momentum": 100.0
   },
   "counts": {
-    "events": 74,
-    "recent_30d_events": 43,
-    "previous_30d_events": 21,
-    "physical_events": 5,
-    "critical_infrastructure_events": 14,
+    "events": 79,
+    "recent_30d_events": 47,
+    "previous_30d_events": 22,
+    "physical_events": 6,
+    "critical_infrastructure_events": 16,
     "reported_attribution_events": 1,
-    "unattributed_events": 71,
+    "unattributed_events": 75,
     "disputed_attribution_records": 0,
     "suspected_attribution_records": 3,
     "military_response_events": 3,
@@ -30,7 +30,7 @@
       "actor": "Russia",
       "event_count": 1,
       "first_seen": "2026-08-07T07:00:00Z",
-      "last_seen": "2026-10-15T06:45:11Z",
+      "last_seen": "2026-10-07T07:00:00Z",
       "max_event_score": 56.0,
       "modalities": [
         "airspace_violation",
@@ -52,7 +52,6 @@
       "responses": [
         "collective_statement",
         "investigation",
-        "military_alert",
         "sanctions"
       ]
     }
