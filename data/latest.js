@@ -1,10 +1,10 @@
 window.__RISK_DATA__ = {
   "version": 6,
-  "updated_at": "2026-10-16T01:31:32.472045Z",
-  "score": 32.5,
-  "raw_score": 32.5,
-  "market_score": 25.1,
-  "market_raw_score": 25.1,
+  "updated_at": "2026-10-19T01:25:49.488373Z",
+  "score": 32.4,
+  "raw_score": 32.4,
+  "market_score": 27.2,
+  "market_raw_score": 27.2,
   "market_coverage_pct": 100.0,
   "synchronization_bonus": 0.0,
   "level": "WATCH",
@@ -34,19 +34,19 @@ window.__RISK_DATA__ = {
   "pillars": [
     {
       "name": "Broad Credit",
-      "score": 39.4
+      "score": 38.6
     },
     {
       "name": "Funding / Liquidity",
-      "score": 10.8
+      "score": 18.1
     },
     {
       "name": "Banking",
-      "score": 35.2
+      "score": 31.0
     },
     {
       "name": "AI / Private Credit",
-      "score": 63.4
+      "score": 53.9
     },
     {
       "name": "Europe / Energy",
@@ -111,20 +111,20 @@ window.__RISK_DATA__ = {
     "v6_neural": "separate neural ensemble is trained on historical-comparable channel scores; deterministic Stage remains authoritative"
   },
   "diagnostics": {
-    "us10y": 5.19,
-    "us2y": 4.82,
-    "curve_2s10s_bps": 37.000000000000014,
-    "vix": 16.87,
-    "realized_10y_vol_bps": 86.40888112249858,
+    "us10y": 5.1,
+    "us2y": 4.77,
+    "curve_2s10s_bps": 33.00000000000001,
+    "vix": 16.46,
+    "realized_10y_vol_bps": 93.34469229124586,
     "move_manual": null,
     "italy_bund_bps": 80.02857142857103,
     "wti": 101.91,
     "gas": 3.22,
-    "sofr": 3.88,
+    "sofr": 3.89,
     "iorb": 3.9,
-    "sofr_iorb_bps": -2.0000000000000018,
+    "sofr_iorb_bps": -0.9999999999999787,
     "cpff": 0.2,
-    "ccc_oas": 12.82,
+    "ccc_oas": 12.78,
     "cdx_hy_bps": null,
     "clo_aaa_bps": null,
     "clo_bbb_bps": null,
@@ -140,7 +140,7 @@ window.__RISK_DATA__ = {
       "value": "0.84%",
       "source": "FRED BAMLC0A0CM",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-10-14",
+      "as_of": "2026-10-15",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
       "note": "45% absolute level + 30% deviation from ~5y history + 25% 5/20-observation deterioration speed.",
@@ -150,11 +150,11 @@ window.__RISK_DATA__ = {
         "velocity": 58.1
       },
       "stats": {
-        "percentile": 50.9,
+        "percentile": 51.0,
         "robust_z": 0.0,
         "delta_5": 0.02,
         "delta_20": 0.06,
-        "velocity_pct_5": 82.7,
+        "velocity_pct_5": 82.8,
         "velocity_pct_20": 87.4
       },
       "quality": {}
@@ -162,47 +162,47 @@ window.__RISK_DATA__ = {
     {
       "id": "hy_credit",
       "name": "US High Yield OAS",
-      "score": 32.9,
-      "value": "3.25%",
+      "score": 31.0,
+      "value": "3.23%",
       "source": "FRED BAMLH0A0HYM2",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-10-14",
+      "as_of": "2026-10-15",
       "weight": 14,
       "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
       "note": "Core contagion channel. Fast widening can score high even before the absolute OAS reaches crisis thresholds.",
       "components": {
         "level": 0.0,
-        "deviation": 35.2,
-        "velocity": 89.5
+        "deviation": 29.8,
+        "velocity": 88.2
       },
       "stats": {
-        "percentile": 77.3,
-        "robust_z": 0.71,
-        "delta_5": 0.16,
-        "delta_20": 0.55,
-        "velocity_pct_5": 91.4,
-        "velocity_pct_20": 96.9
+        "percentile": 75.4,
+        "robust_z": 0.64,
+        "delta_5": 0.08,
+        "delta_20": 0.53,
+        "velocity_pct_5": 79.9,
+        "velocity_pct_20": 96.5
       },
       "quality": {}
     },
     {
       "id": "leveraged_credit",
       "name": "Leveraged / Structured Credit",
-      "score": 70.7,
-      "value": "CCC OAS 12.82%",
+      "score": 70.4,
+      "value": "CCC OAS 12.78%",
       "source": "FRED CCC OAS + optional CDX/CLO",
       "mode": "AUTO/OVERRIDE",
-      "as_of": "2026-10-14",
+      "as_of": "2026-10-15",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/series/BAMLH0A3HYC",
       "note": "CCC OAS is the automatic leveraged-credit proxy. Optional CDX HY and CLO AAA/BBB spreads can override when they show more stress.",
       "components": {
-        "level": 36.7,
+        "level": 36.6,
         "deviation": 100.0,
-        "velocity": 96.5
+        "velocity": 95.6
       },
       "stats": {
-        "ccc_oas": 12.82,
+        "ccc_oas": 12.78,
         "cdx_hy_bps": null,
         "clo_aaa_bps": null,
         "clo_bbb_bps": null
@@ -238,49 +238,49 @@ window.__RISK_DATA__ = {
     {
       "id": "rates_liquidity",
       "name": "Treasury Vol / Liquidity",
-      "score": 10.1,
-      "value": "RV20 86.41 bp / VIX 16.87",
+      "score": 18.2,
+      "value": "RV20 93.34 bp / VIX 16.46",
       "source": "FRED DGS10 + VIXCLS",
       "mode": "AUTO/HYBRID",
-      "as_of": "2026-10-14",
+      "as_of": "2026-10-15",
       "weight": 8,
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "note": "Uses the strongest signal from 10Y realized yield volatility, VIX, and optional MOVE. Missing inputs are not treated as zero.",
       "components": {
-        "level": 7.1,
+        "level": 14.8,
         "deviation": 0.0,
-        "velocity": 27.7
+        "velocity": 46.0
       },
       "stats": {
-        "rv": 86.40888112249858,
+        "rv": 93.34469229124586,
         "move": null,
-        "vix": 16.87
+        "vix": 16.46
       },
       "quality": {}
     },
     {
       "id": "funding_market",
       "name": "Repo / Funding Market",
-      "score": 22.3,
-      "value": "-2.0 bp",
+      "score": 36.1,
+      "value": "-1.0 bp",
       "source": "FRED SOFR - IORB",
       "mode": "AUTO-DYNAMIC",
-      "as_of": "2026-10-14",
+      "as_of": "2026-10-15",
       "weight": 10,
       "source_url": "https://fred.stlouisfed.org/graph/?id=SOFR,IORB",
       "note": "Positive SOFR-IORB pressure is monitored against absolute thresholds, its own distribution and deterioration velocity.",
       "components": {
         "level": 0.0,
-        "deviation": 74.4,
-        "velocity": 0.0
+        "deviation": 87.9,
+        "velocity": 38.8
       },
       "stats": {
-        "percentile": 82.7,
-        "robust_z": 2.36,
-        "delta_5": -2.0,
-        "delta_20": -1.0,
-        "velocity_pct_5": 19.2,
-        "velocity_pct_20": 23.4
+        "percentile": 86.6,
+        "robust_z": 2.7,
+        "delta_5": 1.0,
+        "delta_20": 2.0,
+        "velocity_pct_5": 76.8,
+        "velocity_pct_20": 81.7
       },
       "quality": {}
     },
@@ -357,7 +357,7 @@ window.__RISK_DATA__ = {
     {
       "id": "data_center",
       "name": "AI Data-center Financing",
-      "score": 66.7,
+      "score": 56.7,
       "value": "Event score",
       "source": "Reuters / deal evidence",
       "mode": "EVENT-DECAY",
@@ -366,7 +366,7 @@ window.__RISK_DATA__ = {
       "source_url": "https://www.reuters.com/business/finance/oracles-18-billion-data-center-debt-under-pressure-ft-reports-2026-09-18/",
       "note": "Material repricing: $18bn of Project Jupiter loans were quoted around 89-91 cents and broader syndication reportedly stalled. Treat as sector stress, not yet a system-wide freeze.",
       "components": {
-        "level": 66.7,
+        "level": 56.7,
         "deviation": null,
         "velocity": null
       },
@@ -374,8 +374,8 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 28,
-        "freshness_multiplier": 1.0
+        "age_days": 31,
+        "freshness_multiplier": 0.85
       },
       "quality": {
         "confidence": "high"
@@ -384,7 +384,7 @@ window.__RISK_DATA__ = {
     {
       "id": "private_credit",
       "name": "Private-credit Liquidity",
-      "score": 66.7,
+      "score": 56.7,
       "value": "Event score",
       "source": "Fund disclosures / optional BDC NAV discount",
       "mode": "EVENT/MARKET",
@@ -393,7 +393,7 @@ window.__RISK_DATA__ = {
       "source_url": "https://www.reuters.com/markets/wealth/morgan-stanley-private-credit-fund-redemptions-remain-elevated-third-quarter-2026-09-18/",
       "note": "Morgan Stanley North Haven PIF saw 11.4% redemption requests versus a 5% repurchase limit. Elevated liquidity pressure, though the backlog may be stabilizing.",
       "components": {
-        "level": 66.7,
+        "level": 56.7,
         "deviation": null,
         "velocity": null
       },
@@ -401,8 +401,8 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "high",
         "confidence_multiplier": 1.0,
-        "age_days": 28,
-        "freshness_multiplier": 1.0,
+        "age_days": 31,
+        "freshness_multiplier": 0.85,
         "bdc_discount_pct": null,
         "bdc_score": null
       },
@@ -413,7 +413,7 @@ window.__RISK_DATA__ = {
     {
       "id": "bank_ai",
       "name": "Bank AI-credit Inventory",
-      "score": 56.7,
+      "score": 48.2,
       "value": "Event score",
       "source": "Syndication / lender evidence",
       "mode": "EVENT-DECAY",
@@ -422,7 +422,7 @@ window.__RISK_DATA__ = {
       "source_url": "https://www.reuters.com/business/finance/oracles-18-billion-data-center-debt-under-pressure-ft-reports-2026-09-18/",
       "note": "Banks reportedly retained more Oracle-linked project debt than planned after distribution weakened. This overlaps with the data-center event; v3 limits double counting through explicit channel weights and requires broad-market transmission for higher stages.",
       "components": {
-        "level": 56.7,
+        "level": 48.2,
         "deviation": null,
         "velocity": null
       },
@@ -430,8 +430,8 @@ window.__RISK_DATA__ = {
         "raw_score_0_3": 2,
         "confidence": "medium",
         "confidence_multiplier": 0.85,
-        "age_days": 28,
-        "freshness_multiplier": 1.0
+        "age_days": 31,
+        "freshness_multiplier": 0.85
       },
       "quality": {
         "confidence": "medium"
