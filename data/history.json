@@ -670,5 +670,33 @@
     "cpff": 0.25,
     "italy_bund_bps": 80.02857142857103,
     "wti": 101.91
+  },
+  {
+    "date": "2026-10-21",
+    "score": 33.6,
+    "raw_score": 33.6,
+    "market_score": 28.7,
+    "level": "WATCH",
+    "stage": 2,
+    "coverage_pct": 100.0,
+    "market_coverage_pct": 100.0,
+    "breadth": 11.1,
+    "synchronization_bonus": 0.0,
+    "pillars": {
+      "Broad Credit": 42.8,
+      "Funding / Liquidity": 14.5,
+      "Banking": 36.0,
+      "AI / Private Credit": 53.9,
+      "Europe / Energy": 21.8
+    },
+    "hy_oas": 3.29,
+    "ig_oas": 0.87,
+    "ccc_oas": 13.1,
+    "stlfsi": -0.7206,
+    "rates_vol": 88.47550954627907,
+    "sofr_iorb_bps": -2.9999999999999805,
+    "cpff": 0.25,
+    "italy_bund_bps": 80.02857142857103,
+    "wti": 101.91
   }
 ]
