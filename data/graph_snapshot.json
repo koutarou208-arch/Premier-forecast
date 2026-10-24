@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-24T16:05:13.795951Z",
+  "generated_at": "2026-10-24T18:55:04.574615Z",
   "nodes": [
     {
       "id": "article:3c3016e36a3fb152b8eff9d9",
@@ -5430,6 +5430,15 @@
       }
     },
     {
+      "id": "event:evt_d813116261fad2d6",
+      "kind": "Event",
+      "label": "Russian threats prompt calls for tighter German security",
+      "meta": {
+        "geopolitical": true,
+        "geopolitical_event_score": 12.0
+      }
+    },
+    {
       "id": "day:2025-12-10",
       "kind": "Day",
       "label": "2025-12-10",
@@ -6081,6 +6090,15 @@
       "meta": {}
     },
     {
+      "id": "event:evt_dbac85b44bbdc74a",
+      "kind": "Event",
+      "label": "Everyone in UK 'must step up' to deter Russian threat of wider war, armed forces chief to warn",
+      "meta": {
+        "geopolitical": true,
+        "geopolitical_event_score": 12.0
+      }
+    },
+    {
       "id": "entity:news.sky.com",
       "kind": "Entity",
       "label": "news.sky.com",
@@ -6102,15 +6120,6 @@
       "meta": {
         "published_at": "2025-12-15T08:00:00Z",
         "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPaE5WRjBJbXhoWE1NZ21xQVE5eWtZbUVvQkxMeFJoVDlJUUJYb196SHU3UjhscHJMNUFCaFc0aXpTN1hQcko0Qm44UkR6Vng5VjhDRmRnTjlZcF9PSnJPV3hnYjAzazF1bk4xZTFjN1R2ajd2bi12OURTd1pHMV9DdTdpTWxNbmlGd3NBWjVPLTBrbFFENTdMNFBDWi1lRFNTRUwxRDNpX0xSTXItUUcwVzlEME11bGg3aDFYeTNmQ2lLV2J4UXc?oc=5"
-      }
-    },
-    {
-      "id": "event:evt_87b55dde614f4ae0",
-      "kind": "Event",
-      "label": "Everyone in UK 'must step up' to deter Russian threat of wider war, armed forces chief to warn",
-      "meta": {
-        "geopolitical": true,
-        "geopolitical_event_score": 12.0
       }
     },
     {
@@ -7288,6 +7297,15 @@
       "kind": "Source",
       "label": "TradingKey",
       "meta": {}
+    },
+    {
+      "id": "event:evt_1d49fe8b7e65a596",
+      "kind": "Event",
+      "label": "Private Credit Funding for AI Data Centers",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
     },
     {
       "id": "entity:TradingKey",
@@ -9598,15 +9616,6 @@
       "kind": "Source",
       "label": "PEI Private Equity",
       "meta": {}
-    },
-    {
-      "id": "event:evt_b9e5470d616560ee",
-      "kind": "Event",
-      "label": "Stressed out: How private equity is weathering higher-for-longer",
-      "meta": {
-        "geopolitical": false,
-        "geopolitical_event_score": null
-      }
     },
     {
       "id": "entity:PEI Private Equity",
@@ -12171,7 +12180,7 @@
       }
     },
     {
-      "id": "event:evt_eed6cc088d74021f",
+      "id": "event:evt_a684bf30def8060d",
       "kind": "Event",
       "label": "Private Credit Fears Deepen With UBS Warning of 15% Defaults",
       "meta": {
@@ -12186,6 +12195,15 @@
       "meta": {
         "published_at": "2026-02-25T08:00:00Z",
         "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPc0FYVmJoVjVOOC0xTHpKWDRKM3MyUXNZOFpkeWQ2VWMyVHRybWxCV0ZMYm5sZGpVWWZsdHM3QVF0VlNmY05nbEQ1cnpLRFZ1Sm1BRDNsemJCZmhxeVZPVGRxNmp5TktoT05hdUU5bG1aZzVSU0tkZUtUeWI4aDA3bkswSjRjSFNndVFsQmx1TW1zQWxPazkzb2Y1LU90X1RiYTN4TXZWZkFnVXp5OEg2WDBKaw?oc=5"
+      }
+    },
+    {
+      "id": "event:evt_a734e110b90b6324",
+      "kind": "Event",
+      "label": "Private Credit Fears Deepen With UBS Warning of 15% Defaults",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
       }
     },
     {
@@ -15381,6 +15399,15 @@
       }
     },
     {
+      "id": "event:evt_a4f3a53e8ef4c121",
+      "kind": "Event",
+      "label": "Moody's cuts rating on private credit fund run by KKR and Future Standard to junk as bad loans grow",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
       "id": "article:43dac66e8694ae7dc84ea04c",
       "kind": "Article",
       "label": "How does the current global oil crisis compare with the 1973 oil embargo? - Al Jazeera",
@@ -15885,6 +15912,15 @@
       }
     },
     {
+      "id": "event:evt_2e2ca86568d9850d",
+      "kind": "Event",
+      "label": "Davidson Kempner: Opportunistic credit could benefit from ‘capital structure reset’",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
       "id": "article:aba51193236922ab4cbe3a70",
       "kind": "Article",
       "label": "Bank Loans to NBFIs: Evidence of Specialization, Part I - philadelphiafed.org",
@@ -16218,15 +16254,6 @@
       "meta": {}
     },
     {
-      "id": "event:evt_dd02525819e6d5de",
-      "kind": "Event",
-      "label": "米国プライベートクレジットのリスクは高まるのか？ 足元はリーマン・ショックに近いとは言えない 野村證券・小髙貴久",
-      "meta": {
-        "geopolitical": false,
-        "geopolitical_event_score": null
-      }
-    },
-    {
       "id": "entity:野村證券",
       "kind": "Entity",
       "label": "野村證券",
@@ -16246,15 +16273,6 @@
       "kind": "Source",
       "label": "nomura.co.jp",
       "meta": {}
-    },
-    {
-      "id": "event:evt_9d0260bc1eec25e3",
-      "kind": "Event",
-      "label": "米国プライベートクレジットのリスクは高まるのか？ 足元はリーマン・ショックに近いとは言えない 野村證券・小髙貴久",
-      "meta": {
-        "geopolitical": false,
-        "geopolitical_event_score": null
-      }
     },
     {
       "id": "entity:nomura.co.jp",
@@ -17604,21 +17622,21 @@
       }
     },
     {
+      "id": "event:evt_37bf553903a8bc7b",
+      "kind": "Event",
+      "label": "プライベートクレジット市場の資金構造から、金融システム危機にはつながりにくいと考える理由 野村證券・小清水直和",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
       "id": "article:b7c802767e32ff348626627d",
       "kind": "Article",
       "label": "プライベートクレジット市場の資金構造から、金融システム危機にはつながりにくいと考える理由 野村證券・小清水直和 - nomura.co.jp",
       "meta": {
         "published_at": "2026-04-09T09:17:52Z",
         "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5GWTYwcTV6YlhVS0MwcXpuOXNsZ2M1TFJnSkFELVBlMzNxWjJRNFZ1aFRHUEwtTzluZnNNbE14VzBTNUdtOWY4MWpkLXBpSmZDaXJEZ1lpQ2kyV0d5NWg0?oc=5"
-      }
-    },
-    {
-      "id": "event:evt_7f5275aba675724a",
-      "kind": "Event",
-      "label": "プライベートクレジット市場の資金構造から、金融システム危機にはつながりにくいと考える理由 野村證券・小清水直和",
-      "meta": {
-        "geopolitical": false,
-        "geopolitical_event_score": null
       }
     },
     {
@@ -17823,6 +17841,15 @@
       "meta": {}
     },
     {
+      "id": "event:evt_ea217291b0ad4d47",
+      "kind": "Event",
+      "label": "プライベートクレジットが招く「第2のリーマンショック」の懸念とAIトレンドへの影",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
       "id": "day:2026-04-13",
       "kind": "Day",
       "label": "2026-04-13",
@@ -17871,6 +17898,15 @@
       "meta": {
         "published_at": "2026-04-13T07:00:00Z",
         "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWkJjcnBQc1REQ050N1VGSGF2RzNibmF6WUZmTHdVM0tTU2FkTWRBV3FFdnJFYWoyU29JX2owUnBHVlRqdnNkVjZxbjUxb05lOThRWEhxTWZkOWRuVUVhWlNTTGRkdzZfanBsalF6YW5OYjdvek5rTXBWb3dVUzBFSjFYejVLZUlzckQ3Q3lzNXJuY3BVM0oxVGc0LUdCLXJDSW1PZ2EyTWNCUkF0TUNOZQ?oc=5"
+      }
+    },
+    {
+      "id": "event:evt_f173364fb33b86cf",
+      "kind": "Event",
+      "label": "Italian bonds under strain as energy and politics bite",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
       }
     },
     {
@@ -22455,6 +22491,15 @@
       "meta": {}
     },
     {
+      "id": "article:284023df9c69efa541c78cf9",
+      "kind": "Article",
+      "label": "【マクロ戦略家が警鐘】グローバル金融システムに崩壊の危機、日本が「80%のデフレ津波」を引き起こす可能性 - BigGo ファイナンス",
+      "meta": {
+        "published_at": "2026-05-21T07:00:00Z",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE54NGhDbHRyWnI3RmNGTWxtNlpLUjhwWlNCemtEalNuNTJjOG1wRkZna1A0cExWWjRnNW1VN18yUmY5U0pRQjh3QWtEVHAyUzg0aUtrMElaRVBtdVFaN00w?oc=5"
+      }
+    },
+    {
       "id": "article:32128903ba50e668f0718f03",
       "kind": "Article",
       "label": "APRA warns super funds’ bank holdings could spark systemic crisis - capitalbrief.com",
@@ -22468,15 +22513,6 @@
       "kind": "Source",
       "label": "capitalbrief.com",
       "meta": {}
-    },
-    {
-      "id": "event:evt_2b509c5fd85fc0a5",
-      "kind": "Event",
-      "label": "APRA warns super funds’ bank holdings could spark systemic crisis",
-      "meta": {
-        "geopolitical": false,
-        "geopolitical_event_score": null
-      }
     },
     {
       "id": "entity:capitalbrief.com",
@@ -28572,7 +28608,7 @@
       "meta": {}
     },
     {
-      "id": "event:evt_91a4e41a20759223",
+      "id": "event:evt_4b2c35f7810e20b2",
       "kind": "Event",
       "label": "Private credit crunch? NBFIs and why the financial crisis does not apply",
       "meta": {
@@ -28627,6 +28663,15 @@
       "kind": "Source",
       "label": "Marsh McLennan",
       "meta": {}
+    },
+    {
+      "id": "event:evt_ed72f347d36f69fd",
+      "kind": "Event",
+      "label": "Private credit crunch? NBFIs and why the financial crisis does not apply",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
     },
     {
       "id": "entity:Marsh McLennan",
@@ -31978,8 +32023,8 @@
       "kind": "Event",
       "label": "Russian Hybrid Attacks In The Baltic Region And Poland: How To Stop Them",
       "meta": {
-        "geopolitical": false,
-        "geopolitical_event_score": null
+        "geopolitical": true,
+        "geopolitical_event_score": 46.0
       }
     },
     {
@@ -33885,7 +33930,7 @@
       }
     },
     {
-      "id": "event:evt_e59109e9a4c5cc05",
+      "id": "event:evt_c81b0268ebe41550",
       "kind": "Event",
       "label": "The 15 Companies Leading The $1.3T AI Build-Out",
       "meta": {
@@ -34008,15 +34053,6 @@
       "meta": {
         "published_at": "2026-08-18T07:00:00Z",
         "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOSkpSdEk2YU9od2JycmhsanVrLVBYVlc5bEx1RjdOaGZHMTBIRGh2Z2YtN2Nmb3F3ejVXdnRLakF4QkVaWmJiRTZiTjJCREpZT0hFOGIzeTFqakxBWThqZjdtMGtMR2k3SGR4QXdQOWNHVmdTMTBLQWNqRjhTRGczSVVpYnhiZkpwNjhDQjlJX1l1UldrazdqWWI1TXl1R3JSNzFfN1ZIakxCTmYwMzV1OHY5c2hIV3VVQ004UTRIQWJrelRjR01QWGsxekI?oc=5"
-      }
-    },
-    {
-      "id": "event:evt_31cd6d25595d1871",
-      "kind": "Event",
-      "label": "The 15 Companies Leading The $1.3T AI Build-Out",
-      "meta": {
-        "geopolitical": false,
-        "geopolitical_event_score": null
       }
     },
     {
@@ -37361,7 +37397,7 @@
       "label": "Press statement by President Costa following the meeting with Chancellor of Germany, Friedrich Merz - Consilium.europa.eu",
       "meta": {
         "published_at": "2026-09-09T07:00:00Z",
-        "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOR2lvNkg3cTFMTzczLUF5WVc2MTBsNUt0eXc1SnltRGljVUs1NUhoeGxzNjJxUktlV1g3bG5ZUUVRV2RpcUFRX1ZiUWNHZXctV2lPUkoxd3pobXVxTklBOWZOelphQ2FyUlo3THRkdlN5Sl9GXzlJQk83TG91VVNlNk5zNUpYc3pYdFNTaC1wSzlHaVY1UkJiOTdvSlVObm10QmFlWFRoTlp1MURvN2xOWGV4MGhuaHhKMTVvdHhvaWFhTVpkNUp5ZkluRmROTkJTTHlHRzRZQnZrZlVnUzdjRGlBQTlnd3I5SHNycS0zZXZ4TnBxbjB1cXdR?oc=5"
+        "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQbEVuWUVfSjhZRjA4LXlMSnZwSnJDdGFXeG5VbmY2US1vMUt6LXBFVWVpQnR1ZV9pam1jUGN5eDlKMGVubGFHV3dPcnNQcVZmYnJLWnJmOHBxd0NMTUJESjZRSm9VU0hIWm9ncjFrenNLR3RVYW5JcEozVTJ1TTkzdW5hSzN2V195Z2ZacnB1aTNqZXdwYTlSZFI3bGxuSV9WQnY5RHctVmN4R1VHMmU1T2tUZ0daclo4Wk93amlPSWVhVENiUWlvWVBxMElRUURBNDdxdVN1dFJheG43bEg2dEl1Um5WSTJXNmwza0twRHlPQkM0TGo5TzB3?oc=5"
       }
     },
     {
@@ -41075,7 +41111,7 @@
       "label": "European spy chiefs warn Russia could test NATO’s Article 5 within ‘months not years’",
       "meta": {
         "geopolitical": true,
-        "geopolitical_event_score": 22.0
+        "geopolitical_event_score": 12.0
       }
     },
     {
@@ -41307,6 +41343,24 @@
       }
     },
     {
+      "id": "article:9dd869d035dac77cc7e96627",
+      "kind": "Article",
+      "label": "CVC Marathon CEO Sees Bargains in High-Grade Data Center Debt - Bloomberg",
+      "meta": {
+        "published_at": "2026-09-22T07:00:00Z",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbndsVllUS1B6S1owX0hYa3lLS3dvRnFOdTR3cHd6dEdzRVhxMklXTVVyNE8zQzNScjUzbG9ycXJEMk12SXJ3T3M5Qk12bFNUTFJDVHc1SU11NDhpY2dmcnF2UmViYjVXMGVueFdtMENtT1dPVnRTZS1MaG1EWkdMQTRNWl9yT21mc2dNeFIyLURUb2doU1FSZXZNUkpLbG5BVUN1MDBpVldDdTNUbGdXYjhn?oc=5"
+      }
+    },
+    {
+      "id": "event:evt_923ddcea518a1df3",
+      "kind": "Event",
+      "label": "CVC Marathon CEO Sees Bargains in High-Grade Data Center Debt",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
       "id": "article:a5f643633bf152a03b61ee4f",
       "kind": "Article",
       "label": "Polish Guards Call Police After Drone Spotted Over Redzikowo US Missile Shield Facility - united24media.com",
@@ -41361,15 +41415,6 @@
       "meta": {
         "published_at": "2026-09-22T07:00:00Z",
         "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbndsVllUS1B6S1owX0hYa3lLS3dvRnFOdTR3cHd6dEdzRVhxMklXTVVyNE8zQzNScjUzbG9ycXJEMk12SXJ3T3M5Qk12bFNUTFJDVHc1SU11NDhpY2dmcnF2UmViYjVXMGVueFdtMENtT1dPVnRTZS1MaG1EWkdMQTRNWl9yT21mc2dNeFIyLURUb2doU1FSZXZNUkpLbG5BVUN1MDBpVldDdTNUbGdXYjhn?oc=5"
-      }
-    },
-    {
-      "id": "event:evt_e273c36a9a571dfb",
-      "kind": "Event",
-      "label": "CVC Marathon CEO Sees Bargains in High-Grade Data Center Debt",
-      "meta": {
-        "geopolitical": false,
-        "geopolitical_event_score": null
       }
     },
     {
@@ -43869,6 +43914,15 @@
       "meta": {}
     },
     {
+      "id": "event:evt_94c049697b1c1d43",
+      "kind": "Event",
+      "label": "Russia’s hybrid war is raising fears of a ‘dark winter’ across Europe",
+      "meta": {
+        "geopolitical": true,
+        "geopolitical_event_score": 10.0
+      }
+    },
+    {
       "id": "entity:AzerNews",
       "kind": "Entity",
       "label": "AzerNews",
@@ -46275,21 +46329,21 @@
       }
     },
     {
+      "id": "event:evt_3a827a62a3761d66",
+      "kind": "Event",
+      "label": "米国プライベートクレジットのリスクは高まるのか？ 足元はリーマン・ショックに近いとは言えない 野村證券・小髙貴久",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
       "id": "article:e32bef34f5531a667a93c20a",
       "kind": "Article",
       "label": "プライベートクレジット市場の資金構造から、金融システム危機にはつながりにくいと考える理由 野村證券・小清水直和 - 野村證券",
       "meta": {
         "published_at": "2026-10-09T07:00:00Z",
         "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5GWTYwcTV6YlhVS0MwcXpuOXNsZ2M1TFJnSkFELVBlMzNxWjJRNFZ1aFRHUEwtTzluZnNNbE14VzBTNUdtOWY4MWpkLXBpSmZDaXJEZ1lpQ2kyV0d5NWg0?oc=5"
-      }
-    },
-    {
-      "id": "event:evt_674b1e2542858f18",
-      "kind": "Event",
-      "label": "プライベートクレジット市場の資金構造から、金融システム危機にはつながりにくいと考える理由 野村證券・小清水直和",
-      "meta": {
-        "geopolitical": false,
-        "geopolitical_event_score": null
       }
     },
     {
@@ -46659,6 +46713,15 @@
       "meta": {
         "published_at": "2026-10-11T05:00:22Z",
         "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNck1Kck9Db1gwdUQ5OUlHbmZvZnhwQ0tGTVVRcmUwejN6cThOZFUyRjBKWE1mNGl2V2otdXVDWXhES21BdUZQaVA4TGc2dmhSNmZpNVdENjBWV2Y3V1ZCZU5xbFlCQV9nMXFWTDkwc3ZIb1dxcTM5VlBEbDRrTVBJN1NzR3JWMHl6RFl3?oc=5"
+      }
+    },
+    {
+      "id": "event:evt_419f7c7f4ef05a55",
+      "kind": "Event",
+      "label": "NATO Is Winning the War Russia Isn’t Fighting",
+      "meta": {
+        "geopolitical": true,
+        "geopolitical_event_score": 12.0
       }
     },
     {
@@ -48114,9 +48177,18 @@
       }
     },
     {
-      "id": "event:evt_652d2ae11950bd6b",
+      "id": "article:577f383ea1c24dcb060cc644",
+      "kind": "Article",
+      "label": "今週の決算･経済カレンダー(10/19~10/23)SpaceX・テスラ・メタやAI半導体・インフラ決算、NVIDIA GTC Berlinに注目！AI信用不安は後退するか？半導体株は反発するか？ - Moomoo",
+      "meta": {
+        "published_at": "2026-10-16T07:00:00Z",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVzAyZ0dZRi1YQ1RHOTdZQ3kxejhiR1VySkI0cEJFZlV2T1BoR1hEcmZtZk1CSGsyenkxUEd3eUI2Qmc1NzhhaEtabnNFYWVKejA0OW5jN0RzajFVUTFnOGsyRmp0SjhPN2JPVXcxeE1JVXJNS29xOFVZSTNubzVCc085R3ZDaTFQaG12eVdkb2hxSS12N2tTVmVfN29YYS1OdmdHVHd0bjY2dVR1?oc=5"
+      }
+    },
+    {
+      "id": "event:evt_6748364ac354a52f",
       "kind": "Event",
-      "label": "プライベートクレジット市場の資金構造から、金融システム危機にはつながりにくいと考える理由 野村證券・小清水直和",
+      "label": "今週の決算･経済カレンダー(10/19~10/23)SpaceX・テスラ・メタやAI半導体・インフラ決算、NVIDIA GTC Berlinに注目！AI信用不安は後退するか？半導体株は反発するか？",
       "meta": {
         "geopolitical": false,
         "geopolitical_event_score": null
@@ -48162,24 +48234,6 @@
       "id": "event:evt_113bd7d0d02bc714",
       "kind": "Event",
       "label": "The US economy is facing 2 hot wars heating up at a bad time for the White House",
-      "meta": {
-        "geopolitical": false,
-        "geopolitical_event_score": null
-      }
-    },
-    {
-      "id": "article:577f383ea1c24dcb060cc644",
-      "kind": "Article",
-      "label": "今週の決算･経済カレンダー(10/19~10/23)SpaceX・テスラ・メタやAI半導体・インフラ決算、NVIDIA GTC Berlinに注目！AI信用不安は後退するか？半導体株は反発するか？ - Moomoo",
-      "meta": {
-        "published_at": "2026-10-16T11:09:04Z",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVzAyZ0dZRi1YQ1RHOTdZQ3kxejhiR1VySkI0cEJFZlV2T1BoR1hEcmZtZk1CSGsyenkxUEd3eUI2Qmc1NzhhaEtabnNFYWVKejA0OW5jN0RzajFVUTFnOGsyRmp0SjhPN2JPVXcxeE1JVXJNS29xOFVZSTNubzVCc085R3ZDaTFQaG12eVdkb2hxSS12N2tTVmVfN29YYS1OdmdHVHd0bjY2dVR1?oc=5"
-      }
-    },
-    {
-      "id": "event:evt_6748364ac354a52f",
-      "kind": "Event",
-      "label": "今週の決算･経済カレンダー(10/19~10/23)SpaceX・テスラ・メタやAI半導体・インフラ決算、NVIDIA GTC Berlinに注目！AI信用不安は後退するか？半導体株は反発するか？",
       "meta": {
         "geopolitical": false,
         "geopolitical_event_score": null
@@ -48562,6 +48616,27 @@
         "geopolitical": false,
         "geopolitical_event_score": null
       }
+    },
+    {
+      "id": "article:fb76779863e6cc46f7cf13e4",
+      "kind": "Article",
+      "label": "NATO gegen Russland: Überlegenheit auf dem Papier, Verwundbarkeit in der Wirklichkeit - Xpert.Digital - Konrad Wolfenstein",
+      "meta": {
+        "published_at": "2026-10-17T11:22:02Z",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZmx2Z1c5bFl4V0VDbEJ3ZFlsYmdkTjBkQXJQZXlPS2I5N2Eyd1VUdnUyRkJPV2gzS3RaaVA0Z1BobDFibjZvejBkMGpFYmw5U1RkT1lZSkswUzhnaHp2NHg2MnlLWWQ2ZEkxN05sMTNmc002S1FKWDl0S3Rlem5WNVU2X09mTHVvaTRLbk1SY042SW_SAZsBQVVfeXFMTW0zbWs0S3NwU0RRRG9BTGFwcEgzNmdiTkVMc3pWSHl2RmJxUXdiQXJRbU13cm1JWU5vYnoxVGFtbFpfdmJxWEFUM0FVOGg5RUIzc1ByN2o3LUtaRHQ3T0tTNUNpV1pBUkdOT250Mzg2VnZaN0RaUktxSEo2RUFxVkhEWkFHUUtlYjdDa3JDLTk3djRUc1RhQTZJSUk?oc=5"
+      }
+    },
+    {
+      "id": "source:Xpert.Digital - Konrad Wolfenstein",
+      "kind": "Source",
+      "label": "Xpert.Digital - Konrad Wolfenstein",
+      "meta": {}
+    },
+    {
+      "id": "entity:Xpert.Digital - Konrad Wolfenstein",
+      "kind": "Entity",
+      "label": "Xpert.Digital - Konrad Wolfenstein",
+      "meta": {}
     },
     {
       "id": "article:ef8ece3d4f4db5352aa66d8a",
@@ -49769,7 +49844,7 @@
       "label": "EU unveils a new Arctic push as global warming and security threats reshape the region - Rocky Mount Telegram",
       "meta": {
         "published_at": "2026-10-20T13:29:49Z",
-        "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOcWszRXlrcXZXYnRxMV9PQkVXY2NIQVdvU0pWLWl6TkxweVdfTm9vV3VnLVJVbFd1S01uNVFzVkZyM1Z4Y19nUmZ3UjNfTTd0MmVESEs3SGh1NG82YnZCcTZRTlM0RHQ2T3c3VzVpVm42dDFtQmRhcm41X0NZdXB6Qk0zNURuQ2RKdDNyZkljMUZwcDdxUDlxZi1wS21RUGpON1lGVVFfR1lmTHNpWWxrdnptcjI0NGNVRG9rbVpfQ3pOOUoxd3Fra0RBZnpTQy1qajM4NmM4blJ4dHFIc2hveEprYnNxYmc1cEhHZlNDYWYwSmdmYm5FVVhTMFdBY1hxTU91SUdxVklVLTVKRVE?oc=5"
+        "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNNU1oZllETFFNMHNtYWNGVzR0Rk5wLTdWR09yYnkzam1xbndpZ1JqWnlteUx1VWk5aDgyZXFrRWJONFNTVGs2bDRfM18xblRTbGJJZTJUN0RCMXZIRUI2cnhxRWUxZXlBb1ZNWHVYbVp6a0RSNE5VOWduZjRSRnBlcHhYbUJTLUU1YUFKVU1VaVlzUHVyZ2xubEg5ZVJjSGRvQmVzY05oWTRtRW5hYy1oWEpMbzhFRDV6MkRFY29IN204RU1Cazc0LTlaaThRMHlwUEN5Z2tZZmxUOFV6ZTBmQWhhUXhYXzNKRFlmQU5ucmZHa1o5UzJmOWxiZ3Jnb2VCT3ItejdJWUY0Y0tYY2dn?oc=5"
       }
     },
     {
@@ -50409,6 +50484,24 @@
       }
     },
     {
+      "id": "article:b818ccb46fa0b6f71ca19455",
+      "kind": "Article",
+      "label": "Private credit market to grow to $3.36T by 2031 despite 2025 liquidity stress and rising regulation. - Pluang",
+      "meta": {
+        "published_at": "2026-10-21T09:14:48Z",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNc1RXTjZKZi1mX0xFcDRjekFIR2MxNzlraDU2cTRndXV0RUdaN1I4WHBSTmNFX3dLYWV2VGF2WHdRaVdOTWxFWUJ4emNnYjd3enc0OHU2clRWSXEtQjRjYmYxRFJlZmJFVUMxT0phZHQxdjRxX19HYjFqSVBjbWxrZjlmM01TUFZnNXA3WHJKTmdVZmFybmp0ai1GcUY2Qk14TElHaTg5dTdGdw?oc=5"
+      }
+    },
+    {
+      "id": "event:evt_d847d6d9b8e79a93",
+      "kind": "Event",
+      "label": "Private credit market to grow to $3.36T by 2031 despite 2025 liquidity stress and rising regulation.",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
       "id": "article:438212cb17135d967396894c",
       "kind": "Article",
       "label": "Goldman Sachs Warns of New Oil Price Shock as Tanker Rates Soar - Crude Oil Prices Today | OilPrice.com",
@@ -50434,6 +50527,36 @@
         "published_at": "2026-10-21T09:30:00Z",
         "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNbXhWb25qWV9nYlVVUDBQcVBybzFSN2U5QlBwaEN3RDlmcG5IMnpfVkgxYWViTVNGYXRHSEVWLVhxNEF1Y3FlQXBBd3RNVG9MSWROQUdZRGh0UWwwRXNEcU9XOFVISlMxYlpHckg1bS1WQW1MZVowVUE4cTlrMEM0S1ZwQTlPMFhubEVqYkdYaw?oc=5"
       }
+    },
+    {
+      "id": "article:db07538af514bee86b3639eb",
+      "kind": "Article",
+      "label": "Gold Loans Surge as Early Credit Stress Emerges in India - Urban Acres",
+      "meta": {
+        "published_at": "2026-10-21T09:46:17Z",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZjBNTnRRSXlIbEUwTDZvelJSLXN6bDBGTV9SZHdoM2lMTEk2VWptaGRkd1NkdC1IUmRHRFAtWW90eHh3b1dVSE9GM25CQ05PR1pNX1NxdENNb1BwQzk5MGVyb3U3V09HVUVycG1lQzVyb0RzTHc1eDN2UVRPUjgxdTE4Q2Y0Vm8?oc=5"
+      }
+    },
+    {
+      "id": "source:Urban Acres",
+      "kind": "Source",
+      "label": "Urban Acres",
+      "meta": {}
+    },
+    {
+      "id": "event:evt_f0c85c145c3bec4e",
+      "kind": "Event",
+      "label": "Gold Loans Surge as Early Credit Stress Emerges in India",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
+      "id": "entity:Urban Acres",
+      "kind": "Entity",
+      "label": "Urban Acres",
+      "meta": {}
     },
     {
       "id": "article:69b1c498a5de26fb287dda7c",
@@ -50662,6 +50785,36 @@
         "published_at": "2026-10-21T16:09:00Z",
         "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOV1JpWHIwb3czNnJuWjBEQWJMbFBMUm95dk9CTWhoOEI3aHcyX1htODRMNFRscVdZRnNfdTYwUzVQdkRJUkhYaTF6aHZ3aXJQWld5SjB2YVNyaEd1RzNZWGZ3Y1JHZUZMZWpBM3BMR1I2dnV0SmVxT0VMQ0hsQy1SLVlfc245RHdsMUkwclBEdGliUFI5cFVqR013ME0wYkJsLWFjLWRiMDhZVm5ENjBXRFVuc0lQWm5UNHItY1pwYXdQNnExRDEzWHdiQUN3WEJkdXFiYzBBVFZnY2Rjbm1kdXdqMDJ1Q18wYWFRN1dVcERFWVRw0gH6AUFVX3lxTFA1QXRrUkN6RThvOUdIM0pKVTVwbVJlV1FZVUxad2xmc2tvMk1IaFdzdDZHWGhXNzczdFRvUWZDeVRkV25KU3BXSFE1QTZWeGFRSFdsOGgxeGYwak5Jb3pPWUdmQUU3YUx4am5NcUhTdkxPMzdYTlR6S2ltRGxvM29lV25BMy13UkYtMkhsdmpxUFRQODdpT0ZkckZHa3QxLWdBaGZfNlNnQXhOb0xkeWQyS0tuVFdkOUJULUNBOVc3NjY4WkI3V1JWQTFFR1VadGY3Q3RicXpmVE9nZ1V3SnZORGNvSGhHTTFLYVZPVXBENW1SUUg4TnZXeHc?oc=5"
       }
+    },
+    {
+      "id": "article:b3f08d0e128d33a61a2e1f13",
+      "kind": "Article",
+      "label": "I can see clearly now the clouds have gone - Chris Skinner's blog",
+      "meta": {
+        "published_at": "2026-10-21T19:19:52Z",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBfdzF3ZVlnekVvY05pQkVSNEc1bVRVUFJzYnZveXlwOWxBRXQxYWxuV1hhN0hLWWlQVnhZdWdHWC1yYWJXYlBOdGRaSE43TzA?oc=5"
+      }
+    },
+    {
+      "id": "source:Chris Skinner's blog",
+      "kind": "Source",
+      "label": "Chris Skinner's blog",
+      "meta": {}
+    },
+    {
+      "id": "event:evt_e6c6355e9e81afe4",
+      "kind": "Event",
+      "label": "I can see clearly now the clouds have gone",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
+      "id": "entity:Chris Skinner's blog",
+      "kind": "Entity",
+      "label": "Chris Skinner's blog",
+      "meta": {}
     },
     {
       "id": "article:f179218a7d1f3964c0e0533d",
@@ -50913,6 +51066,15 @@
       }
     },
     {
+      "id": "article:65c7628ef81497040e5ed4c5",
+      "kind": "Article",
+      "label": "From elite spies to ‘gig-economy’ operatives: the changing face of Russian sabotage - The Conversation",
+      "meta": {
+        "published_at": "2026-10-22T11:07:34Z",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMmFnU29nbndKakRYWDRJdElUM0pMblZzWkNvbllfV2RxMXl0azVnMGlSUUFSWEdhNEhRTjRZbzItdzEzQjVzZFU3U0ZNVXN6RlM4bUpLYTNPdVZoZFJnZFVkeEo0NWdPYkdteGRDOUswU1pkZW4xaDdOSUcwSk5ZSkdMSFdpaUF0LUpUbC1nVS1fVV9ZMkF6YjYxVV9zZTFaZW5HV0sxUG8yR21ocTdodDNJUmFYUQ?oc=5"
+      }
+    },
+    {
       "id": "article:07a87529dd248c1765fe76c6",
       "kind": "Article",
       "label": "Exclusive / Trump and an oil shock aren’t enough for Texan drillers - Semafor",
@@ -51153,6 +51315,15 @@
       "meta": {
         "published_at": "2026-10-22T19:57:22Z",
         "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNOHVPT05RNXJBMm9FVHVsVjVHSkR3RUpkVEQ1OWRFUktoNFdwQkpweEdqd0I0QkFMZHlOalJoWnFJU25BLTlGbVpuaFdvMlJBa1FLM3JFbU43SV9BeUo3V0VoWk9FdVR4UE96Qzhuemdtam9TZURteW9JRVpxUXFUSEM4WloxVHpKUlBhWFFDTU96SHA0dFUtQnBlWXVpbnlweDVKX1FUU2pSa3hUcThKVWpmbzdVMnFqaTViajRHdGhEYWRPVTBlcw?oc=5"
+      }
+    },
+    {
+      "id": "article:ff70804ba2472a66ddb23c52",
+      "kind": "Article",
+      "label": "Turkey’s central bank cuts key rate to 36% from 37% By Investing.com - Investing.com India",
+      "meta": {
+        "published_at": "2026-10-22T20:10:40Z",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcHN6YWtqNjNPemVqa20yX21Od3ZsLTlRTk9sTUxRajVDUFdTYjEwRC03eXczckViSG5xNi1GNFJWRnh0WW95dnpvOTUyTnlwMEh5dnRVQ1JINjY1R0hnVFhCZGJ5RDVmWEppT0ZiVWVKTFlDTmstempyLUVQRWV4bzI2UFdMTXFBUG9jcEUwZjZpUWk0LWJHa1RmdDFFdVdvSUNYNUdkbnFydUZ4VVE?oc=5"
       }
     },
     {
@@ -51486,6 +51657,24 @@
       }
     },
     {
+      "id": "article:e0ce57c058b5edbe2cc516fe",
+      "kind": "Article",
+      "label": "What First Bank (FRBA) Said on Its Q3 Earnings Call - TradingView",
+      "meta": {
+        "published_at": "2026-10-23T18:04:49Z",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaWZDekxnUWVjRXN1OWNqTzRsUzEtb19ZaEpLRl9wQ2VhcDVvdFM2TE5DaXdkcGEzQ3NQYmZxOTk1dklVUG1DMjNEQmV5bWRSRGE3T0J0amhSN2dsVkJvVG52eXRVQjZmTDNaRmwzLVRHN0pVay0wU2F0ai1zNzBmSGtNeDFWc2pueW1aMURWa1hYbGZua0xlWVl0Qldab2VZa1FGRUhqMXNXYmZiRGI4?oc=5"
+      }
+    },
+    {
+      "id": "event:evt_8f592570a8e2ae17",
+      "kind": "Event",
+      "label": "What First Bank (FRBA) Said on Its Q3 Earnings Call",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
       "id": "article:82a3e2a11469227b4e463f7c",
       "kind": "Article",
       "label": "Liquidity Regulations and the Discount Window: Restoring a Balance Between Stored and Purchased Liquidity - Bank Policy Institute",
@@ -51597,6 +51786,15 @@
       }
     },
     {
+      "id": "article:8359ee832330fc3397debb3a",
+      "kind": "Article",
+      "label": "Russia’s Hot War on NATO: Airport Sabotage, Cruise Missiles & European Silence - Kyiv Post",
+      "meta": {
+        "published_at": "2026-10-24T06:03:07Z",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE42M1RoQ0VpMU9sNjRaX19Zb2JmbTdIT0hOSVFTcEVoNnYtLWxOcXo3QTBjNXU4RDBwS2dDd2p5dDY2bUh2VUpHMXVVTERrdw?oc=5"
+      }
+    },
+    {
       "id": "article:02ed24bec48b9c6dc51756be",
       "kind": "Article",
       "label": "Global Oil Supply to Plunge Below Demand This Year Due to Iran War, IEA says - EnergyNow.com",
@@ -51604,6 +51802,36 @@
         "published_at": "2026-10-24T06:29:11Z",
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaVBlWG5DSkFCVzhjMTZxbjlfMkxvZXZwdmJrUlZEUkx2Nm8xRnJRZC0zZFhna0p6VHJ3WTFpSEpCbjN4UHBOQ25lTVNaTFh3RmtRNXl4cWpFZzVLNXJhQ0d3MHg4RHNqSWN6V1g0Q2Nhem16ZkhubU1oVjJyME1hakxRUF8xRVJuZHNGQU5NYk0zeWgzNkt4ZlFnR2hoVEVSV0VabXBNcmdBZw?oc=5"
       }
+    },
+    {
+      "id": "article:96345b3436a7204332fb1dd8",
+      "kind": "Article",
+      "label": "CBE stress tests show banking sector resilient to severe shocks - Daily News Egypt",
+      "meta": {
+        "published_at": "2026-10-24T13:57:02Z",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQ0VBY3ZRWGtEX2d2RFFjeWg0LS0tdm5wU0lTeFEwcjBOOTQzUVRTcVNpYTM1V0NWczQ2dUd0dXJBbURUblppZHMtMnBpLUZLbnJJNXppZlBlLXR4dzlYRWFtb0I1V2ZGeW1aUnp5Rk1OVENSSTlzWmtEbHpiZ0VMbThWRk5ULWdNYUROTzhlOVE1b3dmcGx6cTF5V1NwTFVxVThnTUlFQV9Mdw?oc=5"
+      }
+    },
+    {
+      "id": "source:Daily News Egypt",
+      "kind": "Source",
+      "label": "Daily News Egypt",
+      "meta": {}
+    },
+    {
+      "id": "event:evt_6add0eafaf729c29",
+      "kind": "Event",
+      "label": "CBE stress tests show banking sector resilient to severe shocks",
+      "meta": {
+        "geopolitical": false,
+        "geopolitical_event_score": null
+      }
+    },
+    {
+      "id": "entity:Daily News Egypt",
+      "kind": "Entity",
+      "label": "Daily News Egypt",
+      "meta": {}
     },
     {
       "id": "campaign:Russia",
@@ -57319,63 +57547,63 @@
       "src": "event:evt_4ac6bd2ab4daeafd",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.5961,
+      "weight": 0.5983,
       "meta": {}
     },
     {
       "src": "event:evt_4ac6bd2ab4daeafd",
       "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.5961,
+      "weight": 0.5983,
       "meta": {}
     },
     {
       "src": "event:evt_4ac6bd2ab4daeafd",
       "dst": "topic:funding_liquidity",
       "rel": "ABOUT",
-      "weight": 0.5961,
+      "weight": 0.5983,
       "meta": {}
     },
     {
       "src": "event:evt_4ac6bd2ab4daeafd",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.5961,
+      "weight": 0.5983,
       "meta": {}
     },
     {
       "src": "event:evt_4ac6bd2ab4daeafd",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.5961,
+      "weight": 0.5983,
       "meta": {}
     },
     {
       "src": "event:evt_4ac6bd2ab4daeafd",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.5961,
+      "weight": 0.5983,
       "meta": {}
     },
     {
       "src": "event:evt_4ac6bd2ab4daeafd",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.5961,
+      "weight": 0.5983,
       "meta": {}
     },
     {
       "src": "event:evt_4ac6bd2ab4daeafd",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.5961,
+      "weight": 0.5983,
       "meta": {}
     },
     {
       "src": "event:evt_4ac6bd2ab4daeafd",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.5961,
+      "weight": 0.5983,
       "meta": {}
     },
     {
@@ -57484,7 +57712,7 @@
       "src": "article:c02f4e13eafbb098db56e9b7",
       "dst": "event:evt_4ac6bd2ab4daeafd",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5961,
+      "weight": 0.5983,
       "meta": {
         "published_at": "2025-11-12T08:00:00Z"
       }
@@ -58333,7 +58561,7 @@
       "src": "article:1defa3cb04a880f7b2e0183a",
       "dst": "event:evt_64bc2108a695140b",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5251,
+      "weight": 0.5205,
       "meta": {
         "published_at": "2025-11-17T08:00:00Z"
       }
@@ -58349,35 +58577,35 @@
       "src": "event:evt_64bc2108a695140b",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.5251,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_64bc2108a695140b",
-      "dst": "topic:geopolitical_hybrid",
-      "rel": "ABOUT",
-      "weight": 0.5251,
+      "weight": 0.5205,
       "meta": {}
     },
     {
       "src": "event:evt_64bc2108a695140b",
       "dst": "topic:energy_shock",
       "rel": "ABOUT",
-      "weight": 0.5251,
+      "weight": 0.5205,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_64bc2108a695140b",
+      "dst": "topic:geopolitical_hybrid",
+      "rel": "ABOUT",
+      "weight": 0.5205,
       "meta": {}
     },
     {
       "src": "event:evt_64bc2108a695140b",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.5251,
+      "weight": 0.5205,
       "meta": {}
     },
     {
       "src": "event:evt_64bc2108a695140b",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.5251,
+      "weight": 0.5205,
       "meta": {}
     },
     {
@@ -61598,7 +61826,7 @@
       "src": "article:56287b6507a1a7864b198fff",
       "dst": "event:evt_3fa9f9a95e1eb29b",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6793,
+      "weight": 0.6944,
       "meta": {
         "published_at": "2025-11-21T08:00:00Z"
       }
@@ -61614,63 +61842,63 @@
       "src": "event:evt_3fa9f9a95e1eb29b",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.6793,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_3fa9f9a95e1eb29b",
-      "dst": "topic:systemic_crisis",
-      "rel": "ABOUT",
-      "weight": 0.6793,
+      "weight": 0.6944,
       "meta": {}
     },
     {
       "src": "event:evt_3fa9f9a95e1eb29b",
       "dst": "topic:corporate_credit",
       "rel": "ABOUT",
-      "weight": 0.6793,
+      "weight": 0.6944,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_3fa9f9a95e1eb29b",
+      "dst": "topic:systemic_crisis",
+      "rel": "ABOUT",
+      "weight": 0.6944,
       "meta": {}
     },
     {
       "src": "event:evt_3fa9f9a95e1eb29b",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.6793,
+      "weight": 0.6944,
       "meta": {}
     },
     {
       "src": "event:evt_3fa9f9a95e1eb29b",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.6793,
+      "weight": 0.6944,
       "meta": {}
     },
     {
       "src": "event:evt_3fa9f9a95e1eb29b",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.6793,
+      "weight": 0.6944,
       "meta": {}
     },
     {
       "src": "event:evt_3fa9f9a95e1eb29b",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.6793,
+      "weight": 0.6944,
       "meta": {}
     },
     {
       "src": "event:evt_3fa9f9a95e1eb29b",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.6793,
+      "weight": 0.6944,
       "meta": {}
     },
     {
       "src": "event:evt_3fa9f9a95e1eb29b",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.6793,
+      "weight": 0.6944,
       "meta": {}
     },
     {
@@ -64682,14 +64910,14 @@
       "src": "event:evt_6b35b5dce3117c3a",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.6566,
+      "weight": 0.6523,
       "meta": {}
     },
     {
       "src": "event:evt_6b35b5dce3117c3a",
       "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.6566,
+      "weight": 0.6523,
       "meta": {}
     },
     {
@@ -64703,35 +64931,35 @@
       "src": "event:evt_6b35b5dce3117c3a",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.6566,
+      "weight": 0.6523,
       "meta": {}
     },
     {
       "src": "event:evt_6b35b5dce3117c3a",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.6566,
+      "weight": 0.6523,
       "meta": {}
     },
     {
       "src": "event:evt_6b35b5dce3117c3a",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.6566,
+      "weight": 0.6523,
       "meta": {}
     },
     {
       "src": "event:evt_6b35b5dce3117c3a",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.6566,
+      "weight": 0.6523,
       "meta": {}
     },
     {
       "src": "event:evt_6b35b5dce3117c3a",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.6566,
+      "weight": 0.6523,
       "meta": {}
     },
     {
@@ -66063,7 +66291,7 @@
       "src": "article:e84035528dfca7478237f467",
       "dst": "event:evt_6b35b5dce3117c3a",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6566,
+      "weight": 0.6523,
       "meta": {
         "published_at": "2025-12-08T08:00:00Z"
       }
@@ -66079,14 +66307,14 @@
       "src": "event:evt_6b35b5dce3117c3a",
       "dst": "topic:corporate_credit",
       "rel": "ABOUT",
-      "weight": 0.6566,
+      "weight": 0.6523,
       "meta": {}
     },
     {
       "src": "event:evt_6b35b5dce3117c3a",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.6566,
+      "weight": 0.6523,
       "meta": {}
     },
     {
@@ -66518,18 +66746,53 @@
     },
     {
       "src": "article:10193f1d6fc0cffd049dee1f",
-      "dst": "event:evt_2664daac41cae051",
+      "dst": "event:evt_d813116261fad2d6",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5148,
+      "weight": 0.5116,
       "meta": {
         "published_at": "2025-12-10T08:00:00Z"
       }
     },
     {
-      "src": "event:evt_2664daac41cae051",
+      "src": "event:evt_d813116261fad2d6",
       "dst": "day:2025-12-10",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d813116261fad2d6",
+      "dst": "topic:europe_sovereign",
+      "rel": "ABOUT",
+      "weight": 0.5116,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d813116261fad2d6",
+      "dst": "topic:geopolitical_hybrid",
+      "rel": "ABOUT",
+      "weight": 0.5116,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d813116261fad2d6",
+      "dst": "topic:energy_shock",
+      "rel": "ABOUT",
+      "weight": 0.5116,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d813116261fad2d6",
+      "dst": "indicator:energy",
+      "rel": "IMPACTS",
+      "weight": 0.5116,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d813116261fad2d6",
+      "dst": "indicator:europe",
+      "rel": "IMPACTS",
+      "weight": 0.5116,
       "meta": {}
     },
     {
@@ -68749,7 +69012,7 @@
     },
     {
       "src": "article:31042fc2eec18c5046f0d1a7",
-      "dst": "event:evt_2664daac41cae051",
+      "dst": "event:evt_dbac85b44bbdc74a",
       "rel": "EVIDENCE_FOR",
       "weight": 0.4405,
       "meta": {
@@ -68757,10 +69020,17 @@
       }
     },
     {
-      "src": "event:evt_2664daac41cae051",
+      "src": "event:evt_dbac85b44bbdc74a",
       "dst": "day:2025-12-15",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_dbac85b44bbdc74a",
+      "dst": "topic:geopolitical_hybrid",
+      "rel": "ABOUT",
+      "weight": 0.4242,
       "meta": {}
     },
     {
@@ -68851,26 +69121,12 @@
     },
     {
       "src": "article:d795a405e71647bb6faec0d4",
-      "dst": "event:evt_87b55dde614f4ae0",
+      "dst": "event:evt_dbac85b44bbdc74a",
       "rel": "EVIDENCE_FOR",
       "weight": 0.4242,
       "meta": {
         "published_at": "2025-12-15T08:00:00Z"
       }
-    },
-    {
-      "src": "event:evt_87b55dde614f4ae0",
-      "dst": "day:2025-12-15",
-      "rel": "OBSERVED_ON",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_87b55dde614f4ae0",
-      "dst": "topic:geopolitical_hybrid",
-      "rel": "ABOUT",
-      "weight": 0.4242,
-      "meta": {}
     },
     {
       "src": "article:d795a405e71647bb6faec0d4",
@@ -68922,6 +69178,13 @@
       "meta": {
         "published_at": "2025-12-15T08:00:00Z"
       }
+    },
+    {
+      "src": "event:evt_2664daac41cae051",
+      "dst": "day:2025-12-15",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
     },
     {
       "src": "article:e7fb1d667c19267aaedd59fc",
@@ -72341,63 +72604,63 @@
       "src": "event:evt_5b1bb2097738c397",
       "dst": "topic:ai_data_center",
       "rel": "ABOUT",
-      "weight": 0.5864,
+      "weight": 0.6216,
       "meta": {}
     },
     {
       "src": "event:evt_5b1bb2097738c397",
       "dst": "topic:funding_liquidity",
       "rel": "ABOUT",
-      "weight": 0.5864,
+      "weight": 0.6216,
       "meta": {}
     },
     {
       "src": "event:evt_5b1bb2097738c397",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.5864,
+      "weight": 0.6216,
       "meta": {}
     },
     {
       "src": "event:evt_5b1bb2097738c397",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.5864,
+      "weight": 0.6216,
       "meta": {}
     },
     {
       "src": "event:evt_5b1bb2097738c397",
       "dst": "indicator:data_center",
       "rel": "IMPACTS",
-      "weight": 0.5864,
+      "weight": 0.6216,
       "meta": {}
     },
     {
       "src": "event:evt_5b1bb2097738c397",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.5864,
+      "weight": 0.6216,
       "meta": {}
     },
     {
       "src": "event:evt_5b1bb2097738c397",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.5864,
+      "weight": 0.6216,
       "meta": {}
     },
     {
       "src": "event:evt_5b1bb2097738c397",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.5864,
+      "weight": 0.6216,
       "meta": {}
     },
     {
       "src": "event:evt_5b1bb2097738c397",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.5864,
+      "weight": 0.6216,
       "meta": {}
     },
     {
@@ -72416,12 +72679,82 @@
     },
     {
       "src": "article:b2e3bf5b2a7d006fda71e137",
-      "dst": "event:evt_5b1bb2097738c397",
+      "dst": "event:evt_1d49fe8b7e65a596",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5864,
+      "weight": 0.58,
       "meta": {
         "published_at": "2026-01-01T08:00:00Z"
       }
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
+      "dst": "day:2026-01-01",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
+      "dst": "topic:funding_liquidity",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
+      "dst": "topic:ai_data_center",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
+      "dst": "indicator:bank_ai",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
+      "dst": "indicator:data_center",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
+      "dst": "indicator:funding_market",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
+      "dst": "indicator:rates_liquidity",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
     },
     {
       "src": "article:b2e3bf5b2a7d006fda71e137",
@@ -77688,14 +78021,14 @@
       "src": "event:evt_59c9eefc1b0930a0",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.5509,
+      "weight": 0.5284,
       "meta": {}
     },
     {
       "src": "event:evt_59c9eefc1b0930a0",
       "dst": "topic:funding_liquidity",
       "rel": "ABOUT",
-      "weight": 0.5509,
+      "weight": 0.5284,
       "meta": {}
     },
     {
@@ -77709,14 +78042,14 @@
       "src": "event:evt_59c9eefc1b0930a0",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.5509,
+      "weight": 0.5284,
       "meta": {}
     },
     {
       "src": "event:evt_59c9eefc1b0930a0",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.5509,
+      "weight": 0.5284,
       "meta": {}
     },
     {
@@ -77737,14 +78070,14 @@
       "src": "event:evt_59c9eefc1b0930a0",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.5509,
+      "weight": 0.5284,
       "meta": {}
     },
     {
       "src": "event:evt_59c9eefc1b0930a0",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.5509,
+      "weight": 0.5284,
       "meta": {}
     },
     {
@@ -78309,14 +78642,14 @@
       "src": "event:evt_59c9eefc1b0930a0",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.5509,
+      "weight": 0.5284,
       "meta": {}
     },
     {
       "src": "event:evt_59c9eefc1b0930a0",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.5509,
+      "weight": 0.5284,
       "meta": {}
     },
     {
@@ -79061,74 +79394,18 @@
     },
     {
       "src": "article:6bab3e76726bd81d7ae378da",
-      "dst": "event:evt_b9e5470d616560ee",
+      "dst": "event:evt_59c9eefc1b0930a0",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4482,
+      "weight": 0.5284,
       "meta": {
         "published_at": "2026-02-02T08:00:00Z"
       }
     },
     {
-      "src": "event:evt_b9e5470d616560ee",
+      "src": "event:evt_59c9eefc1b0930a0",
       "dst": "day:2026-02-02",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b9e5470d616560ee",
-      "dst": "topic:private_credit",
-      "rel": "ABOUT",
-      "weight": 0.4482,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b9e5470d616560ee",
-      "dst": "topic:inflation_rates",
-      "rel": "ABOUT",
-      "weight": 0.4482,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b9e5470d616560ee",
-      "dst": "topic:funding_liquidity",
-      "rel": "ABOUT",
-      "weight": 0.4482,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b9e5470d616560ee",
-      "dst": "indicator:energy",
-      "rel": "IMPACTS",
-      "weight": 0.4482,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b9e5470d616560ee",
-      "dst": "indicator:funding_market",
-      "rel": "IMPACTS",
-      "weight": 0.4482,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b9e5470d616560ee",
-      "dst": "indicator:leveraged_credit",
-      "rel": "IMPACTS",
-      "weight": 0.4482,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b9e5470d616560ee",
-      "dst": "indicator:private_credit",
-      "rel": "IMPACTS",
-      "weight": 0.4482,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b9e5470d616560ee",
-      "dst": "indicator:rates_liquidity",
-      "rel": "IMPACTS",
-      "weight": 0.4482,
       "meta": {}
     },
     {
@@ -79401,7 +79678,7 @@
       "src": "article:b57133f541ae63a3ba9e3265",
       "dst": "event:evt_3f6261bf3427b31b",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4892,
+      "weight": 0.4928,
       "meta": {
         "published_at": "2026-02-03T08:00:00Z"
       }
@@ -79417,63 +79694,63 @@
       "src": "event:evt_3f6261bf3427b31b",
       "dst": "topic:funding_liquidity",
       "rel": "ABOUT",
-      "weight": 0.4892,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_3f6261bf3427b31b",
-      "dst": "topic:systemic_crisis",
-      "rel": "ABOUT",
-      "weight": 0.4892,
+      "weight": 0.4928,
       "meta": {}
     },
     {
       "src": "event:evt_3f6261bf3427b31b",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.4892,
+      "weight": 0.4928,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_3f6261bf3427b31b",
+      "dst": "topic:systemic_crisis",
+      "rel": "ABOUT",
+      "weight": 0.4928,
       "meta": {}
     },
     {
       "src": "event:evt_3f6261bf3427b31b",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.4892,
+      "weight": 0.4928,
       "meta": {}
     },
     {
       "src": "event:evt_3f6261bf3427b31b",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.4892,
+      "weight": 0.4928,
       "meta": {}
     },
     {
       "src": "event:evt_3f6261bf3427b31b",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.4892,
+      "weight": 0.4928,
       "meta": {}
     },
     {
       "src": "event:evt_3f6261bf3427b31b",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.4892,
+      "weight": 0.4928,
       "meta": {}
     },
     {
       "src": "event:evt_3f6261bf3427b31b",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.4892,
+      "weight": 0.4928,
       "meta": {}
     },
     {
       "src": "event:evt_3f6261bf3427b31b",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.4892,
+      "weight": 0.4928,
       "meta": {}
     },
     {
@@ -80325,7 +80602,7 @@
       "src": "article:4c2cafdce1fccbe62e57ac3e",
       "dst": "event:evt_33b958843ba54873",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6086,
+      "weight": 0.6078,
       "meta": {
         "published_at": "2026-02-05T08:00:00Z"
       }
@@ -80346,16 +80623,16 @@
     },
     {
       "src": "event:evt_33b958843ba54873",
-      "dst": "topic:systemic_crisis",
+      "dst": "topic:banking",
       "rel": "ABOUT",
-      "weight": 0.6086,
+      "weight": 0.6023,
       "meta": {}
     },
     {
       "src": "event:evt_33b958843ba54873",
-      "dst": "topic:banking",
+      "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.6023,
+      "weight": 0.6078,
       "meta": {}
     },
     {
@@ -80376,7 +80653,7 @@
       "src": "event:evt_33b958843ba54873",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.6086,
+      "weight": 0.6078,
       "meta": {}
     },
     {
@@ -84437,7 +84714,7 @@
       "src": "event:evt_4d174bfd624a2ff3",
       "dst": "topic:geopolitical_hybrid",
       "rel": "ABOUT",
-      "weight": 0.6235,
+      "weight": 0.614,
       "meta": {}
     },
     {
@@ -84706,7 +84983,7 @@
       "src": "event:evt_4d174bfd624a2ff3",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.5867,
+      "weight": 0.6709,
       "meta": {}
     },
     {
@@ -84720,7 +84997,7 @@
       "src": "event:evt_4d174bfd624a2ff3",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.5867,
+      "weight": 0.6709,
       "meta": {}
     },
     {
@@ -85131,7 +85408,7 @@
       "src": "article:8961c4a5c79a065393749925",
       "dst": "event:evt_4d174bfd624a2ff3",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6084,
+      "weight": 0.6344,
       "meta": {
         "published_at": "2026-02-20T08:00:00Z"
       }
@@ -87168,81 +87445,81 @@
     },
     {
       "src": "article:a31b9608af2f84a82f5b4b61",
-      "dst": "event:evt_eed6cc088d74021f",
+      "dst": "event:evt_a684bf30def8060d",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.58,
+      "weight": 0.6015,
       "meta": {
         "published_at": "2026-02-25T08:00:00Z"
       }
     },
     {
-      "src": "event:evt_eed6cc088d74021f",
+      "src": "event:evt_a684bf30def8060d",
       "dst": "day:2026-02-25",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
       "meta": {}
     },
     {
-      "src": "event:evt_eed6cc088d74021f",
-      "dst": "topic:corporate_credit",
-      "rel": "ABOUT",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_eed6cc088d74021f",
+      "src": "event:evt_a684bf30def8060d",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.58,
+      "weight": 0.6015,
       "meta": {}
     },
     {
-      "src": "event:evt_eed6cc088d74021f",
+      "src": "event:evt_a684bf30def8060d",
+      "dst": "topic:corporate_credit",
+      "rel": "ABOUT",
+      "weight": 0.6015,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a684bf30def8060d",
       "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.58,
+      "weight": 0.6015,
       "meta": {}
     },
     {
-      "src": "event:evt_eed6cc088d74021f",
+      "src": "event:evt_a684bf30def8060d",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.6015,
       "meta": {}
     },
     {
-      "src": "event:evt_eed6cc088d74021f",
+      "src": "event:evt_a684bf30def8060d",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.6015,
       "meta": {}
     },
     {
-      "src": "event:evt_eed6cc088d74021f",
+      "src": "event:evt_a684bf30def8060d",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.6015,
       "meta": {}
     },
     {
-      "src": "event:evt_eed6cc088d74021f",
+      "src": "event:evt_a684bf30def8060d",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.6015,
       "meta": {}
     },
     {
-      "src": "event:evt_eed6cc088d74021f",
+      "src": "event:evt_a684bf30def8060d",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.6015,
       "meta": {}
     },
     {
-      "src": "event:evt_eed6cc088d74021f",
+      "src": "event:evt_a684bf30def8060d",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.6015,
       "meta": {}
     },
     {
@@ -87261,12 +87538,82 @@
     },
     {
       "src": "article:c8f6117f55032c162b149551",
-      "dst": "event:evt_eed6cc088d74021f",
+      "dst": "event:evt_a734e110b90b6324",
       "rel": "EVIDENCE_FOR",
       "weight": 0.58,
       "meta": {
         "published_at": "2026-02-25T08:00:00Z"
       }
+    },
+    {
+      "src": "event:evt_a734e110b90b6324",
+      "dst": "day:2026-02-25",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a734e110b90b6324",
+      "dst": "topic:corporate_credit",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a734e110b90b6324",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a734e110b90b6324",
+      "dst": "topic:systemic_crisis",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a734e110b90b6324",
+      "dst": "indicator:banking_stress",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a734e110b90b6324",
+      "dst": "indicator:funding_market",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a734e110b90b6324",
+      "dst": "indicator:hy_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a734e110b90b6324",
+      "dst": "indicator:ig_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a734e110b90b6324",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a734e110b90b6324",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
     },
     {
       "src": "article:c8f6117f55032c162b149551",
@@ -88529,42 +88876,42 @@
       "src": "event:evt_0a006744ad4df498",
       "dst": "topic:energy_shock",
       "rel": "ABOUT",
-      "weight": 0.6566,
+      "weight": 0.5029,
       "meta": {}
     },
     {
       "src": "event:evt_0a006744ad4df498",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.6122,
+      "weight": 0.5029,
       "meta": {}
     },
     {
       "src": "event:evt_0a006744ad4df498",
       "dst": "topic:funding_liquidity",
       "rel": "ABOUT",
-      "weight": 0.6122,
+      "weight": 0.5029,
       "meta": {}
     },
     {
       "src": "event:evt_0a006744ad4df498",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.6566,
+      "weight": 0.5029,
       "meta": {}
     },
     {
       "src": "event:evt_0a006744ad4df498",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.6566,
+      "weight": 0.5029,
       "meta": {}
     },
     {
       "src": "event:evt_0a006744ad4df498",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.6122,
+      "weight": 0.5029,
       "meta": {}
     },
     {
@@ -89313,14 +89660,14 @@
       "src": "event:evt_d0e87a6a0aa8a20c",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.5053,
+      "weight": 0.5005,
       "meta": {}
     },
     {
       "src": "event:evt_d0e87a6a0aa8a20c",
       "dst": "topic:funding_liquidity",
       "rel": "ABOUT",
-      "weight": 0.5053,
+      "weight": 0.5005,
       "meta": {}
     },
     {
@@ -89348,21 +89695,21 @@
       "src": "event:evt_d0e87a6a0aa8a20c",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.5053,
+      "weight": 0.5005,
       "meta": {}
     },
     {
       "src": "event:evt_d0e87a6a0aa8a20c",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.5053,
+      "weight": 0.5005,
       "meta": {}
     },
     {
       "src": "event:evt_d0e87a6a0aa8a20c",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.5053,
+      "weight": 0.5005,
       "meta": {}
     },
     {
@@ -89639,19 +89986,12 @@
     },
     {
       "src": "article:8fbe468e32ca78d57cbe94fd",
-      "dst": "event:evt_d0e87a6a0aa8a20c",
+      "dst": "event:evt_0a006744ad4df498",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5053,
+      "weight": 0.5029,
       "meta": {
         "published_at": "2026-03-04T08:00:00Z"
       }
-    },
-    {
-      "src": "event:evt_d0e87a6a0aa8a20c",
-      "dst": "topic:energy_shock",
-      "rel": "ABOUT",
-      "weight": 0.5053,
-      "meta": {}
     },
     {
       "src": "article:8fbe468e32ca78d57cbe94fd",
@@ -91418,7 +91758,7 @@
       "src": "article:a137a1d8f19b8bf618b32d22",
       "dst": "event:evt_0e58d020e2ec259b",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6867,
+      "weight": 0.686,
       "meta": {
         "published_at": "2026-03-09T07:00:00Z"
       }
@@ -91763,21 +92103,21 @@
       "src": "event:evt_1c1490748a822528",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.5864,
+      "weight": 0.5831,
       "meta": {}
     },
     {
       "src": "event:evt_1c1490748a822528",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.5864,
+      "weight": 0.5831,
       "meta": {}
     },
     {
       "src": "event:evt_1c1490748a822528",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.5864,
+      "weight": 0.5831,
       "meta": {}
     },
     {
@@ -92016,7 +92356,7 @@
       "src": "article:e795802cf8f5262d47df5a81",
       "dst": "event:evt_6349fe1969b0fd13",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5648,
+      "weight": 0.5673,
       "meta": {
         "published_at": "2026-03-10T07:00:00Z"
       }
@@ -92032,42 +92372,42 @@
       "src": "event:evt_6349fe1969b0fd13",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.5648,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6349fe1969b0fd13",
-      "dst": "topic:funding_liquidity",
-      "rel": "ABOUT",
-      "weight": 0.5648,
+      "weight": 0.5673,
       "meta": {}
     },
     {
       "src": "event:evt_6349fe1969b0fd13",
       "dst": "topic:energy_shock",
       "rel": "ABOUT",
-      "weight": 0.5648,
+      "weight": 0.5673,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6349fe1969b0fd13",
+      "dst": "topic:funding_liquidity",
+      "rel": "ABOUT",
+      "weight": 0.5673,
       "meta": {}
     },
     {
       "src": "event:evt_6349fe1969b0fd13",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.5648,
+      "weight": 0.5673,
       "meta": {}
     },
     {
       "src": "event:evt_6349fe1969b0fd13",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.5648,
+      "weight": 0.5673,
       "meta": {}
     },
     {
       "src": "event:evt_6349fe1969b0fd13",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.5648,
+      "weight": 0.5673,
       "meta": {}
     },
     {
@@ -92086,9 +92426,9 @@
     },
     {
       "src": "article:f3089a0477a6f8ade1521b70",
-      "dst": "event:evt_1c1490748a822528",
+      "dst": "event:evt_4d174bfd624a2ff3",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5864,
+      "weight": 0.5883,
       "meta": {
         "published_at": "2026-03-10T07:00:00Z"
       }
@@ -93437,7 +93777,7 @@
       "src": "article:125b37babf511bee59c52584",
       "dst": "event:evt_bf3f6b72b6a3fa5d",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.662,
+      "weight": 0.6586,
       "meta": {
         "published_at": "2026-03-16T07:00:00Z"
       }
@@ -93458,16 +93798,16 @@
     },
     {
       "src": "event:evt_bf3f6b72b6a3fa5d",
-      "dst": "topic:systemic_crisis",
+      "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.6819,
+      "weight": 0.6586,
       "meta": {}
     },
     {
       "src": "event:evt_bf3f6b72b6a3fa5d",
-      "dst": "topic:europe_sovereign",
+      "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.662,
+      "weight": 0.6819,
       "meta": {}
     },
     {
@@ -93495,7 +93835,7 @@
       "src": "event:evt_bf3f6b72b6a3fa5d",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.662,
+      "weight": 0.6586,
       "meta": {}
     },
     {
@@ -96323,15 +96663,15 @@
     },
     {
       "src": "article:2eec79a00ddaa1dd042d0e2f",
-      "dst": "event:evt_4d174bfd624a2ff3",
+      "dst": "event:evt_030bba4c1c24850d",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5867,
+      "weight": 0.58,
       "meta": {
         "published_at": "2026-03-22T07:00:00Z"
       }
     },
     {
-      "src": "event:evt_4d174bfd624a2ff3",
+      "src": "event:evt_030bba4c1c24850d",
       "dst": "day:2026-03-22",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
@@ -96359,6 +96699,13 @@
       "meta": {
         "published_at": "2026-03-22T07:00:00Z"
       }
+    },
+    {
+      "src": "event:evt_4d174bfd624a2ff3",
+      "dst": "day:2026-03-22",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
     },
     {
       "src": "article:2f51df80d42b8390ad74e35a",
@@ -96716,7 +97063,7 @@
       "src": "article:c3f2e96964e82d91f43e65fd",
       "dst": "event:evt_4d174bfd624a2ff3",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6235,
+      "weight": 0.614,
       "meta": {
         "published_at": "2026-03-23T07:00:00Z"
       }
@@ -97094,7 +97441,7 @@
     },
     {
       "src": "article:33d8981db69a8975d6ce5fc9",
-      "dst": "event:evt_030bba4c1c24850d",
+      "dst": "event:evt_a4f3a53e8ef4c121",
       "rel": "EVIDENCE_FOR",
       "weight": 0.5838,
       "meta": {
@@ -97102,10 +97449,73 @@
       }
     },
     {
-      "src": "event:evt_030bba4c1c24850d",
+      "src": "event:evt_a4f3a53e8ef4c121",
+      "dst": "day:2026-03-24",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a4f3a53e8ef4c121",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.5838,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a4f3a53e8ef4c121",
+      "dst": "topic:corporate_credit",
+      "rel": "ABOUT",
+      "weight": 0.5838,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a4f3a53e8ef4c121",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.58,
+      "weight": 0.5838,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a4f3a53e8ef4c121",
+      "dst": "indicator:energy",
+      "rel": "IMPACTS",
+      "weight": 0.5838,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a4f3a53e8ef4c121",
+      "dst": "indicator:hy_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5838,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a4f3a53e8ef4c121",
+      "dst": "indicator:ig_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5838,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a4f3a53e8ef4c121",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5838,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a4f3a53e8ef4c121",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5838,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_a4f3a53e8ef4c121",
+      "dst": "indicator:rates_liquidity",
+      "rel": "IMPACTS",
+      "weight": 0.5838,
       "meta": {}
     },
     {
@@ -98184,6 +98594,13 @@
       "meta": {}
     },
     {
+      "src": "event:evt_030bba4c1c24850d",
+      "dst": "topic:inflation_rates",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
       "src": "article:636cc8c9814540a453cdc915",
       "dst": "entity:Goldman Sachs",
       "rel": "MENTIONS",
@@ -98540,12 +98957,82 @@
     },
     {
       "src": "article:a8d78d1b264a3858762fd4ba",
-      "dst": "event:evt_030bba4c1c24850d",
+      "dst": "event:evt_2e2ca86568d9850d",
       "rel": "EVIDENCE_FOR",
       "weight": 0.5632,
       "meta": {
         "published_at": "2026-03-26T07:00:00Z"
       }
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
+      "dst": "day:2026-03-26",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.5415,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
+      "dst": "topic:corporate_credit",
+      "rel": "ABOUT",
+      "weight": 0.5415,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
+      "dst": "topic:ai_data_center",
+      "rel": "ABOUT",
+      "weight": 0.5415,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
+      "dst": "indicator:bank_ai",
+      "rel": "IMPACTS",
+      "weight": 0.5415,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
+      "dst": "indicator:data_center",
+      "rel": "IMPACTS",
+      "weight": 0.5415,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
+      "dst": "indicator:hy_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5415,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
+      "dst": "indicator:ig_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5415,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5415,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5415,
+      "meta": {}
     },
     {
       "src": "article:a8d78d1b264a3858762fd4ba",
@@ -98637,7 +99124,7 @@
     },
     {
       "src": "article:b5e981f030789db0524d196f",
-      "dst": "event:evt_030bba4c1c24850d",
+      "dst": "event:evt_2e2ca86568d9850d",
       "rel": "EVIDENCE_FOR",
       "weight": 0.5864,
       "meta": {
@@ -98898,7 +99385,7 @@
     },
     {
       "src": "article:f4df5179afb212a78c7e2f13",
-      "dst": "event:evt_030bba4c1c24850d",
+      "dst": "event:evt_2e2ca86568d9850d",
       "rel": "EVIDENCE_FOR",
       "weight": 0.5415,
       "meta": {
@@ -99300,56 +99787,56 @@
       "src": "event:evt_1cf5882d2a557acd",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.6206,
+      "weight": 0.6432,
       "meta": {}
     },
     {
       "src": "event:evt_1cf5882d2a557acd",
       "dst": "topic:funding_liquidity",
       "rel": "ABOUT",
-      "weight": 0.6206,
+      "weight": 0.7103,
       "meta": {}
     },
     {
       "src": "event:evt_1cf5882d2a557acd",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.6206,
+      "weight": 0.6432,
       "meta": {}
     },
     {
       "src": "event:evt_1cf5882d2a557acd",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.6206,
+      "weight": 0.6432,
       "meta": {}
     },
     {
       "src": "event:evt_1cf5882d2a557acd",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.6206,
+      "weight": 0.7103,
       "meta": {}
     },
     {
       "src": "event:evt_1cf5882d2a557acd",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.6206,
+      "weight": 0.6432,
       "meta": {}
     },
     {
       "src": "event:evt_1cf5882d2a557acd",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.6206,
+      "weight": 0.6432,
       "meta": {}
     },
     {
       "src": "event:evt_1cf5882d2a557acd",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.6206,
+      "weight": 0.6432,
       "meta": {}
     },
     {
@@ -99421,67 +99908,18 @@
     },
     {
       "src": "article:0ca5890778150c04ebbc1e14",
-      "dst": "event:evt_dd02525819e6d5de",
+      "dst": "event:evt_1cf5882d2a557acd",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6628,
+      "weight": 0.7103,
       "meta": {
         "published_at": "2026-03-27T08:42:47Z"
       }
     },
     {
-      "src": "event:evt_dd02525819e6d5de",
-      "dst": "day:2026-03-27",
-      "rel": "OBSERVED_ON",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_dd02525819e6d5de",
+      "src": "event:evt_1cf5882d2a557acd",
       "dst": "topic:energy_shock",
       "rel": "ABOUT",
-      "weight": 0.6628,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_dd02525819e6d5de",
-      "dst": "topic:inflation_rates",
-      "rel": "ABOUT",
-      "weight": 0.6628,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_dd02525819e6d5de",
-      "dst": "topic:private_credit",
-      "rel": "ABOUT",
-      "weight": 0.6628,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_dd02525819e6d5de",
-      "dst": "indicator:energy",
-      "rel": "IMPACTS",
-      "weight": 0.6628,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_dd02525819e6d5de",
-      "dst": "indicator:leveraged_credit",
-      "rel": "IMPACTS",
-      "weight": 0.6628,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_dd02525819e6d5de",
-      "dst": "indicator:private_credit",
-      "rel": "IMPACTS",
-      "weight": 0.6628,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_dd02525819e6d5de",
-      "dst": "indicator:rates_liquidity",
-      "rel": "IMPACTS",
-      "weight": 0.6628,
+      "weight": 0.7103,
       "meta": {}
     },
     {
@@ -99507,7 +99945,7 @@
     },
     {
       "src": "article:cc90a36b05dfba588acabb90",
-      "dst": "event:evt_9d0260bc1eec25e3",
+      "dst": "event:evt_1cf5882d2a557acd",
       "rel": "EVIDENCE_FOR",
       "weight": 0.6432,
       "meta": {
@@ -99515,71 +99953,22 @@
       }
     },
     {
-      "src": "event:evt_9d0260bc1eec25e3",
-      "dst": "day:2026-03-27",
-      "rel": "OBSERVED_ON",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_9d0260bc1eec25e3",
-      "dst": "topic:inflation_rates",
-      "rel": "ABOUT",
-      "weight": 0.6432,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_9d0260bc1eec25e3",
-      "dst": "topic:private_credit",
-      "rel": "ABOUT",
-      "weight": 0.6432,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_9d0260bc1eec25e3",
+      "src": "event:evt_1cf5882d2a557acd",
       "dst": "topic:ai_data_center",
       "rel": "ABOUT",
       "weight": 0.6432,
       "meta": {}
     },
     {
-      "src": "event:evt_9d0260bc1eec25e3",
+      "src": "event:evt_1cf5882d2a557acd",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
       "weight": 0.6432,
       "meta": {}
     },
     {
-      "src": "event:evt_9d0260bc1eec25e3",
+      "src": "event:evt_1cf5882d2a557acd",
       "dst": "indicator:data_center",
-      "rel": "IMPACTS",
-      "weight": 0.6432,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_9d0260bc1eec25e3",
-      "dst": "indicator:energy",
-      "rel": "IMPACTS",
-      "weight": 0.6432,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_9d0260bc1eec25e3",
-      "dst": "indicator:leveraged_credit",
-      "rel": "IMPACTS",
-      "weight": 0.6432,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_9d0260bc1eec25e3",
-      "dst": "indicator:private_credit",
-      "rel": "IMPACTS",
-      "weight": 0.6432,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_9d0260bc1eec25e3",
-      "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
       "weight": 0.6432,
       "meta": {}
@@ -99943,70 +100332,70 @@
       "src": "event:evt_e990430b5dd77655",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.7456,
+      "weight": 0.6731,
       "meta": {}
     },
     {
       "src": "event:evt_e990430b5dd77655",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.7167,
+      "weight": 0.7194,
       "meta": {}
     },
     {
       "src": "event:evt_e990430b5dd77655",
       "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.7456,
+      "weight": 0.6731,
       "meta": {}
     },
     {
       "src": "event:evt_e990430b5dd77655",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.7456,
+      "weight": 0.6731,
       "meta": {}
     },
     {
       "src": "event:evt_e990430b5dd77655",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.7456,
+      "weight": 0.6731,
       "meta": {}
     },
     {
       "src": "event:evt_e990430b5dd77655",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.7456,
+      "weight": 0.6731,
       "meta": {}
     },
     {
       "src": "event:evt_e990430b5dd77655",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.7456,
+      "weight": 0.6731,
       "meta": {}
     },
     {
       "src": "event:evt_e990430b5dd77655",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.7456,
+      "weight": 0.6731,
       "meta": {}
     },
     {
       "src": "event:evt_e990430b5dd77655",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.6986,
+      "weight": 0.7194,
       "meta": {}
     },
     {
       "src": "event:evt_e990430b5dd77655",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.7167,
+      "weight": 0.7194,
       "meta": {}
     },
     {
@@ -101103,7 +101492,7 @@
       "src": "article:dd31531ad33632f174de344c",
       "dst": "event:evt_e990430b5dd77655",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.7167,
+      "weight": 0.7194,
       "meta": {
         "published_at": "2026-04-01T07:00:00Z"
       }
@@ -101438,14 +101827,14 @@
       "src": "event:evt_e990430b5dd77655",
       "dst": "topic:banking",
       "rel": "ABOUT",
-      "weight": 0.7456,
+      "weight": 0.6594,
       "meta": {}
     },
     {
       "src": "event:evt_e990430b5dd77655",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.7456,
+      "weight": 0.6594,
       "meta": {}
     },
     {
@@ -101900,7 +102289,7 @@
       "src": "article:ffa48418a80b79536125538a",
       "dst": "event:evt_57cc8fd46d336386",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.7022,
+      "weight": 0.7046,
       "meta": {
         "published_at": "2026-04-06T07:00:00Z"
       }
@@ -101916,70 +102305,63 @@
       "src": "event:evt_57cc8fd46d336386",
       "dst": "topic:banking",
       "rel": "ABOUT",
-      "weight": 0.7022,
+      "weight": 0.7046,
       "meta": {}
     },
     {
       "src": "event:evt_57cc8fd46d336386",
       "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.7022,
+      "weight": 0.7046,
       "meta": {}
     },
     {
       "src": "event:evt_57cc8fd46d336386",
-      "dst": "topic:private_credit",
+      "dst": "topic:corporate_credit",
       "rel": "ABOUT",
-      "weight": 0.7022,
+      "weight": 0.7046,
       "meta": {}
     },
     {
       "src": "event:evt_57cc8fd46d336386",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.7022,
+      "weight": 0.7046,
       "meta": {}
     },
     {
       "src": "event:evt_57cc8fd46d336386",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.7022,
+      "weight": 0.7046,
       "meta": {}
     },
     {
       "src": "event:evt_57cc8fd46d336386",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.7022,
+      "weight": 0.7046,
       "meta": {}
     },
     {
       "src": "event:evt_57cc8fd46d336386",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.7022,
+      "weight": 0.7046,
       "meta": {}
     },
     {
       "src": "event:evt_57cc8fd46d336386",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.7022,
+      "weight": 0.7046,
       "meta": {}
     },
     {
       "src": "event:evt_57cc8fd46d336386",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.7022,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_57cc8fd46d336386",
-      "dst": "indicator:private_credit",
-      "rel": "IMPACTS",
-      "weight": 0.7022,
+      "weight": 0.7046,
       "meta": {}
     },
     {
@@ -102838,7 +103220,7 @@
       "src": "article:7cb49b2c70745078ea6d5b15",
       "dst": "event:evt_e990430b5dd77655",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6599,
+      "weight": 0.6731,
       "meta": {
         "published_at": "2026-04-08T07:00:00Z"
       }
@@ -102854,7 +103236,7 @@
       "src": "event:evt_e990430b5dd77655",
       "dst": "topic:geopolitical_hybrid",
       "rel": "ABOUT",
-      "weight": 0.6599,
+      "weight": 0.6731,
       "meta": {}
     },
     {
@@ -103840,18 +104222,81 @@
     },
     {
       "src": "article:1c56c7417feac130155e2fec",
-      "dst": "event:evt_e990430b5dd77655",
+      "dst": "event:evt_37bf553903a8bc7b",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.7446,
+      "weight": 0.7366,
       "meta": {
         "published_at": "2026-04-09T09:17:52Z"
       }
     },
     {
-      "src": "event:evt_e990430b5dd77655",
+      "src": "event:evt_37bf553903a8bc7b",
       "dst": "day:2026-04-09",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_37bf553903a8bc7b",
+      "dst": "topic:systemic_crisis",
+      "rel": "ABOUT",
+      "weight": 0.7275,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_37bf553903a8bc7b",
+      "dst": "topic:europe_sovereign",
+      "rel": "ABOUT",
+      "weight": 0.7366,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_37bf553903a8bc7b",
+      "dst": "topic:banking",
+      "rel": "ABOUT",
+      "weight": 0.7275,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_37bf553903a8bc7b",
+      "dst": "indicator:bank_ai",
+      "rel": "IMPACTS",
+      "weight": 0.7275,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_37bf553903a8bc7b",
+      "dst": "indicator:banking_stress",
+      "rel": "IMPACTS",
+      "weight": 0.7275,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_37bf553903a8bc7b",
+      "dst": "indicator:europe",
+      "rel": "IMPACTS",
+      "weight": 0.7366,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_37bf553903a8bc7b",
+      "dst": "indicator:funding_market",
+      "rel": "IMPACTS",
+      "weight": 0.7275,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_37bf553903a8bc7b",
+      "dst": "indicator:hy_credit",
+      "rel": "IMPACTS",
+      "weight": 0.7275,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_37bf553903a8bc7b",
+      "dst": "indicator:ig_credit",
+      "rel": "IMPACTS",
+      "weight": 0.7275,
       "meta": {}
     },
     {
@@ -103870,7 +104315,7 @@
     },
     {
       "src": "article:b7c802767e32ff348626627d",
-      "dst": "event:evt_7f5275aba675724a",
+      "dst": "event:evt_37bf553903a8bc7b",
       "rel": "EVIDENCE_FOR",
       "weight": 0.7275,
       "meta": {
@@ -103878,70 +104323,14 @@
       }
     },
     {
-      "src": "event:evt_7f5275aba675724a",
-      "dst": "day:2026-04-09",
-      "rel": "OBSERVED_ON",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_7f5275aba675724a",
-      "dst": "topic:systemic_crisis",
-      "rel": "ABOUT",
-      "weight": 0.7275,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_7f5275aba675724a",
-      "dst": "topic:banking",
-      "rel": "ABOUT",
-      "weight": 0.7275,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_7f5275aba675724a",
+      "src": "event:evt_37bf553903a8bc7b",
       "dst": "topic:corporate_credit",
       "rel": "ABOUT",
       "weight": 0.7275,
       "meta": {}
     },
     {
-      "src": "event:evt_7f5275aba675724a",
-      "dst": "indicator:bank_ai",
-      "rel": "IMPACTS",
-      "weight": 0.7275,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_7f5275aba675724a",
-      "dst": "indicator:banking_stress",
-      "rel": "IMPACTS",
-      "weight": 0.7275,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_7f5275aba675724a",
-      "dst": "indicator:funding_market",
-      "rel": "IMPACTS",
-      "weight": 0.7275,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_7f5275aba675724a",
-      "dst": "indicator:hy_credit",
-      "rel": "IMPACTS",
-      "weight": 0.7275,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_7f5275aba675724a",
-      "dst": "indicator:ig_credit",
-      "rel": "IMPACTS",
-      "weight": 0.7275,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_7f5275aba675724a",
+      "src": "event:evt_37bf553903a8bc7b",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
       "weight": 0.7275,
@@ -104429,18 +104818,88 @@
     },
     {
       "src": "article:243e923ade796b09276bd0cd",
-      "dst": "event:evt_e990430b5dd77655",
+      "dst": "event:evt_ea217291b0ad4d47",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.7319,
+      "weight": 0.6849,
       "meta": {
         "published_at": "2026-04-13T07:00:00Z"
       }
     },
     {
-      "src": "event:evt_e990430b5dd77655",
+      "src": "event:evt_ea217291b0ad4d47",
       "dst": "day:2026-04-13",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "topic:europe_sovereign",
+      "rel": "ABOUT",
+      "weight": 0.7456,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "topic:systemic_crisis",
+      "rel": "ABOUT",
+      "weight": 0.7456,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.6849,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "indicator:banking_stress",
+      "rel": "IMPACTS",
+      "weight": 0.7456,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "indicator:europe",
+      "rel": "IMPACTS",
+      "weight": 0.7456,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "indicator:funding_market",
+      "rel": "IMPACTS",
+      "weight": 0.7456,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "indicator:hy_credit",
+      "rel": "IMPACTS",
+      "weight": 0.7456,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "indicator:ig_credit",
+      "rel": "IMPACTS",
+      "weight": 0.7456,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.6849,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.6849,
       "meta": {}
     },
     {
@@ -104531,7 +104990,7 @@
     },
     {
       "src": "article:d68590cac5252290fd95237f",
-      "dst": "event:evt_e990430b5dd77655",
+      "dst": "event:evt_f173364fb33b86cf",
       "rel": "EVIDENCE_FOR",
       "weight": 0.7077,
       "meta": {
@@ -104539,9 +104998,72 @@
       }
     },
     {
-      "src": "event:evt_e990430b5dd77655",
+      "src": "event:evt_f173364fb33b86cf",
+      "dst": "day:2026-04-13",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f173364fb33b86cf",
+      "dst": "topic:europe_sovereign",
+      "rel": "ABOUT",
+      "weight": 0.6986,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f173364fb33b86cf",
       "dst": "topic:corporate_credit",
       "rel": "ABOUT",
+      "weight": 0.6986,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f173364fb33b86cf",
+      "dst": "topic:systemic_crisis",
+      "rel": "ABOUT",
+      "weight": 0.6986,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f173364fb33b86cf",
+      "dst": "indicator:banking_stress",
+      "rel": "IMPACTS",
+      "weight": 0.6986,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f173364fb33b86cf",
+      "dst": "indicator:europe",
+      "rel": "IMPACTS",
+      "weight": 0.6986,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f173364fb33b86cf",
+      "dst": "indicator:funding_market",
+      "rel": "IMPACTS",
+      "weight": 0.6986,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f173364fb33b86cf",
+      "dst": "indicator:hy_credit",
+      "rel": "IMPACTS",
+      "weight": 0.6986,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f173364fb33b86cf",
+      "dst": "indicator:ig_credit",
+      "rel": "IMPACTS",
+      "weight": 0.6986,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f173364fb33b86cf",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
       "weight": 0.6986,
       "meta": {}
     },
@@ -104568,7 +105090,7 @@
     },
     {
       "src": "article:fb0af5a02c7bad0758aa87ba",
-      "dst": "event:evt_e990430b5dd77655",
+      "dst": "event:evt_f173364fb33b86cf",
       "rel": "EVIDENCE_FOR",
       "weight": 0.6986,
       "meta": {
@@ -104598,12 +105120,26 @@
     },
     {
       "src": "article:5ff0d7f6572cf0db696b2b60",
-      "dst": "event:evt_e990430b5dd77655",
+      "dst": "event:evt_ea217291b0ad4d47",
       "rel": "EVIDENCE_FOR",
       "weight": 0.7456,
       "meta": {
         "published_at": "2026-04-13T11:40:35Z"
       }
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "topic:banking",
+      "rel": "ABOUT",
+      "weight": 0.7456,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "indicator:bank_ai",
+      "rel": "IMPACTS",
+      "weight": 0.7456,
+      "meta": {}
     },
     {
       "src": "article:5ff0d7f6572cf0db696b2b60",
@@ -106761,7 +107297,7 @@
       "src": "article:041d2170dda44115c95c17cf",
       "dst": "event:evt_44b911e55c527ed6",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4889,
+      "weight": 0.4899,
       "meta": {
         "published_at": "2026-04-22T07:00:00Z"
       }
@@ -106777,56 +107313,56 @@
       "src": "event:evt_44b911e55c527ed6",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.4889,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_44b911e55c527ed6",
-      "dst": "topic:corporate_credit",
-      "rel": "ABOUT",
-      "weight": 0.4889,
+      "weight": 0.4899,
       "meta": {}
     },
     {
       "src": "event:evt_44b911e55c527ed6",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.4889,
+      "weight": 0.4899,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_44b911e55c527ed6",
+      "dst": "topic:corporate_credit",
+      "rel": "ABOUT",
+      "weight": 0.4899,
       "meta": {}
     },
     {
       "src": "event:evt_44b911e55c527ed6",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.4889,
+      "weight": 0.4899,
       "meta": {}
     },
     {
       "src": "event:evt_44b911e55c527ed6",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.4889,
+      "weight": 0.4899,
       "meta": {}
     },
     {
       "src": "event:evt_44b911e55c527ed6",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.4889,
+      "weight": 0.4899,
       "meta": {}
     },
     {
       "src": "event:evt_44b911e55c527ed6",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.4889,
+      "weight": 0.4899,
       "meta": {}
     },
     {
       "src": "event:evt_44b911e55c527ed6",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.4889,
+      "weight": 0.4899,
       "meta": {}
     },
     {
@@ -108793,7 +109329,7 @@
       "src": "article:57b4bd61ff342e70b5a31a5c",
       "dst": "event:evt_0b05d6405e5418a1",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5688,
+      "weight": 0.565,
       "meta": {
         "published_at": "2026-04-24T07:00:00Z"
       }
@@ -109211,7 +109747,7 @@
       "src": "article:bc3f20dbf06f46d7f38ae031",
       "dst": "event:evt_0b05d6405e5418a1",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.583,
+      "weight": 0.5828,
       "meta": {
         "published_at": "2026-04-24T07:00:00Z"
       }
@@ -109898,14 +110434,21 @@
     },
     {
       "src": "event:evt_58d77593e4bd75f8",
-      "dst": "topic:inflation_rates",
+      "dst": "topic:ai_data_center",
       "rel": "ABOUT",
       "weight": 0.58,
       "meta": {}
     },
     {
       "src": "event:evt_58d77593e4bd75f8",
-      "dst": "indicator:energy",
+      "dst": "indicator:bank_ai",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_58d77593e4bd75f8",
+      "dst": "indicator:data_center",
       "rel": "IMPACTS",
       "weight": 0.58,
       "meta": {}
@@ -111393,14 +111936,14 @@
       "src": "event:evt_dae6f9d0189d4f94",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.604,
+      "weight": 0.603,
       "meta": {}
     },
     {
       "src": "event:evt_dae6f9d0189d4f94",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.604,
+      "weight": 0.603,
       "meta": {}
     },
     {
@@ -113871,7 +114414,7 @@
       "src": "article:231b3f96e9ff1b164eaffddb",
       "dst": "event:evt_dae6f9d0189d4f94",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.604,
+      "weight": 0.603,
       "meta": {
         "published_at": "2026-05-06T17:00:20Z"
       }
@@ -115079,14 +115622,14 @@
       "src": "event:evt_b4e80ad17be60b46",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {}
     },
     {
       "src": "event:evt_b4e80ad17be60b46",
       "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {}
     },
     {
@@ -115107,35 +115650,35 @@
       "src": "event:evt_b4e80ad17be60b46",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {}
     },
     {
       "src": "event:evt_b4e80ad17be60b46",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {}
     },
     {
       "src": "event:evt_b4e80ad17be60b46",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {}
     },
     {
       "src": "event:evt_b4e80ad17be60b46",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {}
     },
     {
       "src": "event:evt_b4e80ad17be60b46",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {}
     },
     {
@@ -116874,7 +117417,7 @@
       "src": "article:cf313cae254689a3b8255461",
       "dst": "event:evt_b4e80ad17be60b46",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {
         "published_at": "2026-05-13T07:00:00Z"
       }
@@ -116890,21 +117433,21 @@
       "src": "event:evt_b4e80ad17be60b46",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {}
     },
     {
       "src": "event:evt_b4e80ad17be60b46",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {}
     },
     {
       "src": "event:evt_b4e80ad17be60b46",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.7074,
+      "weight": 0.717,
       "meta": {}
     },
     {
@@ -118941,14 +119484,14 @@
       "src": "event:evt_0db5c8c274d64337",
       "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.6832,
+      "weight": 0.6236,
       "meta": {}
     },
     {
       "src": "event:evt_0db5c8c274d64337",
       "dst": "topic:banking",
       "rel": "ABOUT",
-      "weight": 0.6832,
+      "weight": 0.6236,
       "meta": {}
     },
     {
@@ -118962,35 +119505,35 @@
       "src": "event:evt_0db5c8c274d64337",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.6832,
+      "weight": 0.6236,
       "meta": {}
     },
     {
       "src": "event:evt_0db5c8c274d64337",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.6832,
+      "weight": 0.6236,
       "meta": {}
     },
     {
       "src": "event:evt_0db5c8c274d64337",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.6832,
+      "weight": 0.6236,
       "meta": {}
     },
     {
       "src": "event:evt_0db5c8c274d64337",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.6832,
+      "weight": 0.6236,
       "meta": {}
     },
     {
       "src": "event:evt_0db5c8c274d64337",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.6832,
+      "weight": 0.6236,
       "meta": {}
     },
     {
@@ -119346,6 +119889,50 @@
       "meta": {}
     },
     {
+      "src": "article:284023df9c69efa541c78cf9",
+      "dst": "source:BigGo ファイナンス",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:284023df9c69efa541c78cf9",
+      "dst": "event:evt_0db5c8c274d64337",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.579,
+      "meta": {
+        "published_at": "2026-05-21T07:00:00Z"
+      }
+    },
+    {
+      "src": "event:evt_0db5c8c274d64337",
+      "dst": "day:2026-05-21",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_0db5c8c274d64337",
+      "dst": "topic:energy_shock",
+      "rel": "ABOUT",
+      "weight": 0.579,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_0db5c8c274d64337",
+      "dst": "indicator:energy",
+      "rel": "IMPACTS",
+      "weight": 0.579,
+      "meta": {}
+    },
+    {
+      "src": "article:284023df9c69efa541c78cf9",
+      "dst": "entity:BigGo ファイナンス",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
       "src": "article:32128903ba50e668f0718f03",
       "dst": "source:capitalbrief.com",
       "rel": "PUBLISHED_BY",
@@ -119354,7 +119941,7 @@
     },
     {
       "src": "article:32128903ba50e668f0718f03",
-      "dst": "event:evt_2b509c5fd85fc0a5",
+      "dst": "event:evt_0db5c8c274d64337",
       "rel": "EVIDENCE_FOR",
       "weight": 0.6236,
       "meta": {
@@ -119362,70 +119949,14 @@
       }
     },
     {
-      "src": "event:evt_2b509c5fd85fc0a5",
-      "dst": "day:2026-05-21",
-      "rel": "OBSERVED_ON",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_2b509c5fd85fc0a5",
-      "dst": "topic:systemic_crisis",
-      "rel": "ABOUT",
-      "weight": 0.6236,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_2b509c5fd85fc0a5",
-      "dst": "topic:banking",
-      "rel": "ABOUT",
-      "weight": 0.6236,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_2b509c5fd85fc0a5",
+      "src": "event:evt_0db5c8c274d64337",
       "dst": "topic:corporate_credit",
       "rel": "ABOUT",
       "weight": 0.6236,
       "meta": {}
     },
     {
-      "src": "event:evt_2b509c5fd85fc0a5",
-      "dst": "indicator:bank_ai",
-      "rel": "IMPACTS",
-      "weight": 0.6236,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_2b509c5fd85fc0a5",
-      "dst": "indicator:banking_stress",
-      "rel": "IMPACTS",
-      "weight": 0.6236,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_2b509c5fd85fc0a5",
-      "dst": "indicator:funding_market",
-      "rel": "IMPACTS",
-      "weight": 0.6236,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_2b509c5fd85fc0a5",
-      "dst": "indicator:hy_credit",
-      "rel": "IMPACTS",
-      "weight": 0.6236,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_2b509c5fd85fc0a5",
-      "dst": "indicator:ig_credit",
-      "rel": "IMPACTS",
-      "weight": 0.6236,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_2b509c5fd85fc0a5",
+      "src": "event:evt_0db5c8c274d64337",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
       "weight": 0.6236,
@@ -128713,42 +129244,42 @@
       "src": "event:evt_6a38adb4e09b4d49",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.4113,
+      "weight": 0.4039,
       "meta": {}
     },
     {
       "src": "event:evt_6a38adb4e09b4d49",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.4113,
+      "weight": 0.4039,
       "meta": {}
     },
     {
       "src": "event:evt_6a38adb4e09b4d49",
       "dst": "topic:geopolitical_hybrid",
       "rel": "ABOUT",
-      "weight": 0.4113,
+      "weight": 0.4039,
       "meta": {}
     },
     {
       "src": "event:evt_6a38adb4e09b4d49",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.4113,
+      "weight": 0.4039,
       "meta": {}
     },
     {
       "src": "event:evt_6a38adb4e09b4d49",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.4113,
+      "weight": 0.4039,
       "meta": {}
     },
     {
       "src": "event:evt_6a38adb4e09b4d49",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.4113,
+      "weight": 0.4039,
       "meta": {}
     },
     {
@@ -128922,7 +129453,7 @@
       "src": "article:f0a913165e424831bebfb4e2",
       "dst": "event:evt_6a38adb4e09b4d49",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4113,
+      "weight": 0.4039,
       "meta": {
         "published_at": "2026-06-17T07:00:00Z"
       }
@@ -131188,14 +131719,14 @@
     },
     {
       "src": "event:evt_af4a6f6f372a15a2",
-      "dst": "topic:inflation_rates",
+      "dst": "topic:corporate_credit",
       "rel": "ABOUT",
       "weight": 0.58,
       "meta": {}
     },
     {
       "src": "event:evt_af4a6f6f372a15a2",
-      "dst": "topic:corporate_credit",
+      "dst": "topic:inflation_rates",
       "rel": "ABOUT",
       "weight": 0.58,
       "meta": {}
@@ -139575,81 +140106,81 @@
     },
     {
       "src": "article:5769d233a2f6aeb6295ed2be",
-      "dst": "event:evt_91a4e41a20759223",
+      "dst": "event:evt_4b2c35f7810e20b2",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.58,
+      "weight": 0.5801,
       "meta": {
         "published_at": "2026-07-15T07:00:00Z"
       }
     },
     {
-      "src": "event:evt_91a4e41a20759223",
+      "src": "event:evt_4b2c35f7810e20b2",
       "dst": "day:2026-07-15",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
       "meta": {}
     },
     {
-      "src": "event:evt_91a4e41a20759223",
-      "dst": "topic:corporate_credit",
-      "rel": "ABOUT",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_91a4e41a20759223",
-      "dst": "topic:private_credit",
-      "rel": "ABOUT",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_91a4e41a20759223",
+      "src": "event:evt_4b2c35f7810e20b2",
       "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.58,
+      "weight": 0.5801,
       "meta": {}
     },
     {
-      "src": "event:evt_91a4e41a20759223",
+      "src": "event:evt_4b2c35f7810e20b2",
+      "dst": "topic:corporate_credit",
+      "rel": "ABOUT",
+      "weight": 0.5801,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_4b2c35f7810e20b2",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.5801,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_4b2c35f7810e20b2",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.5801,
       "meta": {}
     },
     {
-      "src": "event:evt_91a4e41a20759223",
+      "src": "event:evt_4b2c35f7810e20b2",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.5801,
       "meta": {}
     },
     {
-      "src": "event:evt_91a4e41a20759223",
+      "src": "event:evt_4b2c35f7810e20b2",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.5801,
       "meta": {}
     },
     {
-      "src": "event:evt_91a4e41a20759223",
+      "src": "event:evt_4b2c35f7810e20b2",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.5801,
       "meta": {}
     },
     {
-      "src": "event:evt_91a4e41a20759223",
+      "src": "event:evt_4b2c35f7810e20b2",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.5801,
       "meta": {}
     },
     {
-      "src": "event:evt_91a4e41a20759223",
+      "src": "event:evt_4b2c35f7810e20b2",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.58,
+      "weight": 0.5801,
       "meta": {}
     },
     {
@@ -139791,12 +140322,82 @@
     },
     {
       "src": "article:b62eb1b6a00ac6569da542df",
-      "dst": "event:evt_91a4e41a20759223",
+      "dst": "event:evt_ed72f347d36f69fd",
       "rel": "EVIDENCE_FOR",
       "weight": 0.58,
       "meta": {
         "published_at": "2026-07-15T07:00:00Z"
       }
+    },
+    {
+      "src": "event:evt_ed72f347d36f69fd",
+      "dst": "day:2026-07-15",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ed72f347d36f69fd",
+      "dst": "topic:corporate_credit",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ed72f347d36f69fd",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ed72f347d36f69fd",
+      "dst": "topic:systemic_crisis",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ed72f347d36f69fd",
+      "dst": "indicator:banking_stress",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ed72f347d36f69fd",
+      "dst": "indicator:funding_market",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ed72f347d36f69fd",
+      "dst": "indicator:hy_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ed72f347d36f69fd",
+      "dst": "indicator:ig_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ed72f347d36f69fd",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_ed72f347d36f69fd",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
     },
     {
       "src": "article:b62eb1b6a00ac6569da542df",
@@ -144604,7 +145205,7 @@
       "src": "article:d1960f774c7631e527a09b9f",
       "dst": "event:evt_0b05d6405e5418a1",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5554,
+      "weight": 0.548,
       "meta": {
         "published_at": "2026-07-23T07:00:00Z"
       }
@@ -146034,49 +146635,49 @@
       "src": "event:evt_80b80735871ce4c5",
       "dst": "topic:ai_data_center",
       "rel": "ABOUT",
-      "weight": 0.6573,
+      "weight": 0.6638,
       "meta": {}
     },
     {
       "src": "event:evt_80b80735871ce4c5",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.6573,
+      "weight": 0.6638,
       "meta": {}
     },
     {
       "src": "event:evt_80b80735871ce4c5",
       "dst": "topic:geopolitical_hybrid",
       "rel": "ABOUT",
-      "weight": 0.6573,
+      "weight": 0.6638,
       "meta": {}
     },
     {
       "src": "event:evt_80b80735871ce4c5",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.6573,
+      "weight": 0.6638,
       "meta": {}
     },
     {
       "src": "event:evt_80b80735871ce4c5",
       "dst": "indicator:data_center",
       "rel": "IMPACTS",
-      "weight": 0.6573,
+      "weight": 0.6638,
       "meta": {}
     },
     {
       "src": "event:evt_80b80735871ce4c5",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.6573,
+      "weight": 0.6638,
       "meta": {}
     },
     {
       "src": "event:evt_80b80735871ce4c5",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.6573,
+      "weight": 0.6638,
       "meta": {}
     },
     {
@@ -146261,7 +146862,7 @@
       "src": "article:d7de950674bb428962675ece",
       "dst": "event:evt_80b80735871ce4c5",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6573,
+      "weight": 0.6638,
       "meta": {
         "published_at": "2026-07-28T07:00:00Z"
       }
@@ -150077,7 +150678,7 @@
       "src": "article:b0886ecb70a5bf1cb7262714",
       "dst": "event:evt_e9579d4bb82c3172",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4519,
+      "weight": 0.4646,
       "meta": {
         "published_at": "2026-08-06T07:00:00Z"
       }
@@ -150093,49 +150694,49 @@
       "src": "event:evt_e9579d4bb82c3172",
       "dst": "topic:ai_data_center",
       "rel": "ABOUT",
-      "weight": 0.4519,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e9579d4bb82c3172",
-      "dst": "topic:geopolitical_hybrid",
-      "rel": "ABOUT",
-      "weight": 0.4519,
+      "weight": 0.4646,
       "meta": {}
     },
     {
       "src": "event:evt_e9579d4bb82c3172",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.4519,
+      "weight": 0.4646,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_e9579d4bb82c3172",
+      "dst": "topic:geopolitical_hybrid",
+      "rel": "ABOUT",
+      "weight": 0.4646,
       "meta": {}
     },
     {
       "src": "event:evt_e9579d4bb82c3172",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.4519,
+      "weight": 0.4646,
       "meta": {}
     },
     {
       "src": "event:evt_e9579d4bb82c3172",
       "dst": "indicator:data_center",
       "rel": "IMPACTS",
-      "weight": 0.4519,
+      "weight": 0.4646,
       "meta": {}
     },
     {
       "src": "event:evt_e9579d4bb82c3172",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.4519,
+      "weight": 0.4646,
       "meta": {}
     },
     {
       "src": "event:evt_e9579d4bb82c3172",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.4519,
+      "weight": 0.4646,
       "meta": {}
     },
     {
@@ -150431,7 +151032,7 @@
       "src": "article:1a05343f6cbdf0aea4d2e742",
       "dst": "event:evt_19d89bac523c8382",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5591,
+      "weight": 0.5516,
       "meta": {
         "published_at": "2026-08-07T07:00:00Z"
       }
@@ -150441,6 +151042,13 @@
       "dst": "day:2026-08-07",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_19d89bac523c8382",
+      "dst": "topic:geopolitical_hybrid",
+      "rel": "ABOUT",
+      "weight": 0.6036,
       "meta": {}
     },
     {
@@ -150478,13 +151086,6 @@
       "dst": "topic:energy_shock",
       "rel": "ABOUT",
       "weight": 0.4641,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_767f3bb6261762be",
-      "dst": "topic:geopolitical_hybrid",
-      "rel": "ABOUT",
-      "weight": 0.58,
       "meta": {}
     },
     {
@@ -150642,21 +151243,21 @@
       "src": "event:evt_4a390fbbb367f711",
       "dst": "topic:geopolitical_hybrid",
       "rel": "ABOUT",
-      "weight": 0.5251,
+      "weight": 0.6821,
       "meta": {}
     },
     {
       "src": "event:evt_4a390fbbb367f711",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.5251,
+      "weight": 0.6821,
       "meta": {}
     },
     {
       "src": "event:evt_4a390fbbb367f711",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.5251,
+      "weight": 0.6821,
       "meta": {}
     },
     {
@@ -150849,7 +151450,7 @@
       "src": "article:3c45c5acb5e926e70cd12071",
       "dst": "event:evt_19d89bac523c8382",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5591,
+      "weight": 0.5516,
       "meta": {
         "published_at": "2026-08-08T03:39:00Z"
       }
@@ -150883,13 +151484,6 @@
       "meta": {
         "published_at": "2026-08-08T03:39:00Z"
       }
-    },
-    {
-      "src": "event:evt_19d89bac523c8382",
-      "dst": "topic:geopolitical_hybrid",
-      "rel": "ABOUT",
-      "weight": 0.6036,
-      "meta": {}
     },
     {
       "src": "article:52fcab5f135e9f7193137498",
@@ -152963,7 +153557,7 @@
       "src": "article:22dff60a452b2262d74a589c",
       "dst": "event:evt_4a390fbbb367f711",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.58,
+      "weight": 0.5842,
       "meta": {
         "published_at": "2026-08-12T07:00:00Z"
       }
@@ -152979,14 +153573,14 @@
       "src": "event:evt_4a390fbbb367f711",
       "dst": "topic:energy_shock",
       "rel": "ABOUT",
-      "weight": 0.5251,
+      "weight": 0.6821,
       "meta": {}
     },
     {
       "src": "event:evt_4a390fbbb367f711",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.5251,
+      "weight": 0.6821,
       "meta": {}
     },
     {
@@ -156206,7 +156800,7 @@
       "src": "article:add5a9ac9a4e0326567097e2",
       "dst": "event:evt_8ebcc23672a0058f",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4111,
+      "weight": 0.5814,
       "meta": {
         "published_at": "2026-08-17T07:00:00Z"
       }
@@ -156222,63 +156816,70 @@
       "src": "event:evt_8ebcc23672a0058f",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.4111,
+      "weight": 0.5814,
       "meta": {}
     },
     {
       "src": "event:evt_8ebcc23672a0058f",
       "dst": "topic:corporate_credit",
       "rel": "ABOUT",
-      "weight": 0.4111,
+      "weight": 0.5814,
       "meta": {}
     },
     {
       "src": "event:evt_8ebcc23672a0058f",
-      "dst": "topic:funding_liquidity",
+      "dst": "topic:ai_data_center",
       "rel": "ABOUT",
-      "weight": 0.4111,
+      "weight": 0.5814,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_8ebcc23672a0058f",
+      "dst": "indicator:bank_ai",
+      "rel": "IMPACTS",
+      "weight": 0.5814,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_8ebcc23672a0058f",
+      "dst": "indicator:data_center",
+      "rel": "IMPACTS",
+      "weight": 0.5814,
       "meta": {}
     },
     {
       "src": "event:evt_8ebcc23672a0058f",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.4111,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_8ebcc23672a0058f",
-      "dst": "indicator:funding_market",
-      "rel": "IMPACTS",
-      "weight": 0.4111,
+      "weight": 0.5814,
       "meta": {}
     },
     {
       "src": "event:evt_8ebcc23672a0058f",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.4111,
+      "weight": 0.5814,
       "meta": {}
     },
     {
       "src": "event:evt_8ebcc23672a0058f",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.4111,
+      "weight": 0.5814,
       "meta": {}
     },
     {
       "src": "event:evt_8ebcc23672a0058f",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.4111,
+      "weight": 0.5814,
       "meta": {}
     },
     {
       "src": "event:evt_8ebcc23672a0058f",
-      "dst": "indicator:rates_liquidity",
+      "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.4111,
+      "weight": 0.5814,
       "meta": {}
     },
     {
@@ -157105,67 +157706,67 @@
     },
     {
       "src": "article:2f79981959db01568ab3cb75",
-      "dst": "event:evt_e59109e9a4c5cc05",
+      "dst": "event:evt_c81b0268ebe41550",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4579,
+      "weight": 0.4594,
       "meta": {
         "published_at": "2026-08-18T07:00:00Z"
       }
     },
     {
-      "src": "event:evt_e59109e9a4c5cc05",
+      "src": "event:evt_c81b0268ebe41550",
       "dst": "day:2026-08-18",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
       "meta": {}
     },
     {
-      "src": "event:evt_e59109e9a4c5cc05",
-      "dst": "topic:ai_data_center",
-      "rel": "ABOUT",
-      "weight": 0.4579,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e59109e9a4c5cc05",
+      "src": "event:evt_c81b0268ebe41550",
       "dst": "topic:geopolitical_hybrid",
       "rel": "ABOUT",
-      "weight": 0.4579,
+      "weight": 0.4492,
       "meta": {}
     },
     {
-      "src": "event:evt_e59109e9a4c5cc05",
+      "src": "event:evt_c81b0268ebe41550",
+      "dst": "topic:ai_data_center",
+      "rel": "ABOUT",
+      "weight": 0.4492,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_c81b0268ebe41550",
       "dst": "topic:energy_shock",
       "rel": "ABOUT",
-      "weight": 0.4579,
+      "weight": 0.4492,
       "meta": {}
     },
     {
-      "src": "event:evt_e59109e9a4c5cc05",
+      "src": "event:evt_c81b0268ebe41550",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.4579,
+      "weight": 0.4492,
       "meta": {}
     },
     {
-      "src": "event:evt_e59109e9a4c5cc05",
+      "src": "event:evt_c81b0268ebe41550",
       "dst": "indicator:data_center",
       "rel": "IMPACTS",
-      "weight": 0.4579,
+      "weight": 0.4492,
       "meta": {}
     },
     {
-      "src": "event:evt_e59109e9a4c5cc05",
+      "src": "event:evt_c81b0268ebe41550",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.4579,
+      "weight": 0.4492,
       "meta": {}
     },
     {
-      "src": "event:evt_e59109e9a4c5cc05",
+      "src": "event:evt_c81b0268ebe41550",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.4579,
+      "weight": 0.4492,
       "meta": {}
     },
     {
@@ -157457,68 +158058,12 @@
     },
     {
       "src": "article:b6e5711da54cb7bca1887c02",
-      "dst": "event:evt_31cd6d25595d1871",
+      "dst": "event:evt_c81b0268ebe41550",
       "rel": "EVIDENCE_FOR",
       "weight": 0.4492,
       "meta": {
         "published_at": "2026-08-18T07:00:00Z"
       }
-    },
-    {
-      "src": "event:evt_31cd6d25595d1871",
-      "dst": "day:2026-08-18",
-      "rel": "OBSERVED_ON",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_31cd6d25595d1871",
-      "dst": "topic:geopolitical_hybrid",
-      "rel": "ABOUT",
-      "weight": 0.4492,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_31cd6d25595d1871",
-      "dst": "topic:ai_data_center",
-      "rel": "ABOUT",
-      "weight": 0.4492,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_31cd6d25595d1871",
-      "dst": "topic:energy_shock",
-      "rel": "ABOUT",
-      "weight": 0.4492,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_31cd6d25595d1871",
-      "dst": "indicator:bank_ai",
-      "rel": "IMPACTS",
-      "weight": 0.4492,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_31cd6d25595d1871",
-      "dst": "indicator:data_center",
-      "rel": "IMPACTS",
-      "weight": 0.4492,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_31cd6d25595d1871",
-      "dst": "indicator:energy",
-      "rel": "IMPACTS",
-      "weight": 0.4492,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_31cd6d25595d1871",
-      "dst": "indicator:private_credit",
-      "rel": "IMPACTS",
-      "weight": 0.4492,
-      "meta": {}
     },
     {
       "src": "article:b6e5711da54cb7bca1887c02",
@@ -170537,7 +171082,7 @@
       "src": "article:e458b907e0f10c599414ea5b",
       "dst": "event:evt_5268bd4ed6656ef9",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5011,
+      "weight": 0.4936,
       "meta": {
         "published_at": "2026-09-09T07:00:00Z"
       }
@@ -170558,16 +171103,16 @@
     },
     {
       "src": "event:evt_5268bd4ed6656ef9",
-      "dst": "topic:energy_shock",
+      "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.4937,
+      "weight": 0.58,
       "meta": {}
     },
     {
       "src": "event:evt_5268bd4ed6656ef9",
-      "dst": "topic:europe_sovereign",
+      "dst": "topic:energy_shock",
       "rel": "ABOUT",
-      "weight": 0.58,
+      "weight": 0.4937,
       "meta": {}
     },
     {
@@ -170660,7 +171205,7 @@
       "src": "article:699370f5fc0c28c1990c46e8",
       "dst": "event:evt_5268bd4ed6656ef9",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5016,
+      "weight": 0.4948,
       "meta": {
         "published_at": "2026-09-10T06:23:48Z"
       }
@@ -172993,7 +173538,7 @@
       "src": "article:58d7a8509c5cebc173b59984",
       "dst": "event:evt_b5f73571bbbf288f",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4419,
+      "weight": 0.4457,
       "meta": {
         "published_at": "2026-09-13T07:00:00Z"
       }
@@ -173009,7 +173554,7 @@
       "src": "event:evt_b5f73571bbbf288f",
       "dst": "topic:geopolitical_hybrid",
       "rel": "ABOUT",
-      "weight": 0.4419,
+      "weight": 0.4457,
       "meta": {}
     },
     {
@@ -174649,7 +175194,7 @@
       "src": "article:98f44ac4f57e04dfed09b874",
       "dst": "event:evt_4a390fbbb367f711",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5006,
+      "weight": 0.5169,
       "meta": {
         "published_at": "2026-09-15T07:00:00Z"
       }
@@ -174904,7 +175449,7 @@
       "src": "article:bd430c846aa28b71d4991454",
       "dst": "event:evt_4a390fbbb367f711",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5931,
+      "weight": 0.5998,
       "meta": {
         "published_at": "2026-09-15T08:21:19Z"
       }
@@ -176679,7 +177224,7 @@
       "src": "article:6b30c5f876d020856f69aa64",
       "dst": "event:evt_b5707e5fe8e75a81",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5404,
+      "weight": 0.5742,
       "meta": {
         "published_at": "2026-09-17T07:00:00Z"
       }
@@ -176695,84 +177240,63 @@
       "src": "event:evt_b5707e5fe8e75a81",
       "dst": "topic:ai_data_center",
       "rel": "ABOUT",
-      "weight": 0.5404,
+      "weight": 0.5742,
       "meta": {}
     },
     {
       "src": "event:evt_b5707e5fe8e75a81",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.5404,
+      "weight": 0.5742,
       "meta": {}
     },
     {
       "src": "event:evt_b5707e5fe8e75a81",
-      "dst": "topic:systemic_crisis",
+      "dst": "topic:banking",
       "rel": "ABOUT",
-      "weight": 0.5404,
+      "weight": 0.5742,
       "meta": {}
     },
     {
       "src": "event:evt_b5707e5fe8e75a81",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.5404,
+      "weight": 0.5742,
       "meta": {}
     },
     {
       "src": "event:evt_b5707e5fe8e75a81",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.5404,
+      "weight": 0.5742,
       "meta": {}
     },
     {
       "src": "event:evt_b5707e5fe8e75a81",
       "dst": "indicator:data_center",
       "rel": "IMPACTS",
-      "weight": 0.5404,
+      "weight": 0.5742,
       "meta": {}
     },
     {
       "src": "event:evt_b5707e5fe8e75a81",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.5404,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b5707e5fe8e75a81",
-      "dst": "indicator:funding_market",
-      "rel": "IMPACTS",
-      "weight": 0.5404,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b5707e5fe8e75a81",
-      "dst": "indicator:hy_credit",
-      "rel": "IMPACTS",
-      "weight": 0.5404,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_b5707e5fe8e75a81",
-      "dst": "indicator:ig_credit",
-      "rel": "IMPACTS",
-      "weight": 0.5404,
+      "weight": 0.5742,
       "meta": {}
     },
     {
       "src": "event:evt_b5707e5fe8e75a81",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.5404,
+      "weight": 0.5742,
       "meta": {}
     },
     {
       "src": "event:evt_b5707e5fe8e75a81",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.5404,
+      "weight": 0.5742,
       "meta": {}
     },
     {
@@ -182496,7 +183020,7 @@
       "src": "event:evt_1871db6cbe88a368",
       "dst": "topic:funding_liquidity",
       "rel": "ABOUT",
-      "weight": 0.5823,
+      "weight": 0.5821,
       "meta": {}
     },
     {
@@ -182517,7 +183041,7 @@
       "src": "article:754eab79b344c544877c7403",
       "dst": "event:evt_1871db6cbe88a368",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5823,
+      "weight": 0.5821,
       "meta": {
         "published_at": "2026-09-20T07:00:12Z"
       }
@@ -183669,21 +184193,21 @@
       "src": "event:evt_8bba2a28bc46b4f9",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.3355,
+      "weight": 0.374,
       "meta": {}
     },
     {
       "src": "event:evt_8bba2a28bc46b4f9",
       "dst": "topic:geopolitical_hybrid",
       "rel": "ABOUT",
-      "weight": 0.3355,
+      "weight": 0.374,
       "meta": {}
     },
     {
       "src": "event:evt_8bba2a28bc46b4f9",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.3355,
+      "weight": 0.374,
       "meta": {}
     },
     {
@@ -184444,21 +184968,21 @@
       "src": "event:evt_1008901f609adb82",
       "dst": "topic:geopolitical_hybrid",
       "rel": "ABOUT",
-      "weight": 0.3683,
+      "weight": 0.4126,
       "meta": {}
     },
     {
       "src": "event:evt_1008901f609adb82",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.3683,
+      "weight": 0.4126,
       "meta": {}
     },
     {
       "src": "event:evt_1008901f609adb82",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.3683,
+      "weight": 0.4126,
       "meta": {}
     },
     {
@@ -184949,15 +185473,15 @@
     },
     {
       "src": "article:b99d5709ab8e732c9fa02d49",
-      "dst": "event:evt_8bba2a28bc46b4f9",
+      "dst": "event:evt_1008901f609adb82",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.3355,
+      "weight": 0.3351,
       "meta": {
         "published_at": "2026-09-22T05:40:24Z"
       }
     },
     {
-      "src": "event:evt_8bba2a28bc46b4f9",
+      "src": "event:evt_1008901f609adb82",
       "dst": "day:2026-09-22",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
@@ -185308,6 +185832,99 @@
       "meta": {}
     },
     {
+      "src": "article:9dd869d035dac77cc7e96627",
+      "dst": "source:Bloomberg",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:9dd869d035dac77cc7e96627",
+      "dst": "event:evt_923ddcea518a1df3",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.58,
+      "meta": {
+        "published_at": "2026-09-22T07:00:00Z"
+      }
+    },
+    {
+      "src": "event:evt_923ddcea518a1df3",
+      "dst": "day:2026-09-22",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_923ddcea518a1df3",
+      "dst": "topic:ai_data_center",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_923ddcea518a1df3",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_923ddcea518a1df3",
+      "dst": "topic:corporate_credit",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_923ddcea518a1df3",
+      "dst": "indicator:bank_ai",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_923ddcea518a1df3",
+      "dst": "indicator:data_center",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_923ddcea518a1df3",
+      "dst": "indicator:hy_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_923ddcea518a1df3",
+      "dst": "indicator:ig_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_923ddcea518a1df3",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_923ddcea518a1df3",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "article:9dd869d035dac77cc7e96627",
+      "dst": "entity:Bloomberg",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
       "src": "article:a5f643633bf152a03b61ee4f",
       "dst": "source:united24media.com",
       "rel": "PUBLISHED_BY",
@@ -185469,82 +186086,12 @@
     },
     {
       "src": "article:ebe7cfb6c392acdeea53edee",
-      "dst": "event:evt_e273c36a9a571dfb",
+      "dst": "event:evt_923ddcea518a1df3",
       "rel": "EVIDENCE_FOR",
       "weight": 0.58,
       "meta": {
         "published_at": "2026-09-22T07:00:00Z"
       }
-    },
-    {
-      "src": "event:evt_e273c36a9a571dfb",
-      "dst": "day:2026-09-22",
-      "rel": "OBSERVED_ON",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e273c36a9a571dfb",
-      "dst": "topic:ai_data_center",
-      "rel": "ABOUT",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e273c36a9a571dfb",
-      "dst": "topic:private_credit",
-      "rel": "ABOUT",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e273c36a9a571dfb",
-      "dst": "topic:corporate_credit",
-      "rel": "ABOUT",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e273c36a9a571dfb",
-      "dst": "indicator:bank_ai",
-      "rel": "IMPACTS",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e273c36a9a571dfb",
-      "dst": "indicator:data_center",
-      "rel": "IMPACTS",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e273c36a9a571dfb",
-      "dst": "indicator:hy_credit",
-      "rel": "IMPACTS",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e273c36a9a571dfb",
-      "dst": "indicator:ig_credit",
-      "rel": "IMPACTS",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e273c36a9a571dfb",
-      "dst": "indicator:leveraged_credit",
-      "rel": "IMPACTS",
-      "weight": 0.58,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_e273c36a9a571dfb",
-      "dst": "indicator:private_credit",
-      "rel": "IMPACTS",
-      "weight": 0.58,
-      "meta": {}
     },
     {
       "src": "article:ebe7cfb6c392acdeea53edee",
@@ -189546,12 +190093,19 @@
     },
     {
       "src": "article:13f8d6fcd40a28db2c3740d3",
-      "dst": "event:evt_4a390fbbb367f711",
+      "dst": "event:evt_1008901f609adb82",
       "rel": "EVIDENCE_FOR",
       "weight": 0.4945,
       "meta": {
         "published_at": "2026-09-24T15:05:07Z"
       }
+    },
+    {
+      "src": "event:evt_1008901f609adb82",
+      "dst": "day:2026-09-24",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
     },
     {
       "src": "article:13f8d6fcd40a28db2c3740d3",
@@ -189589,7 +190143,7 @@
       "meta": {}
     },
     {
-      "src": "event:evt_4a390fbbb367f711",
+      "src": "event:evt_1008901f609adb82",
       "dst": "actor:NATO",
       "rel": "REPORTED_ATTRIBUTION",
       "weight": 1.0,
@@ -189876,7 +190430,7 @@
     },
     {
       "src": "article:94a0cc7bbe7d1901b238c717",
-      "dst": "event:evt_4a390fbbb367f711",
+      "dst": "event:evt_1008901f609adb82",
       "rel": "EVIDENCE_FOR",
       "weight": 0.4699,
       "meta": {
@@ -191193,12 +191747,19 @@
     },
     {
       "src": "article:fdcd978dd3a78d53f568999d",
-      "dst": "event:evt_4a390fbbb367f711",
+      "dst": "event:evt_1008901f609adb82",
       "rel": "EVIDENCE_FOR",
       "weight": 0.4945,
       "meta": {
         "published_at": "2026-09-25T07:00:00Z"
       }
+    },
+    {
+      "src": "event:evt_1008901f609adb82",
+      "dst": "day:2026-09-25",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
     },
     {
       "src": "article:fdcd978dd3a78d53f568999d",
@@ -193904,12 +194465,19 @@
     },
     {
       "src": "article:ab6ccf7892ad20884d117d31",
-      "dst": "event:evt_4a390fbbb367f711",
+      "dst": "event:evt_1008901f609adb82",
       "rel": "EVIDENCE_FOR",
       "weight": 0.58,
       "meta": {
         "published_at": "2026-09-29T07:00:00Z"
       }
+    },
+    {
+      "src": "event:evt_1008901f609adb82",
+      "dst": "day:2026-09-29",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
     },
     {
       "src": "article:ab6ccf7892ad20884d117d31",
@@ -194252,7 +194820,7 @@
     },
     {
       "src": "article:5d798d65487c11430d445fe6",
-      "dst": "event:evt_4a390fbbb367f711",
+      "dst": "event:evt_1008901f609adb82",
       "rel": "EVIDENCE_FOR",
       "weight": 0.58,
       "meta": {
@@ -195086,12 +195654,54 @@
     },
     {
       "src": "article:4f262c31458738e4ecdf2517",
-      "dst": "event:evt_4a390fbbb367f711",
+      "dst": "event:evt_94c049697b1c1d43",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4296,
+      "weight": 0.4319,
       "meta": {
         "published_at": "2026-09-30T07:00:00Z"
       }
+    },
+    {
+      "src": "event:evt_94c049697b1c1d43",
+      "dst": "day:2026-09-30",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_94c049697b1c1d43",
+      "dst": "topic:europe_sovereign",
+      "rel": "ABOUT",
+      "weight": 0.4319,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_94c049697b1c1d43",
+      "dst": "topic:geopolitical_hybrid",
+      "rel": "ABOUT",
+      "weight": 0.4319,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_94c049697b1c1d43",
+      "dst": "topic:energy_shock",
+      "rel": "ABOUT",
+      "weight": 0.4319,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_94c049697b1c1d43",
+      "dst": "indicator:energy",
+      "rel": "IMPACTS",
+      "weight": 0.4319,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_94c049697b1c1d43",
+      "dst": "indicator:europe",
+      "rel": "IMPACTS",
+      "weight": 0.4319,
+      "meta": {}
     },
     {
       "src": "article:4f262c31458738e4ecdf2517",
@@ -195181,12 +195791,33 @@
     },
     {
       "src": "article:757a6a68e59dec45db7baadb",
-      "dst": "event:evt_4a390fbbb367f711",
+      "dst": "event:evt_1008901f609adb82",
       "rel": "EVIDENCE_FOR",
       "weight": 0.4126,
       "meta": {
         "published_at": "2026-09-30T07:00:00Z"
       }
+    },
+    {
+      "src": "event:evt_1008901f609adb82",
+      "dst": "day:2026-09-30",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1008901f609adb82",
+      "dst": "topic:energy_shock",
+      "rel": "ABOUT",
+      "weight": 0.4126,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_1008901f609adb82",
+      "dst": "indicator:energy",
+      "rel": "IMPACTS",
+      "weight": 0.4126,
+      "meta": {}
     },
     {
       "src": "article:757a6a68e59dec45db7baadb",
@@ -195264,7 +195895,7 @@
       "src": "article:9d12b03aa64472f3469cf04a",
       "dst": "event:evt_60e766641e4aadf2",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4571,
+      "weight": 0.4449,
       "meta": {
         "published_at": "2026-09-30T07:00:00Z"
       }
@@ -195280,63 +195911,42 @@
       "src": "event:evt_60e766641e4aadf2",
       "dst": "topic:ai_data_center",
       "rel": "ABOUT",
-      "weight": 0.4571,
+      "weight": 0.4449,
       "meta": {}
     },
     {
       "src": "event:evt_60e766641e4aadf2",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.4571,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_60e766641e4aadf2",
-      "dst": "topic:corporate_credit",
-      "rel": "ABOUT",
-      "weight": 0.4571,
+      "weight": 0.4449,
       "meta": {}
     },
     {
       "src": "event:evt_60e766641e4aadf2",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.4571,
+      "weight": 0.4449,
       "meta": {}
     },
     {
       "src": "event:evt_60e766641e4aadf2",
       "dst": "indicator:data_center",
       "rel": "IMPACTS",
-      "weight": 0.4571,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_60e766641e4aadf2",
-      "dst": "indicator:hy_credit",
-      "rel": "IMPACTS",
-      "weight": 0.4571,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_60e766641e4aadf2",
-      "dst": "indicator:ig_credit",
-      "rel": "IMPACTS",
-      "weight": 0.4571,
+      "weight": 0.4449,
       "meta": {}
     },
     {
       "src": "event:evt_60e766641e4aadf2",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.4571,
+      "weight": 0.4449,
       "meta": {}
     },
     {
       "src": "event:evt_60e766641e4aadf2",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.4571,
+      "weight": 0.4449,
       "meta": {}
     },
     {
@@ -200878,7 +201488,7 @@
       "src": "article:95e76bf106f17e21c6036731",
       "dst": "event:evt_053f041b8dc2defc",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.64,
+      "weight": 0.6393,
       "meta": {
         "published_at": "2026-10-06T07:00:00Z"
       }
@@ -202346,42 +202956,42 @@
       "src": "event:evt_cf62c65d4f254cef",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.7103,
+      "weight": 0.5869,
       "meta": {}
     },
     {
       "src": "event:evt_cf62c65d4f254cef",
       "dst": "topic:energy_shock",
       "rel": "ABOUT",
-      "weight": 0.7103,
+      "weight": 0.5869,
       "meta": {}
     },
     {
       "src": "event:evt_cf62c65d4f254cef",
       "dst": "topic:funding_liquidity",
       "rel": "ABOUT",
-      "weight": 0.7103,
+      "weight": 0.5869,
       "meta": {}
     },
     {
       "src": "event:evt_cf62c65d4f254cef",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.7103,
+      "weight": 0.5869,
       "meta": {}
     },
     {
       "src": "event:evt_cf62c65d4f254cef",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.7103,
+      "weight": 0.5869,
       "meta": {}
     },
     {
       "src": "event:evt_cf62c65d4f254cef",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.7103,
+      "weight": 0.5869,
       "meta": {}
     },
     {
@@ -203622,18 +204232,67 @@
     },
     {
       "src": "article:d267d139926ac745297fcb46",
-      "dst": "event:evt_cf62c65d4f254cef",
+      "dst": "event:evt_3a827a62a3761d66",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.7103,
+      "weight": 0.6628,
       "meta": {
         "published_at": "2026-10-09T07:00:00Z"
       }
     },
     {
-      "src": "event:evt_cf62c65d4f254cef",
+      "src": "event:evt_3a827a62a3761d66",
       "dst": "day:2026-10-09",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_3a827a62a3761d66",
+      "dst": "topic:energy_shock",
+      "rel": "ABOUT",
+      "weight": 0.6628,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_3a827a62a3761d66",
+      "dst": "topic:inflation_rates",
+      "rel": "ABOUT",
+      "weight": 0.6628,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_3a827a62a3761d66",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.6628,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_3a827a62a3761d66",
+      "dst": "indicator:energy",
+      "rel": "IMPACTS",
+      "weight": 0.6628,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_3a827a62a3761d66",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.6628,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_3a827a62a3761d66",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.6628,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_3a827a62a3761d66",
+      "dst": "indicator:rates_liquidity",
+      "rel": "IMPACTS",
+      "weight": 0.6628,
       "meta": {}
     },
     {
@@ -203659,82 +204318,12 @@
     },
     {
       "src": "article:e32bef34f5531a667a93c20a",
-      "dst": "event:evt_674b1e2542858f18",
+      "dst": "event:evt_a9154a8abda8beae",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.7366,
+      "weight": 0.7446,
       "meta": {
         "published_at": "2026-10-09T07:00:00Z"
       }
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
-      "dst": "day:2026-10-09",
-      "rel": "OBSERVED_ON",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
-      "dst": "topic:systemic_crisis",
-      "rel": "ABOUT",
-      "weight": 0.7366,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
-      "dst": "topic:europe_sovereign",
-      "rel": "ABOUT",
-      "weight": 0.7366,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
-      "dst": "topic:banking",
-      "rel": "ABOUT",
-      "weight": 0.7366,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
-      "dst": "indicator:bank_ai",
-      "rel": "IMPACTS",
-      "weight": 0.7366,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
-      "dst": "indicator:banking_stress",
-      "rel": "IMPACTS",
-      "weight": 0.7366,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
-      "dst": "indicator:europe",
-      "rel": "IMPACTS",
-      "weight": 0.7366,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
-      "dst": "indicator:funding_market",
-      "rel": "IMPACTS",
-      "weight": 0.7366,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
-      "dst": "indicator:hy_credit",
-      "rel": "IMPACTS",
-      "weight": 0.7366,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
-      "dst": "indicator:ig_credit",
-      "rel": "IMPACTS",
-      "weight": 0.7366,
-      "meta": {}
     },
     {
       "src": "article:e32bef34f5531a667a93c20a",
@@ -204915,7 +205504,7 @@
     },
     {
       "src": "article:d228a1077623899aece99d0d",
-      "dst": "event:evt_4a390fbbb367f711",
+      "dst": "event:evt_419f7c7f4ef05a55",
       "rel": "EVIDENCE_FOR",
       "weight": 0.4714,
       "meta": {
@@ -204923,10 +205512,31 @@
       }
     },
     {
-      "src": "event:evt_4a390fbbb367f711",
+      "src": "event:evt_419f7c7f4ef05a55",
       "dst": "day:2026-10-11",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_419f7c7f4ef05a55",
+      "dst": "topic:geopolitical_hybrid",
+      "rel": "ABOUT",
+      "weight": 0.4714,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_419f7c7f4ef05a55",
+      "dst": "topic:europe_sovereign",
+      "rel": "ABOUT",
+      "weight": 0.4714,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_419f7c7f4ef05a55",
+      "dst": "indicator:europe",
+      "rel": "IMPACTS",
+      "weight": 0.4714,
       "meta": {}
     },
     {
@@ -205146,6 +205756,13 @@
       "meta": {
         "published_at": "2026-10-11T15:13:00Z"
       }
+    },
+    {
+      "src": "event:evt_4a390fbbb367f711",
+      "dst": "day:2026-10-11",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
     },
     {
       "src": "article:55dafd5f3149c591b59586a9",
@@ -205455,7 +206072,7 @@
       "src": "article:c132ae5a71c59492655a81c0",
       "dst": "event:evt_053f041b8dc2defc",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.585,
+      "weight": 0.5875,
       "meta": {
         "published_at": "2026-10-12T07:00:00Z"
       }
@@ -206188,7 +206805,7 @@
       "src": "article:79da4dcd7f180e02bfc535cc",
       "dst": "event:evt_dbe7bcb15ed3c2ed",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5645,
+      "weight": 0.5937,
       "meta": {
         "published_at": "2026-10-12T16:16:29Z"
       }
@@ -206204,63 +206821,63 @@
       "src": "event:evt_dbe7bcb15ed3c2ed",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.5645,
+      "weight": 0.5937,
       "meta": {}
     },
     {
       "src": "event:evt_dbe7bcb15ed3c2ed",
       "dst": "topic:banking",
       "rel": "ABOUT",
-      "weight": 0.5645,
+      "weight": 0.5937,
       "meta": {}
     },
     {
       "src": "event:evt_dbe7bcb15ed3c2ed",
       "dst": "topic:corporate_credit",
       "rel": "ABOUT",
-      "weight": 0.5645,
+      "weight": 0.5937,
       "meta": {}
     },
     {
       "src": "event:evt_dbe7bcb15ed3c2ed",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.5645,
+      "weight": 0.5937,
       "meta": {}
     },
     {
       "src": "event:evt_dbe7bcb15ed3c2ed",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.5645,
+      "weight": 0.5937,
       "meta": {}
     },
     {
       "src": "event:evt_dbe7bcb15ed3c2ed",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.5645,
+      "weight": 0.5937,
       "meta": {}
     },
     {
       "src": "event:evt_dbe7bcb15ed3c2ed",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.5645,
+      "weight": 0.5937,
       "meta": {}
     },
     {
       "src": "event:evt_dbe7bcb15ed3c2ed",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.5645,
+      "weight": 0.5937,
       "meta": {}
     },
     {
       "src": "event:evt_dbe7bcb15ed3c2ed",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.5645,
+      "weight": 0.5937,
       "meta": {}
     },
     {
@@ -210284,86 +210901,130 @@
     },
     {
       "src": "article:2666dc768190927238362992",
-      "dst": "event:evt_652d2ae11950bd6b",
+      "dst": "event:evt_a9154a8abda8beae",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.7366,
+      "weight": 0.7446,
       "meta": {
         "published_at": "2026-10-16T07:00:00Z"
       }
     },
     {
-      "src": "event:evt_652d2ae11950bd6b",
+      "src": "article:2666dc768190927238362992",
+      "dst": "entity:野村證券",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:577f383ea1c24dcb060cc644",
+      "dst": "source:Moomoo",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:577f383ea1c24dcb060cc644",
+      "dst": "event:evt_6748364ac354a52f",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.4135,
+      "meta": {
+        "published_at": "2026-10-16T07:00:00Z"
+      }
+    },
+    {
+      "src": "event:evt_6748364ac354a52f",
       "dst": "day:2026-10-16",
       "rel": "OBSERVED_ON",
       "weight": 1.0,
       "meta": {}
     },
     {
-      "src": "event:evt_652d2ae11950bd6b",
+      "src": "event:evt_6748364ac354a52f",
+      "dst": "topic:ai_data_center",
+      "rel": "ABOUT",
+      "weight": 0.452,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6748364ac354a52f",
       "dst": "topic:systemic_crisis",
       "rel": "ABOUT",
-      "weight": 0.7366,
+      "weight": 0.452,
       "meta": {}
     },
     {
-      "src": "event:evt_652d2ae11950bd6b",
+      "src": "event:evt_6748364ac354a52f",
       "dst": "topic:europe_sovereign",
       "rel": "ABOUT",
-      "weight": 0.7366,
+      "weight": 0.4135,
       "meta": {}
     },
     {
-      "src": "event:evt_652d2ae11950bd6b",
-      "dst": "topic:banking",
-      "rel": "ABOUT",
-      "weight": 0.7366,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_652d2ae11950bd6b",
+      "src": "event:evt_6748364ac354a52f",
       "dst": "indicator:bank_ai",
       "rel": "IMPACTS",
-      "weight": 0.7366,
+      "weight": 0.452,
       "meta": {}
     },
     {
-      "src": "event:evt_652d2ae11950bd6b",
+      "src": "event:evt_6748364ac354a52f",
       "dst": "indicator:banking_stress",
       "rel": "IMPACTS",
-      "weight": 0.7366,
+      "weight": 0.452,
       "meta": {}
     },
     {
-      "src": "event:evt_652d2ae11950bd6b",
+      "src": "event:evt_6748364ac354a52f",
+      "dst": "indicator:data_center",
+      "rel": "IMPACTS",
+      "weight": 0.452,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6748364ac354a52f",
       "dst": "indicator:europe",
       "rel": "IMPACTS",
-      "weight": 0.7366,
+      "weight": 0.4135,
       "meta": {}
     },
     {
-      "src": "event:evt_652d2ae11950bd6b",
+      "src": "event:evt_6748364ac354a52f",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.7366,
+      "weight": 0.452,
       "meta": {}
     },
     {
-      "src": "event:evt_652d2ae11950bd6b",
+      "src": "event:evt_6748364ac354a52f",
       "dst": "indicator:hy_credit",
       "rel": "IMPACTS",
-      "weight": 0.7366,
+      "weight": 0.452,
       "meta": {}
     },
     {
-      "src": "event:evt_652d2ae11950bd6b",
+      "src": "event:evt_6748364ac354a52f",
       "dst": "indicator:ig_credit",
       "rel": "IMPACTS",
-      "weight": 0.7366,
+      "weight": 0.452,
       "meta": {}
     },
     {
-      "src": "article:2666dc768190927238362992",
-      "dst": "entity:野村證券",
+      "src": "event:evt_6748364ac354a52f",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.452,
+      "meta": {}
+    },
+    {
+      "src": "article:577f383ea1c24dcb060cc644",
+      "dst": "entity:Moomoo",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:577f383ea1c24dcb060cc644",
+      "dst": "entity:NVIDIA",
       "rel": "MENTIONS",
       "weight": 1.0,
       "meta": {}
@@ -210587,120 +211248,6 @@
     {
       "src": "article:be711208d7a75c85b7a213c6",
       "dst": "entity:Yahoo Finance",
-      "rel": "MENTIONS",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "article:577f383ea1c24dcb060cc644",
-      "dst": "source:Moomoo",
-      "rel": "PUBLISHED_BY",
-      "weight": 0.72,
-      "meta": {}
-    },
-    {
-      "src": "article:577f383ea1c24dcb060cc644",
-      "dst": "event:evt_6748364ac354a52f",
-      "rel": "EVIDENCE_FOR",
-      "weight": 0.4135,
-      "meta": {
-        "published_at": "2026-10-16T11:09:04Z"
-      }
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "day:2026-10-16",
-      "rel": "OBSERVED_ON",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "topic:ai_data_center",
-      "rel": "ABOUT",
-      "weight": 0.452,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "topic:systemic_crisis",
-      "rel": "ABOUT",
-      "weight": 0.452,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "topic:europe_sovereign",
-      "rel": "ABOUT",
-      "weight": 0.4135,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "indicator:bank_ai",
-      "rel": "IMPACTS",
-      "weight": 0.452,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "indicator:banking_stress",
-      "rel": "IMPACTS",
-      "weight": 0.452,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "indicator:data_center",
-      "rel": "IMPACTS",
-      "weight": 0.452,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "indicator:europe",
-      "rel": "IMPACTS",
-      "weight": 0.4135,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "indicator:funding_market",
-      "rel": "IMPACTS",
-      "weight": 0.452,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "indicator:hy_credit",
-      "rel": "IMPACTS",
-      "weight": 0.452,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "indicator:ig_credit",
-      "rel": "IMPACTS",
-      "weight": 0.452,
-      "meta": {}
-    },
-    {
-      "src": "event:evt_6748364ac354a52f",
-      "dst": "indicator:private_credit",
-      "rel": "IMPACTS",
-      "weight": 0.452,
-      "meta": {}
-    },
-    {
-      "src": "article:577f383ea1c24dcb060cc644",
-      "dst": "entity:Moomoo",
-      "rel": "MENTIONS",
-      "weight": 1.0,
-      "meta": {}
-    },
-    {
-      "src": "article:577f383ea1c24dcb060cc644",
-      "dst": "entity:NVIDIA",
       "rel": "MENTIONS",
       "weight": 1.0,
       "meta": {}
@@ -211486,21 +212033,21 @@
       "src": "event:evt_cf97d0b6f1fb6759",
       "dst": "topic:energy_shock",
       "rel": "ABOUT",
-      "weight": 0.4957,
+      "weight": 0.5235,
       "meta": {}
     },
     {
       "src": "event:evt_cf97d0b6f1fb6759",
       "dst": "topic:geopolitical_hybrid",
       "rel": "ABOUT",
-      "weight": 0.4957,
+      "weight": 0.5235,
       "meta": {}
     },
     {
       "src": "event:evt_cf97d0b6f1fb6759",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.4957,
+      "weight": 0.5235,
       "meta": {}
     },
     {
@@ -212047,6 +212594,50 @@
       "src": "article:c79cf67afc7ef01c32b8ecaa",
       "dst": "entity:The New York Times",
       "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:fb76779863e6cc46f7cf13e4",
+      "dst": "source:Xpert.Digital - Konrad Wolfenstein",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:fb76779863e6cc46f7cf13e4",
+      "dst": "event:evt_4a390fbbb367f711",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.5889,
+      "meta": {
+        "published_at": "2026-10-17T11:22:02Z"
+      }
+    },
+    {
+      "src": "event:evt_4a390fbbb367f711",
+      "dst": "day:2026-10-17",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:fb76779863e6cc46f7cf13e4",
+      "dst": "entity:NATO",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:fb76779863e6cc46f7cf13e4",
+      "dst": "entity:Xpert.Digital - Konrad Wolfenstein",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:fb76779863e6cc46f7cf13e4",
+      "dst": "actor:NATO",
+      "rel": "MENTIONS_ACTOR",
       "weight": 1.0,
       "meta": {}
     },
@@ -213232,7 +213823,7 @@
       "src": "article:439eaa4c1a2b16662debd149",
       "dst": "event:evt_a9154a8abda8beae",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6261,
+      "weight": 0.6339,
       "meta": {
         "published_at": "2026-10-18T23:52:00Z"
       }
@@ -213739,7 +214330,7 @@
       "src": "article:4f3fa9a8d7bee068445e2f59",
       "dst": "event:evt_a9154a8abda8beae",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6339,
+      "weight": 0.6261,
       "meta": {
         "published_at": "2026-10-19T10:53:46Z"
       }
@@ -217864,6 +218455,92 @@
       "meta": {}
     },
     {
+      "src": "article:b818ccb46fa0b6f71ca19455",
+      "dst": "source:Pluang",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:b818ccb46fa0b6f71ca19455",
+      "dst": "event:evt_d847d6d9b8e79a93",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.58,
+      "meta": {
+        "published_at": "2026-10-21T09:14:48Z"
+      }
+    },
+    {
+      "src": "event:evt_d847d6d9b8e79a93",
+      "dst": "day:2026-10-21",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d847d6d9b8e79a93",
+      "dst": "topic:funding_liquidity",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d847d6d9b8e79a93",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d847d6d9b8e79a93",
+      "dst": "topic:inflation_rates",
+      "rel": "ABOUT",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d847d6d9b8e79a93",
+      "dst": "indicator:energy",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d847d6d9b8e79a93",
+      "dst": "indicator:funding_market",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d847d6d9b8e79a93",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d847d6d9b8e79a93",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_d847d6d9b8e79a93",
+      "dst": "indicator:rates_liquidity",
+      "rel": "IMPACTS",
+      "weight": 0.58,
+      "meta": {}
+    },
+    {
+      "src": "article:b818ccb46fa0b6f71ca19455",
+      "dst": "entity:Pluang",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
       "src": "article:438212cb17135d967396894c",
       "dst": "source:Crude Oil Prices Today | OilPrice.com",
       "rel": "PUBLISHED_BY",
@@ -217975,6 +218652,113 @@
     {
       "src": "article:564e7d87a0747da1787776b5",
       "dst": "entity:Yahoo Finance",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:db07538af514bee86b3639eb",
+      "dst": "source:Urban Acres",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:db07538af514bee86b3639eb",
+      "dst": "event:evt_f0c85c145c3bec4e",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.5335,
+      "meta": {
+        "published_at": "2026-10-21T09:46:17Z"
+      }
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "day:2026-10-21",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "topic:corporate_credit",
+      "rel": "ABOUT",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "topic:systemic_crisis",
+      "rel": "ABOUT",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "topic:ai_data_center",
+      "rel": "ABOUT",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "indicator:bank_ai",
+      "rel": "IMPACTS",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "indicator:banking_stress",
+      "rel": "IMPACTS",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "indicator:data_center",
+      "rel": "IMPACTS",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "indicator:funding_market",
+      "rel": "IMPACTS",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "indicator:hy_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "indicator:ig_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.5335,
+      "meta": {}
+    },
+    {
+      "src": "article:db07538af514bee86b3639eb",
+      "dst": "entity:Urban Acres",
       "rel": "MENTIONS",
       "weight": 1.0,
       "meta": {}
@@ -218778,6 +219562,50 @@
       "src": "article:b1eb02da513004cd3589916e",
       "dst": "actor:Russia",
       "rel": "MENTIONS_ACTOR",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:b3f08d0e128d33a61a2e1f13",
+      "dst": "source:Chris Skinner's blog",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:b3f08d0e128d33a61a2e1f13",
+      "dst": "event:evt_e6c6355e9e81afe4",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.3538,
+      "meta": {
+        "published_at": "2026-10-21T19:19:52Z"
+      }
+    },
+    {
+      "src": "event:evt_e6c6355e9e81afe4",
+      "dst": "day:2026-10-21",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_e6c6355e9e81afe4",
+      "dst": "topic:energy_shock",
+      "rel": "ABOUT",
+      "weight": 0.3538,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_e6c6355e9e81afe4",
+      "dst": "indicator:energy",
+      "rel": "IMPACTS",
+      "weight": 0.3538,
+      "meta": {}
+    },
+    {
+      "src": "article:b3f08d0e128d33a61a2e1f13",
+      "dst": "entity:Chris Skinner's blog",
+      "rel": "MENTIONS",
       "weight": 1.0,
       "meta": {}
     },
@@ -219639,6 +220467,43 @@
       "meta": {}
     },
     {
+      "src": "article:65c7628ef81497040e5ed4c5",
+      "dst": "source:The Conversation",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:65c7628ef81497040e5ed4c5",
+      "dst": "event:evt_4a390fbbb367f711",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.58,
+      "meta": {
+        "published_at": "2026-10-22T11:07:34Z"
+      }
+    },
+    {
+      "src": "article:65c7628ef81497040e5ed4c5",
+      "dst": "entity:Russia",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:65c7628ef81497040e5ed4c5",
+      "dst": "entity:The Conversation",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:65c7628ef81497040e5ed4c5",
+      "dst": "actor:Russia",
+      "rel": "MENTIONS_ACTOR",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
       "src": "article:07a87529dd248c1765fe76c6",
       "dst": "source:Semafor",
       "rel": "PUBLISHED_BY",
@@ -220318,14 +221183,14 @@
       "src": "event:evt_c9a08565d5506af8",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.4266,
+      "weight": 0.3883,
       "meta": {}
     },
     {
       "src": "event:evt_c9a08565d5506af8",
       "dst": "topic:private_credit",
       "rel": "ABOUT",
-      "weight": 0.4266,
+      "weight": 0.3883,
       "meta": {}
     },
     {
@@ -220339,7 +221204,7 @@
       "src": "event:evt_c9a08565d5506af8",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.4266,
+      "weight": 0.3883,
       "meta": {}
     },
     {
@@ -220360,21 +221225,21 @@
       "src": "event:evt_c9a08565d5506af8",
       "dst": "indicator:leveraged_credit",
       "rel": "IMPACTS",
-      "weight": 0.4266,
+      "weight": 0.3883,
       "meta": {}
     },
     {
       "src": "event:evt_c9a08565d5506af8",
       "dst": "indicator:private_credit",
       "rel": "IMPACTS",
-      "weight": 0.4266,
+      "weight": 0.3883,
       "meta": {}
     },
     {
       "src": "event:evt_c9a08565d5506af8",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.4266,
+      "weight": 0.3883,
       "meta": {}
     },
     {
@@ -220403,6 +221268,36 @@
     {
       "src": "article:ff04d1a54220d0224286b26d",
       "dst": "entity:Forbes",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:ff70804ba2472a66ddb23c52",
+      "dst": "source:Investing.com India",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:ff70804ba2472a66ddb23c52",
+      "dst": "event:evt_c9a08565d5506af8",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.3883,
+      "meta": {
+        "published_at": "2026-10-22T20:10:40Z"
+      }
+    },
+    {
+      "src": "event:evt_c9a08565d5506af8",
+      "dst": "topic:geopolitical_hybrid",
+      "rel": "ABOUT",
+      "weight": 0.3883,
+      "meta": {}
+    },
+    {
+      "src": "article:ff70804ba2472a66ddb23c52",
+      "dst": "entity:Investing.com India",
       "rel": "MENTIONS",
       "weight": 1.0,
       "meta": {}
@@ -220883,7 +221778,7 @@
       "src": "article:544c4502a160cabfbbace3f2",
       "dst": "event:evt_c058e19ef3905f26",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.5816,
+      "weight": 0.6063,
       "meta": {
         "published_at": "2026-10-23T06:48:00Z"
       }
@@ -221273,6 +222168,57 @@
       "meta": {}
     },
     {
+      "src": "article:e0ce57c058b5edbe2cc516fe",
+      "dst": "source:TradingView",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:e0ce57c058b5edbe2cc516fe",
+      "dst": "event:evt_8f592570a8e2ae17",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.2742,
+      "meta": {
+        "published_at": "2026-10-23T18:04:49Z"
+      }
+    },
+    {
+      "src": "event:evt_8f592570a8e2ae17",
+      "dst": "day:2026-10-23",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_8f592570a8e2ae17",
+      "dst": "topic:private_credit",
+      "rel": "ABOUT",
+      "weight": 0.2742,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_8f592570a8e2ae17",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.2742,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_8f592570a8e2ae17",
+      "dst": "indicator:private_credit",
+      "rel": "IMPACTS",
+      "weight": 0.2742,
+      "meta": {}
+    },
+    {
+      "src": "article:e0ce57c058b5edbe2cc516fe",
+      "dst": "entity:TradingView",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
       "src": "article:82a3e2a11469227b4e463f7c",
       "dst": "source:Bank Policy Institute",
       "rel": "PUBLISHED_BY",
@@ -221445,7 +222391,7 @@
       "src": "article:f537e960832969be89e69f06",
       "dst": "event:evt_5c4ff23c5f6a28de",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.6353,
+      "weight": 0.6327,
       "meta": {
         "published_at": "2026-10-24T02:00:00Z"
       }
@@ -221461,42 +222407,42 @@
       "src": "event:evt_5c4ff23c5f6a28de",
       "dst": "topic:energy_shock",
       "rel": "ABOUT",
-      "weight": 0.6353,
+      "weight": 0.6327,
       "meta": {}
     },
     {
       "src": "event:evt_5c4ff23c5f6a28de",
       "dst": "topic:inflation_rates",
       "rel": "ABOUT",
-      "weight": 0.6353,
+      "weight": 0.6327,
       "meta": {}
     },
     {
       "src": "event:evt_5c4ff23c5f6a28de",
       "dst": "topic:funding_liquidity",
       "rel": "ABOUT",
-      "weight": 0.6353,
+      "weight": 0.6327,
       "meta": {}
     },
     {
       "src": "event:evt_5c4ff23c5f6a28de",
       "dst": "indicator:energy",
       "rel": "IMPACTS",
-      "weight": 0.6353,
+      "weight": 0.6327,
       "meta": {}
     },
     {
       "src": "event:evt_5c4ff23c5f6a28de",
       "dst": "indicator:funding_market",
       "rel": "IMPACTS",
-      "weight": 0.6353,
+      "weight": 0.6327,
       "meta": {}
     },
     {
       "src": "event:evt_5c4ff23c5f6a28de",
       "dst": "indicator:rates_liquidity",
       "rel": "IMPACTS",
-      "weight": 0.6353,
+      "weight": 0.6327,
       "meta": {}
     },
     {
@@ -221567,6 +222513,64 @@
       "meta": {}
     },
     {
+      "src": "article:8359ee832330fc3397debb3a",
+      "dst": "source:Kyiv Post",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:8359ee832330fc3397debb3a",
+      "dst": "event:evt_4a390fbbb367f711",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.6821,
+      "meta": {
+        "published_at": "2026-10-24T06:03:07Z"
+      }
+    },
+    {
+      "src": "article:8359ee832330fc3397debb3a",
+      "dst": "entity:European Union",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:8359ee832330fc3397debb3a",
+      "dst": "entity:Kyiv Post",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:8359ee832330fc3397debb3a",
+      "dst": "entity:NATO",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:8359ee832330fc3397debb3a",
+      "dst": "entity:Russia",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:8359ee832330fc3397debb3a",
+      "dst": "actor:NATO",
+      "rel": "MENTIONS_ACTOR",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:8359ee832330fc3397debb3a",
+      "dst": "actor:Russia",
+      "rel": "MENTIONS_ACTOR",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
       "src": "article:02ed24bec48b9c6dc51756be",
       "dst": "source:EnergyNow.com",
       "rel": "PUBLISHED_BY",
@@ -221577,7 +222581,7 @@
       "src": "article:02ed24bec48b9c6dc51756be",
       "dst": "event:evt_cf97d0b6f1fb6759",
       "rel": "EVIDENCE_FOR",
-      "weight": 0.4957,
+      "weight": 0.5235,
       "meta": {
         "published_at": "2026-10-24T06:29:11Z"
       }
@@ -221592,6 +222596,99 @@
     {
       "src": "article:02ed24bec48b9c6dc51756be",
       "dst": "entity:EnergyNow.com",
+      "rel": "MENTIONS",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "article:96345b3436a7204332fb1dd8",
+      "dst": "source:Daily News Egypt",
+      "rel": "PUBLISHED_BY",
+      "weight": 0.72,
+      "meta": {}
+    },
+    {
+      "src": "article:96345b3436a7204332fb1dd8",
+      "dst": "event:evt_6add0eafaf729c29",
+      "rel": "EVIDENCE_FOR",
+      "weight": 0.4833,
+      "meta": {
+        "published_at": "2026-10-24T13:57:02Z"
+      }
+    },
+    {
+      "src": "event:evt_6add0eafaf729c29",
+      "dst": "day:2026-10-24",
+      "rel": "OBSERVED_ON",
+      "weight": 1.0,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6add0eafaf729c29",
+      "dst": "topic:corporate_credit",
+      "rel": "ABOUT",
+      "weight": 0.4833,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6add0eafaf729c29",
+      "dst": "topic:banking",
+      "rel": "ABOUT",
+      "weight": 0.4833,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6add0eafaf729c29",
+      "dst": "topic:systemic_crisis",
+      "rel": "ABOUT",
+      "weight": 0.4833,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6add0eafaf729c29",
+      "dst": "indicator:bank_ai",
+      "rel": "IMPACTS",
+      "weight": 0.4833,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6add0eafaf729c29",
+      "dst": "indicator:banking_stress",
+      "rel": "IMPACTS",
+      "weight": 0.4833,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6add0eafaf729c29",
+      "dst": "indicator:funding_market",
+      "rel": "IMPACTS",
+      "weight": 0.4833,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6add0eafaf729c29",
+      "dst": "indicator:hy_credit",
+      "rel": "IMPACTS",
+      "weight": 0.4833,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6add0eafaf729c29",
+      "dst": "indicator:ig_credit",
+      "rel": "IMPACTS",
+      "weight": 0.4833,
+      "meta": {}
+    },
+    {
+      "src": "event:evt_6add0eafaf729c29",
+      "dst": "indicator:leveraged_credit",
+      "rel": "IMPACTS",
+      "weight": 0.4833,
+      "meta": {}
+    },
+    {
+      "src": "article:96345b3436a7204332fb1dd8",
+      "dst": "entity:Daily News Egypt",
       "rel": "MENTIONS",
       "weight": 1.0,
       "meta": {}
@@ -221862,7 +222959,7 @@
     },
     {
       "src": "event:evt_70b7b1a80c6735f1",
-      "dst": "event:evt_87b55dde614f4ae0",
+      "dst": "event:evt_dbac85b44bbdc74a",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
@@ -221871,7 +222968,7 @@
       }
     },
     {
-      "src": "event:evt_87b55dde614f4ae0",
+      "src": "event:evt_dbac85b44bbdc74a",
       "dst": "event:evt_1b67dd2513007273",
       "rel": "PRECEDES",
       "weight": 1.0,
@@ -222802,7 +223899,7 @@
     },
     {
       "src": "event:evt_03192573eaeffe6d",
-      "dst": "event:evt_31cd6d25595d1871",
+      "dst": "event:evt_c243159f082fc91c",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
@@ -222811,8 +223908,8 @@
       }
     },
     {
-      "src": "event:evt_31cd6d25595d1871",
-      "dst": "event:evt_c243159f082fc91c",
+      "src": "event:evt_c243159f082fc91c",
+      "dst": "event:evt_c81b0268ebe41550",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
@@ -222821,7 +223918,7 @@
       }
     },
     {
-      "src": "event:evt_c243159f082fc91c",
+      "src": "event:evt_c81b0268ebe41550",
       "dst": "event:evt_ecbcb7008360fd2e",
       "rel": "PRECEDES",
       "weight": 1.0,
@@ -223362,11 +224459,21 @@
     },
     {
       "src": "event:evt_642eba85cac81e4a",
+      "dst": "event:evt_419f7c7f4ef05a55",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 1.68,
+        "topic": "geopolitical_hybrid"
+      }
+    },
+    {
+      "src": "event:evt_419f7c7f4ef05a55",
       "dst": "event:evt_88cec54420705276",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 2.02,
+        "gap_days": 0.34,
         "topic": "geopolitical_hybrid"
       }
     },
@@ -224062,11 +225169,21 @@
     },
     {
       "src": "event:evt_776b109f65f3bef6",
+      "dst": "event:evt_1d49fe8b7e65a596",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 1.0,
+        "topic": "funding_liquidity"
+      }
+    },
+    {
+      "src": "event:evt_1d49fe8b7e65a596",
       "dst": "event:evt_da2f97c73f67c0a1",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 2.0,
+        "gap_days": 1.0,
         "topic": "funding_liquidity"
       }
     },
@@ -225202,11 +226319,21 @@
     },
     {
       "src": "event:evt_ccf4dc01ce76a72e",
+      "dst": "event:evt_d847d6d9b8e79a93",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 0.02,
+        "topic": "funding_liquidity"
+      }
+    },
+    {
+      "src": "event:evt_d847d6d9b8e79a93",
       "dst": "event:evt_84262030e1eeca77",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 0.46,
+        "gap_days": 0.44,
         "topic": "funding_liquidity"
       }
     },
@@ -225292,11 +226419,21 @@
     },
     {
       "src": "event:evt_6b35b5dce3117c3a",
+      "dst": "event:evt_d813116261fad2d6",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 8.0,
+        "topic": "europe_sovereign"
+      }
+    },
+    {
+      "src": "event:evt_d813116261fad2d6",
       "dst": "event:evt_19118e3f0ab5ab3b",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 24.0,
+        "gap_days": 16.0,
         "topic": "europe_sovereign"
       }
     },
@@ -225422,11 +226559,31 @@
     },
     {
       "src": "event:evt_e990430b5dd77655",
+      "dst": "event:evt_ea217291b0ad4d47",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 14.0,
+        "topic": "europe_sovereign"
+      }
+    },
+    {
+      "src": "event:evt_ea217291b0ad4d47",
+      "dst": "event:evt_f173364fb33b86cf",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 0.0,
+        "topic": "europe_sovereign"
+      }
+    },
+    {
+      "src": "event:evt_f173364fb33b86cf",
       "dst": "event:evt_44b911e55c527ed6",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 23.0,
+        "gap_days": 9.0,
         "topic": "europe_sovereign"
       }
     },
@@ -225962,11 +227119,21 @@
     },
     {
       "src": "event:evt_a9154a8abda8beae",
+      "dst": "event:evt_94c049697b1c1d43",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 0.29,
+        "topic": "europe_sovereign"
+      }
+    },
+    {
+      "src": "event:evt_94c049697b1c1d43",
       "dst": "event:evt_f455735cb517fa3d",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 1.0,
+        "gap_days": 0.71,
         "topic": "europe_sovereign"
       }
     },
@@ -226302,21 +227469,11 @@
     },
     {
       "src": "event:evt_1357308c83a89410",
-      "dst": "event:evt_b9e5470d616560ee",
-      "rel": "PRECEDES",
-      "weight": 1.0,
-      "meta": {
-        "gap_days": 4.0,
-        "topic": "private_credit"
-      }
-    },
-    {
-      "src": "event:evt_b9e5470d616560ee",
       "dst": "event:evt_6a67dc52cd4bfab6",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 1.0,
+        "gap_days": 5.0,
         "topic": "private_credit"
       }
     },
@@ -226402,11 +227559,21 @@
     },
     {
       "src": "event:evt_263ccfcc6674ab74",
+      "dst": "event:evt_a684bf30def8060d",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 1.0,
+        "topic": "private_credit"
+      }
+    },
+    {
+      "src": "event:evt_a684bf30def8060d",
       "dst": "event:evt_cdd4d0912f6f4c0c",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 2.0,
+        "gap_days": 1.0,
         "topic": "private_credit"
       }
     },
@@ -226572,11 +227739,21 @@
     },
     {
       "src": "event:evt_7a3d8fe6e96a874d",
+      "dst": "event:evt_a4f3a53e8ef4c121",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 1.0,
+        "topic": "private_credit"
+      }
+    },
+    {
+      "src": "event:evt_a4f3a53e8ef4c121",
       "dst": "event:evt_09b7687a8b8aa653",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 2.0,
+        "gap_days": 1.0,
         "topic": "private_credit"
       }
     },
@@ -226602,6 +227779,16 @@
     },
     {
       "src": "event:evt_25bc3ae15e6fc709",
+      "dst": "event:evt_2e2ca86568d9850d",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 0.0,
+        "topic": "private_credit"
+      }
+    },
+    {
+      "src": "event:evt_2e2ca86568d9850d",
       "dst": "event:evt_b94550f59c470e3b",
       "rel": "PRECEDES",
       "weight": 1.0,
@@ -227361,6 +228548,16 @@
       }
     },
     {
+      "src": "event:evt_28d21f001494477e",
+      "dst": "event:evt_8f592570a8e2ae17",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 1.24,
+        "topic": "private_credit"
+      }
+    },
+    {
       "src": "event:evt_af7770b27c98bb03",
       "dst": "event:evt_63c28ff06681be7e",
       "rel": "PRECEDES",
@@ -227522,7 +228719,7 @@
     },
     {
       "src": "event:evt_825c94a1ebe972e3",
-      "dst": "event:evt_7f5275aba675724a",
+      "dst": "event:evt_37bf553903a8bc7b",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
@@ -227531,7 +228728,7 @@
       }
     },
     {
-      "src": "event:evt_7f5275aba675724a",
+      "src": "event:evt_37bf553903a8bc7b",
       "dst": "event:evt_e4a5bd32d8d8eb43",
       "rel": "PRECEDES",
       "weight": 1.0,
@@ -227642,21 +228839,11 @@
     },
     {
       "src": "event:evt_0db5c8c274d64337",
-      "dst": "event:evt_2b509c5fd85fc0a5",
-      "rel": "PRECEDES",
-      "weight": 1.0,
-      "meta": {
-        "gap_days": 1.0,
-        "topic": "systemic_crisis"
-      }
-    },
-    {
-      "src": "event:evt_2b509c5fd85fc0a5",
       "dst": "event:evt_510e0c0fc4ac4a36",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 6.0,
+        "gap_days": 7.0,
         "topic": "systemic_crisis"
       }
     },
@@ -227792,6 +228979,16 @@
     },
     {
       "src": "event:evt_311d6e3f6a92ea52",
+      "dst": "event:evt_4b2c35f7810e20b2",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 0.0,
+        "topic": "systemic_crisis"
+      }
+    },
+    {
+      "src": "event:evt_4b2c35f7810e20b2",
       "dst": "event:evt_e24a9897779ddcaf",
       "rel": "PRECEDES",
       "weight": 1.0,
@@ -227962,41 +229159,21 @@
     },
     {
       "src": "event:evt_42b33102827ab870",
-      "dst": "event:evt_674b1e2542858f18",
-      "rel": "PRECEDES",
-      "weight": 1.0,
-      "meta": {
-        "gap_days": 0.88,
-        "topic": "systemic_crisis"
-      }
-    },
-    {
-      "src": "event:evt_674b1e2542858f18",
       "dst": "event:evt_bedb246604ba5060",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 5.53,
+        "gap_days": 6.41,
         "topic": "systemic_crisis"
       }
     },
     {
       "src": "event:evt_bedb246604ba5060",
-      "dst": "event:evt_652d2ae11950bd6b",
-      "rel": "PRECEDES",
-      "weight": 1.0,
-      "meta": {
-        "gap_days": 1.47,
-        "topic": "systemic_crisis"
-      }
-    },
-    {
-      "src": "event:evt_652d2ae11950bd6b",
       "dst": "event:evt_d120aca38e7271f9",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 1.92,
+        "gap_days": 3.39,
         "topic": "systemic_crisis"
       }
     },
@@ -228312,21 +229489,11 @@
     },
     {
       "src": "event:evt_f7c02c11a5a8f0d0",
-      "dst": "event:evt_dd02525819e6d5de",
-      "rel": "PRECEDES",
-      "weight": 1.0,
-      "meta": {
-        "gap_days": 1.07,
-        "topic": "energy_shock"
-      }
-    },
-    {
-      "src": "event:evt_dd02525819e6d5de",
       "dst": "event:evt_c5657cda15ffd75a",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 1.93,
+        "gap_days": 3.0,
         "topic": "energy_shock"
       }
     },
@@ -229342,11 +230509,21 @@
     },
     {
       "src": "event:evt_64a8edd20cecab0b",
+      "dst": "event:evt_3a827a62a3761d66",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 1.33,
+        "topic": "energy_shock"
+      }
+    },
+    {
+      "src": "event:evt_3a827a62a3761d66",
       "dst": "event:evt_e5ce225850656a0f",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 2.17,
+        "gap_days": 0.83,
         "topic": "energy_shock"
       }
     },
@@ -229622,11 +230799,21 @@
     },
     {
       "src": "event:evt_67ecff478071df13",
+      "dst": "event:evt_e6c6355e9e81afe4",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 0.24,
+        "topic": "energy_shock"
+      }
+    },
+    {
+      "src": "event:evt_e6c6355e9e81afe4",
       "dst": "event:evt_95e77b944a89eb5c",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 0.26,
+        "gap_days": 0.02,
         "topic": "energy_shock"
       }
     },
@@ -229912,21 +231099,11 @@
     },
     {
       "src": "event:evt_1cf5882d2a557acd",
-      "dst": "event:evt_9d0260bc1eec25e3",
-      "rel": "PRECEDES",
-      "weight": 1.0,
-      "meta": {
-        "gap_days": 0.07,
-        "topic": "inflation_rates"
-      }
-    },
-    {
-      "src": "event:evt_9d0260bc1eec25e3",
       "dst": "event:evt_65255f775f22101d",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 4.24,
+        "gap_days": 4.31,
         "topic": "inflation_rates"
       }
     },
@@ -230762,7 +231939,7 @@
     },
     {
       "src": "event:evt_719be7ed7443fab6",
-      "dst": "event:evt_eed6cc088d74021f",
+      "dst": "event:evt_a734e110b90b6324",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
@@ -230771,7 +231948,7 @@
       }
     },
     {
-      "src": "event:evt_eed6cc088d74021f",
+      "src": "event:evt_a734e110b90b6324",
       "dst": "event:evt_7d615b74193e8729",
       "rel": "PRECEDES",
       "weight": 1.0,
@@ -230982,7 +232159,7 @@
     },
     {
       "src": "event:evt_db76339cf7d8ef7d",
-      "dst": "event:evt_91a4e41a20759223",
+      "dst": "event:evt_ed72f347d36f69fd",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
@@ -230991,7 +232168,7 @@
       }
     },
     {
-      "src": "event:evt_91a4e41a20759223",
+      "src": "event:evt_ed72f347d36f69fd",
       "dst": "event:evt_fd897002372ea682",
       "rel": "PRECEDES",
       "weight": 1.0,
@@ -231197,6 +232374,26 @@
       "weight": 1.0,
       "meta": {
         "gap_days": 4.74,
+        "topic": "corporate_credit"
+      }
+    },
+    {
+      "src": "event:evt_7a353cdb4d9b763a",
+      "dst": "event:evt_f0c85c145c3bec4e",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 0.04,
+        "topic": "corporate_credit"
+      }
+    },
+    {
+      "src": "event:evt_f0c85c145c3bec4e",
+      "dst": "event:evt_6add0eafaf729c29",
+      "rel": "PRECEDES",
+      "weight": 1.0,
+      "meta": {
+        "gap_days": 3.17,
         "topic": "corporate_credit"
       }
     },
@@ -232102,16 +233299,6 @@
     },
     {
       "src": "event:evt_9a5f0ee73431f327",
-      "dst": "event:evt_e59109e9a4c5cc05",
-      "rel": "PRECEDES",
-      "weight": 1.0,
-      "meta": {
-        "gap_days": 0.0,
-        "topic": "ai_data_center"
-      }
-    },
-    {
-      "src": "event:evt_e59109e9a4c5cc05",
       "dst": "event:evt_758f2c1077e81b3c",
       "rel": "PRECEDES",
       "weight": 1.0,
@@ -232272,7 +233459,7 @@
     },
     {
       "src": "event:evt_1871db6cbe88a368",
-      "dst": "event:evt_e273c36a9a571dfb",
+      "dst": "event:evt_923ddcea518a1df3",
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
@@ -232281,7 +233468,7 @@
       }
     },
     {
-      "src": "event:evt_e273c36a9a571dfb",
+      "src": "event:evt_923ddcea518a1df3",
       "dst": "event:evt_634656128431f246",
       "rel": "PRECEDES",
       "weight": 1.0,
@@ -232376,7 +233563,7 @@
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 2.17,
+        "gap_days": 2.0,
         "topic": "ai_data_center"
       }
     },
@@ -232386,7 +233573,7 @@
       "rel": "PRECEDES",
       "weight": 1.0,
       "meta": {
-        "gap_days": 5.06,
+        "gap_days": 5.24,
         "topic": "ai_data_center"
       }
     },
@@ -232980,10 +234167,10 @@
     }
   ],
   "stats": {
-    "nodes": 6548,
-    "edges": 24519,
-    "articles": 2987,
-    "events": 1130,
+    "nodes": 6576,
+    "edges": 24649,
+    "articles": 2998,
+    "events": 1139,
     "historical_episodes": 5
   }
 }
