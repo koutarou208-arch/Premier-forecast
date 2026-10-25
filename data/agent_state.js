@@ -1,6 +1,6 @@
 window.__AGENT_STATE__ = {
   "version": 1,
-  "updated_at": "2026-10-18T00:35:43.398949Z",
+  "updated_at": "2026-10-25T00:46:18.946351Z",
   "decision": "reject_all",
   "policy_summary": {
     "optimization_cutoff": "2022-12-31",
@@ -10,18 +10,18 @@ window.__AGENT_STATE__ = {
     "max_changes_per_cycle": 1
   },
   "baseline": {
-    "objective": 0.8701266688316412,
-    "roc_auc": 0.8735420982016759,
-    "average_precision": 0.9273151797046836,
+    "objective": 0.8675575226451953,
+    "roc_auc": 0.8725990961303078,
+    "average_precision": 0.9264983327425361,
     "event_recall": 0.75,
-    "false_positive_rate": 0.0872093023255814,
-    "specificity": 0.9127906976744186,
-    "threshold": 34.5,
+    "false_positive_rate": 0.09738372093023256,
+    "specificity": 0.9026162790697674,
+    "threshold": 34.0,
     "event_peaks": {
-      "gfc": 93.80284378540878,
-      "euro": 53.25077723320184,
-      "repo2019": 20.407952365870884,
-      "covid": 80.4436263826679
+      "gfc": 93.7993218238183,
+      "euro": 53.091303654307566,
+      "repo2019": 20.53075130678034,
+      "covid": 80.43795831748227
     }
   },
   "accepted_change": null,
@@ -30,121 +30,121 @@ window.__AGENT_STATE__ = {
     {
       "kind": "market_weight_transfer",
       "description": "funding_market -1, europe +1",
-      "objective": 0.871419,
-      "improvement": 0.001293,
+      "objective": 0.869421,
+      "improvement": 0.001864,
       "passes_guardrails": false,
       "rejection_reasons": [
         "objective improvement below minimum"
       ],
-      "fpr": 0.082849,
+      "fpr": 0.090116,
       "event_recall": 0.75
     },
     {
       "kind": "market_weight_transfer",
-      "description": "financial_stress -1, europe +1",
-      "objective": 0.871088,
-      "improvement": 0.000961,
+      "description": "banking_stress -1, europe +1",
+      "objective": 0.86926,
+      "improvement": 0.001703,
       "passes_guardrails": false,
       "rejection_reasons": [
         "objective improvement below minimum"
       ],
-      "fpr": 0.084302,
+      "fpr": 0.09157,
+      "event_recall": 0.75
+    },
+    {
+      "kind": "market_weight_transfer",
+      "description": "energy -1, europe +1",
+      "objective": 0.869248,
+      "improvement": 0.00169,
+      "passes_guardrails": false,
+      "rejection_reasons": [
+        "objective improvement below minimum"
+      ],
+      "fpr": 0.09157,
       "event_recall": 0.75
     },
     {
       "kind": "market_weight_transfer",
       "description": "hy_credit -1, europe +1",
-      "objective": 0.870651,
-      "improvement": 0.000524,
+      "objective": 0.869237,
+      "improvement": 0.00168,
       "passes_guardrails": false,
       "rejection_reasons": [
         "objective improvement below minimum"
       ],
-      "fpr": 0.087209,
-      "event_recall": 0.75
-    },
-    {
-      "kind": "market_weight_transfer",
-      "description": "rates_liquidity -1, europe +1",
-      "objective": 0.870634,
-      "improvement": 0.000508,
-      "passes_guardrails": false,
-      "rejection_reasons": [
-        "objective improvement below minimum"
-      ],
-      "fpr": 0.087209,
+      "fpr": 0.09157,
       "event_recall": 0.75
     },
     {
       "kind": "market_weight_transfer",
       "description": "leveraged_credit -1, europe +1",
-      "objective": 0.870571,
-      "improvement": 0.000445,
+      "objective": 0.86913,
+      "improvement": 0.001573,
       "passes_guardrails": false,
       "rejection_reasons": [
         "objective improvement below minimum"
       ],
-      "fpr": 0.087209,
+      "fpr": 0.09157,
+      "event_recall": 0.75
+    },
+    {
+      "kind": "market_weight_transfer",
+      "description": "rates_liquidity -1, europe +1",
+      "objective": 0.86886,
+      "improvement": 0.001302,
+      "passes_guardrails": false,
+      "rejection_reasons": [
+        "objective improvement below minimum"
+      ],
+      "fpr": 0.093023,
       "event_recall": 0.75
     },
     {
       "kind": "market_weight_transfer",
       "description": "ig_credit -1, europe +1",
-      "objective": 0.870518,
-      "improvement": 0.000391,
+      "objective": 0.868817,
+      "improvement": 0.00126,
       "passes_guardrails": false,
       "rejection_reasons": [
         "objective improvement below minimum"
       ],
-      "fpr": 0.087209,
+      "fpr": 0.093023,
       "event_recall": 0.75
     },
     {
       "kind": "market_weight_transfer",
-      "description": "rates_liquidity -1, hy_credit +1",
-      "objective": 0.870373,
-      "improvement": 0.000247,
+      "description": "financial_stress -1, europe +1",
+      "objective": 0.868777,
+      "improvement": 0.00122,
       "passes_guardrails": false,
       "rejection_reasons": [
         "objective improvement below minimum"
       ],
-      "fpr": 0.085756,
+      "fpr": 0.093023,
       "event_recall": 0.75
     },
     {
       "kind": "market_weight_transfer",
-      "description": "funding_market -1, banking_stress +1",
-      "objective": 0.870299,
-      "improvement": 0.000173,
+      "description": "rates_liquidity -1, financial_stress +1",
+      "objective": 0.868519,
+      "improvement": 0.000961,
       "passes_guardrails": false,
       "rejection_reasons": [
         "objective improvement below minimum"
       ],
-      "fpr": 0.085756,
+      "fpr": 0.093023,
       "event_recall": 0.75
     },
     {
       "kind": "market_weight_transfer",
-      "description": "funding_market -1, ig_credit +1",
-      "objective": 0.87017,
-      "improvement": 4.3e-05,
+      "description": "rates_liquidity -1, ig_credit +1",
+      "objective": 0.868494,
+      "improvement": 0.000936,
       "passes_guardrails": false,
       "rejection_reasons": [
         "objective improvement below minimum"
       ],
-      "fpr": 0.087209,
-      "event_recall": 0.75
-    },
-    {
-      "kind": "market_weight_transfer",
-      "description": "funding_market -1, leveraged_credit +1",
-      "objective": 0.87013,
-      "improvement": 4e-06,
-      "passes_guardrails": false,
-      "rejection_reasons": [
-        "objective improvement below minimum"
-      ],
-      "fpr": 0.087209,
+      "fpr": 0.093023,
       "event_recall": 0.75
     }
   ],
@@ -180,12 +180,12 @@ window.__AGENT_STATE__ = {
   },
   "holdout_report": {
     "incumbent": {
-      "objective": 0.6971607640168409,
-      "roc_auc": 0.8917176573426573,
-      "average_precision": 0.7902383357876435,
+      "objective": 0.7001254045147947,
+      "roc_auc": 0.8971642764015645,
+      "average_precision": 0.7941891452212819,
       "event_recall": 0.0,
-      "false_positive_rate": 0.0625,
-      "specificity": 0.9375,
+      "false_positive_rate": 0.062146892655367235,
+      "specificity": 0.9378531073446328,
       "threshold": 20.0,
       "event_peaks": {
         "gfc": null,
@@ -195,12 +195,12 @@ window.__AGENT_STATE__ = {
       }
     },
     "post_decision": {
-      "objective": 0.6971607640168409,
-      "roc_auc": 0.8917176573426573,
-      "average_precision": 0.7902383357876435,
+      "objective": 0.7001254045147947,
+      "roc_auc": 0.8971642764015645,
+      "average_precision": 0.7941891452212819,
       "event_recall": 0.0,
-      "false_positive_rate": 0.0625,
-      "specificity": 0.9375,
+      "false_positive_rate": 0.062146892655367235,
+      "specificity": 0.9378531073446328,
       "threshold": 20.0,
       "event_peaks": {
         "gfc": null,
