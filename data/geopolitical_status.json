@@ -6,20 +6,20 @@
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
   "calibration_status": "experimental_unvalidated",
   "components": {
-    "top_quartile_event_severity": 36.2,
+    "top_quartile_event_severity": 36.8,
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
     "response_intensity": 75.0,
-    "thirty_day_momentum": 61.3
+    "thirty_day_momentum": 60.4
   },
   "counts": {
-    "events": 137,
-    "recent_30d_events": 65,
+    "events": 136,
+    "recent_30d_events": 64,
     "previous_30d_events": 53,
     "physical_events": 16,
-    "critical_infrastructure_events": 34,
+    "critical_infrastructure_events": 35,
     "reported_attribution_events": 4,
-    "unattributed_events": 128,
+    "unattributed_events": 127,
     "disputed_attribution_records": 0,
     "suspected_attribution_records": 5,
     "military_response_events": 4,
