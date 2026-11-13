@@ -1,6 +1,6 @@
 [
   {
-    "day": "2025-11-13",
+    "day": "2025-11-14",
     "kind": "actor_mention",
     "key": "EU",
     "event_count": 1,
@@ -13,7 +13,7 @@
     "max_event_score": 28.0
   },
   {
-    "day": "2025-11-13",
+    "day": "2025-11-14",
     "kind": "actor_mention",
     "key": "NATO",
     "event_count": 1,
@@ -26,20 +26,7 @@
     "max_event_score": 28.0
   },
   {
-    "day": "2025-11-13",
-    "kind": "actor_mention",
-    "key": "Ukraine",
-    "event_count": 1,
-    "physical_events": 0,
-    "critical_infrastructure_events": 1,
-    "attributed_events": 0,
-    "military_response_events": 0,
-    "explicit_threat_events": 0,
-    "avg_event_score": 28.0,
-    "max_event_score": 28.0
-  },
-  {
-    "day": "2025-11-13",
+    "day": "2025-11-14",
     "kind": "overall",
     "key": "geopolitical_hybrid",
     "event_count": 1,
@@ -52,7 +39,7 @@
     "max_event_score": 28.0
   },
   {
-    "day": "2025-11-13",
+    "day": "2025-11-14",
     "kind": "target",
     "key": "transport",
     "event_count": 1,
@@ -65,7 +52,7 @@
     "max_event_score": 28.0
   },
   {
-    "day": "2025-11-13",
+    "day": "2025-11-14",
     "kind": "target",
     "key": "undersea_infrastructure",
     "event_count": 1,
@@ -886,27 +873,14 @@
   {
     "day": "2025-12-10",
     "kind": "actor_mention",
-    "key": "Germany",
-    "event_count": 1,
-    "physical_events": 0,
-    "critical_infrastructure_events": 0,
-    "attributed_events": 0,
-    "military_response_events": 0,
-    "explicit_threat_events": 0,
-    "avg_event_score": 12.0,
-    "max_event_score": 12.0
-  },
-  {
-    "day": "2025-12-10",
-    "kind": "actor_mention",
     "key": "Russia",
-    "event_count": 2,
+    "event_count": 1,
     "physical_events": 0,
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
     "explicit_threat_events": 0,
-    "avg_event_score": 20.0,
+    "avg_event_score": 28.0,
     "max_event_score": 28.0
   },
   {
@@ -939,13 +913,13 @@
     "day": "2025-12-10",
     "kind": "overall",
     "key": "geopolitical_hybrid",
-    "event_count": 3,
+    "event_count": 2,
     "physical_events": 0,
     "critical_infrastructure_events": 1,
     "attributed_events": 0,
     "military_response_events": 0,
     "explicit_threat_events": 0,
-    "avg_event_score": 17.33,
+    "avg_event_score": 20.0,
     "max_event_score": 28.0
   },
   {
@@ -7072,32 +7046,6 @@
     "max_event_score": 12.0
   },
   {
-    "day": "2026-09-30",
-    "kind": "actor_mention",
-    "key": "Russia",
-    "event_count": 1,
-    "physical_events": 0,
-    "critical_infrastructure_events": 0,
-    "attributed_events": 0,
-    "military_response_events": 0,
-    "explicit_threat_events": 0,
-    "avg_event_score": 10.0,
-    "max_event_score": 10.0
-  },
-  {
-    "day": "2026-09-30",
-    "kind": "overall",
-    "key": "geopolitical_hybrid",
-    "event_count": 1,
-    "physical_events": 0,
-    "critical_infrastructure_events": 0,
-    "attributed_events": 0,
-    "military_response_events": 0,
-    "explicit_threat_events": 0,
-    "avg_event_score": 10.0,
-    "max_event_score": 10.0
-  },
-  {
     "day": "2026-10-01",
     "kind": "overall",
     "key": "geopolitical_hybrid",
@@ -7361,7 +7309,7 @@
     "day": "2026-10-12",
     "kind": "actor_mention",
     "key": "NATO",
-    "event_count": 4,
+    "event_count": 3,
     "physical_events": 0,
     "critical_infrastructure_events": 0,
     "attributed_events": 0,
@@ -7374,7 +7322,7 @@
     "day": "2026-10-12",
     "kind": "actor_mention",
     "key": "Russia",
-    "event_count": 2,
+    "event_count": 1,
     "physical_events": 0,
     "critical_infrastructure_events": 0,
     "attributed_events": 0,
@@ -7413,7 +7361,7 @@
     "day": "2026-10-12",
     "kind": "overall",
     "key": "geopolitical_hybrid",
-    "event_count": 4,
+    "event_count": 3,
     "physical_events": 0,
     "critical_infrastructure_events": 0,
     "attributed_events": 0,
