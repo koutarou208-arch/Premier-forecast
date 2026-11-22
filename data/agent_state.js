@@ -1,6 +1,6 @@
 window.__AGENT_STATE__ = {
   "version": 1,
-  "updated_at": "2026-11-15T02:21:32.197672Z",
+  "updated_at": "2026-11-22T02:47:47.600148Z",
   "decision": "reject_all",
   "policy_summary": {
     "optimization_cutoff": "2022-12-31",
