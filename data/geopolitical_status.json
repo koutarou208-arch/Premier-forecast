@@ -1,25 +1,25 @@
 {
   "version": 1,
-  "as_of": "2026-11-22T01:35:19Z",
+  "as_of": "2026-11-22T07:50:09Z",
   "window_days": 90,
-  "geopolitical_escalation_index": 76.4,
+  "geopolitical_escalation_index": 76.3,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
   "calibration_status": "experimental_unvalidated",
   "components": {
-    "top_quartile_event_severity": 34.0,
+    "top_quartile_event_severity": 33.8,
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
     "response_intensity": 100.0,
-    "thirty_day_momentum": 81.1
+    "thirty_day_momentum": 80.6
   },
   "counts": {
-    "events": 211,
-    "recent_30d_events": 99,
-    "previous_30d_events": 61,
+    "events": 213,
+    "recent_30d_events": 100,
+    "previous_30d_events": 62,
     "physical_events": 27,
     "critical_infrastructure_events": 46,
     "reported_attribution_events": 4,
-    "unattributed_events": 199,
+    "unattributed_events": 201,
     "disputed_attribution_records": 0,
     "suspected_attribution_records": 9,
     "military_response_events": 8,
