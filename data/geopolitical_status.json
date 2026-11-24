@@ -1,23 +1,23 @@
 {
   "version": 1,
-  "as_of": "2026-11-23T20:02:48Z",
+  "as_of": "2026-11-24T04:45:00Z",
   "window_days": 90,
-  "geopolitical_escalation_index": 78.8,
+  "geopolitical_escalation_index": 79.3,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
   "calibration_status": "experimental_unvalidated",
   "components": {
-    "top_quartile_event_severity": 33.8,
+    "top_quartile_event_severity": 33.9,
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
     "response_intensity": 100.0,
-    "thirty_day_momentum": 93.1
+    "thirty_day_momentum": 95.6
   },
   "counts": {
     "events": 223,
-    "recent_30d_events": 108,
-    "previous_30d_events": 58,
+    "recent_30d_events": 109,
+    "previous_30d_events": 57,
     "physical_events": 28,
-    "critical_infrastructure_events": 48,
+    "critical_infrastructure_events": 49,
     "reported_attribution_events": 4,
     "unattributed_events": 210,
     "disputed_attribution_records": 0,
@@ -30,7 +30,7 @@
       "actor": "Russia",
       "event_count": 3,
       "first_seen": "2026-08-26T07:00:00Z",
-      "last_seen": "2026-11-23T20:02:48Z",
+      "last_seen": "2026-11-24T04:45:00Z",
       "max_event_score": 56.0,
       "modalities": [
         "airspace_violation",
@@ -62,7 +62,7 @@
       "actor": "Ukraine",
       "event_count": 1,
       "first_seen": "2026-08-07T07:00:00Z",
-      "last_seen": "2026-11-23T20:02:48Z",
+      "last_seen": "2026-11-24T04:45:00Z",
       "max_event_score": 56.0,
       "modalities": [
         "airspace_violation",
