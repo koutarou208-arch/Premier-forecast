@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "as_of": "2026-11-24T17:16:20Z",
+  "as_of": "2026-11-25T00:33:59Z",
   "window_days": 90,
-  "geopolitical_escalation_index": 80.5,
+  "geopolitical_escalation_index": 80.4,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
   "calibration_status": "experimental_unvalidated",
   "components": {
-    "top_quartile_event_severity": 34.9,
+    "top_quartile_event_severity": 34.6,
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
     "response_intensity": 100.0,
@@ -16,22 +16,22 @@
     "events": 226,
     "recent_30d_events": 112,
     "previous_30d_events": 55,
-    "physical_events": 31,
+    "physical_events": 29,
     "critical_infrastructure_events": 52,
-    "reported_attribution_events": 4,
+    "reported_attribution_events": 5,
     "unattributed_events": 213,
     "disputed_attribution_records": 0,
-    "suspected_attribution_records": 11,
+    "suspected_attribution_records": 9,
     "military_response_events": 8,
     "explicit_threat_events": 3
   },
   "campaigns": [
     {
       "actor": "Russia",
-      "event_count": 3,
+      "event_count": 4,
       "first_seen": "2026-08-26T07:00:00Z",
-      "last_seen": "2026-11-24T17:16:20Z",
-      "max_event_score": 56.0,
+      "last_seen": "2026-11-24T22:51:20Z",
+      "max_event_score": 68.0,
       "modalities": [
         "airspace_violation",
         "cyber_attack",
@@ -59,10 +59,25 @@
       ]
     },
     {
+      "actor": "Poland",
+      "event_count": 1,
+      "first_seen": "2026-11-20T09:36:25Z",
+      "last_seen": "2026-11-24T10:48:17Z",
+      "max_event_score": 68.0,
+      "modalities": [
+        "airspace_violation",
+        "drone_incursion"
+      ],
+      "targets": [
+        "government"
+      ],
+      "responses": []
+    },
+    {
       "actor": "Ukraine",
       "event_count": 1,
       "first_seen": "2026-08-07T07:00:00Z",
-      "last_seen": "2026-11-24T17:16:20Z",
+      "last_seen": "2026-11-24T22:51:20Z",
       "max_event_score": 56.0,
       "modalities": [
         "airspace_violation",
