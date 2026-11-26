@@ -1,25 +1,25 @@
 {
   "version": 1,
-  "as_of": "2026-11-25T08:47:56Z",
+  "as_of": "2026-11-25T21:35:20Z",
   "window_days": 90,
-  "geopolitical_escalation_index": 79.9,
+  "geopolitical_escalation_index": 79.7,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
   "calibration_status": "experimental_unvalidated",
   "components": {
-    "top_quartile_event_severity": 34.3,
+    "top_quartile_event_severity": 34.5,
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
     "response_intensity": 100.0,
-    "thirty_day_momentum": 98.2
+    "thirty_day_momentum": 96.6
   },
   "counts": {
-    "events": 230,
+    "events": 231,
     "recent_30d_events": 112,
-    "previous_30d_events": 57,
+    "previous_30d_events": 58,
     "physical_events": 29,
-    "critical_infrastructure_events": 53,
+    "critical_infrastructure_events": 55,
     "reported_attribution_events": 5,
-    "unattributed_events": 217,
+    "unattributed_events": 218,
     "disputed_attribution_records": 0,
     "suspected_attribution_records": 9,
     "military_response_events": 8,
@@ -30,10 +30,11 @@
       "actor": "Russia",
       "event_count": 4,
       "first_seen": "2026-08-26T07:00:00Z",
-      "last_seen": "2026-11-25T08:47:56Z",
+      "last_seen": "2026-11-25T15:12:00Z",
       "max_event_score": 68.0,
       "modalities": [
         "airspace_violation",
+        "arson",
         "cyber_attack",
         "drone_incursion",
         "explosive_drone",
@@ -66,7 +67,8 @@
       "max_event_score": 68.0,
       "modalities": [
         "airspace_violation",
-        "drone_incursion"
+        "drone_incursion",
+        "missile_incursion"
       ],
       "targets": [
         "government"
@@ -77,10 +79,11 @@
       "actor": "Ukraine",
       "event_count": 1,
       "first_seen": "2026-08-07T07:00:00Z",
-      "last_seen": "2026-11-25T08:47:56Z",
+      "last_seen": "2026-11-25T15:12:00Z",
       "max_event_score": 56.0,
       "modalities": [
         "airspace_violation",
+        "arson",
         "cyber_attack",
         "drone_incursion",
         "explosive_drone",
