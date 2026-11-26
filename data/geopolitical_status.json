@@ -1,36 +1,36 @@
 {
   "version": 1,
-  "as_of": "2026-11-25T21:35:20Z",
+  "as_of": "2026-11-26T10:36:08Z",
   "window_days": 90,
-  "geopolitical_escalation_index": 79.7,
+  "geopolitical_escalation_index": 77.9,
   "interpretation": "experimental state index only; not a probability of war or attribution confidence",
   "calibration_status": "experimental_unvalidated",
   "components": {
-    "top_quartile_event_severity": 34.5,
+    "top_quartile_event_severity": 34.7,
     "event_density": 100.0,
     "cross_border_breadth": 100.0,
     "response_intensity": 100.0,
-    "thirty_day_momentum": 96.6
+    "thirty_day_momentum": 87.5
   },
   "counts": {
-    "events": 231,
+    "events": 235,
     "recent_30d_events": 112,
-    "previous_30d_events": 58,
-    "physical_events": 29,
+    "previous_30d_events": 64,
+    "physical_events": 31,
     "critical_infrastructure_events": 55,
-    "reported_attribution_events": 5,
-    "unattributed_events": 218,
+    "reported_attribution_events": 6,
+    "unattributed_events": 221,
     "disputed_attribution_records": 0,
     "suspected_attribution_records": 9,
-    "military_response_events": 8,
-    "explicit_threat_events": 2
+    "military_response_events": 10,
+    "explicit_threat_events": 1
   },
   "campaigns": [
     {
       "actor": "Russia",
-      "event_count": 4,
+      "event_count": 5,
       "first_seen": "2026-08-26T07:00:00Z",
-      "last_seen": "2026-11-25T15:12:00Z",
+      "last_seen": "2026-11-26T09:04:03Z",
       "max_event_score": 68.0,
       "modalities": [
         "airspace_violation",
@@ -61,9 +61,9 @@
     },
     {
       "actor": "Poland",
-      "event_count": 1,
-      "first_seen": "2026-11-20T09:36:25Z",
-      "last_seen": "2026-11-24T20:56:51Z",
+      "event_count": 2,
+      "first_seen": "2026-11-20T04:31:10Z",
+      "last_seen": "2026-11-25T15:25:32Z",
       "max_event_score": 68.0,
       "modalities": [
         "airspace_violation",
@@ -73,13 +73,15 @@
       "targets": [
         "government"
       ],
-      "responses": []
+      "responses": [
+        "air_intercept"
+      ]
     },
     {
       "actor": "Ukraine",
       "event_count": 1,
       "first_seen": "2026-08-07T07:00:00Z",
-      "last_seen": "2026-11-25T15:12:00Z",
+      "last_seen": "2026-11-26T09:04:03Z",
       "max_event_score": 56.0,
       "modalities": [
         "airspace_violation",
